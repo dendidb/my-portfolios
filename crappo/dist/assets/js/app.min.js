@@ -240,8 +240,6 @@ var WindowResize = function () {
 
       _index.Footer.footerSticky();
 
-      _index.Footer.destroyFooterSticky();
-
       _index.Footer.destroyAccordion();
 
       $('body').removeClass('hold-transition');
