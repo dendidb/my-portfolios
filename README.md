@@ -1,1 +1,1 @@
-# my-portfolios
+# this is my portfolios. you can see my project in this repo
