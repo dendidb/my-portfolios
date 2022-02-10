@@ -8,14 +8,11 @@ const Footer = (() => {
     // -- handle padding bottom
     const handleFooterSticky = () => {
       const _footer = $('.footer').innerHeight();
-      if ($(window).width() >= 767.98) {
+      if ($(window).width() > 767) {
         $('.main-site').css('paddingBottom', _footer);
+      } else {
+        $('.main-site').removeAttr('style');
       }
-    }
-
-    // -- destroy footer sticky
-    const destroyFooterSticky = () => {
-      $('.main-site').removeAttr('style');
     }
 
     // -- handle accordion
@@ -48,14 +45,12 @@ const Footer = (() => {
     // - init
     const init = () => {
       handleFooterSticky();
-      destroyFooterSticky();
       handleAccordion();
     }
   
     return {
       init,
       footerSticky: handleFooterSticky,
-      destroyFooterSticky: destroyFooterSticky,
       destroyAccordion: handleDestroyAccordion
     }
   

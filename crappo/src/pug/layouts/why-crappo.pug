@@ -5,6 +5,17 @@
 //why-crappo
 .why-crappo
   .container
+    .why-crappo__wrapper
+      .why-crappo__img
+        ='\n'
+        img(src='assets/img/dummy/'+wcu.img data=wcu.title)/
+        ='\n'
+      .why-crappo__txt
+        h3.why-crappo__title
+          | !{wcu.title}
+        p.why-crappo__desc
+          | !{wcu.desc}
+
     
 
 ='\n'

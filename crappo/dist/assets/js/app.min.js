@@ -83,14 +83,11 @@ var Footer = function () {
   var handleFooterSticky = function handleFooterSticky() {
     var _footer = $('.footer').innerHeight();
 
-    if ($(window).width() >= 767.98) {
+    if ($(window).width() > 767) {
       $('.main-site').css('paddingBottom', _footer);
+    } else {
+      $('.main-site').removeAttr('style');
     }
-  }; // -- destroy footer sticky
-
-
-  var destroyFooterSticky = function destroyFooterSticky() {
-    $('.main-site').removeAttr('style');
   }; // -- handle accordion
 
 
@@ -126,14 +123,12 @@ var Footer = function () {
 
   var init = function init() {
     handleFooterSticky();
-    destroyFooterSticky();
     handleAccordion();
   };
 
   return {
     init: init,
     footerSticky: handleFooterSticky,
-    destroyFooterSticky: destroyFooterSticky,
     destroyAccordion: handleDestroyAccordion
   };
 }();
