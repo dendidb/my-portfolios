@@ -12,9 +12,17 @@
     .hero-banner__info
       p.hero-banner__info__sale
         | !{val.infoSale}
+      ='\n'
       span.hero-banner__info__desc
         | !{val.infoDesc}
+      ='\n'
     h2.hero-banner__title
       | !{val.title}
     p.hero-banner__desc
       | !{val.desc}
+  .hero-banner__btn
+    ='\n'
+    a.btn.btn--primary(href='#')
+      | !{val.button.text}
+    ='\n'
+
