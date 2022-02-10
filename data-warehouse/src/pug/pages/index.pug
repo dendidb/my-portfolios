@@ -1,0 +1,18 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = 'about';
+    siteTitle = 'Home';
+
+//- Body
+block siteContent
+  //- Section Description
+  include home/hero-banner.pug
+  //- Section Description
+  include home/section-description.pug
+  //- Features
+  include home/features.pug
+  //- Testimony
+  include home/testimony.pug

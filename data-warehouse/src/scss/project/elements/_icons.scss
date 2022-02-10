@@ -1,0 +1,42 @@
+/* -------------------------------------------------------------------------- */
+/* Elements: Icon                                                             */
+/* -------------------------------------------------------------------------- */
+
+.fi {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Datawarehouse' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-left:before {
+  content: "\e904";
+  color: #fff;
+}
+.fi-chevron-down:before {
+  content: "\e909";
+  color: #4f4f4f;
+}
+.fi-arrow-right:before {
+  content: "\e900";
+}
+.fi-instagram:before {
+  content: "\e901";
+  color: #fff;
+}
+.fi-twitter:before {
+  content: "\e902";
+  color: #fff;
+}
+.fi-facebook:before {
+  content: "\e903";
+  color: #fff;
+}

@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Layouts Blog
+  ========================================================================== */
+
+.blog {
+  $b: &;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 120px 0;
+  @include large {
+    padding: 96px 0;
+  }
+  @include medium {
+    padding: 72px 0;
+  }
+  @include small {
+    padding: 48px 0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: 92px;
+    z-index: 1;
+    width: 132px;
+    height: 115px;
+    background-image: url(../img/bg/element1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left top;
+    @include large {
+      width: 96px;
+      height: 88px;
+      right: 72px;
+      bottom: -32px;
+    }
+    @include medium {
+      width: 88px;
+      height: 80px;
+      right: 48px;
+    }
+    @include small {
+      width: 80px;
+      height: 72px;
+      right: 24px;
+      bottom: -24px;
+    }
+    @include extra-small {
+      width: 72px;
+      height: 64px;
+      right: 16px;
+    }
+  }
+
+  &__img {
+    &__el {
+      transition: all 350ms ease;
+    }
+  }
+
+  &__title {
+    margin-bottom: 72px;
+    @include large {
+      margin-bottom: 56px;
+    }
+    @include medium {
+      margin-bottom: 40px;
+    }
+    @include small {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-bottom: 72px;
+    @include medium {
+      margin-bottom: 32px;
+    }
+    @include small {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -50px;
+      z-index: 1;
+      width: 130px;
+      height: 115px;
+      background-image: url(../img/bg/element1.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: left top;
+      @include large {
+        width: 96px;
+        height: 88px;
+        top: -40px;
+        left: -32px;
+      }
+      @include medium {
+        top: -24px;
+        width: 88px;
+        height: 80px;
+      }
+      @include small {
+        top: -16px;
+        width: 80px;
+        height: 72px;
+      }
+      @include extra-small {
+        width: 72px;
+        height: 64px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 32px;
+      right: -376px;
+      z-index: 1;
+      width: 780px;
+      height: 560px;
+      background-image: url(../img/bg/bg-element-2.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      @include large {
+        width: 700px;
+        height: 500px;
+        right: -270px;
+        bottom: 48px;
+      }
+      @include medium {
+        width: 680px;
+        height: 460px;
+        bottom: 120px;
+      }
+      @include small {
+        width: 600px;
+        height: 400px;
+        bottom: 128px;
+      }
+      @include extra-small {
+        width: 580px;
+        height: 360px;
+        bottom: 152px;
+      }
+    }
+  }
+
+  &__list {
+    margin-left: -18px;
+    margin-right: -18px;
+    @include clearfix;
+    @include medium {
+      font-size: 0;
+      margin-left: -32px;
+      margin-right: -32px;
+      padding: 16px 32px 40px;
+      @include scroll(x, no-touch, hide);
+    }
+    @include small {
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  #{$b}__item {
+    float: left;
+    width: 33.3333333%;
+    padding: 0 18px;
+    @include medium {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      max-width: 320px;
+      padding: 0;
+      margin-right: 32px;
+      white-space: normal;
+    }
+    @include small {
+      max-width: 280px;
+      margin-right: 24px;
+    }
+    @include extra-small {
+      &:last-child {
+        margin-right: 24px;
+      }
+    }
+    @include retina {
+      max-width: 240px;
+    }
+
+    &:hover {
+      #{$b} {
+        &__img {
+          &__el {
+            transform: scale(1.1);
+          }
+        }
+        &__txt {
+          &__title {
+            color: color(blue, 1);
+          }
+          .btn-forward {
+            i {
+              transform: translateX(4px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+//-------------------------------------------------------------------------------
+  @name: Market
+  -------------------------------------------------------------------------------//
+-
+  dataMarket = {
+    sectionTitle: 'Market sentiments, portfolio, and run the infrastructure of your choice',
+    img: 'btc-graph.svg',
+    alt: 'BTC Grapch',
+    title: 'Invest Smart',
+    desc: 'Get full statistic information about the behaviour of buyers and sellers will help you to make the decision.',
+    btn: {
+      text: 'Learn More',
+      to: '#learn-more'
+    }
+  }
+
+//market
+.market
+  .container
+    .market__head
+      h3.market__head__title
+        | !{dataMarket.sectionTitle}
+    .market__body
+      .market__img
+        ='\n'
+        img.market__img__btc(src='assets/img/dummy/'+dataMarket.img alt=dataMarket.alt)/
+        ='\n'
+        img.market__img__increase(src='assets/img/dummy/increase-in-trade.svg' alt='Increase in Trade')/
+        ='\n'
+        img.market__img__price(src='assets/img/dummy/price-in-dollar.svg' alt='Price in Dollar')/
+        ='\n'
+      .market__txt
+        h3.market__txt__title
+          | !{dataMarket.title}
+        p.market__txt__desc
+          | !{dataMarket.desc}
+        .market__txt__btn
+          ='\n'
+          a.btn.btn--primary-reverse(href=dataMarket.btn.to) !{dataMarket.btn.text}
+          ='\n'
+='\n'
+//end-market

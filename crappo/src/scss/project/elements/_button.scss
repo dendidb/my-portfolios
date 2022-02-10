@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Init: Button
+   ========================================================================== */
+   
+.btn {
+  min-height: 60px;
+  border-radius: 32px;
+  display: inline-block;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  font-weight: fw(regular);
+  @include font-size(h5);
+  border: 1px solid transparent;
+  text-align: center;
+  min-width: 148px;
+  padding: 16px 32px;
+  transition: all .3s ease;
+  &--primary {
+    background-color: color(tertiary);
+    &-reverse {
+      background-color: color(tertiary);
+      color: color(white);
+      &:hover {
+        background-color: transparent;
+        border-color: color(white);
+      }
+    }
+  }
+}

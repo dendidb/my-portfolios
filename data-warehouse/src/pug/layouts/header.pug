@@ -1,0 +1,63 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoSrc: 'logo.svg',
+    logoLink: 'index.html',
+    logoAlt: 'Dara Warehouse',
+    menu: [
+      {
+        to: 'about.html',
+        text: 'About',
+        classActive: 'about'
+      },
+      {
+        to: 'help.html',
+        text: 'Help',
+        classActive: 'help'
+      },
+      {
+        to: 'features.html',
+        text: 'Features',
+        classActive: 'features'
+      },
+      {
+        to: 'signup.html',
+        text: 'Signup',
+        classActive: 'signup'
+      }
+    ],
+    demo: {
+      to: '#',
+      text: 'Request Demo'
+    }
+  }
+
+//header
+.header
+  .container
+    .header__content
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__el(src="assets/img/logo/"+dataHeader.logoSrc alt=dataHeader.logoAlt)/
+      ='\n'
+      button.burger-menu.js-nav(type='button')
+        each val in [1, 2, 3]
+          ='\n'
+          span.burger-menu__bar
+      .header__scroll-mobile
+        ul.header__nav
+          each val in dataHeader.menu
+            li.header__nav__item(class=(navActive == val.classActive ? 'header__nav__item--active' : ''))
+              ='\n'
+              a.header__nav__link(href=val.to) !{val.text}
+        .header__demo
+          ='\n'
+          a.btn.btn--white(href=dataHeader.demo.to) !{dataHeader.demo.text}
+            ='\n'
+            i.fi.fi-arrow-right
+            ='\n'
+

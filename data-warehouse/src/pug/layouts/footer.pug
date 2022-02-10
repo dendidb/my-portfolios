@@ -1,0 +1,161 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  -------------------------------------------------------------------------------//
+
+-
+  data = {
+    trial: {
+      title: 'Try for free!',
+      desc: 'Get limited 1 week free try our features!',
+      learnMore: {
+        to: 'learn-more.html',
+        txt: 'Learn More'
+      },
+      demo: {
+        to: 'demo.html',
+        txt: 'Request Demo'
+      },
+    },
+    logo: {
+      to: 'index.html',
+      src: 'logo-text.svg',
+      alt: 'Data Warehouse'
+    },
+    about: {
+      address: 'Warehouse Society, 234 Bahagia Ave Street PRBW 29281',
+      email: 'info@warehouse.project',
+      phone: '1-232-3434 (Main)'
+    },
+    menu: [
+      {
+        to: 'about.html',
+        title: 'About',
+        nav: [
+          {
+            to: 'profile.html',
+            title: 'Profile'
+          },
+          {
+            to: 'features.html',
+            title: 'Features'
+          },
+          {
+            to: 'careers.html',
+            title: 'Careers'
+          },
+          {
+            to: 'dwnews.html',
+            title: 'DW News'
+          },
+        ]
+      },
+      {
+        to: 'help.html',
+        title: 'Help',
+        nav: [
+          {
+            to: 'support.html',
+            title: 'Support'
+          },
+          {
+            to: 'signup.html',
+            title: 'Sign up'
+          },
+          {
+            to: 'guide.html',
+            title: 'Guide'
+          },
+          {
+            to: 'reports.html',
+            title: 'Reports'
+          },
+          {
+            to: 'qa.html',
+            title: 'Q&A'
+          },
+        ]
+      },
+    ],
+    sosmed: {
+      to: '#',
+      title: 'Social Media',
+      item: [
+        {
+          to: '#',
+          class: 'facebook'
+        },
+        {
+          to: '#',
+          class: 'twitter'
+        },
+        {
+          to: '#',
+          class: 'instagram'
+        }
+      ]
+    },
+    bottom: {
+      copyright: '&copy; Datawarehouse&trade;, 2020. All rights reserved.<br />Company Registration Number: 21479524.',
+      btn: {
+        to: ''
+      }
+    }
+  }
+
+// footer
+.footer
+  // footer_trial
+  .footer__trial
+    .container
+      .footer__trial__txt
+        h2.footer__trial__title !{data.trial.title}
+        p.footer__trial__desc !{data.trial.desc}
+      .footer__trial__btn
+        ='\n'
+        a.btn.btn--secondary(href=data.trial.learnMore.to) !{data.trial.learnMore.txt}
+        ='\n'
+        a.btn.btn--white(href=data.trial.demo.to) !{data.trial.demo.txt}
+          ='\n'
+          i.fi.fi-arrow-right
+          ='\n'
+  // footer_menu
+  .footer__menu
+    .container
+      .footer__wrapper
+        .footer__list.js-accordion-footer
+          each val in data.menu
+            .footer__list__item
+              h4.footer__title !{val.title}
+              ul.footer__nav
+                each item in val.nav
+                  li.footer__item
+                    ='\n'
+                    a.footer__link(href=item.to) !{item.title}
+                  ='\n'
+        .footer__contact
+          h4.footer__contact__title !{data.sosmed.title}
+          ul.footer__contact__nav
+            each sosmedItem in data.sosmed.item
+              li.footer__contact__item(class=sosmedItem.class)
+                ='\n'
+                a.footer__contact__link(href=sosmedItem.to)
+                  ='\n'
+                  i.fi(class='fi-'+sosmedItem.class)
+                ='\n'
+      .footer__about
+        ='\n'
+        a.footer__logo(href=data.logo.to)
+          ='\n'
+          img.footer__logo__el(src="assets/img/logo/"+data.logo.src alt=data.logo.alt)/
+          ='\n'
+        .footer__about__txt
+          p.footer__about__txt__address !{data.about.address}
+          p.footer__about__txt__email !{data.about.email}
+        p.footer__about__txt__phone !{data.about.phone}
+      ='\n'
+  ='\n'
+  // footer_copyright
+  .footer__copyright
+    .container
+      p.footer__copyright__txt !{data.bottom.copyright}
+include ../components/floating-chat.pug

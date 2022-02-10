@@ -1,0 +1,13 @@
+//-------------------------------------------------------------------------------
+  @name: Hero Banner
+  -------------------------------------------------------------------------------//
+
+//hero-banner
+.hero-banner
+  .container
+    .hero-banner__content
+      each val in dataBanner.list
+        - data = val;
+        include ../components/hero-banner.pug
+='\n'
+//end-hero-banner

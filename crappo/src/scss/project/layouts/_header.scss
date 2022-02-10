@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Layouts Header
+   ========================================================================== */
+
+.header {
+  padding: 56px 0;
+  background-color: color(primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: zi(header);
+  width: 100%;
+  transition: all .4s ease;
+  @include large {
+    padding: 48px 0;
+  }
+  @include medium {
+    padding: 16px 0;
+  }
+  @include small {
+    padding: 12px 0;
+  }
+  // scrolldown
+  .scroll-down & {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+  }
+  // header on scroll
+  .header-on-scroll & {
+    transition: transform 0.5s ease;
+  }
+  // header on scroll
+  .header-on-scroll & {
+    @include shadow(8);
+    padding: 14px 0;
+    box-shadow: 0 4px 16px color(shadow-blue);
+  }
+  &__content {
+    @include clearfix;
+  }
+  &__logo {
+    margin: 4px 0;
+    float: left;
+    width: 132px;
+    @include remove-tap-highlight;
+    @include medium {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__el {
+      display: block;
+      height: 40px;
+      transition: all .3s ease;
+      .scroll-down,
+      .header-on-scroll & {
+        margin: 6px 0;
+        @include medium {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .overlay {
+    @include large {
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: color(overlay);
+      z-index: zi(header-overlay);
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease;
+      transition-delay: 0.25s;
+      .show-menu & {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+      }
+    }
+  }
+  &__menu {
+    float: right;
+    padding: 14px 0;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include medium {
+      position: fixed;
+      float: none;
+      padding: 24px 24px 32px;
+      top: 68px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      bottom: 0;
+      background-color: color(primary-accent);
+      z-index: zi(header);
+      transform: translateX(100%);
+      transform-origin: right center;
+      transition: all .55s ease;
+      transition-delay: .70s;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .show-menu & {
+        transform: none;
+        transition-delay: 0s;
+      }
+    }
+    @include small {
+      top: 68px;
+    }
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include medium {
+      width: 100%;
+      margin-bottom: 16px;
+      margin-right: 0;
+      transform: translateY(16px);
+      opacity: 0;
+      transition: all .4s ease 0s;
+      @for $i from 1 through 5 {
+        $d: 475;
+        &:nth-child(#{$i}) {
+          transition-delay: ($d - ($i * 65) + ms);
+        }
+      }
+      .show-menu & {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        @for $i from 1 through 5 {
+          $d: 475;
+          &:nth-child(#{$i}) {
+            transition-delay: ($d + ($i * 65) + ms);
+          }
+        }
+      }
+    }
+    &:nth-last-child(2) {
+      margin-right: 56px;
+      @include medium {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      margin-right: 48px;
+      position: relative;
+    }
+    &:last-child::after {
+      content: '';
+      position: absolute;
+      right: -24px;
+      top: 2px;
+      bottom: 0;
+      border: solid 1px color(grey, 0);
+      opacity: .5;
+      @include medium {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: color(white);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    @include remove-tap-highlight;
+    &:hover {
+      color: color(tertiary);
+    }
+    @include medium {
+      padding: 8px 16px;
+      display: block;
+    }
+  }
+  &__btn {
+    float: right;
+    background-color: color(tertiary);
+    display: block;
+    width: 130px;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+    outline: 0;
+    border: solid 1px transparent;
+    border-radius: 32px;
+    @include remove-tap-highlight;
+    transition: all .3s ease;
+    &:hover {
+      background-color: color(secondary);
+    }
+    @include medium {
+      line-height: 40px;
+      background-color: color(tertiary);
+      min-height: 40px;
+      border-radius: 50%;
+      width: 40px;
+      margin-right: 12px;
+      border: none;
+      padding: 0;
+    }
+    @include small {
+      margin-right: 8px;
+    }
+    &__icon {
+      display: none;
+      @include medium {
+        display: inline-block;
+        width: 24px;
+      }
+    }
+    &__txt {
+      text-decoration: none;
+      color: color(white);
+      @include medium {
+        display: none;
+      }
+    }
+  }
+}
+@include burger-menu;

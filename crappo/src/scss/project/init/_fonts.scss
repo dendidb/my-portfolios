@@ -1,0 +1,67 @@
+/* ==========================================================================
+ Init: Fonts
+ ========================================================================== */
+
+ @font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Medium.eot');
+  src: url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Rubik-Medium.woff2') format('woff2'),
+      url('../fonts/Rubik-Medium.woff') format('woff'),
+      url('../fonts/Rubik-Medium.ttf') format('truetype'),
+      url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.eot');
+  src: url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Rubik-Regular.woff2') format('woff2'),
+      url('../fonts/Rubik-Regular.woff') format('woff'),
+      url('../fonts/Rubik-Regular.ttf') format('truetype'),
+      url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Bold.eot');
+  src: url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Rubik-Bold.woff2') format('woff2'),
+      url('../fonts/Rubik-Bold.woff') format('woff'),
+      url('../fonts/Rubik-Bold.ttf') format('truetype'),
+      url('../fonts/Rubik-Bold.svg#Rubik-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-SemiBold.eot');
+  src: url('../fonts/Rubik-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
+      url('../fonts/Rubik-SemiBold.woff') format('woff'),
+      url('../fonts/Rubik-SemiBold.ttf') format('truetype'),
+      url('../fonts/Rubik-SemiBold.svg#Rubik-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'crappo-icons';
+  src: url('../fonts/crappo-icons.eot?1xn3wm');
+  src: url('../fonts/crappo-icons.eot?1xn3wm#iefix') format('embedded-opentype'),
+    url('../fonts/crappo-icons.ttf?1xn3wm') format('truetype'),
+    url('../fonts/crappo-icons.woff?1xn3wm') format('woff'),
+    url('../fonts/crappo-icons.svg?1xn3wm#crappo-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

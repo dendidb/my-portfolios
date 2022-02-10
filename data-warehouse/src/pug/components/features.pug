@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Features
+  -------------------------------------------------------------------------------//
+
+//features-item
+.features__item
+  .features__box
+    .features__img
+      ='\n'
+      img.features__img__el(src='assets/img/dummy/'+data.img, alt=data.title)/
+    .features__txt
+      h4.features__txt__title
+        | !{data.title}
+      .features__txt__wrapper
+        p.features__txt__desc
+          | !{data.desc}
+      a.features__txt__link(href=data.to)
+        | Learn more
+        i.fi.fi-arrow-right

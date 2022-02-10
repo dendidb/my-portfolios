@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Variable: Typography
+   ========================================================================== */
+
+$font-main: 'Rubik', sans-serif;
+
+// Font
+$font: (
+  family-main: $font-main,
+  h1: (
+    font-size: 6.4rem,
+    line-height: 7.2rem,
+  ),
+  h2: (
+    font-size: 4rem,
+    line-height: 6rem,
+  ),
+  h3: (
+    font-size: 3.2rem,
+    line-height: 3.6rem,
+  ),
+  h4: (
+    font-size: 2rem,
+    line-height: 2.8rem,
+  ),
+  h5: (
+    font-size: 1.8rem,
+    line-height: 2.4rem,
+  ),
+  h6: (
+    font-size: 1.6rem,
+    line-height: 2.8rem,
+  ),
+  body: (
+    font-size: 1.6rem,
+    line-height: 2.4rem,
+  ),
+  lable: (
+    font-size: 1.4rem,
+    line-height: 2rem,
+  ),
+  small: (
+    font-size: 1.2rem,
+    line-height: 1.6rem,
+  ),
+  weight: (
+    light: 300,
+    regular: 400,
+    semi-bold: 500,
+    bold: 700,
+  ),
+);

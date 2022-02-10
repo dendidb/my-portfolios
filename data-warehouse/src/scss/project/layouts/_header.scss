@@ -1,0 +1,274 @@
+/* ==========================================================================
+  Layouts: Header
+  ========================================================================== */
+
+.header {
+  $h: &;
+  position: fixed;
+  width: 100%;
+  background-color: color(white);
+  padding-top: 48px;
+  padding-bottom: 48px;
+  transition: all 0.4s ease;
+  z-index: zi(header);
+  @include large {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  @include medium {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    &::before {
+      content: "";
+      position: fixed;
+      top: 64px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+      transform-origin: top center;
+      background-color: rgba(color(black), 0.75);
+      transition: all .65s ease .7s;
+      @include small {
+        top: 64px;
+      }
+      .show-nav & {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        transform: none;
+      }
+    }
+  }
+  .scroll-down &,
+  .header-on-scroll & {
+    transition: all 0.5s ease;
+  }
+  .scroll-down & {
+    box-shadow: none;
+    transform: translateY(-100%);
+  }
+
+  .header-on-scroll & {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include shadow(8);
+  }
+
+  &__content {
+    position: relative;
+    font-size: 0;
+    @include clearfix;
+  }
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    @include remove-tap-highlight;
+    padding: 10px 0;
+    @include medium {
+      padding: 0;
+    }
+    @include small {
+      padding: 4px 0;
+    }
+    &__el {
+      height: 40px;
+      display: block;
+      @include small {
+        height: 32px;
+      }
+    }
+  }
+  &__scroll-mobile {
+    display: inline-block;
+    margin-left: 120px;
+    @include medium {
+      position: fixed;
+      @include scroll("y", "touch", "show");
+      width: 100%;
+      top: 64px;
+      left: 0;
+      bottom: 0;
+      margin-left: 0;
+      background-color: color(purple, 1);
+      padding: 56px 24px 64px;
+      transform: scaleY(0);
+      transition: all 0.45s ease;
+      transform-origin: top center;
+      transition-delay: 0.55s;
+      @include small {
+        top: 64px;
+      }
+      .show-nav & {
+        transform: none;
+        transition-delay: .2s;
+      }
+    }
+    @include small {
+      top: 64px;
+      padding: 40px 24px 56px;
+    }
+  }
+  &__nav {
+    $n: &;
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include medium {
+      margin-bottom: 48px;
+      width: 100%;
+    }
+    @include small {
+      margin-bottom: 24px;
+    }
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 40px;
+      font-weight: fw(medium);
+      color: color(grey);
+      @include medium {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 24px;
+        transform: translateY(12px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        @for $i from 1 through 4 {
+          $delay: 220 - ($i * 30) + ms;
+          &:nth-child(#{$i}) {
+            transition-delay: $delay;
+          }
+        }
+        .show-nav & {
+          transform: none;
+          opacity: 1;
+          @for $i from 1 through 4 {
+            $delay: 350 + ($i * 50) + ms;
+            &:nth-child(#{$i}) {
+              transition-delay: $delay;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        #{$n}__link {
+          color: color(purple, 1);
+          @include medium {
+            color: color(black);
+          }
+        }
+      }
+      &--active {
+        color: color(black);
+        font-weight: fw(bold);
+        #{$n}__link {
+          @include medium {
+            padding-left: 40px;
+            &::after {
+              content: "";
+              position: absolute;
+              border-bottom: solid 4px color(white);
+              top: 50%;
+              width: 32px;
+              left: 0;
+              border-radius: 2px;
+              transform: translateY(-50%);
+              background-color: color(white);
+            }
+          }
+        }
+      }
+    }
+    &__link {
+      @include remove-tap-highlight;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      transition: all 0.3s ease;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        background-color: color(purple, 1);
+        width: 100%;
+        height: 1px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: all .3s ease;
+      }
+      &:hover {
+        &:after {
+          transform: scaleX(1);
+        }
+      }
+      @include medium {
+        @include font-size(h5);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: block;
+        color: color(white);
+      }
+    }
+  }
+  &__demo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include medium {
+      position: relative;
+      opacity: 0;
+      top: 0;
+      width: 100%;
+      transform: translateY(12px);
+      transition: opacity 0.75s ease 0s, transform 0.75s ease 50ms, background-color 0.2s ease;
+    }
+    .show-nav & {
+      transform: none;
+      opacity: 1;
+      transition: opacity 0.75s ease 0.65s, transform 0.75s ease 0.65s, background-color 0.2s ease;
+    }
+  }
+  .burger-menu {
+    display: none;
+    @include medium {
+      display: block;
+      position: absolute;
+      z-index: zi(header-burger-menu);
+      right: -8px;
+      top: -4px;
+      &__bar {
+        transition: all 0.3s ease 0.6s;
+        .show-nav & {
+          transition-delay: 0s;
+          &:nth-child(1) {
+            transform: rotate(135deg) translate(5px, -4px);
+            transition-delay: 100ms;
+          }
+          &:nth-child(2) {
+            transform: scale(0);
+            opacity: 0;
+            transition-delay: 0ms;
+          }
+          &:nth-child(3) {
+            transform: rotate(-135deg) translate(6px, 5px);
+            transition-delay: 250ms;
+          }
+        }
+      }
+    }
+  }
+}

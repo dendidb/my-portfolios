@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: Blog
+  -------------------------------------------------------------------------------//
+
+// Blog
+.blog
+  .container
+    .blog__title
+      h3.text-title !{data.title}
+    .blog__content
+      .blog__list
+        each val in data.list
+          - data = val;
+          include ../components/blog-item.pug
+    .blog__btn
+      a.btn.btn--secondary(href=data.btn.to) !{data.btn.text}

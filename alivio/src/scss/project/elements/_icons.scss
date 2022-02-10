@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Init: Icons
+   ========================================================================== */
+
+[class^="crappo-"], [class*=" crappo-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'crappo-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.crappo-chevron-down:before {
+  content: "\e911";
+}
+.crappo-chevron-right:before {
+  content: "\e904";
+}
+.crappo-chart:before {
+  content: "\e900";
+}
+.crappo-earth:before {
+  content: "\e901";
+}
+.crappo-ethereum:before {
+  content: "\e902";
+}
+.crappo-litecoin:before {
+  content: "\e903";
+}
+.crappo-mastercard .path1:before {
+  content: "\e905";
+  color: rgb(189, 189, 189);
+}
+.crappo-mastercard .path2:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(130, 130, 130);
+}
+.crappo-mastercard .path3:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(224, 224, 224);
+}
+.crappo-user:before {
+  content: "\e908";
+}
+.crappo-bitcoin-solid:before {
+  content: "\e909";
+}
+.crappo-bitcoin-circle .path1:before {
+  content: "\e90a";
+  color: rgb(224, 224, 224);
+}
+.crappo-bitcoin-circle .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(13, 13, 43);
+}
+.crappo-youtube:before {
+  content: "\e90c";
+}
+.crappo-instagram:before {
+  content: "\e90d";
+}
+.crappo-linkedin:before {
+  content: "\e90e";
+}
+.crappo-facebook:before {
+  content: "\e90f";
+}
+.crappo-twitter:before {
+  content: "\e910";
+}

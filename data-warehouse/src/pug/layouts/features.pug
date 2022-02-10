@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------
+  @name: Features
+  -------------------------------------------------------------------------------//
+
+//features
+.features
+  .container
+    .features__head
+      h2.features__title
+        | !{dataFeatures.title}
+      h6.features__desc
+        | !{dataFeatures.desc}
+    //features-list
+    .features__list
+      each val in dataFeatures.list
+        -
+          data = val
+        include ../components/features.pug

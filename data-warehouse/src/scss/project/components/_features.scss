@@ -1,0 +1,119 @@
+/* ==========================================================================
+  Components: Features
+  ========================================================================== */
+
+.features {
+  $f: &;
+  &__item {
+    #{$f}__box {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+    &:nth-child(1) {
+      #{$f}__box {
+        background-image: url(../img/bg/feature-bg-1.svg);
+      }
+    }
+    &:nth-child(2) {
+      #{$f}__box {
+        background-image: url(../img/bg/feature-bg-2.svg);
+      }
+    }
+    &:nth-child(3) {
+      #{$f}__box {
+        background-image: url(../img/bg/feature-bg-3.svg);
+      }
+    }
+    &:nth-child(4) {
+      #{$f}__box {
+        background-image: url(../img/bg/feature-bg-4.svg);
+      }
+    }
+  }
+  &__box {
+    font-size: 0;
+  }
+  &__img {
+    width: 44%;
+    display: inline-block;
+    vertical-align: middle;
+    @include small {
+      width: 36%;
+    }
+  }
+  &__txt {
+    width: 56%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 56px 50px 96px 14px;
+    position: relative;
+    @include large {
+      padding-right: 40px;
+    }
+    @include small {
+      padding: 32px 24px 72px 14px;
+      width: 64%;
+    }
+    &__title {
+      font-weight: fw(regular);
+      margin-bottom: 30px;
+      @include medium {
+        margin-bottom: 24px;
+      }
+      @include small {
+        @include font-size(h6);
+        margin-bottom: 8px;
+      }
+      @include x-small {
+        @include font-size(body);
+      }
+    }
+    &__wrapper {
+      min-height: 144px;
+      @include small {
+        min-height: 80px;
+      }
+    }
+    &__desc {
+      color: color(grey);
+      margin-bottom: 0;
+      @include multiline-ellipsis(6);
+      @include small {
+        @include font-size(label);
+        @include multiline-ellipsis(4);
+      }
+    }
+    &__link {
+      position: absolute;
+      bottom: 32px;
+      left: 20px;
+      right: 50px;
+      font-weight: fw(bold);
+      text-decoration: none;
+      @include font-size(body);
+      @include remove-tap-highlight;
+      &:hover {
+        .fi-arrow-right {
+          transform: translateX(6px);
+        }
+      }
+      @include small {
+        left: 14px;
+        bottom: 24px;
+        @include font-size(label);
+      }
+    }
+    .fi-arrow-right {
+      display: inline-block;
+      vertical-align: middle;
+      color: color(purple, 1);
+      margin-left: 20px;
+      transition: all .3s ease;
+      @include small {
+        margin-left: 12px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

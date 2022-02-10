@@ -1,0 +1,51 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+-
+  dataHeader = {
+    logoImg: 'crappo.svg',
+    logoAlt: 'Crappo Logo',
+    menuList: [
+      {
+        text: 'Products',
+        to: 'products.html'
+      },
+      {
+        text: 'Features',
+        to: 'features.html'
+      },
+      {
+        text: 'About',
+        to: 'about.html'
+      },
+      {
+        text: 'Contact',
+        to: 'contact.html'
+      },
+      {
+        text: 'Login',
+        to: 'login.html'
+      },
+      {
+        text: 'Register',
+        to: 'register.html'
+      }
+    ]
+  }
+
+//header
+.header
+  .container
+    ='\n'
+    a.header__logo
+    ='\n'
+    img(src='assets/img/logo/'+dataHeader.logoImg alt=dataHeader.logoAlt)/
+    ='\n'
+
+
+
+='\n'
+//end-header
+
+
+

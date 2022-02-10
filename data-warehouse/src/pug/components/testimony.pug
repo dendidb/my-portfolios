@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Testimony
+  -------------------------------------------------------------------------------//
+
+//testimony-item
+.testimony__item
+  .testimony__box
+    .testimony__head
+      .testimony__avatar
+        ='\n'
+        img.testimony__avatar__el(src='assets/img/dummy/'+data.avatar, alt=data.name)/
+      .testimony__txt
+        h5.testimony__name
+          | !{data.name}
+        h6.testimony__position
+          | !{data.position}
+    .testimony__body
+      p.testimony__description
+        | !{data.description}

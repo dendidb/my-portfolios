@@ -1,0 +1,60 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoSrc: 'trafalgar.svg',
+    logoLink: 'index.html',
+    logoAlt: 'the Special Day',
+    menu: [
+      {
+        link: 'index.html',
+        text: 'Home',
+        classActive: 'home'
+      },
+      {
+        link: 'find-doctor.html',
+        text: 'Find a doctor',
+        classActive: 'find-doctor'
+      },
+      {
+        link: 'apps.html',
+        text: 'Apps',
+        classActive: 'apps'
+      },
+      {
+        link: 'testimonials.html',
+        text: 'Testimonials',
+        classActive: 'testimonials'
+      },
+      {
+        link: 'about-us.html',
+        text: 'About us',
+        classActive: 'about-us'
+      }
+    ]
+  };
+
+//header
+.header
+  .container
+    .header__nav
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__img(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      ul.header__nav__menu
+        each val in dataHeader.menu
+          li.header__nav__item
+            ='\n'
+            a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+            ='\n'
+      ='\n'
+      button.burger-menu.js-mobile-menu(type='button')
+        each val in [0, 1, 2]
+          ='\n'
+          span.burger-menu__bar
+='\n'

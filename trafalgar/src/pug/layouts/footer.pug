@@ -1,0 +1,100 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  -------------------------------------------------------------------------------//
+
+-
+  dataFooter = {
+    logoSrc: 'trafalgar-footer.svg',
+    logoLink: 'index.html',
+    logoAlt: 'trafalgar',
+    description: 'Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone',
+    menu: [
+      {
+        title: 'Company',
+        nav: [
+          {
+            title: 'About',
+            link: 'about.html'
+          },
+          {
+            title: 'Testimonials',
+            link: 'testimonials.html'
+          },
+          {
+            title: 'Find a doctor',
+            link: 'find-doctor.html'
+          },
+          {
+            title: 'Apps',
+            link: 'apps.html'
+          }
+        ]
+      },
+      {
+        title: 'Region',
+        nav: [
+          {
+            title: 'Indonesia',
+            link: 'indonesia.html'
+          },
+          {
+            title: 'Singapore',
+            link: 'singapore.html'
+          },
+          {
+            title: 'Hongkong',
+            link: 'hongkong.html'
+          },
+          {
+            title: 'Canada',
+            link: 'canada.html'
+          }
+        ]
+      },
+      {
+        title: 'Help',
+        nav: [
+          {
+            title: 'Help Center',
+            link: 'help.html'
+          },
+          {
+            title: 'Contact Support',
+            link: 'contact.html'
+          },
+          {
+            title: 'Intructions',
+            link: 'Intructions.html'
+          },
+          {
+            title: 'How it works',
+            link: 'how-it-works.html'
+          }
+        ]
+      }
+    ],
+    copyright: '© Trafalgar PTY LTD 2020. All Rights Reserved'
+  }
+
+//footer
+.footer
+  .container
+    .footer__menu.js-footer-accordion
+      each val in dataFooter.menu
+        .footer__menu__item
+          if val.title
+            h3.footer__title !{val.title}
+          ul.footer__nav
+            each item in val.nav
+              li.footer__nav__item
+                ='\n'
+                a.footer__nav__link(href=item.link) !{item.title}
+                ='\n'
+    .footer__about
+      ='\n'
+      a.footer__logo(href=dataFooter.logoLink)
+        ='\n'
+        img.footer__logo__img(src='assets/img/logo/'+dataFooter.logoSrc, alt=dataFooter.logoAlt)/
+      ='\n'
+      p.footer__description !{dataFooter.description}
+      p.footer__copyright !{dataFooter.copyright}

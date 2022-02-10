@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Init: Section Title
+   ========================================================================== */
+
+  .section-title {
+    @include font-size(h2);
+    margin-bottom: 100px;
+    color: color(white);
+    max-width: 768px;
+    text-align: center;
+    margin: 0 auto 100px;
+  }

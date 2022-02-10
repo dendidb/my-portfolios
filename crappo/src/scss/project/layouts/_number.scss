@@ -1,0 +1,84 @@
+/* ==========================================================================
+Layouts Number
+========================================================================== */
+
+.number {
+   padding: 64px 0 56px;
+   overflow: hidden;
+   background-color: color(primary);
+   font-size: 0;
+   &__list {
+      background-color: color(primary);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+      color: color(white);
+      @include clearfix;
+      @include medium {
+         margin-right: -32px;
+         margin-left: -32px;
+         padding: 0 32px;
+         @include scroll('x', 'touch', 'hide');
+      }
+      @include small {
+         margin-right: -24px;
+         margin-left: -24px;
+         padding: 0 24px;
+      }
+      &__item {
+         display: inline-block;
+         vertical-align: middle;
+         width: 33.3333333%;
+         @include medium {
+            width: 320px;
+            white-space: normal;
+         }
+         &:last-child {
+            margin-right: 0;
+         }
+         &__img {
+            background-color: color(number-transparent);
+            width: 80px;
+            height: 80px;
+            padding: 24px;
+            margin-right: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            @include small {
+               margin-right: 16px;
+               width: 60px;
+               height: 60px;
+               line-height: 40px;
+               padding: 14px;
+            }
+            i {
+               @include font-size(h3);
+               color: color(tertiary);
+               @include small {
+                  width: 30px;
+               }
+            }
+         }
+         &__txt {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            &__title {
+               margin-bottom: 4px;
+               @include font-size(h2);
+               font-weight: fw(bold);
+               @include extra-small {
+                  @include font-size(h4);
+               }
+            }
+            &__desc {
+               margin: 0;
+               @include font-size(h6);
+               font-weight: fw(regular);
+            }
+         }
+      }
+   }
+}

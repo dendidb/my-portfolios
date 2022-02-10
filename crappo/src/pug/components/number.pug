@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------
+  @name: Number
+  -------------------------------------------------------------------------------//
+
+//number-item
+li.number__list__item
+  .number__list__item__img
+    ='\n'
+    i(class='crappo-'+val.iconClass)
+  ='\n'
+  .number__list__item__txt
+    h3.number__list__item__txt__title
+      | !{val.title}
+    p.number__list__item__txt__desc
+      | !{val.desc}
+
+='\n'
+//end-number-item

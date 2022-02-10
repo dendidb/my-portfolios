@@ -1,0 +1,25 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Home';
+
+//- Body
+block siteContent
+  //- Hero Banner
+  include home/hero-banner.pug
+  //- Number
+  include home/number.pug
+  //- Why Crappo
+  include home/why-crappo.pug
+  //- Calculator
+  include home/calculator.pug
+  //- Market
+  include home/market.pug
+  //- Header
+  include home/statistics.pug
+  //- Grow Profit
+  include home/grow-profit.pug
+  //- Subscribe
+  include home/subscribe.pug

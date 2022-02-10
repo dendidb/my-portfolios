@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Layouts: Testimony
+  ========================================================================== */
+
+.testimony {
+  $t: &;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  overflow: hidden;
+  @include large {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+  @include medium {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+  @include small {
+
+  }
+  &__wrapper {
+    padding: 96px 88px;
+    border-radius: 50px;
+    background-color: color(purple, 1);
+    @include large {
+      padding: 80px 64px;
+    }
+    @include medium {
+      border-radius: 40px;
+      padding: 64px 32px;
+    }
+    @include small {
+      padding: 56px 24px;
+      border-radius: 32px;
+    }
+    @include x-small {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+  &__title {
+    color: color(white);
+    font-weight: fw(bold);
+    margin-bottom: 64px;
+    @include large {
+      margin-bottom: 48px;
+    }
+    @include medium {
+      @include font-size(h3);
+      margin-bottom: 24px;
+    }
+    @include small {
+      @include font-size(h4);
+      margin-bottom: 20px;
+    }
+  }
+  #{$t} {
+    &__item {
+      transition: all .3s ease;
+    }
+  }
+  .owl-carousel {
+    padding-bottom: 86px;
+    @include medium {
+      padding-bottom: 72px;
+    }
+    @include small {
+      padding-bottom: 64px;
+    }
+    @include x-small {
+      padding-bottom: 56px;
+    }
+    .owl-item {
+      max-width: 645px;
+      transition: all .75s ease;
+      @include medium {
+        max-width: 560px;
+      }
+      @include small {
+        max-width: 480px;
+      }
+      @include x-small {
+        max-width: 260px;
+      }
+      @include retina {
+        max-width: 220px;
+      }
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: all .5s ease;
+        transition-delay: .4s;
+        background: linear-gradient(270deg, color(white) 9.75%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 20px;
+      }
+      &.active {
+        #{$t} {
+          &__box {
+            box-shadow: 0px 20px 0px 0px rgba(33, 35, 83, .2);
+          }
+        }
+      }
+      &.active + .active {
+        #{$t} {
+          &__box {
+            box-shadow: 0px 20px 0px 0px rgba(33, 35, 83, .1);
+          }
+        }
+      }
+      &.active ~ .owl-item{
+        max-width: 400px;
+        @include x-small {
+          max-width: 260px;
+        }
+        @include retina {
+          max-width: 220px;
+        }
+        &::before {
+          opacity: 1;
+          transition-delay: 0s;
+        }
+      }
+    }
+    .owl-stage-outer {
+      overflow: initial;
+    }
+    .owl-nav {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      button {
+        color: color(white);
+        transition: all .3s ease;
+        &.owl-prev {
+          margin-right: 16px;
+          @include font-icon('\e904');
+          &:hover {
+            transform: translateX(-4px);
+          }
+        }
+        &.owl-next {
+          @include font-icon('\e900');
+          &:hover {
+            transform: translateX(4px);
+          }
+        }
+        &.disabled {
+          color: color(purple, 3);
+          &:hover {
+            color: color(purple, 3);
+            transform: none;
+          }
+        }
+        &:hover {
+          color: color(white);
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+    .owl-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .owl-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: color(white);
+        transition: all .3s ease;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          width: 10px;
+          height: 10px;
+          background-color: color(pink, 1);
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  &--single {
+    &__item {
+      width: 645px;
+    }
+  }
+}

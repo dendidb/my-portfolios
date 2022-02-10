@@ -1,0 +1,13 @@
+//-------------------------------------------------------------------------------
+  @name: Number
+  -------------------------------------------------------------------------------//
+
+//number
+.number
+  .container
+    ul.number__list
+      each val in dataNumber.list
+        - data = val
+        include ../components/number.pug
+='\n'
+//end-number
