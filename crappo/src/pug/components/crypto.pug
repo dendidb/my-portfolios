@@ -3,7 +3,21 @@
   -------------------------------------------------------------------------------//
 
 //crypto
-
-
+.crypto__item
+  .crypto__box
+    ='\n'
+    .crypto__box__img
+      ='\n'
+      img.crypto__box__img__el(src='assets/img/icons/'+val.img alt=val.title)/
+      ='\n'
+    h3.crypto__box__title
+      | !{val.title}
+    p.crypto__box__desc
+      | !{val.desc}
+    .crypto__box__btn
+      ='\n'
+      a.btn.btn--primary(href=val.button.to)
+        | !{val.button.text}
+      ='\n'
 ='\n'
 //end-crypto

@@ -1,3 +1,26 @@
 /* ==========================================================================
    Layouts Crypto
    ========================================================================== */
+
+.crypto {
+  $c: &;
+  padding: 80px 0;
+  background-color: color(grey, 4);
+  &__wrapper {
+    @include clearfix;
+  }
+  &__title {
+    max-width: 740px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  &__list {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  #{$c}__item {
+    float: left;
+    width: 33.3333333%;
+    padding: 24px;
+  }
+}
