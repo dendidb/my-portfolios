@@ -1580,9 +1580,9 @@ b {
 }
 .header-on-scroll .header {
   padding: 14px 0;
-  -webkit-box-shadow: 0 4px 16px rgba(9, 12, 19, 0.1);
-     -moz-box-shadow: 0 4px 16px rgba(9, 12, 19, 0.1);
-          box-shadow: 0 4px 16px rgba(9, 12, 19, 0.1);
+  -webkit-box-shadow: 0 4px 16px rgba(54, 113, 233, 0.1);
+     -moz-box-shadow: 0 4px 16px rgba(54, 113, 233, 0.1);
+          box-shadow: 0 4px 16px rgba(54, 113, 233, 0.1);
 }
 .header__content::before, .header__content::after {
   content: " ";
@@ -1926,7 +1926,7 @@ b {
   height: 40px;
   background-color: #3671e9;
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 991.98px) {
   .burger-menu {
     background-color: #2b076e;
     display: block;

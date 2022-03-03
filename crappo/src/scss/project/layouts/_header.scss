@@ -31,7 +31,6 @@
   }
   // header on scroll
   .header-on-scroll & {
-    @include shadow(8);
     padding: 14px 0;
     box-shadow: 0 4px 16px color(shadow-blue);
   }
