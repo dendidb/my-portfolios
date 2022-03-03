@@ -3,7 +3,20 @@
   -------------------------------------------------------------------------------//
 
 //subscribe
-
-
+.subscribe
+  .container
+    .subscribe__box
+      .subscribe__txt
+        h3.subscribe__title !{dataSubscribe.title}
+        p.subscribe__desc !{dataSubscribe.desc}
+      form.subscribe__form(action='#' method='post')
+        .subscribe__input
+          ='\n'
+          input.subscribe__email(type='email' name='emailInput' id='emailInput' placeholder='Enter Your Email' autocomplete='off')/
+          ='\n'
+        .subscribe__btn
+          ='\n'
+          button.btn.btn--secondary(type='submit') Subscribe
+          ='\n'
 ='\n'
 //end-subscribe

@@ -1,3 +1,35 @@
 /* ==========================================================================
    Layouts Statistics
    ========================================================================== */
+
+.statistics {
+  padding: 64px 0;
+  background-color: color(secondary);
+  overflow: hidden;
+  &__wrapper {
+    @include clearfix;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    left: -139px;
+    width: 59%;
+  }
+  &__txt {
+    float: right;
+    width: 41%;
+    padding: 120px 0;
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: color(white);
+    @include font-size(h3);
+    font-weight: fw(bold);
+  }
+  &__desc {
+    margin-bottom: 32px;
+    color: color(white);
+    @include font-size(h6);
+    font-weight: fw(regular);
+  }
+}

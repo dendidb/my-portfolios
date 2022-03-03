@@ -13,18 +13,31 @@
   @include font-size(h5);
   border: 1px solid transparent;
   text-align: center;
+  @include remove-tap-highlight;
   min-width: 148px;
   padding: 16px 32px;
   transition: all .3s ease;
+  @include extra-small {
+    padding: 8px 0;
+    display: block;
+    min-height: 20px;
+  }
   &--primary {
     background-color: color(tertiary);
-    &-reverse {
-      background-color: color(tertiary);
+    border-color: color(tertiary);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      border-color: color(white);
       color: color(white);
-      &:hover {
-        background-color: transparent;
-        border-color: color(white);
-      }
+    }
+  }
+  &--secondary {
+    background-color: color(white);
+    &:hover {
+      background-color: transparent;
+      border-color: color(white);
+      color: color(white);
     }
   }
 }

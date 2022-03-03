@@ -223,7 +223,6 @@ Layouts Footer
     }
     &__sosmed {
       float: right;
-      margin: 6px 0;
       @include extra-small {
         float: none;
       }
@@ -246,6 +245,8 @@ Layouts Footer
       }
       &__link {
         width: 42px;
+        height: 42px;
+        line-height: 40px;
         border-radius: 50%;
         text-align: center;
         background-color: transparent;

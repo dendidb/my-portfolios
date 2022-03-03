@@ -234,16 +234,52 @@
       <div class="container">
         <div class="why-crappo__wrapper">
           <div class="why-crappo__img">
-            <img src="assets/img/dummy/crappo-illustration.svg" data="Why you should choose CRAPPO" />
+            <img class="why-crappo__img__el" src="assets/img/dummy/crappo-illustration.svg" data="Why you should choose CRAPPO" />
           </div>
           <div class="why-crappo__txt">
-            <h3 class="why-crappo__title">Why you should choose CRAPPO</h3>
-            <p class="why-crappo__desc">Experience the next generation cryptocurrency platform. No financial borders, extra fees, and fake reviews.</p>
+            <div class="why-crappo__txt__wrapper">
+              <h3 class="why-crappo__title">Why you should choose CRAPPO</h3>
+              <p class="why-crappo__desc">Experience the next generation cryptocurrency platform. No financial borders, extra fees, and fake reviews.</p>
+              <div class="why-crappo__btn">
+                <a class="btn btn--primary" href="#learnMore">Learn More</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!--end-why-crappo-->
+    <!--calculator-->
+    <div class="calculate">
+      <div class="container">
+        <div class="calculate__txt">
+          <h2 class="calculate__title">Check how much you can earn</h2>
+          <p class="calculate__desc">Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.</p>
+        </div>
+        <div class="calculate__box">
+          <form class="calculate__rate" action="#" method="post">
+            <div class="calculate__input">
+              <input class="calculate__input-txt" type="text" name="calculateForm" id="calculateForm" placeholder="Enter your hash rate" autocomplete="off">
+              <select class="calculate__input-slct">
+                <option value="1">TH/s</option>
+                <option value="2">TH/m</option>
+                <option value="3">TH/h</option>
+                <option value="4">TH/mm</option>
+              </select>
+            </div>
+            <div class="calculate__btn"><button class="btn btn--primary" type="button">Calculate</button></div>
+          </form>
+          <div class="calculate__estimated">
+            <h5 class="calculate__estimated__title">Estimated 24 hour revenue:</h5>
+            <h3 class="calculate__estimated__eth">0.055 130 59 eth
+              <span class="calculate__estimated__dollar">($1275)</span>
+            </h3>
+            <p class="calculate__estimated__revenue">Revenue will change based on mining difficulty and Ethereum price.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-calculator-->
     <!--crypto-->
     <div class="crypto">
       <div class="container">
@@ -253,6 +289,7 @@
             <!--crypto-->
             <div class="crypto__item">
               <div class="crypto__box">
+                <a class="crypto__link" href="#"></a>
                 <div class="crypto__box__img">
                   <img class="crypto__box__img__el" src="assets/img/icons/bitcoin.png" alt="BItcoin" />
                 </div>
@@ -267,6 +304,7 @@
             <!--crypto-->
             <div class="crypto__item">
               <div class="crypto__box">
+                <a class="crypto__link" href="#"></a>
                 <div class="crypto__box__img">
                   <img class="crypto__box__img__el" src="assets/img/icons/ethereum.png" alt="Ethereum" />
                 </div>
@@ -281,6 +319,7 @@
             <!--crypto-->
             <div class="crypto__item">
               <div class="crypto__box">
+                <a class="crypto__link" href="#"></a>
                 <div class="crypto__box__img">
                   <img class="crypto__box__img__el" src="assets/img/icons/litecoin.png" alt="Litecoin" />
                 </div>
@@ -313,13 +352,71 @@
             <h3 class="market__txt__title">Invest Smart</h3>
             <p class="market__txt__desc">Get full statistic information about the behaviour of buyers and sellers will help you to make the decision.</p>
             <div class="market__txt__btn">
-              <a class="btn btn--primary-reverse" href="#learn-more">Learn More</a>
+              <a class="btn btn--primary" href="#learn-more">Learn More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!--end-market-->
+    <!--statistics-->
+    <div class="statistics">
+      <div class="container">
+        <div class="statistics__wrapper">
+          <div class="statistics__img">
+            <img class="statistics__img__el" src="assets/img/dummy/statistic-graph.svg" alt="Statistics" />
+          </div>
+          <div class="statistics__txt">
+            <h3 class="statistics__title">Detailed Statistics</h3>
+            <p class="statistics__desc">View all mining related information in realtime, at any point at any location and decide which polls you want to mine in.</p>
+            <div class="statistics__btn">
+              <a class="btn btn--primary" href="#learnMore">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-statistics-->
+    <!--grow-profit-->
+    <div class="grow-profit">
+      <div class="container">
+        <div class="grow-profit__wrapper">
+          <div class="grow-profit__img">
+            <img class="grow-profit__img__el" src="assets/img/dummy/grow-table.svg" alt="Grow Table" />
+          </div>
+          <div class="grow-profit__txt">
+            <div class="grow-profit__txt__wrapper">
+              <h3 class="grow-profit__title">Grow your profit and track your investments</h3>
+              <p class="grow-profit__desc">Use advanced analytical tools. Clear TradingView charts let you track current and historical profit investments.</p>
+              <div class="grow-profit__btn">
+                <a class="btn btn--primary" href="#learnMore">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-grow-profit-->
+    <!--subscribe-->
+    <div class="subscribe">
+      <div class="container">
+        <div class="subscribe__box">
+          <div class="subscribe__txt">
+            <h3 class="subscribe__title">Start mining now</h3>
+            <p class="subscribe__desc">Join now with CRAPPO to get the latest news and start mining now</p>
+          </div>
+          <form class="subscribe__form" action="#" method="post">
+            <div class="subscribe__input">
+              <input class="subscribe__email" type="email" name="emailInput" id="emailInput" placeholder="Enter Your Email" autocomplete="off" />
+            </div>
+            <div class="subscribe__btn">
+              <button class="btn btn--secondary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--end-subscribe-->
   </div>
   <!--footer-->
   <div class="footer">

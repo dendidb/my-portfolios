@@ -1109,6 +1109,14 @@ b {
      -moz-box-shadow: shadow(1);
           box-shadow: shadow(1);
 }
+.crypto__box:hover .crypto__box .btn--round {
+  background-color: #3671e9;
+  border-color: #3671e9;
+  padding: 14px 16px 14px 24px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
 .crypto__box__img {
   margin-bottom: 24px;
 }
@@ -1136,6 +1144,187 @@ b {
 /* ==========================================================================
    Components Subscribe
    ========================================================================== */
+.subscribe {
+  padding: 88px 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 7, 110, 0)), to(rgba(13, 13, 43, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, rgba(43, 7, 110, 0), rgba(13, 13, 43, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(43, 7, 110, 0), rgba(13, 13, 43, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(43, 7, 110, 0), rgba(13, 13, 43, 0.1));
+  background-image: linear-gradient(to top, rgba(43, 7, 110, 0), rgba(13, 13, 43, 0.1));
+  position: relative;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe {
+    padding: 24px 0;
+  }
+}
+.subscribe::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-image: url(../img/bg/subscribe-bg.svg);
+  background-repeat: no-repeat;
+  -moz-background-size: contain;
+       background-size: contain;
+  background-position: center;
+}
+.subscribe__box {
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
+  padding: 48px;
+  background-image: url(../img/bg/subscribe-box-bg.svg);
+  background-color: #3671e9;
+  background-repeat: no-repeat;
+  -moz-background-size: auto 100%;
+       background-size: auto 100%;
+  background-position: center center;
+  font-size: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .subscribe__box {
+    -moz-background-size: auto 80%;
+         background-size: auto 80%;
+    background-position: left top;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__box {
+    padding: 32px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .subscribe__box {
+    padding: 24px;
+  }
+}
+.subscribe__txt {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__txt {
+    width: 100%;
+  }
+}
+.subscribe__title {
+  margin-bottom: 16px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+@media only screen and (max-width: 575.86px) {
+  .subscribe__title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+.subscribe__desc {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #fff;
+  max-width: 348px;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__desc {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__desc {
+    margin-bottom: 8px;
+  }
+}
+.subscribe__form {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__form {
+    padding: 0;
+  }
+}
+.subscribe__input {
+  width: 68%;
+  padding-right: 6.6%;
+  vertical-align: middle;
+  display: inline-block;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__input {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__input {
+    width: 100%;
+    display: block;
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+}
+.subscribe__email {
+  width: 100%;
+  padding-bottom: 8px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.subscribe__email:-moz-placeholder-shown {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+.subscribe__email:-ms-input-placeholder {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+.subscribe__email:placeholder-shown {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+.subscribe__btn {
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__btn {
+    width: 100%;
+    display: block;
+  }
+}
+.subscribe__btn .btn {
+  width: 100%;
+  display: block;
+  font-weight: 500;
+}
+
 /* ==========================================================================
    Elements Index
    ========================================================================== */
@@ -1253,6 +1442,11 @@ b {
   line-height: 2.4rem;
   border: 1px solid transparent;
   text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   min-width: 148px;
   padding: 16px 32px;
   -webkit-transition: all 0.3s ease;
@@ -1260,16 +1454,30 @@ b {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media only screen and (max-width: 575.86px) {
+  .btn {
+    padding: 8px 0;
+    display: block;
+    min-height: 20px;
+  }
+}
 .btn--primary {
   background-color: #3671e9;
-}
-.btn--primary-reverse {
-  background-color: #3671e9;
+  border-color: #3671e9;
   color: #fff;
 }
-.btn--primary-reverse:hover {
+.btn--primary:hover {
   background-color: transparent;
   border-color: #fff;
+  color: #fff;
+}
+.btn--secondary {
+  background-color: #fff;
+}
+.btn--secondary:hover {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
 }
 
 /* ==========================================================================
@@ -1376,9 +1584,6 @@ b {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-.header__logo__el .scroll-down, .header-on-scroll .header__logo__el {
-  margin: 6px 0;
 }
 @media only screen and (max-width: 991.98px) {
   .header__logo__el .scroll-down, .header-on-scroll .header__logo__el {
@@ -1756,10 +1961,20 @@ b {
 Layouts Number
 ========================================================================== */
 .number {
-  padding: 64px 0 56px;
+  padding: 96px 0 88px;
   overflow: hidden;
   background-color: #0d0d2b;
   font-size: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .number {
+    padding: 88px 0 80px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .number {
+    padding: 80px 0 72px;
+  }
 }
 .number__list {
   background-color: #0d0d2b;
@@ -1874,11 +2089,245 @@ Layouts Number
    ========================================================================== */
 .why-crappo {
   padding: 88px 0 80px;
+  position: relative;
+}
+@media only screen and (max-width: 1199.98px) {
+  .why-crappo {
+    padding: 72px 0 64px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .why-crappo {
+    padding: 54px 0 48px;
+  }
+}
+.why-crappo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/bg/u.png);
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 240px;
+  height: 240px;
+  z-index: 2;
+  bottom: -64px;
+  right: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .why-crappo::before {
+    width: 180px;
+    height: 180px;
+  }
+}
+.why-crappo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/bg/d.png);
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 260px;
+  height: 260px;
+  z-index: 2;
+  top: -80px;
+  right: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .why-crappo::after {
+    width: 180px;
+    height: 180px;
+  }
+}
+.why-crappo__wrapper::before, .why-crappo__wrapper::after {
+  content: " ";
+  display: table;
+}
+.why-crappo__wrapper::after {
+  clear: both;
+}
+.why-crappo__img {
+  float: left;
+  width: 60%;
+  padding-right: 120px;
+}
+@media only screen and (max-width: 991.98px) {
+  .why-crappo__img {
+    padding-right: 0;
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+.why-crappo__img__el {
+  display: block;
+  width: 100%;
+}
+.why-crappo__txt {
+  float: right;
+  width: 40%;
+  display: table;
+  min-height: 473px;
+}
+@media only screen and (max-width: 991.98px) {
+  .why-crappo__txt {
+    width: 100%;
+    min-height: initial;
+  }
+}
+.why-crappo__txt__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 991.98px) {
+  .why-crappo__txt__wrapper {
+    vertical-align: top;
+  }
+}
+.why-crappo__title {
+  margin-bottom: 24px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.why-crappo__desc {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #fff;
 }
 
 /* ==========================================================================
    Layouts Calculator
    ========================================================================== */
+.calculate {
+  padding: 88px 0;
+  position: relative;
+}
+@media only screen and (max-width: 991.98px) {
+  .calculate {
+    padding: 72px 0 40px;
+  }
+}
+.calculate::before {
+  content: "";
+  width: 100%;
+  height: 264px;
+  display: block;
+  background-color: #f8f9fb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.calculate__txt {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 622px;
+  margin-bottom: 64px;
+}
+.calculate__title {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.calculate__desc {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #e0e0e0;
+  margin-bottom: 0;
+}
+.calculate__box {
+  background-color: #fff;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
+  max-width: 942px;
+  margin: 0 auto;
+  padding: 48px;
+  -webkit-box-shadow: -8 20px 200px 0 rgba(57, 23, 119, 0.5);
+     -moz-box-shadow: -8 20px 200px 0 rgba(57, 23, 119, 0.5);
+          box-shadow: -8 20px 200px 0 rgba(57, 23, 119, 0.5);
+}
+.calculate__rate {
+  margin-bottom: 96px;
+  font-size: 0;
+}
+.calculate__input-txt {
+  display: inline-block;
+  vertical-align: middle;
+  width: 58%;
+  margin-right: 6.9%;
+  color: #0d0d2b;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  padding-bottom: 8px;
+  background-color: transparent;
+  border-width: 0px 0px 1px;
+  -webkit-border-image: initial;
+     -moz-border-image: initial;
+       -o-border-image: initial;
+          border-image: initial;
+  outline: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.calculate__input-txt:-moz-placeholder-shown {
+  color: #0d0d2b;
+  -webkit-text-fill-color: #0d0d2b;
+}
+.calculate__input-txt:-ms-input-placeholder {
+  color: #0d0d2b;
+  -webkit-text-fill-color: #0d0d2b;
+}
+.calculate__input-txt:placeholder-shown {
+  color: #0d0d2b;
+  -webkit-text-fill-color: #0d0d2b;
+}
+.calculate__input-slct {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35.1%;
+  background-image: url(../img/icons/th-icon-arrow-down.svg);
+  background-color: transparent;
+  -moz-background-size: 12px;
+       background-size: 12px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.calculate__btn {
+  width: 17.5%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.calculate__estimated__title {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #3671e9;
+  margin-bottom: 16px;
+}
+.calculate__estimated__eth {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #0d0d2b;
+}
+.calculate__estimated__dollar {
+  color: #3671e9;
+  margin-left: 4px;
+}
+.calculate__estimated__revenue {
+  color: #828282;
+  margin-bottom: 0;
+}
+
 /* ==========================================================================
    Layouts Crypto
    ========================================================================== */
@@ -1907,6 +2356,19 @@ Layouts Number
   width: 33.3333333%;
   padding: 24px;
 }
+@media only screen and (max-width: 1199.98px) {
+  .crypto .crypto__item {
+    padding: 16px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .crypto .crypto__item {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+}
 
 /* ==========================================================================
    Layouts Market
@@ -1919,7 +2381,6 @@ Layouts Number
   -moz-background-size: 686px auto;
        background-size: 686px auto;
   background-position: 151px top;
-  margin-bottom: 320px;
 }
 .market::before, .market::after {
   content: " ";
@@ -2044,9 +2505,84 @@ Layouts Number
 /* ==========================================================================
    Layouts Statistics
    ========================================================================== */
+.statistics {
+  padding: 64px 0;
+  background-color: #2b076e;
+  overflow: hidden;
+}
+.statistics__wrapper {
+  position: relative;
+}
+.statistics__wrapper::before, .statistics__wrapper::after {
+  content: " ";
+  display: table;
+}
+.statistics__wrapper::after {
+  clear: both;
+}
+.statistics__img {
+  position: absolute;
+  left: -139px;
+  width: 59%;
+}
+.statistics__txt {
+  float: right;
+  width: 41%;
+  padding: 120px 0;
+}
+.statistics__title {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+}
+.statistics__desc {
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+}
+
 /* ==========================================================================
    Layouts Grow Profit
    ========================================================================== */
+.grow-profit {
+  padding: 64px 0 96px;
+  background-color: #2b076e;
+}
+.grow-profit__wrapper::before, .grow-profit__wrapper::after {
+  content: " ";
+  display: table;
+}
+.grow-profit__wrapper::after {
+  clear: both;
+}
+.grow-profit__img {
+  float: right;
+  width: 62%;
+}
+.grow-profit__txt {
+  float: left;
+  width: 38%;
+  display: table;
+  min-height: 322px;
+}
+.grow-profit__txt__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.grow-profit__title {
+  margin-bottom: 24px;
+  color: #fff;
+}
+.grow-profit__desc {
+  color: #e0e0e0;
+  max-width: 408px;
+  margin-bottom: 32px;
+}
+
 /* ==========================================================================
    Layouts Subscribe
    ========================================================================== */
@@ -2382,7 +2918,6 @@ Layouts Footer
 }
 .footer__bottom__sosmed {
   float: right;
-  margin: 6px 0;
 }
 @media only screen and (max-width: 575.86px) {
   .footer__bottom__sosmed {
@@ -2410,6 +2945,8 @@ Layouts Footer
 }
 .footer__bottom__sosmed__link {
   width: 42px;
+  height: 42px;
+  line-height: 40px;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;

@@ -22,5 +22,14 @@
     float: left;
     width: 33.3333333%;
     padding: 24px;
+    @include large {
+      padding: 16px;
+    }
+    @include medium {
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin-bottom: 32px;
+    }
   }
 }

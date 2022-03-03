@@ -3,7 +3,31 @@
   -------------------------------------------------------------------------------//
 
 //calculator
-
+.calculate
+  .container
+    .calculate__txt
+      h2.calculate__title Check how much you can earn
+      p.calculate__desc Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.
+    .calculate__box
+      form.calculate__rate(action='#' method='post')
+        .calculate__input
+          ='\n'
+          input.calculate__input-txt(type='text' name='calculateForm' id='calculateForm' placeholder='Enter your hash rate' autocomplete='off')
+          ='\n'
+          select.calculate__input-slct
+            option(value='1') TH/s
+            option(value='2') TH/m
+            option(value='3') TH/h
+            option(value='4') TH/mm
+        .calculate__btn
+          button.btn.btn--primary(type='button') Calculate
+      .calculate__estimated
+        h5.calculate__estimated__title Estimated 24 hour revenue:
+        h3.calculate__estimated__eth 0.055 130 59 eth
+          ='\n'
+          span.calculate__estimated__dollar ($1275)
+        p.calculate__estimated__revenue Revenue will change based on mining difficulty and Ethereum price.
+      
 
 ='\n'
 //end-calculator

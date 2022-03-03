@@ -1,3 +1,34 @@
 /* ==========================================================================
    Layouts Grow Profit
    ========================================================================== */
+
+.grow-profit {
+  padding: 64px 0 96px;
+  background-color: color(secondary);
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: right;
+    width: 62%;
+  }
+  &__txt {
+    float: left;
+    width: 38%;
+    display: table;
+    min-height: 322px;
+    &__wrapper {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: color(white);
+  }
+  &__desc {
+    color: color(grey, 1);
+    max-width: 408px;
+    margin-bottom: 32px;
+  }
+}

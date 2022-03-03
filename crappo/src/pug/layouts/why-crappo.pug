@@ -8,12 +8,17 @@
     .why-crappo__wrapper
       .why-crappo__img
         ='\n'
-        img(src='assets/img/dummy/'+wcu.img data=wcu.title)/
+        img.why-crappo__img__el(src='assets/img/dummy/'+wcu.img data=wcu.title)/
         ='\n'
       .why-crappo__txt
-        h3.why-crappo__title
-          | !{wcu.title}
-        p.why-crappo__desc
-          | !{wcu.desc}
+        .why-crappo__txt__wrapper
+          h3.why-crappo__title
+            | !{wcu.title}
+          p.why-crappo__desc
+            | !{wcu.desc}
+          .why-crappo__btn
+            ='\n'
+            a.btn.btn--primary(href='#learnMore') Learn More
+            ='\n'
 ='\n'
 //end-why-crappo

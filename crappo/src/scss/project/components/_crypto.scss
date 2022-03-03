@@ -10,8 +10,15 @@
   text-align: center;
   box-shadow: shadow(1);
   &:hover {
-    #{$cb}__box {
-      
+    #{$cb} {
+      .btn--round {
+        background-color: color(tertiary);
+        border-color: color(tertiary);
+        padding: 14px 16px 14px 24px;
+        color: color(white);
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+      }
     }
   }
   &__img {
