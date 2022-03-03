@@ -6,9 +6,10 @@
 .crypto
   .container
     .crypto__wrapper
-      h3.crypto__title
-        | !{dataCrypto.title}
-      .crypto__list
+      .crypto__head
+        h3.crypto__title
+          | !{dataCrypto.title}
+      .crypto__body
         each val in dataCrypto.list
           - data = val;
           include ../components/crypto.pug

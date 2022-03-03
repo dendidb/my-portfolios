@@ -191,6 +191,9 @@ Layouts Footer
       @include medium {
         margin-right: 16px;
       }
+      @include small {
+        margin-right: 8px;
+      }
     }
     &__link {
       width: 96px;
@@ -209,8 +212,8 @@ Layouts Footer
       }
     }
     &__img {
-      width: 40px;
       display: inline-block;
+      min-width: 40px;
     }
   }
   &__bottom {

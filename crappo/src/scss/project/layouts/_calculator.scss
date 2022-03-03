@@ -28,6 +28,9 @@
     @include font-size(h3);
     font-weight: fw(bold);
     color: color(white);
+    @include extra-small {
+      @include font-size(h4);
+    }
   }
   &__desc {
     @include font-size(h6);
@@ -41,7 +44,7 @@
     max-width: 942px;
     margin: 0 auto;
     padding: 48px;
-    // box-shadow: shadow(s7);
+    box-shadow: shadow(s6);
   }
   &__rate {
     margin-bottom: 96px;

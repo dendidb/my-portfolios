@@ -1055,12 +1055,6 @@ b {
     padding-right: 24px;
   }
 }
-@media only screen and (max-width: 575.86px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
 
 .main-site {
   -webkit-transition: all 0.3s ease;
@@ -1109,6 +1103,16 @@ b {
      -moz-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
           box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
 }
+@media only screen and (max-width: 991.98px) {
+  .crypto__box {
+    padding: 32px 16px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .crypto__box {
+    padding: 40px 16px;
+  }
+}
 .crypto__box:hover .crypto__box .btn--round {
   background-color: #3671e9;
   border-color: #3671e9;
@@ -1120,13 +1124,40 @@ b {
 .crypto__box__img {
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 575.86px) {
+  .crypto__box__img {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .crypto__box__img {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .crypto__box__img {
+    margin-bottom: 16px;
+  }
+}
 .crypto__box__img__el {
   width: 80px;
   display: block;
   margin: 0 auto;
 }
 .crypto__box__title {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+}
+@media only screen and (max-width: 575.86px) {
+  .crypto__box__title {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+.crypto__box__title__small {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #bdbdbd;
 }
 .crypto__box__desc {
   color: #828282;
@@ -2257,6 +2288,12 @@ Layouts Number
   font-weight: 700;
   color: #fff;
 }
+@media only screen and (max-width: 575.86px) {
+  .calculate__title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
 .calculate__desc {
   font-size: 1.6rem;
   line-height: 2.8rem;
@@ -2272,6 +2309,9 @@ Layouts Number
   max-width: 942px;
   margin: 0 auto;
   padding: 48px;
+  -webkit-box-shadow: shadow(s6);
+     -moz-box-shadow: shadow(s6);
+          box-shadow: shadow(s6);
 }
 .calculate__rate {
   margin-bottom: 96px;
@@ -2353,6 +2393,16 @@ Layouts Number
   padding: 80px 0;
   background-color: #f8f9fb;
 }
+@media only screen and (max-width: 1199.98px) {
+  .crypto {
+    padding: 32px 0 56px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .crypto {
+    padding: 24px 0 40px;
+  }
+}
 .crypto__wrapper::before, .crypto__wrapper::after {
   content: " ";
   display: table;
@@ -2360,14 +2410,22 @@ Layouts Number
 .crypto__wrapper::after {
   clear: both;
 }
-.crypto__title {
+.crypto__head {
   max-width: 740px;
   margin: 0 auto 40px;
+}
+.crypto__title {
+  margin-bottom: 0;
   text-align: center;
 }
-.crypto__list {
-  margin-left: -24px;
-  margin-right: -24px;
+@media only screen and (max-width: 575.86px) {
+  .crypto__title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+.crypto__body {
+  font-size: 0;
 }
 .crypto .crypto__item {
   float: left;
@@ -2384,6 +2442,17 @@ Layouts Number
     width: 100%;
     display: block;
     margin-bottom: 32px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .crypto .crypto__item {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .crypto .crypto__item {
+    margin-bottom: 24px;
   }
 }
 
@@ -2427,6 +2496,7 @@ Layouts Number
   line-height: 6rem;
   color: #fff;
   font-weight: 700;
+  margin-bottom: 0;
 }
 @media only screen and (max-width: 575.86px) {
   .market__head__title {
@@ -2965,6 +3035,11 @@ Layouts Footer
     margin-right: 16px;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .footer__payments__item {
+    margin-right: 8px;
+  }
+}
 .footer__payments__link {
   width: 96px;
   height: 64px;
@@ -2987,8 +3062,8 @@ Layouts Footer
   background-color: #3671e9;
 }
 .footer__payments__img {
-  width: 40px;
   display: inline-block;
+  min-width: 40px;
 }
 .footer__bottom {
   text-align: left;

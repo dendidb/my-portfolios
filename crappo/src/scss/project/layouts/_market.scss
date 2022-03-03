@@ -25,8 +25,9 @@
       @include font-size(h2);
       color: color(white);
       font-weight: fw(bold);
+      margin-bottom: 0;
       @include extra-small {
-          @include font-size(h4);
+        @include font-size(h4);
       }
     }
   }
