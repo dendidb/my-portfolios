@@ -11,7 +11,6 @@ Layouts Footer
   left: 0;
   width: 100%;
   padding: 80px 0;
-  z-index: zi(footer);
   @include large {
     padding: 64px 0;
   }
@@ -37,16 +36,17 @@ Layouts Footer
   }
   &__logo {
     float: left;
+    display: inline-block;
     @include remove-tap-highlight;
     @include medium {
       float: none;
     }
     &__el {
       display: block;
-      height: 40px;
       @include medium {
-        height: 32px;
-        margin-bottom: 32px;
+        height: 40px;
+        margin-bottom: 24px;
+        display: block;
       }
     }
   }
@@ -164,6 +164,9 @@ Layouts Footer
     list-style: none;
     padding: 0;
     margin: 0;
+    @include medium {
+      max-width: 336px;
+    }
     @include small {
       float: none;
       max-width: initial;
@@ -185,8 +188,8 @@ Layouts Footer
       vertical-align: middle;
       margin-right: 24px;
       @include remove-tap-highlight;
-      @include extra-small {
-        margin-right: 8px;
+      @include medium {
+        margin-right: 16px;
       }
     }
     &__link {
@@ -237,7 +240,7 @@ Layouts Footer
         vertical-align: middle;
         margin-right: 16px;
         @include extra-small {
-          margin-right: 12px;
+          margin-right: px;
           &:last-child {
             margin-right: 0;
           }

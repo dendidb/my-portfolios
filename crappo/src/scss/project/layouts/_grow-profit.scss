@@ -5,26 +5,44 @@
 .grow-profit {
   padding: 64px 0 96px;
   background-color: color(secondary);
+  @include medium {
+    padding: 40px 0 72px;
+  }
   &__wrapper {
     @include clearfix;
   }
   &__img {
     float: right;
     width: 62%;
+    @include medium {
+      width: 100%;
+      margin-bottom: 24px;
+    }
   }
   &__txt {
     float: left;
     width: 38%;
     display: table;
     min-height: 322px;
+    @include medium {
+      width: 100%;
+      min-height: initial;
+    }
     &__wrapper {
       display: table-cell;
       vertical-align: middle;
+      @include medium {
+        vertical-align: top;
+      }
     }
   }
   &__title {
     margin-bottom: 24px;
     color: color(white);
+    @include font-size(h3);
+    @include extra-small {
+      @include font-size(h4);
+    }
   }
   &__desc {
     color: color(grey, 1);

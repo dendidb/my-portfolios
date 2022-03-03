@@ -4,7 +4,7 @@
 
 .subscribe {
   padding: 88px 0;
-  background-image: color(gradient-subscribe);
+  background: color(gradient-subscribe);
   position: relative;
   @include medium {
     padding: 40px 0;

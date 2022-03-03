@@ -9,4 +9,5 @@ $shadow: (
   3: 0 4px 48px map-get($colors, shadow-hover),
   4: 0 4px 64px map-get($colors, shadow),
   5: 0 4px 72px map-get($colors, shadow-hover),
+  6: 0 20px 200px 0 map-get($colors, shadow-hover),
 );

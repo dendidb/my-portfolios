@@ -10,7 +10,7 @@
   border: none;
   text-decoration: none;
   font-weight: fw(regular);
-  @include font-size(h5);
+  @include font-size(h6);
   border: 1px solid transparent;
   text-align: center;
   @include remove-tap-highlight;
@@ -19,7 +19,6 @@
   transition: all .3s ease;
   @include extra-small {
     padding: 8px 0;
-    display: block;
     min-height: 20px;
   }
   &--primary {

@@ -28,6 +28,10 @@
       width: 180px;
       height: 180px;
     }
+    @include extra-small {
+      width: 180px;
+      height: 180px;
+    }
   }
   &::after {
     content: "";
@@ -87,6 +91,15 @@
     @include font-size(h3);
     font-weight: fw(bold);
     color: color(white);
+    @include medium {
+      margin-bottom: 16px;
+    }
+    @include small {
+      margin-bottom: 8px;
+    }
+    @include extra-small {
+      @include font-size(h4);
+    }
   }
   &__desc {
     @include font-size(h6);

@@ -6,6 +6,9 @@
   padding: 64px 0;
   background-color: color(secondary);
   overflow: hidden;
+  @include medium {
+    padding: 48px 0;
+  }
   &__wrapper {
     @include clearfix;
     position: relative;
@@ -14,17 +17,36 @@
     position: absolute;
     left: -139px;
     width: 59%;
+    @include large {
+      padding: -30px;
+    }
+    @include medium {
+      width: 100%;
+      position: static;
+      margin-bottom: 24px;
+    }
   }
   &__txt {
     float: right;
     width: 41%;
     padding: 120px 0;
+    @include large {
+      padding: 64px 0;
+    }
+    @include medium {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
   }
   &__title {
     margin-bottom: 24px;
     color: color(white);
     @include font-size(h3);
     font-weight: fw(bold);
+    @include extra-small {
+      @include font-size(h4);
+    }
   }
   &__desc {
     margin-bottom: 32px;
