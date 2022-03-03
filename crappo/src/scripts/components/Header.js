@@ -27,7 +27,7 @@ const Header = (() => {
 
   // --- handleDestroyMobileMenu
   const handleDestroyMobileMenu = () => {
-    if ($(window).width() >= 992) {
+    if ($(window).width() >= 767) {
       if ($('body').hasClass('show-menu')) {
         Scrolllable.enable();
         $('body').removeClass('show-menu');

@@ -171,7 +171,7 @@ var Header = function () {
 
 
   var handleDestroyMobileMenu = function handleDestroyMobileMenu() {
-    if ($(window).width() >= 992) {
+    if ($(window).width() >= 767) {
       if ($('body').hasClass('show-menu')) {
         _utilities.Scrolllable.enable();
 
