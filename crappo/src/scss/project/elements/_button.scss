@@ -43,6 +43,9 @@
     background-color: color(tertiary);
     border-color: color(tertiary);
     color: color(white);
+    @include extra-small {
+      width: 100%;
+    }
     &:hover {
       background-color: transparent;
       border-color: color(tertiary);

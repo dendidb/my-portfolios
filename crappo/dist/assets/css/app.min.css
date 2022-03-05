@@ -1514,6 +1514,11 @@ b {
   border-color: #3671e9;
   color: #fff;
 }
+@media only screen and (max-width: 575.86px) {
+  .btn--calculate {
+    width: 100%;
+  }
+}
 .btn--calculate:hover {
   background-color: transparent;
   border-color: #3671e9;
@@ -2323,6 +2328,11 @@ Layouts Number
      -moz-box-shadow: 0 20px 200px 0 rgba(57, 23, 119, 0.05);
           box-shadow: 0 20px 200px 0 rgba(57, 23, 119, 0.05);
 }
+@media only screen and (max-width: 767.98px) {
+  .calculate__box {
+    padding: 24px;
+  }
+}
 .calculate__rate {
   margin-bottom: 96px;
   font-size: 0;
@@ -2348,9 +2358,12 @@ Layouts Number
   vertical-align: middle;
   padding-right: 48px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .calculate__input {
     width: 100%;
+    display: block;
+    padding-right: 0;
+    margin-bottom: 16px;
   }
 }
 .calculate__input-txt {
@@ -2383,6 +2396,15 @@ Layouts Number
   color: #0d0d2b;
   -webkit-text-fill-color: #0d0d2b;
 }
+@media only screen and (max-width: 575.86px) {
+  .calculate__input-txt {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-right: 0;
+  }
+}
 .calculate__input-slct {
   display: inline-block;
   vertical-align: middle;
@@ -2407,12 +2429,11 @@ Layouts Number
   padding-bottom: 8px;
   background-color: transparent;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 575.86px) {
   .calculate__input-slct {
-    margin-right: 0;
-    margin-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
     width: 100%;
-    display: block;
   }
 }
 .calculate__btn {
@@ -2420,16 +2441,33 @@ Layouts Number
   display: inline-block;
   vertical-align: middle;
 }
+@media only screen and (max-width: 991.98px) {
+  .calculate__btn {
+    width: 100%;
+  }
+}
 .calculate__estimated__title {
   text-transform: uppercase;
   font-weight: 500;
   color: #3671e9;
   margin-bottom: 16px;
 }
+@media only screen and (max-width: 767.98px) {
+  .calculate__estimated__title {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
 .calculate__estimated__eth {
   text-transform: uppercase;
   margin-bottom: 4px;
   color: #0d0d2b;
+}
+@media only screen and (max-width: 767.98px) {
+  .calculate__estimated__eth {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
 }
 .calculate__estimated__dollar {
   color: #3671e9;

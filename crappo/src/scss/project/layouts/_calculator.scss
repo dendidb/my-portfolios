@@ -45,6 +45,9 @@
     margin: 0 auto;
     padding: 48px;
     box-shadow: 0 20px 200px 0 rgba(57, 23, 119, .05);
+    @include small {
+      padding: 24px;
+    }
   }
   &__rate {
     margin-bottom: 96px;
@@ -64,8 +67,11 @@
     display: inline-block;
     vertical-align: middle;
     padding-right: 48px;
-    @include small {
+    @include medium {
       width: 100%;
+      display: block;
+      padding-right: 0;
+      margin-bottom: 16px;
     }
     &-txt {
       display: inline-block;
@@ -83,6 +89,12 @@
       &:placeholder-shown {
         color: color(primary);
         -webkit-text-fill-color: color(primary);
+      }
+      @include extra-small {
+        width: 100%;
+        margin-bottom: 16px;
+        @include font-size(h6);
+        margin-right: 0;
       }
     }
     &-slct {
@@ -104,11 +116,9 @@
       border-bottom: 1px solid color(grey, 1);
       padding-bottom: 8px;
       background-color: transparent;
-      @include small {
-        margin-right: 0;
-        margin-bottom: 16px;
+      @include extra-small {
+        @include font-size(h6);
         width: 100%;
-        display: block;
       }
     }
   }
@@ -116,6 +126,9 @@
     width: 17.5%;
     display: inline-block;
     vertical-align: middle;
+    @include medium {
+      width: 100%;
+    }
   }
   &__estimated {
     &__title {
@@ -123,11 +136,17 @@
       font-weight: 500;
       color: color(tertiary);
       margin-bottom: 16px;
+      @include small {
+        @include font-size(h6);
+      }
     }
     &__eth {
       text-transform: uppercase;
       margin-bottom: 4px;
       color: color(primary);
+      @include small {
+        @include font-size(h4);
+      }
     }
     &__dollar {
       color: color(tertiary);
