@@ -1509,6 +1509,16 @@ b {
   border-color: #fff;
   color: #fff;
 }
+.btn--calculate {
+  background-color: #3671e9;
+  border-color: #3671e9;
+  color: #fff;
+}
+.btn--calculate:hover {
+  background-color: transparent;
+  border-color: #3671e9;
+  color: #3671e9;
+}
 
 /* ==========================================================================
    Init: Section Title
@@ -2309,13 +2319,39 @@ Layouts Number
   max-width: 942px;
   margin: 0 auto;
   padding: 48px;
-  -webkit-box-shadow: shadow(s6);
-     -moz-box-shadow: shadow(s6);
-          box-shadow: shadow(s6);
+  -webkit-box-shadow: 0 20px 200px 0 rgba(57, 23, 119, 0.05);
+     -moz-box-shadow: 0 20px 200px 0 rgba(57, 23, 119, 0.05);
+          box-shadow: 0 20px 200px 0 rgba(57, 23, 119, 0.05);
 }
 .calculate__rate {
   margin-bottom: 96px;
   font-size: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .calculate__rate {
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .calculate__rate {
+    margin-bottom: 54px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .calculate__rate {
+    margin-bottom: 40px;
+  }
+}
+.calculate__input {
+  width: 82.5%;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 48px;
+}
+@media only screen and (max-width: 767.98px) {
+  .calculate__input {
+    width: 100%;
+  }
 }
 .calculate__input-txt {
   display: inline-block;
@@ -2360,6 +2396,24 @@ Layouts Number
           appearance: none;
   background-repeat: no-repeat;
   background-position: right center;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #0d0d2b;
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  background-color: transparent;
+}
+@media only screen and (max-width: 767.98px) {
+  .calculate__input-slct {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    display: block;
+  }
 }
 .calculate__btn {
   width: 17.5%;

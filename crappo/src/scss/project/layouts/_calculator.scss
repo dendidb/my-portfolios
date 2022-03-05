@@ -44,13 +44,29 @@
     max-width: 942px;
     margin: 0 auto;
     padding: 48px;
-    box-shadow: shadow(s6);
+    box-shadow: 0 20px 200px 0 rgba(57, 23, 119, .05);
   }
   &__rate {
     margin-bottom: 96px;
     font-size: 0;
+    @include large {
+      margin-bottom: 72px;
+    }
+    @include medium {
+      margin-bottom: 54px;
+    }
+    @include small {
+      margin-bottom: 40px;
+    }
   }
   &__input {
+    width: 82.5%;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 48px;
+    @include small {
+      width: 100%;
+    }
     &-txt {
       display: inline-block;
       vertical-align: middle;
@@ -79,6 +95,21 @@
       appearance: none;
       background-repeat: no-repeat;
       background-position: right center;
+      @include font-size(h6);
+      color: color(primary);
+      border: 0;
+      outline: 0;
+      font-size: 2rem;
+      line-height: 3rem;
+      border-bottom: 1px solid color(grey, 1);
+      padding-bottom: 8px;
+      background-color: transparent;
+      @include small {
+        margin-right: 0;
+        margin-bottom: 16px;
+        width: 100%;
+        display: block;
+      }
     }
   }
   &__btn {

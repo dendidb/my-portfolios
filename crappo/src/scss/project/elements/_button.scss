@@ -39,4 +39,14 @@
       color: color(white);
     }
   }
+  &--calculate {
+    background-color: color(tertiary);
+    border-color: color(tertiary);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      border-color: color(tertiary);
+      color: color(tertiary);
+    }
+  }
 }
