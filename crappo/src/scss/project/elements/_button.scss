@@ -52,4 +52,29 @@
       color: color(tertiary);
     }
   }
+  &--round {
+    background-color: color(tertiary);
+    border-color: rgba(43,7,110,.2);
+    min-width: initial;
+    font-size: 0;
+    padding: 14px 16px 14px 24px;
+    border-radius: 30px;
+  }
+  &__txt {
+    @include font-size(h5);
+    color: color(white);
+    vertical-align: middle;
+    margin-right: 24px;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: color(white);
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../img/icons/arrow-right-small.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

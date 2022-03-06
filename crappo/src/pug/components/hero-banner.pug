@@ -4,25 +4,29 @@
 
 //hero-banner-item
 .hero-banner__item
-  .hero-banner__img
-    ='\n'
-    img.hero-banner__img__el(src='assets/img/dummy/'+val.img alt=val.title)/
-    ='\n'
-  .hero-banner__txt
-    .hero-banner__info
-      p.hero-banner__info__sale
-        | !{val.infoSale}
-      ='\n'
-      span.hero-banner__info__desc
-        | !{val.infoDesc}
-      ='\n'
-    h2.hero-banner__title
-      | !{val.title}
-    p.hero-banner__desc
-      | !{val.desc}
-  .hero-banner__btn
-    ='\n'
-    a.btn.btn--primary(href='#')
-      | !{val.button.text}
-    ='\n'
-
+  .container
+    .hero-banner__content
+      .hero-banner__img
+        ='\n'
+        img.hero-banner__img__el(src='assets/img/dummy/'+val.img alt=val.title)/
+        ='\n'
+      .hero-banner__txt
+        .hero-banner__info
+          p.hero-banner__info__sale
+            | !{val.infoSale}
+          ='\n'
+          span.hero-banner__info__desc
+            | !{val.infoDesc}
+          ='\n'
+        h2.hero-banner__title
+          | !{val.title}
+        p.hero-banner__desc
+          | !{val.desc}
+        .hero-banner__btn
+          ='\n'
+          a.btn.btn--round(href=val.button.to)
+            ='\n'
+            span.btn__txt !{val.button.text}
+            ='\n'
+            span.btn__icon
+            ='\n'

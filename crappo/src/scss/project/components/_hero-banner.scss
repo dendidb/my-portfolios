@@ -1,3 +1,80 @@
 /* ==========================================================================
    Components Hero Banner
    ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  @include clearfix;
+  #{$hb} {
+    &__item {
+      width: 100%;
+      display: inline-block;
+    }
+    &__img {
+      width: 50%;
+      float: right;
+      @include medium {
+        width: 100%;
+        float: none;
+      }
+      &__el {
+        display: block;
+      }
+    }
+    &__txt {
+      width: 50%;
+      float: left;
+      padding: 64px 0;
+      @include medium {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &__info {
+      border-radius: 32px;
+      margin-bottom: 24px;
+      max-width: 365px;
+      background-color: rgba(255, 255, 255, .1);
+      padding: 4px 12px 4px 4px;
+      height: 40px;
+      &__sale {
+        text-transform: uppercase;
+        display: inline-block;
+        color: color(primary);
+        padding: 2px 16px;
+        max-width: 112px;
+        font-weight: 500;
+        border-radius: 32px;
+        background-color: color(white);
+        margin-right: 16px;
+        @include font-size(h6);
+        @include medium {
+          max-width: initial;
+        }
+      }
+      &__desc {
+        color: color(white);
+        @include font-size(h6);
+        @include medium {
+          @include font-size(label);
+        }
+      }
+    }
+    &__title {
+      @include font-size(h1);
+      color: color(white);
+      @include medium {
+        @include font-size(h3);
+      }
+    }
+    &__desc {
+      max-width: 430px;
+      margin-bottom: 32px;
+      color: color(grey, 1);
+      @include medium {
+        max-width: initial;
+      }
+    }
+  }
+}

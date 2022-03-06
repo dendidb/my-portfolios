@@ -1080,6 +1080,105 @@ b {
 /* ==========================================================================
    Components Hero Banner
    ========================================================================== */
+.hero-banner::before, .hero-banner::after {
+  content: " ";
+  display: table;
+}
+.hero-banner::after {
+  clear: both;
+}
+.hero-banner .hero-banner__item {
+  width: 100%;
+  display: inline-block;
+}
+.hero-banner .hero-banner__img {
+  width: 50%;
+  float: right;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__img {
+    width: 100%;
+    float: none;
+  }
+}
+.hero-banner .hero-banner__img__el {
+  display: block;
+}
+.hero-banner .hero-banner__txt {
+  width: 50%;
+  float: left;
+  padding: 64px 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__txt {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+.hero-banner .hero-banner__info {
+  -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
+          border-radius: 32px;
+  margin-bottom: 24px;
+  max-width: 365px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px 4px 4px;
+  height: 40px;
+}
+.hero-banner .hero-banner__info__sale {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #0d0d2b;
+  padding: 2px 16px;
+  max-width: 112px;
+  font-weight: 500;
+  -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
+          border-radius: 32px;
+  background-color: #fff;
+  margin-right: 16px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__info__sale {
+    max-width: initial;
+  }
+}
+.hero-banner .hero-banner__info__desc {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__info__desc {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+.hero-banner .hero-banner__title {
+  font-size: 6.4rem;
+  line-height: 7.2rem;
+  color: #fff;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+}
+.hero-banner .hero-banner__desc {
+  max-width: 430px;
+  margin-bottom: 32px;
+  color: #e0e0e0;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__desc {
+    max-width: initial;
+  }
+}
+
 /* ==========================================================================
    Components Number
    ========================================================================== */
@@ -1163,6 +1262,20 @@ b {
   color: #828282;
   margin-bottom: 24px;
 }
+.crypto__box__btn__icon {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ==========================================================================
    Components Market
    ========================================================================== */
@@ -1523,6 +1636,36 @@ b {
   background-color: transparent;
   border-color: #3671e9;
   color: #3671e9;
+}
+.btn--round {
+  background-color: #3671e9;
+  border-color: rgba(43, 7, 110, 0.2);
+  min-width: initial;
+  font-size: 0;
+  padding: 14px 16px 14px 24px;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+}
+.btn__txt {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #fff;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+.btn__icon {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ==========================================================================
@@ -2002,6 +2145,104 @@ b {
 /* ==========================================================================
    Layouts Hero Banner
    ========================================================================== */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+}
+.hero-banner::before, .hero-banner::after {
+  content: " ";
+  display: table;
+}
+.hero-banner::after {
+  clear: both;
+}
+.hero-banner__img {
+  opacity: 0;
+  -webkit-transform: translateY(-16px);
+     -moz-transform: translateY(-16px);
+      -ms-transform: translateY(-16px);
+       -o-transform: translateY(-16px);
+          transform: translateY(-16px);
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.hero-banner__info, .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
+  opacity: 0;
+  -webkit-transform: translateY(16px);
+     -moz-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+       -o-transform: translateY(16px);
+          transform: translateY(16px);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.hero-banner--single .hero-banner__img,
+.hero-banner .owl-item.active .hero-banner__img {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 3.5 ease, -webkit-transform 2s ease;
+  transition: opacity 3.5 ease, -webkit-transform 2s ease;
+  -o-transition: opacity 3.5 ease, -o-transform 2s ease;
+  -moz-transition: opacity 3.5 ease, transform 2s ease, -moz-transform 2s ease;
+  transition: opacity 3.5 ease, transform 2s ease;
+  transition: opacity 3.5 ease, transform 2s ease, -webkit-transform 2s ease, -moz-transform 2s ease, -o-transform 2s ease;
+  -webkit-transition-delay: 0.8s;
+     -moz-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+.hero-banner--single .hero-banner__info, .hero-banner--single .hero-banner__title, .hero-banner--single .hero-banner__desc, .hero-banner--single .hero-banner__btn,
+.hero-banner .owl-item.active .hero-banner__info,
+.hero-banner .owl-item.active .hero-banner__title,
+.hero-banner .owl-item.active .hero-banner__desc,
+.hero-banner .owl-item.active .hero-banner__btn {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: all 1.75s ease;
+  -o-transition: all 1.75s ease;
+  -moz-transition: all 1.75s ease;
+  transition: all 1.75s ease;
+}
+.hero-banner--single .hero-banner__info,
+.hero-banner .owl-item.active .hero-banner__info {
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.hero-banner--single .hero-banner__title,
+.hero-banner .owl-item.active .hero-banner__title {
+  -webkit-transition-delay: 1.2s;
+     -moz-transition-delay: 1.2s;
+       -o-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+.hero-banner--single .hero-banner__desc,
+.hero-banner .owl-item.active .hero-banner__desc {
+  -webkit-transition-delay: 1.6s;
+     -moz-transition-delay: 1.6s;
+       -o-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+.hero-banner--single .hero-banner__desc__btn,
+.hero-banner .owl-item.active .hero-banner__desc__btn {
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
 /* ==========================================================================
 Layouts Number
 ========================================================================== */

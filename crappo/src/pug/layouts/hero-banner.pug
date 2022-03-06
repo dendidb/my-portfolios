@@ -3,11 +3,9 @@
   -------------------------------------------------------------------------------//
 
 //hero-banner
-.hero-banner
-  .container
-    .hero-banner__content
-      each val in dataBanner.list
-        - data = val;
-        include ../components/hero-banner.pug
+.hero-banner.js-slide-banner
+  each val in dataBanner.list
+    - data = val;
+    include ../components/hero-banner.pug
 ='\n'
 //end-hero-banner

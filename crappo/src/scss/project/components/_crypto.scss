@@ -60,6 +60,16 @@
     margin-bottom: 24px;
   }
   &__btn {
-
+    &__icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-image: url(../img/icons/arrow-right-small.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }

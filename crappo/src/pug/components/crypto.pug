@@ -21,8 +21,11 @@
       | !{val.desc}
     .crypto__box__btn
       ='\n'
-      a.btn.btn--primary(href=val.button.to)
-        | !{val.button.text}
-      ='\n'
+      a.btn.btn--round(href=val.button.to)
+        ='\n'
+        span.btn__txt !{val.button.text}
+        ='\n'
+        span.btn__icon
+        ='\n'
 ='\n'
 //end-crypto

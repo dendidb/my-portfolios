@@ -34,13 +34,15 @@ var App = function () {
       _utilities.BrowserCheck.init(); // --- Project
 
 
+      _components.Header.init();
+
+      _components.HeroBanner.init();
+
       _components.WindowResize.init();
 
       _components.WindowScroll.init();
 
       _components.Footer.init();
-
-      _components.Header.init();
     })(jQuery);
   }; // --- load
 
@@ -66,7 +68,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":6,"./utilities":10}],2:[function(require,module,exports){
+},{"./components":7,"./utilities":11}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -195,7 +197,77 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":10}],4:[function(require,module,exports){
+},{"../utilities":11}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _utilities = require("../utilities");
+
+/* ------------------------------------------------------------------------------
+@name: Hero Banner
+@description: Hero Banner
+--------------------------------------------------------------------------------- */
+// --- utilities
+var HeroBanner = function () {
+  // handleRunCarousel
+  var handleRunCarousel = function handleRunCarousel() {
+    var _selector = $('.js-slide-banner');
+
+    var _itemLength = $('.js-slide-banner .hero-banner__item').length;
+    var _itemRun = 1; // destroyCarousel
+
+    if (_selector.hasClass('owl-carousel')) {
+      _selector.owlCarousel('destroy').removeClass('owl-carousel');
+    } // --- check if itemLength > itemRun
+
+
+    if (_itemLength > _itemRun) {
+      // -- init carousel
+      _selector.addClass('owl-carousel').owlCarousel({
+        items: 1,
+        rewind: true,
+        autoplay: true,
+        autoHeight: true,
+        dots: false,
+        nav: false,
+        loop: false,
+        touchDrag: true,
+        mouseDrag: false,
+        autoplayHoverPause: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayTimeout: 4000,
+        dotsSpeed: 4000,
+        autoplaySpeed: 4000,
+        dragEndSpeed: 4000
+      });
+    } else {
+      if (_selector.hasClass('owl-carousel')) {
+        _selector.removeClass('owl-carousel');
+      }
+
+      _selector.addClass('hero-banner--single');
+    }
+  }; // init
+
+
+  var init = function init() {
+    handleRunCarousel();
+  };
+
+  return {
+    init: init
+  };
+}();
+
+var _default = HeroBanner;
+exports["default"] = _default;
+
+},{"../utilities":11}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -260,7 +332,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":6}],5:[function(require,module,exports){
+},{"./index":7}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -344,7 +416,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -362,6 +434,12 @@ Object.defineProperty(exports, "Header", {
     return _Header["default"];
   }
 });
+Object.defineProperty(exports, "HeroBanner", {
+  enumerable: true,
+  get: function get() {
+    return _HeroBanner["default"];
+  }
+});
 Object.defineProperty(exports, "WindowResize", {
   enumerable: true,
   get: function get() {
@@ -375,17 +453,19 @@ Object.defineProperty(exports, "WindowScroll", {
   }
 });
 
-var _Footer = _interopRequireDefault(require("./Footer"));
-
 var _Header = _interopRequireDefault(require("./Header"));
+
+var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
 var _WindowResize = _interopRequireDefault(require("./WindowResize"));
 
 var _WindowScroll = _interopRequireDefault(require("./WindowScroll"));
 
+var _Footer = _interopRequireDefault(require("./Footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Footer":2,"./Header":3,"./WindowResize":4,"./WindowScroll":5}],7:[function(require,module,exports){
+},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./WindowResize":5,"./WindowScroll":6}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -431,7 +511,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -465,7 +545,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -591,7 +671,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":13}],10:[function(require,module,exports){
+},{"../variables":14}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -632,7 +712,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":7,"./Scrolllable":8,"./Validation":9,"./isOS":11}],11:[function(require,module,exports){
+},{"./BrowserCheck":8,"./Scrolllable":9,"./Validation":10,"./isOS":12}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -673,7 +753,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -698,7 +778,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -718,6 +798,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":12}]},{},[1])
+},{"./Regex":13}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

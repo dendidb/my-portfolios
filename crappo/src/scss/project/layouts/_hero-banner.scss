@@ -1,3 +1,62 @@
 /* ==========================================================================
    Layouts Hero Banner
    ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  position: relative;
+  @include clearfix;
+  overflow: hidden;
+  &__img {
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: all 1s ease 0s;
+  }
+
+  &__info,
+  &__title,
+  &__desc,
+  &__btn {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all .5s ease 0s;
+  }
+
+  &--single,
+  .owl-item.active {
+    #{$hb} {
+      &__img {
+        opacity: 1;
+        transform: none;
+        transition: opacity 3.5 ease, transform 2s ease;
+        transition-delay: .8s;
+      }
+
+      &__info,
+      &__title,
+      &__desc,
+      &__btn {
+        opacity: 1;
+        transform: none;
+        transition: all 1.75s ease;
+      }
+
+      &__info {
+        transition-delay: .6s;
+      }
+      &__title {
+        transition-delay: 1.2s;
+      }
+      &__desc {
+        transition-delay: 1.6s;
+        
+      &__btn {
+        transition-delay: 2s;
+      }
+    }
+  }
+    &.owl-carousel {
+      
+    }
+  }
+}

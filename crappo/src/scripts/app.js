@@ -6,10 +6,11 @@ import {
 
 // --- components
 import {
+  Header,
+  HeroBanner,
   WindowResize,
   WindowScroll,
   Footer,
-  Header,
 } from 'components';
 
 // --- App
@@ -38,10 +39,11 @@ const App = (() => {
       BrowserCheck.init();
 
       // --- Project
+      Header.init();
+      HeroBanner.init();
       WindowResize.init();
       WindowScroll.init();
       Footer.init();
-      Header.init();
     })(jQuery);
   }
 

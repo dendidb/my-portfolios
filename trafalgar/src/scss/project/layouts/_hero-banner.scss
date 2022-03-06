@@ -8,14 +8,14 @@
   &__item {
     &::before {
       opacity: 0;
-      transform: translateY(-32px);
+      transform: translateX(-32px);
       transition: all 1.75s ease;
     }
   }
 
   &__img__el {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateX(-32px);
     transition: all 1s ease 0s;
   }
 
@@ -23,7 +23,7 @@
   &__desc,
   &__btn {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateX(32px);
     transition: all .5s ease 0s;
   }
 

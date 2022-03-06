@@ -1,3 +1,16 @@
 /* ==========================================================================
    Layouts Hero Banner
    ========================================================================== */
+
+.hero-banner {
+  @include clearfix;
+  color: color(white);
+  padding: 24px 0 104px;
+  background-image: url(../img/bg/headline-bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  &__content {
+    background-color: salmon;
+  }
+}

@@ -3,14 +3,16 @@
 @description: Indexing all components
 --------------------------------------------------------------------------------- */
 
-import Footer from "./Footer";
 import Header from "./Header";
+import HeroBanner from "./HeroBanner";
 import WindowResize from "./WindowResize";
 import WindowScroll from "./WindowScroll";
+import Footer from "./Footer";
 
 export {
-  Footer,
   Header,
+  HeroBanner,
   WindowScroll,
   WindowResize,
+  Footer,
 };
