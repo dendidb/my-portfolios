@@ -32,9 +32,9 @@ const HeroBanner = (() => {
         dots: false,
         nav: false,
         loop: false,
-        touchDrag: true,
+        touchDrag: false,
         mouseDrag: false,
-        autoplayHoverPause: true,
+        autoplayHoverPause: false,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         autoplayTimeout: 4000,
@@ -42,6 +42,7 @@ const HeroBanner = (() => {
         autoplaySpeed: 4000,
         dragEndSpeed: 450
       });
+      
     } else {
         if(_selector.hasClass('owl-carousel')) {
           _selector.removeClass('owl-carousel');

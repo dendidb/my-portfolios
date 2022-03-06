@@ -7,9 +7,10 @@
   position: relative;
   @include clearfix;
   overflow: hidden;
+  padding: 24px 0 104px;
   &__img {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateY(-32px);
     transition: all 1s ease 0s;
   }
 
@@ -18,7 +19,7 @@
   &__desc,
   &__btn {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(-32px);
     transition: all .5s ease 0s;
   }
 
@@ -28,8 +29,8 @@
       &__img {
         opacity: 1;
         transform: none;
-        transition: opacity 3.5 ease, transform 2s ease;
-        transition-delay: .8s;
+        transition: opacity 1.5 ease, transform 1.6s ease;
+        transition-delay: .4s;
       }
 
       &__info,
@@ -49,14 +50,10 @@
       }
       &__desc {
         transition-delay: 1.6s;
-        
-      &__btn {
-        transition-delay: 2s;
       }
-    }
-  }
-    &.owl-carousel {
-      
+      &__btn {
+        transition-delay: 1.8s;
+      }
     }
   }
 }

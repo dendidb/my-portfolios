@@ -5,11 +5,11 @@
 .hero-banner {
   $hb: &;
   @include clearfix;
+  background-image: url(../img/bg/headline-bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   #{$hb} {
-    &__item {
-      width: 100%;
-      display: inline-block;
-    }
     &__img {
       width: 50%;
       float: right;

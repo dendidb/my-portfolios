@@ -1080,16 +1080,19 @@ b {
 /* ==========================================================================
    Components Hero Banner
    ========================================================================== */
+.hero-banner {
+  background-image: url(../img/bg/headline-bg.png);
+  -moz-background-size: auto 100%;
+       background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 .hero-banner::before, .hero-banner::after {
   content: " ";
   display: table;
 }
 .hero-banner::after {
   clear: both;
-}
-.hero-banner .hero-banner__item {
-  width: 100%;
-  display: inline-block;
 }
 .hero-banner .hero-banner__img {
   width: 50%;
@@ -2148,6 +2151,7 @@ b {
 .hero-banner {
   position: relative;
   overflow: hidden;
+  padding: 24px 0 104px;
 }
 .hero-banner::before, .hero-banner::after {
   content: " ";
@@ -2158,11 +2162,11 @@ b {
 }
 .hero-banner__img {
   opacity: 0;
-  -webkit-transform: translateY(-16px);
-     -moz-transform: translateY(-16px);
-      -ms-transform: translateY(-16px);
-       -o-transform: translateY(-16px);
-          transform: translateY(-16px);
+  -webkit-transform: translateY(-32px);
+     -moz-transform: translateY(-32px);
+      -ms-transform: translateY(-32px);
+       -o-transform: translateY(-32px);
+          transform: translateY(-32px);
   -webkit-transition: all 1s ease 0s;
   -o-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;
@@ -2170,11 +2174,11 @@ b {
 }
 .hero-banner__info, .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
   opacity: 0;
-  -webkit-transform: translateY(16px);
-     -moz-transform: translateY(16px);
-      -ms-transform: translateY(16px);
-       -o-transform: translateY(16px);
-          transform: translateY(16px);
+  -webkit-transform: translateY(-32px);
+     -moz-transform: translateY(-32px);
+      -ms-transform: translateY(-32px);
+       -o-transform: translateY(-32px);
+          transform: translateY(-32px);
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -2188,16 +2192,16 @@ b {
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-  -webkit-transition: opacity 3.5 ease, -webkit-transform 2s ease;
-  transition: opacity 3.5 ease, -webkit-transform 2s ease;
-  -o-transition: opacity 3.5 ease, -o-transform 2s ease;
-  -moz-transition: opacity 3.5 ease, transform 2s ease, -moz-transform 2s ease;
-  transition: opacity 3.5 ease, transform 2s ease;
-  transition: opacity 3.5 ease, transform 2s ease, -webkit-transform 2s ease, -moz-transform 2s ease, -o-transform 2s ease;
-  -webkit-transition-delay: 0.8s;
-     -moz-transition-delay: 0.8s;
-       -o-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+  -webkit-transition: opacity 1.5 ease, -webkit-transform 1.6s ease;
+  transition: opacity 1.5 ease, -webkit-transform 1.6s ease;
+  -o-transition: opacity 1.5 ease, -o-transform 1.6s ease;
+  -moz-transition: opacity 1.5 ease, transform 1.6s ease, -moz-transform 1.6s ease;
+  transition: opacity 1.5 ease, transform 1.6s ease;
+  transition: opacity 1.5 ease, transform 1.6s ease, -webkit-transform 1.6s ease, -moz-transform 1.6s ease, -o-transform 1.6s ease;
+  -webkit-transition-delay: 0.4s;
+     -moz-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .hero-banner--single .hero-banner__info, .hero-banner--single .hero-banner__title, .hero-banner--single .hero-banner__desc, .hero-banner--single .hero-banner__btn,
 .hero-banner .owl-item.active .hero-banner__info,
@@ -2236,13 +2240,14 @@ b {
        -o-transition-delay: 1.6s;
           transition-delay: 1.6s;
 }
-.hero-banner--single .hero-banner__desc__btn,
-.hero-banner .owl-item.active .hero-banner__desc__btn {
-  -webkit-transition-delay: 2s;
-     -moz-transition-delay: 2s;
-       -o-transition-delay: 2s;
-          transition-delay: 2s;
+.hero-banner--single .hero-banner__btn,
+.hero-banner .owl-item.active .hero-banner__btn {
+  -webkit-transition-delay: 1.8s;
+     -moz-transition-delay: 1.8s;
+       -o-transition-delay: 1.8s;
+          transition-delay: 1.8s;
 }
+
 /* ==========================================================================
 Layouts Number
 ========================================================================== */
