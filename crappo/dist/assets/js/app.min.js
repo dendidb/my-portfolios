@@ -243,7 +243,7 @@ var HeroBanner = function () {
         autoplayTimeout: 4000,
         dotsSpeed: 4000,
         autoplaySpeed: 4000,
-        dragEndSpeed: 4000
+        dragEndSpeed: 450
       });
     } else {
       if (_selector.hasClass('owl-carousel')) {
