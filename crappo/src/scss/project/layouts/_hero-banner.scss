@@ -10,7 +10,7 @@
   padding: 24px 0 104px;
   &__img {
     opacity: 0;
-    transform: translateY(-32px);
+    transform: translateX(-32px);
     transition: all 1s ease 0s;
   }
 
@@ -19,7 +19,7 @@
   &__desc,
   &__btn {
     opacity: 0;
-    transform: translateY(-32px);
+    transform: translateX(32px);
     transition: all .5s ease 0s;
   }
 
@@ -29,8 +29,8 @@
       &__img {
         opacity: 1;
         transform: none;
-        transition: opacity 1.5 ease, transform 1.6s ease;
-        transition-delay: .4s;
+        transition: opacity .5 ease, transform .5s ease;
+        transition-delay: .2s;
       }
 
       &__info,
@@ -39,20 +39,20 @@
       &__btn {
         opacity: 1;
         transform: none;
-        transition: all 1.75s ease;
+        transition: all .5s ease;
       }
 
       &__info {
-        transition-delay: .6s;
+        transition-delay: .5s;
       }
       &__title {
-        transition-delay: 1.2s;
+        transition-delay: .5s;
       }
       &__desc {
-        transition-delay: 1.6s;
+        transition-delay: .5s;
       }
       &__btn {
-        transition-delay: 1.8s;
+        transition-delay: .5s;
       }
     }
   }
