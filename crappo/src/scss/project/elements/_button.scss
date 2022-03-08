@@ -22,6 +22,19 @@
     background-color: color(tertiary);
     border-color: color(tertiary);
     color: color(white);
+    #{$b} {
+      &__txt {
+        color: color(white);
+        @include font-size(h6);
+        margin-right: 24px;
+      }
+      &__icon {
+        background-color: color(white);
+        background-image: url(../img/icons/arrow-right-small.svg);
+        background-size: 8px auto;
+      }
+    }
+  
     &:hover {
       background-color: transparent;
       border-color: color(white);
@@ -76,11 +89,6 @@
   &__txt {
     display: inline-block;
     vertical-align: middle;
-    // @include font-size(h5);
-    // color: color(white);
-    // margin-right: 0;
-    // font-size: 0;
-    // transition: all 0.3s ease;
   }
   &__icon {
     width: 32px;
@@ -90,7 +98,7 @@
     display: inline-block;
     vertical-align: middle;
     background-image: url(../img/icons/arrow-right.svg);
-    background-size: 10px auto;
+    background-size: 6px auto;
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.2s ease;

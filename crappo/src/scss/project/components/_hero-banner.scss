@@ -80,7 +80,6 @@
       }
     }
     &__btn {
-    #{$bt} {
       &__txt {
         @include font-size(h5);
         color: color(white);
@@ -89,7 +88,6 @@
         margin-right: 24px;
         transition: all 0.3s ease;
         }
-      }
     }
   }
 }

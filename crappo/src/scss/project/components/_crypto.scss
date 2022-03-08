@@ -53,20 +53,21 @@
   }
   &__btn {
     min-width: 62px;
-    &.btn--round {
-      min-height: 20px;
-      padding: 8px 0;
+    transition: all .3s ease;
+    margin-right: 12px;
+    $bt: &;
+    #{$bt} {
+      &__txt {
+        color: color(white);
+        @include font-size(h6);
+        margin-right: 24px;
+      }
+      &__icon {
+        background-color: color(white);
+        background-image: url(../img/icons/arrow-right-small.svg);
+        background-size: 8px auto;
+        margin-left: 8px;
+      }
     }
-    // &__icon {
-    //   width: 32px;
-    //   height: 32px;
-    //   border-radius: 50%;
-    //   background-image: url(../img/icons/arrow-right-small.svg);
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-color: #fff;
-    //   display: inline-block;
-    //   vertical-align: middle;
-    // }
   }
 }

@@ -215,9 +215,9 @@ var _utilities = require("../utilities");
 var HeroBanner = function () {
   // handleRunCarousel
   var handleRunCarousel = function handleRunCarousel() {
-    var _selector = $('.js-slide-banner');
+    var _selector = $('.js-hero-banner');
 
-    var _itemLength = $('.js-slide-banner .hero-banner__item').length;
+    var _itemLength = $('.js-hero-banner .hero-banner__item').length;
     var _itemRun = 1; // destroyCarousel
 
     if (_selector.hasClass('owl-carousel')) {

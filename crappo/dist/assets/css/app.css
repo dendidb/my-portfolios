@@ -1186,12 +1186,11 @@ b {
     max-width: initial;
   }
 }
-.hero-banner .hero-banner__btn.btn__txt {
+.hero-banner .hero-banner__btn__txt {
   font-size: 1.8rem;
   line-height: 2.4rem;
   color: #fff;
   vertical-align: middle;
-  margin-right: 0;
   font-size: 0;
   margin-right: 24px;
   -webkit-transition: all 0.3s ease;
@@ -1200,15 +1199,6 @@ b {
   transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   Components Number
-   ========================================================================== */
-/* ==========================================================================
-   Components Why Crappo
-   ========================================================================== */
-/* ==========================================================================
-   Components Calculator
-   ========================================================================== */
 /* ==========================================================================
    Components Crypto
    ========================================================================== */
@@ -1282,21 +1272,26 @@ b {
 }
 .crypto__box__btn {
   min-width: 62px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-right: 12px;
 }
-.crypto__box__btn.btn--round {
-  min-height: 20px;
-  padding: 8px 0;
+.crypto__box__btn .crypto__box__btn__txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-right: 24px;
+}
+.crypto__box__btn .crypto__box__btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
+  margin-left: 8px;
 }
 
-/* ==========================================================================
-   Components Market
-   ========================================================================== */
-/* ==========================================================================
-   Components Statistics
-   ========================================================================== */
-/* ==========================================================================
-   Components Grow Profit
-   ========================================================================== */
 /* ==========================================================================
    Components Subscribe
    ========================================================================== */
@@ -1615,6 +1610,18 @@ b {
   border-color: #3671e9;
   color: #fff;
 }
+.btn--primary .btn__txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-right: 24px;
+}
+.btn--primary .btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
+}
 .btn--primary:hover {
   background-color: transparent;
   border-color: #fff;
@@ -1683,8 +1690,8 @@ b {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/icons/arrow-right.svg);
-  -moz-background-size: 10px auto;
-       background-size: 10px auto;
+  -moz-background-size: 6px auto;
+       background-size: 6px auto;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: all 0.2s ease;
@@ -3102,9 +3109,6 @@ Layouts Number
   margin-bottom: 32px;
 }
 
-/* ==========================================================================
-   Layouts Subscribe
-   ========================================================================== */
 /* ==========================================================================
 Layouts Footer
 ========================================================================== */
