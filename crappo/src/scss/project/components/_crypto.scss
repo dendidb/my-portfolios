@@ -6,34 +6,23 @@
   $cb: &;
   padding: 48px 24px;
   border-radius: 16px;
-  min-height: 443px;
   text-align: center;
+  transition: all 0.2s ease;
   box-shadow: 0 40px 40px 0 rgba(57, 23, 119, .03);
-  @include medium {
-    padding: 32px 16px;
+  &:hover {
+    background-color: color(secondary);
+    #{$cb}__title,
+    #{$cb}__desc {
+      color: color(white);
+    }
   }
-  @include small {
+  @include medium {
     padding: 40px 16px;
   }
-  &:hover {
-    #{$cb} {
-      .btn--round {
-        background-color: color(tertiary);
-        border-color: color(tertiary);
-        padding: 14px 16px 14px 24px;
-        color: color(white);
-        font-size: 1.6rem;
-        line-height: 2.8rem;
-      }
-    }
-  }
   &__img {
-    margin-bottom: 24px;
-    @include extra-small {
-      margin-bottom: 16px;
-    }
-    @include small {
-      margin-bottom: 24px;
+    margin-bottom: 48px;
+    @include large {
+      margin-bottom: 32px;
     }
     @include extra-small {
       margin-bottom: 16px;
@@ -45,7 +34,10 @@
     }
   }
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    @include medium {
+      margin-bottom: 32px;
+    }
     @include extra-small {
       margin-bottom: 16px;
       @include font-size(h4);
@@ -60,16 +52,21 @@
     margin-bottom: 24px;
   }
   &__btn {
-    &__icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-image: url(../img/icons/arrow-right-small.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #fff;
-      display: inline-block;
-      vertical-align: middle;
+    min-width: 62px;
+    &.btn--round {
+      min-height: 20px;
+      padding: 8px 0;
     }
+    // &__icon {
+    //   width: 32px;
+    //   height: 32px;
+    //   border-radius: 50%;
+    //   background-image: url(../img/icons/arrow-right-small.svg);
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-color: #fff;
+    //   display: inline-block;
+    //   vertical-align: middle;
+    // }
   }
 }

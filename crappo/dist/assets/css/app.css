@@ -1129,6 +1129,11 @@ b {
   padding: 4px 12px 4px 4px;
   height: 40px;
 }
+@media only screen and (max-width: 991.98px) {
+  .hero-banner .hero-banner__info {
+    margin-bottom: 16px;
+  }
+}
 .hero-banner .hero-banner__info__sale {
   text-transform: uppercase;
   display: inline-block;
@@ -1181,6 +1186,19 @@ b {
     max-width: initial;
   }
 }
+.hero-banner .hero-banner__btn.btn__txt {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #fff;
+  vertical-align: middle;
+  margin-right: 0;
+  font-size: 0;
+  margin-right: 24px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
 /* ==========================================================================
    Components Number
@@ -1199,41 +1217,33 @@ b {
   -webkit-border-radius: 16px;
      -moz-border-radius: 16px;
           border-radius: 16px;
-  min-height: 443px;
   text-align: center;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   -webkit-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
      -moz-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
           box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
 }
-@media only screen and (max-width: 991.98px) {
-  .crypto__box {
-    padding: 32px 16px;
-  }
+.crypto__box:hover {
+  background-color: #2b076e;
 }
-@media only screen and (max-width: 767.98px) {
+.crypto__box:hover .crypto__box__title,
+.crypto__box:hover .crypto__box__desc {
+  color: #fff;
+}
+@media only screen and (max-width: 991.98px) {
   .crypto__box {
     padding: 40px 16px;
   }
 }
-.crypto__box:hover .crypto__box .btn--round {
-  background-color: #3671e9;
-  border-color: #3671e9;
-  padding: 14px 16px 14px 24px;
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-}
 .crypto__box__img {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
-@media only screen and (max-width: 575.86px) {
+@media only screen and (max-width: 1199.98px) {
   .crypto__box__img {
-    margin-bottom: 16px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .crypto__box__img {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 }
 @media only screen and (max-width: 575.86px) {
@@ -1247,7 +1257,12 @@ b {
   margin: 0 auto;
 }
 .crypto__box__title {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 991.98px) {
+  .crypto__box__title {
+    margin-bottom: 32px;
+  }
 }
 @media only screen and (max-width: 575.86px) {
   .crypto__box__title {
@@ -1265,18 +1280,12 @@ b {
   color: #828282;
   margin-bottom: 24px;
 }
-.crypto__box__btn__icon {
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  background-image: url(../img/icons/arrow-right-small.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #fff;
-  display: inline-block;
-  vertical-align: middle;
+.crypto__box__btn {
+  min-width: 62px;
+}
+.crypto__box__btn.btn--round {
+  min-height: 20px;
+  padding: 8px 0;
 }
 
 /* ==========================================================================
@@ -1601,12 +1610,6 @@ b {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-@media only screen and (max-width: 575.86px) {
-  .btn {
-    padding: 8px 0;
-    min-height: 20px;
-  }
-}
 .btn--primary {
   background-color: #3671e9;
   border-color: #3671e9;
@@ -1641,21 +1644,34 @@ b {
   color: #3671e9;
 }
 .btn--round {
-  background-color: #3671e9;
+  background-color: #fff;
   border-color: rgba(43, 7, 110, 0.2);
   min-width: initial;
   font-size: 0;
-  padding: 14px 16px 14px 24px;
   -webkit-border-radius: 30px;
      -moz-border-radius: 30px;
           border-radius: 30px;
+  padding: 14px;
+}
+.btn--round:hover {
+  background-color: #3671e9;
+  padding: 14px 16px 14px 24px;
+}
+.btn--round:hover .btn__txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-right: 24px;
+}
+.btn--round:hover .btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
 }
 .btn__txt {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  color: #fff;
+  display: inline-block;
   vertical-align: middle;
-  margin-right: 24px;
 }
 .btn__icon {
   width: 32px;
@@ -1666,9 +1682,15 @@ b {
   background-color: #fff;
   display: inline-block;
   vertical-align: middle;
-  background-image: url(../img/icons/arrow-right-small.svg);
+  background-image: url(../img/icons/arrow-right.svg);
+  -moz-background-size: 10px auto;
+       background-size: 10px auto;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 /* ==========================================================================
@@ -2198,10 +2220,10 @@ b {
   -moz-transition: opacity 0.5 ease, transform 0.5s ease, -moz-transform 0.5s ease;
   transition: opacity 0.5 ease, transform 0.5s ease;
   transition: opacity 0.5 ease, transform 0.5s ease, -webkit-transform 0.5s ease, -moz-transform 0.5s ease, -o-transform 0.5s ease;
-  -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  -webkit-transition-delay: 0.8s;
+     -moz-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 .hero-banner--single .hero-banner__info, .hero-banner--single .hero-banner__title, .hero-banner--single .hero-banner__desc, .hero-banner--single .hero-banner__btn,
 .hero-banner .owl-item.active .hero-banner__info,
@@ -2228,24 +2250,24 @@ b {
 }
 .hero-banner--single .hero-banner__title,
 .hero-banner .owl-item.active .hero-banner__title {
-  -webkit-transition-delay: 0.5s;
-     -moz-transition-delay: 0.5s;
-       -o-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .hero-banner--single .hero-banner__desc,
 .hero-banner .owl-item.active .hero-banner__desc {
-  -webkit-transition-delay: 0.5s;
-     -moz-transition-delay: 0.5s;
-       -o-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition-delay: 0.7s;
+     -moz-transition-delay: 0.7s;
+       -o-transition-delay: 0.7s;
+          transition-delay: 0.7s;
 }
 .hero-banner--single .hero-banner__btn,
 .hero-banner .owl-item.active .hero-banner__btn {
-  -webkit-transition-delay: 0.5s;
-     -moz-transition-delay: 0.5s;
-       -o-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition-delay: 0.8s;
+     -moz-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 
 /* ==========================================================================

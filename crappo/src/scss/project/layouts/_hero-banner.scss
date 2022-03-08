@@ -30,7 +30,7 @@
         opacity: 1;
         transform: none;
         transition: opacity .5 ease, transform .5s ease;
-        transition-delay: .2s;
+        transition-delay: .8s;
       }
 
       &__info,
@@ -46,13 +46,13 @@
         transition-delay: .5s;
       }
       &__title {
-        transition-delay: .5s;
+        transition-delay: .6s;
       }
       &__desc {
-        transition-delay: .5s;
+        transition-delay: .7s;
       }
       &__btn {
-        transition-delay: .5s;
+        transition-delay: .8s;
       }
     }
   }

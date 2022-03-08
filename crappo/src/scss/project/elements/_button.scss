@@ -1,8 +1,9 @@
 /* ==========================================================================
    Init: Button
    ========================================================================== */
-   
+
 .btn {
+  $b: &;
   min-height: 60px;
   border-radius: 32px;
   display: inline-block;
@@ -16,11 +17,7 @@
   @include remove-tap-highlight;
   min-width: 148px;
   padding: 16px 32px;
-  transition: all .3s ease;
-  @include extra-small {
-    padding: 8px 0;
-    min-height: 20px;
-  }
+  transition: all 0.3s ease;
   &--primary {
     background-color: color(tertiary);
     border-color: color(tertiary);
@@ -53,18 +50,37 @@
     }
   }
   &--round {
-    background-color: color(tertiary);
-    border-color: rgba(43,7,110,.2);
+    background-color: color(white);
+    border-color: rgba(43, 7, 110, 0.2);
     min-width: initial;
     font-size: 0;
-    padding: 14px 16px 14px 24px;
     border-radius: 30px;
+    padding: 14px;
+    &:hover {
+      background-color: color(tertiary);
+      padding: 14px 16px 14px 24px;
+      #{$b} {
+        &__txt {
+          color: color(white);
+          @include font-size(h6);
+          margin-right: 24px;
+        }
+        &__icon {
+          background-color: color(white);
+          background-image: url(../img/icons/arrow-right-small.svg);
+          background-size: 8px auto;
+        }
+      }
+    }
   }
   &__txt {
-    @include font-size(h5);
-    color: color(white);
+    display: inline-block;
     vertical-align: middle;
-    margin-right: 24px;
+    // @include font-size(h5);
+    // color: color(white);
+    // margin-right: 0;
+    // font-size: 0;
+    // transition: all 0.3s ease;
   }
   &__icon {
     width: 32px;
@@ -73,8 +89,10 @@
     background-color: color(white);
     display: inline-block;
     vertical-align: middle;
-    background-image: url(../img/icons/arrow-right-small.svg);
+    background-image: url(../img/icons/arrow-right.svg);
+    background-size: 10px auto;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.2s ease;
   }
 }
