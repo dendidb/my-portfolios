@@ -1410,11 +1410,6 @@ b {
     margin-bottom: 16px;
   }
 }
-@media only screen and (max-width: 767.98px) {
-  .subscribe__desc {
-    margin-bottom: 8px;
-  }
-}
 .subscribe__form {
   display: inline-block;
   vertical-align: middle;
@@ -2286,10 +2281,10 @@ b {
       -ms-transform: translateX(-32px);
        -o-transform: translateX(-32px);
           transform: translateX(-32px);
-  -webkit-transition: all 1.2s ease 0s;
-  -o-transition: all 1.2s ease 0s;
-  -moz-transition: all 1.2s ease 0s;
-  transition: all 1.2s ease 0s;
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
 }
 .hero-banner__info, .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
   opacity: 0;
