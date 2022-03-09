@@ -1132,6 +1132,18 @@ b {
 @media only screen and (max-width: 991.98px) {
   .hero-banner .hero-banner__info {
     margin-bottom: 16px;
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-banner .hero-banner__info {
+    padding-right: 8px;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .hero-banner .hero-banner__info {
+    padding-right: 0;
   }
 }
 .hero-banner .hero-banner__info__sale {
@@ -1154,16 +1166,20 @@ b {
     max-width: initial;
   }
 }
+@media only screen and (max-width: 575.86px) {
+  .hero-banner .hero-banner__info__sale {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    max-width: initial;
+    padding: 2px 8px;
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
 .hero-banner .hero-banner__info__desc {
   color: #fff;
   font-size: 1.6rem;
   line-height: 2.8rem;
-}
-@media only screen and (max-width: 991.98px) {
-  .hero-banner .hero-banner__info__desc {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
 }
 .hero-banner .hero-banner__title {
   font-size: 6.4rem;
@@ -1607,7 +1623,7 @@ b {
 @media only screen and (max-width: 575.86px) {
   .btn {
     min-height: 20px;
-    padding: 16px 0;
+    padding: 8px 0;
   }
 }
 .btn--banner {
@@ -1616,6 +1632,11 @@ b {
   color: #fff;
   min-height: 20px;
   padding: 16px 32px;
+}
+@media only screen and (max-width: 767.98px) {
+  .btn--banner {
+    padding: 8px 16px;
+  }
 }
 .btn--banner:hover {
   background-color: #fff;
@@ -1635,6 +1656,15 @@ b {
       -ms-transform: translateX(8px);
        -o-transform: translateX(8px);
           transform: translateX(8px);
+}
+@media only screen and (max-width: 767.98px) {
+  .btn--banner:hover .btn__icon {
+    -webkit-transform: translateX(6px);
+       -moz-transform: translateX(6px);
+        -ms-transform: translateX(6px);
+         -o-transform: translateX(6px);
+            transform: translateX(6px);
+  }
 }
 .btn--banner .btn__txt {
   color: #fff;
@@ -1668,9 +1698,9 @@ b {
        background-size: 8px auto;
 }
 .btn--primary:hover {
-  background-color: transparent;
+  background-color: #fff;
   border-color: #fff;
-  color: #fff;
+  color: #0d0d2b;
 }
 .btn--secondary {
   background-color: #fff;
@@ -2117,6 +2147,11 @@ b {
 }
 .header__btn:hover {
   background-color: #fff;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__btn:hover {
+    background-color: #2b076e;
+  }
 }
 .header__btn:hover .header__btn__txt {
   color: #0d0d2b;

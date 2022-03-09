@@ -121,16 +121,19 @@ html(lang='en')
 
     //style
     link(rel='stylesheet', href=cssMain)/
+    //end-style
     ='\n\n'
 
   body(class=holdTransitionClass)
     //- header
     include ../layouts/header.pug
 
+    //main-site
     .main-site.main-site--hide.js-main-site
       //- site-content
       block siteContent
-
+      
+    //end-main-site
     //- footer
     include ../layouts/footer.pug
 
@@ -138,4 +141,5 @@ html(lang='en')
     //script
     script(src=jsVendor)
     script(src=jsMain)
+    //end-script
     ='\n\n'

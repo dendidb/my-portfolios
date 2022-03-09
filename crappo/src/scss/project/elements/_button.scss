@@ -20,7 +20,7 @@
   transition: all 0.3s ease;
   @include extra-small {
     min-height: 20px;
-    padding: 16px 0;
+    padding: 8px 0;
   }
   &--banner {
     background-color: color(tertiary);
@@ -28,6 +28,9 @@
     color: color(white);
     min-height: 20px;
     padding: 16px 32px;
+    @include small {
+      padding: 8px 16px;
+    }
     &:hover {
       background-color: color(white);
       #{$b} {
@@ -40,6 +43,9 @@
           background-image: url(../img/icons/arrow-right-small.svg);
           background-size: 8px auto;
           transform: translateX(8px);
+          @include small {
+            transform: translateX(6px);
+          }
         }
       }
     }
@@ -76,9 +82,9 @@
     }
   
     &:hover {
-      background-color: transparent;
+      background-color: color(white);
       border-color: color(white);
-      color: color(white);
+      color: color(primary);
     }
   }
   &--secondary {

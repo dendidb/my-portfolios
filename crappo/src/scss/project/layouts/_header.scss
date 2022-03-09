@@ -178,6 +178,11 @@
       padding: 8px 16px;
       display: block;
     }
+    // &--active {
+    //   font-weight: fw(semi-bold);
+    //   color: gold;
+    //   @include font-size(h4);
+    // }
   }
   &__btn {
     $hbtn: &;
@@ -195,6 +200,9 @@
     transition: all .3s ease;
     &:hover {
       background-color: color(white);
+      @include medium {
+        background-color: color(secondary);
+      }
       #{$hbtn} {
         &__txt {
           color: color(primary);

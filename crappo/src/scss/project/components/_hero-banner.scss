@@ -40,6 +40,14 @@
       height: 40px;
       @include medium {
         margin-bottom: 16px;
+        height: 36px;
+      }
+      @include small {
+        padding-right: 8px;
+        margin-bottom: 16px;
+      }
+      @include extra-small {
+        padding-right: 0;
       }
       &__sale {
         text-transform: uppercase;
@@ -55,13 +63,17 @@
         @include medium {
           max-width: initial;
         }
+        @include extra-small {
+          @include font-size(small);
+          max-width: initial;
+          padding: 2px 8px;
+          margin-right: 8px;
+          margin-bottom: 0;
+        }
       }
       &__desc {
         color: color(white);
         @include font-size(h6);
-        @include medium {
-          @include font-size(label);
-        }
       }
     }
     &__title {

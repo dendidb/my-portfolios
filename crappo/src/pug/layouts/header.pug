@@ -9,23 +9,28 @@
     menuList: [
       {
         text: 'Products',
-        to: '#products'
+        to: '#products',
+        navActive: 'product'
       },
       {
         text: 'Features',
-        to: '#features'
+        to: '#features',
+        navActive: 'features'
       },
       {
         text: 'About',
-        to: '#about'
+        to: '#about',
+        navActive: 'about'
       },
       {
         text: 'Contact',
-        to: '#contact'
+        to: '#contact',
+        navActive: 'contact'
       },
       {
         text: 'Login',
-        to: '#login'
+        to: '#login',
+        navActive: 'login'
       },
     ],
     headerBtn: [
@@ -68,7 +73,7 @@
             - data = val;
             li.header__item
               ='\n'
-              a.header__link(href=val.to) !{val.text}
+              a.header__link(href=val.to class=(navActive == val.classActive ? 'header__link--active' : '')) !{val.text}
               ='\n'
 ='\n'
 //end-header
