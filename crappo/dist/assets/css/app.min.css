@@ -1276,7 +1276,6 @@ b {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin-right: 12px;
 }
 .crypto__box__btn .crypto__box__btn__txt {
   color: #fff;
@@ -1605,6 +1604,52 @@ b {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media only screen and (max-width: 575.86px) {
+  .btn {
+    min-height: 20px;
+    padding: 16px 0;
+  }
+}
+.btn--banner {
+  background-color: #3671e9;
+  border-color: #3671e9;
+  color: #fff;
+  min-height: 20px;
+  padding: 16px 32px;
+}
+.btn--banner:hover {
+  background-color: #fff;
+}
+.btn--banner:hover .btn__txt {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #0d0d2b;
+}
+.btn--banner:hover .btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
+  -webkit-transform: translateX(8px);
+     -moz-transform: translateX(8px);
+      -ms-transform: translateX(8px);
+       -o-transform: translateX(8px);
+          transform: translateX(8px);
+}
+.btn--banner .btn__txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-right: 6px;
+}
+.btn--banner .btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  width: 24px;
+  height: 24px;
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
+}
 .btn--primary {
   background-color: #3671e9;
   border-color: #3671e9;
@@ -1659,6 +1704,10 @@ b {
      -moz-border-radius: 30px;
           border-radius: 30px;
   padding: 14px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .btn--round:hover {
   background-color: #3671e9;
@@ -1668,7 +1717,7 @@ b {
   color: #fff;
   font-size: 1.6rem;
   line-height: 2.8rem;
-  margin-right: 24px;
+  margin-right: 14px;
 }
 .btn--round:hover .btn__icon {
   background-color: #fff;
@@ -1679,6 +1728,10 @@ b {
 .btn__txt {
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn__icon {
   width: 32px;
@@ -1690,8 +1743,8 @@ b {
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/icons/arrow-right.svg);
-  -moz-background-size: 6px auto;
-       background-size: 6px auto;
+  -moz-background-size: 8px auto;
+       background-size: 8px auto;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: all 0.2s ease;
@@ -1910,11 +1963,11 @@ b {
     width: 100%;
     margin-bottom: 16px;
     margin-right: 0;
-    -webkit-transform: translateY(16px);
-       -moz-transform: translateY(16px);
-        -ms-transform: translateY(16px);
-         -o-transform: translateY(16px);
-            transform: translateY(16px);
+    -webkit-transform: translateX(24px);
+       -moz-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+         -o-transform: translateX(24px);
+            transform: translateX(24px);
     opacity: 0;
     -webkit-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
@@ -2063,7 +2116,10 @@ b {
   transition: all 0.3s ease;
 }
 .header__btn:hover {
-  background-color: #2b076e;
+  background-color: #fff;
+}
+.header__btn:hover .header__btn__txt {
+  color: #0d0d2b;
 }
 @media only screen and (max-width: 991.98px) {
   .header__btn {
@@ -2196,10 +2252,10 @@ b {
       -ms-transform: translateX(-32px);
        -o-transform: translateX(-32px);
           transform: translateX(-32px);
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transition: all 1.2s ease 0s;
+  -o-transition: all 1.2s ease 0s;
+  -moz-transition: all 1.2s ease 0s;
+  transition: all 1.2s ease 0s;
 }
 .hero-banner__info, .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
   opacity: 0;
@@ -2221,12 +2277,12 @@ b {
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-  -webkit-transition: opacity 0.5 ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5 ease, -webkit-transform 0.5s ease;
-  -o-transition: opacity 0.5 ease, -o-transform 0.5s ease;
-  -moz-transition: opacity 0.5 ease, transform 0.5s ease, -moz-transform 0.5s ease;
-  transition: opacity 0.5 ease, transform 0.5s ease;
-  transition: opacity 0.5 ease, transform 0.5s ease, -webkit-transform 0.5s ease, -moz-transform 0.5s ease, -o-transform 0.5s ease;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
   -webkit-transition-delay: 0.8s;
      -moz-transition-delay: 0.8s;
        -o-transition-delay: 0.8s;

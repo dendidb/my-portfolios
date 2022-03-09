@@ -11,7 +11,7 @@
   &__img {
     opacity: 0;
     transform: translateX(-32px);
-    transition: all 1s ease 0s;
+    transition: all 1.2s ease 0s;
   }
 
   &__info,
@@ -29,7 +29,7 @@
       &__img {
         opacity: 1;
         transform: none;
-        transition: opacity .5 ease, transform .5s ease;
+        transition: opacity .10 ease, transform .10s ease;
         transition-delay: .8s;
       }
 

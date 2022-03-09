@@ -18,6 +18,46 @@
   min-width: 148px;
   padding: 16px 32px;
   transition: all 0.3s ease;
+  @include extra-small {
+    min-height: 20px;
+    padding: 16px 0;
+  }
+  &--banner {
+    background-color: color(tertiary);
+    border-color: color(tertiary);
+    color: color(white);
+    min-height: 20px;
+    padding: 16px 32px;
+    &:hover {
+      background-color: color(white);
+      #{$b} {
+        &__txt {
+          @include font-size(h6);
+          color: color(primary);
+        }
+        &__icon {
+          background-color: color(white);
+          background-image: url(../img/icons/arrow-right-small.svg);
+          background-size: 8px auto;
+          transform: translateX(8px);
+        }
+      }
+    }
+    #{$b} {
+      &__txt {
+        color: color(white);
+        @include font-size(h6);
+        margin-right: 6px;
+      }
+      &__icon {
+        background-color: color(white);
+        background-image: url(../img/icons/arrow-right-small.svg);
+        width: 24px;
+        height: 24px;
+        background-size: 8px auto;
+      }
+    }
+  }
   &--primary {
     background-color: color(tertiary);
     border-color: color(tertiary);
@@ -69,6 +109,7 @@
     font-size: 0;
     border-radius: 30px;
     padding: 14px;
+    transition: all .5s ease;
     &:hover {
       background-color: color(tertiary);
       padding: 14px 16px 14px 24px;
@@ -76,7 +117,7 @@
         &__txt {
           color: color(white);
           @include font-size(h6);
-          margin-right: 24px;
+          margin-right: 14px;
         }
         &__icon {
           background-color: color(white);
@@ -89,6 +130,7 @@
   &__txt {
     display: inline-block;
     vertical-align: middle;
+    transition: all .3s ease;
   }
   &__icon {
     width: 32px;
@@ -98,7 +140,7 @@
     display: inline-block;
     vertical-align: middle;
     background-image: url(../img/icons/arrow-right.svg);
-    background-size: 6px auto;
+    background-size: 8px auto;
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.2s ease;
