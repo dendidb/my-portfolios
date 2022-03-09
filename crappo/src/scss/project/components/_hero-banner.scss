@@ -32,15 +32,15 @@
       }
     }
     &__info {
-      border-radius: 32px;
-      margin-bottom: 24px;
       max-width: 365px;
       background-color: rgba(255, 255, 255, .1);
-      padding: 4px 12px 4px 4px;
+      padding: 4px 12px 0 4px;
+      border-radius: 32px;
+      margin-bottom: 24px;
       height: 40px;
       @include medium {
         margin-bottom: 16px;
-        height: 36px;
+        height: 38px;
       }
       @include small {
         padding-right: 8px;
@@ -65,8 +65,7 @@
         }
         @include extra-small {
           @include font-size(small);
-          max-width: initial;
-          padding: 2px 8px;
+          padding: 6px 8px;
           margin-right: 8px;
           margin-bottom: 0;
         }
