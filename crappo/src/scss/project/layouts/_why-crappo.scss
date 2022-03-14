@@ -11,6 +11,12 @@
   @include medium {
     padding: 54px 0 48px;
   }
+  @include small {
+    padding: 40px 0 32px;
+  }
+  @include extra-small {
+    padding: 24px 0 16px;
+  }
   &::before {
     content: "";
     display: block;
@@ -29,8 +35,8 @@
       height: 180px;
     }
     @include extra-small {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
     }
   }
   &::after {

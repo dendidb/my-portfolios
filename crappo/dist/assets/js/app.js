@@ -38,6 +38,8 @@ var App = function () {
 
       _components.HeroBanner.init();
 
+      _components.Reveal.init();
+
       _components.WindowResize.init();
 
       _components.WindowScroll.init();
@@ -68,7 +70,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":7,"./utilities":11}],2:[function(require,module,exports){
+},{"./components":8,"./utilities":12}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -197,7 +199,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":11}],4:[function(require,module,exports){
+},{"../utilities":12}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -267,7 +269,110 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{"../utilities":11}],5:[function(require,module,exports){
+},{"../utilities":12}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+/* ------------------------------------------------------------------------------
+@name: Reveal
+@description: Reveal
+--------------------------------------------------------------------------------- */
+var Reveal = function () {
+  // --- handleRevealConfig
+  var handleRevealConfig = function handleRevealConfig() {
+    var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 50;
+    var distance = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '24px';
+    var interval = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 50;
+    var origin = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'bottom';
+    var _config = {
+      duration: 900,
+      distance: distance,
+      delay: delay,
+      interval: interval,
+      origin: origin
+    };
+    return _config;
+  }; // --- handleRunScrollReveal
+
+
+  var handleRunScrollReveal = function handleRunScrollReveal() {
+    // -- homepage section
+    ScrollReveal().reveal('.number__list', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.why-crappo__img', handleRevealConfig(50, '24px', 50, 'left'));
+    ScrollReveal().reveal('.why-crappo__txt', handleRevealConfig(50, '24px', 50, 'right'));
+    ScrollReveal().reveal('.why-crappo__title', handleRevealConfig(50, '24px', 50, 'right'));
+    ScrollReveal().reveal('.why-crappo__desc', handleRevealConfig(60, '24px', 50, 'right'));
+    ScrollReveal().reveal('.why-crappo__btn', handleRevealConfig(70, '24px', 50, 'right'));
+    ScrollReveal().reveal('.calculate__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.calculate__desc', handleRevealConfig(60, '24px', 50, 'top'));
+    ScrollReveal().reveal('.calculate__box', handleRevealConfig(65, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.crypto__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.crypto__title', handleRevealConfig(55, '24px', 50, 'top'));
+    ScrollReveal().reveal('.crypto__item', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.crypto__title', handleRevealConfig(65, '24px', 50, 'top'));
+    ScrollReveal().reveal('.market__head__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.market__img__btc', handleRevealConfig(55, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.market__img__inc', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.market__img__increase', handleRevealConfig(65, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.market__img__price', handleRevealConfig(65, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.market__txt__title', handleRevealConfig(65, '24px', 50, 'left'));
+    ScrollReveal().reveal('.market__txt__desc', handleRevealConfig(65, '24px', 50, 'left'));
+    ScrollReveal().reveal('.market__txt__btn', handleRevealConfig(65, '24px', 50, 'left'));
+    ScrollReveal().reveal('.statistics__img', handleRevealConfig(65, '24px', 50, 'right'));
+    ScrollReveal().reveal('.statistics__txt', handleRevealConfig(65, '24px', 50, 'left'));
+    ScrollReveal().reveal('.grow-profit__img', handleRevealConfig(65, '24px', 50, 'right'));
+    ScrollReveal().reveal('.grow-profit__txt', handleRevealConfig(65, '24px', 50, 'left'));
+    ScrollReveal().reveal('.subscribe__box', handleRevealConfig(65, '24px', 50, 'bottom'));
+
+    if ($(window).width() <= 767.98) {
+      ScrollReveal().reveal('.number__list', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.why-crappo__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.why-crappo__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.why-crappo__title', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.why-crappo__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.why-crappo__btn', handleRevealConfig(70, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.calculate__title', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.calculate__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.calculate__box', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.crypto__title', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.crypto__title', handleRevealConfig(55, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.crypto__item', handleRevealConfig(60, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.crypto__title', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__head__title', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__img__btc', handleRevealConfig(55, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__img__inc', handleRevealConfig(60, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__img__increase', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__img__price', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__txt__title', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__txt__desc', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.market__txt__btn', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.statistics__img', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.statistics__txt', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.grow-profit__img', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.grow-profit__txt', handleRevealConfig(65, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.subscribe__box', handleRevealConfig(65, '24px', 50, 'bottom'));
+    }
+  }; // --- init
+
+
+  var init = function init() {
+    handleRunScrollReveal();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Reveal;
+exports["default"] = _default;
+
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -332,7 +437,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":7}],6:[function(require,module,exports){
+},{"./index":8}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -416,7 +521,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -440,6 +545,12 @@ Object.defineProperty(exports, "HeroBanner", {
     return _HeroBanner["default"];
   }
 });
+Object.defineProperty(exports, "Reveal", {
+  enumerable: true,
+  get: function get() {
+    return _Reveal["default"];
+  }
+});
 Object.defineProperty(exports, "WindowResize", {
   enumerable: true,
   get: function get() {
@@ -457,6 +568,8 @@ var _Header = _interopRequireDefault(require("./Header"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
+var _Reveal = _interopRequireDefault(require("./Reveal"));
+
 var _WindowResize = _interopRequireDefault(require("./WindowResize"));
 
 var _WindowScroll = _interopRequireDefault(require("./WindowScroll"));
@@ -465,7 +578,7 @@ var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./WindowResize":5,"./WindowScroll":6}],8:[function(require,module,exports){
+},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./Reveal":5,"./WindowResize":6,"./WindowScroll":7}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -511,7 +624,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -545,7 +658,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -671,7 +784,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":14}],11:[function(require,module,exports){
+},{"../variables":15}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -712,7 +825,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":8,"./Scrolllable":9,"./Validation":10,"./isOS":12}],12:[function(require,module,exports){
+},{"./BrowserCheck":9,"./Scrolllable":10,"./Validation":11,"./isOS":13}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -753,7 +866,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -778,7 +891,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -798,6 +911,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":13}]},{},[1])
+},{"./Regex":14}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

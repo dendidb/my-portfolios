@@ -1230,6 +1230,7 @@ b {
   -webkit-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
      -moz-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
           box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
+  position: relative;
 }
 .crypto__box:hover {
   background-color: #2b076e;
@@ -1304,6 +1305,15 @@ b {
   -moz-background-size: 8px auto;
        background-size: 8px auto;
   margin-left: 8px;
+}
+
+.crypto__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 /* ==========================================================================
@@ -2293,10 +2303,10 @@ b {
       -ms-transform: translateX(32px);
        -o-transform: translateX(32px);
           transform: translateX(32px);
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .hero-banner--single .hero-banner__img,
 .hero-banner .owl-item.active .hero-banner__img {
@@ -2328,10 +2338,10 @@ b {
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .hero-banner--single .hero-banner__info,
 .hero-banner .owl-item.active .hero-banner__info {
@@ -2506,6 +2516,16 @@ Layouts Number
     padding: 54px 0 48px;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .why-crappo {
+    padding: 40px 0 32px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .why-crappo {
+    padding: 24px 0 16px;
+  }
+}
 .why-crappo::before {
   content: "";
   display: block;
@@ -2528,8 +2548,8 @@ Layouts Number
 }
 @media only screen and (max-width: 575.86px) {
   .why-crappo::before {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 }
 .why-crappo::after {
@@ -2640,6 +2660,11 @@ Layouts Number
     padding: 72px 0 40px;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .calculate {
+    padding: 64px 0 32px;
+  }
+}
 .calculate::before {
   content: "";
   width: 100%;
@@ -2657,9 +2682,14 @@ Layouts Number
   max-width: 622px;
   margin-bottom: 64px;
 }
+@media only screen and (max-width: 767.98px) {
+  .calculate__txt {
+    margin-bottom: 32px;
+  }
+}
 .calculate__title {
-  font-size: 3.2rem;
-  line-height: 3.6rem;
+  font-size: 4rem;
+  line-height: 6rem;
   font-weight: 700;
   color: #fff;
 }

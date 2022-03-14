@@ -20,7 +20,7 @@
   &__btn {
     opacity: 0;
     transform: translateX(32px);
-    transition: all .5s ease 0s;
+    transition: all 1s ease 0s;
   }
 
   &--single,
@@ -39,9 +39,8 @@
       &__btn {
         opacity: 1;
         transform: none;
-        transition: all .5s ease;
+        transition: all 1s ease 0s;
       }
-
       &__info {
         transition-delay: .5s;
       }

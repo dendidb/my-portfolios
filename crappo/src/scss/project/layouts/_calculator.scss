@@ -7,6 +7,9 @@
   @include medium {
     padding: 72px 0 40px;
   }
+  @include small {
+    padding: 64px 0 32px;
+  }
   &::before {
     content: "";
     width: 100%;
@@ -23,9 +26,12 @@
     text-align: center;
     max-width: 622px;
     margin-bottom: 64px;
+    @include small {
+      margin-bottom: 32px;
+    }
   }
   &__title {
-    @include font-size(h3);
+    @include font-size(h2);
     font-weight: fw(bold);
     color: color(white);
     @include extra-small {

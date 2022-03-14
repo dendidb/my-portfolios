@@ -8,6 +8,7 @@ import {
 import {
   Header,
   HeroBanner,
+  Reveal,
   WindowResize,
   WindowScroll,
   Footer,
@@ -41,6 +42,7 @@ const App = (() => {
       // --- Project
       Header.init();
       HeroBanner.init();
+      Reveal.init();
       WindowResize.init();
       WindowScroll.init();
       Footer.init();
