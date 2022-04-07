@@ -1,39 +1,27 @@
+//-------------------------------------------------------------------------------
+  @name: Hero Banner
+  -------------------------------------------------------------------------------//
+
 -
-  dataBannerProduct = {
-    title: 'Aplikasi Apotek Terlengkap Dengan Fitur Praktis Dan Mudah Digunakan',
-    desc: 'Kelola apotek Anda dengan lebih praktis dan serta otomatis dengan Aplikasi RZF Medis',
-    button: [
+  data = [
       {
-        to: '#pesan-sekarang',
-        text: 'Pesan Sekarang',
-        show: true,
-        btnClass: 'primary'
+        title: 'Stay at Home quarantine To stop Corona virus',
+        desc: 'There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to.',
+        img: 'hero-banner-1.svg',
+        btn: {
+          to: 'apps.html',
+          text: 'Consult today'
+        }
       },
       {
-        to: '#konsultasi-gratis',
-        text: 'Konsultasi Gratis',
-        show: true,
-        btnClass: 'secondary'
+        title: 'Stay at Home quarantine To stop Corona virus',
+        desc: 'There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to.',
+        img: 'hero-banner-1.svg',
+        btn: {
+          to: 'apps.html',
+          text: 'Consult today'
+        }
       }
-    ],
-    img: [
-      {
-        img: 'aplikasi-apotek-retail.png',
-        alt: 'Aplikasi Apotek Retail'
-      },
-      {
-        img: 'aplikasi-apotek-grosir.png',
-        alt: 'Aplikasi Apotek Grosir'
-      },
-      {
-        img: 'aplikasi-klinik.png',
-        alt: 'Aplikasi Klinik'
-      },
-      {
-        img: 'aplikasi-puskesmas.png',
-        alt: 'Aplikasi Puskesmas'
-      }
-    ]
-  }
+    ];
 
 include ../../layouts/hero-banner.pug

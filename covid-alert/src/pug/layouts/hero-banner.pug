@@ -3,23 +3,8 @@
   -------------------------------------------------------------------------------//
 
 //hero-banner
-.hero-banner#tentang
-  .container
-    .hero-banner__content
-      .hero-banner__list.js-hero-banner
-        each val in dataBannerProduct.img
-          - data = val;
-          include ../components/hero-banner-item.pug
-      .hero-banner__txt
-        .hero-banner__txt__wrapper
-          h3.hero-banner__title
-            | !{dataBannerProduct.title}
-          p.hero-banner__desc
-            | !{dataBannerProduct.desc}
-          .hero-banner__btn
-            each val in dataBannerProduct.button
-              - data = val;
-              ='\n'
-              a.btn(class='btn--'+val.btnClass href=val.to) !{val.text}
+.hero-banner.js-hero-banner
+  each val in data
+    - data = val;
+    include ../components/hero-banner-item.pug
 ='\n'
-//end-hero-banner

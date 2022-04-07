@@ -4,36 +4,38 @@
 
 -
   dataHeader = {
-    logoImg: 'rzf-software.svg',
-    logoAlt: 'RZF Software',
+    logoImg: 'covid-alert.svg',
+    logoAlt: 'Covid 19 Logo',
     to: 'index.html',
     menuList: [
       {
-        text: 'Tentang',
-        to: '#tentang',
-        navActive: 'about'
+        text: 'Overview',
+        to: '#overview',
+        navActive: 'overview'
       },
       {
-        text: 'Fitur',
-        to: '#fitur',
-        navActive: 'feature'
+        text: 'Contagion',
+        to: '#contagion',
+        navActive: 'contagion'
       },
       {
-        text: 'Promo',
-        to: '#promo',
-        navActive: 'promo'
+        text: 'Symptomps',
+        to: '#symptomps',
+        navActive: 'symptomps'
       },
       {
-        text: 'Testimoni',
-        to: '#testimoni',
-        navActive: 'testimony'
-      },
-      {
-        text: 'Dokumentasi',
-        to: '#dokumentasi',
-        navActive: 'documentation'
+        text: 'Prevention',
+        to: '#prevention',
+        navActive: 'prevention'
       },
     ],
+    headerButton: [
+      {
+        text: 'Contact',
+        to: '#contact',
+        icon: 'contact.svg'
+      }
+    ]
   }
 
 //header
@@ -60,5 +62,9 @@
             ='\n'
             a.header__link(href=val.to class=(navActive == val.navActive ? 'header__link--active' : '')) !{val.text}
             ='\n'
+        each val in dataHeader.headerButton
+          - data = val;
+            ='\n'
+            a.header__btn.btn.btn--secondary(href=val.to class=(navActive == val.navActive ? 'header__link--active' : '')) !{val.text}
 ='\n'
 //end-header
