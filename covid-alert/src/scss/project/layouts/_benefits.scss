@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Layouts Benefits
+   ========================================================================== */
+
+.benefits {
+  padding: 68px 0;
+  overflow: hidden;
+  @include large {
+    padding: 56px 0;
+  }
+  @include small {
+    padding: 48px 0;
+  }
+  @include small {
+    padding: 32px 0;
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__title {
+    font-family: $font-title;
+    @include font-size(h2);
+    text-align: right;
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+      @include font-size(h2-accent);
+      text-align: left;
+    }
+    @include small {
+      @include font-size(h3);
+    }
+  }
+  &__txt {
+    float: right;
+    width: 61.2%;
+    width: 60%;
+    @include medium {
+      width: 100%;
+    }
+  }
+  &__img {
+    float: left;
+    width: 37%;
+    @include medium {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+    @include medium {
+      max-width: initial;
+      float: none;
+    }
+  }
+  &__item {
+    background-color: color(white);
+    @include shadow(2);
+    padding: 16px 24px 16px 64px;
+    @include font-size(h4);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    position: relative;
+    min-width: 480px;
+    &:nth-child(2),
+    &:nth-child(4) {
+      transform: scale(1.04);
+      @include shadow(1);
+      @include small {
+        transform: scale(1.02);
+      }
+    }
+    @include medium {
+      min-width: initial;
+    }
+    @include small {
+      @include font-size(label);
+      padding-left: 56px;
+      margin-bottom: 16px;
+      padding: 12px 20px 12px 40px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      background: url(../img/icons/checklist.svg);
+      background-size: cover;
+      content: '';
+      width: 28px;
+      height: 26px;
+      position: absolute;
+      left: 20px;
+      top: 18px;
+      background-repeat: no-repeat;
+      @include small {
+        top: 16px;
+        left: 14px;
+        width: 14px;
+        height: 12px;
+      }
+    }
+  }
+}

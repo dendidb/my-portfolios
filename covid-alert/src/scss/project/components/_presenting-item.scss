@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Components Presenting Item
+   ========================================================================== */
+
+.presenting {
+  $p: &;
+  &__box {
+    min-height: 240px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(0,0,0,.6);
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+      #{$p}__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__img {
+    height: 240px;
+    &__el {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .js-popup-image {
+      text-decoration: none;
+      @include remove-tap-highlight;
+    }
+  }
+  &__txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s ease;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: color(presenting-overlay);
+    z-index: zi(presenting-overlay-txt);
+    // opacity: 0;
+    // visibility: hidden;
+    // transform: translateY(-4px);
+  }
+  &__ttl{
+    color: color(white);
+    font-weight: fw(medium);
+    @include font-size(h4);
+    margin-bottom: 0;
+    @include small {
+      @include font-size(h6);
+    }
+  }
+}

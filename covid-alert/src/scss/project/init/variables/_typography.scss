@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Variable: Typography
+   ========================================================================== */
+
+$font-title: 'Playfair Display', serif;
+$font-primary: 'Raleway', sans-serif;
+
+// Font
+$font: (
+  family-primary: $font-primary,
+  h1-large: (
+    font-size: 5.6rem,
+    line-height: 6.7rem,
+  ),
+  h1: (
+    font-size: 4.8rem,
+    line-height: 6.4rem,
+  ),
+  h2: (
+    font-size: 4rem,
+    line-height: 5.3rem,
+  ),
+  h2-accent: (
+    font-size: 3.8rem,
+    line-height: 4.2rem,
+  ),
+  h3: (
+    font-size: 2.4rem,
+    line-height: 3.2rem,
+  ),
+  h4: (
+    font-size: 2rem,
+    line-height: 2.8rem,
+  ),
+  h5: (
+    font-size: 1.8rem,
+    line-height: 2.4rem,
+  ),
+  h6: (
+    font-size: 1.6rem,
+    line-height: 2.4rem,
+  ),
+  body: (
+    font-size: 1.6rem,
+    line-height: 2.4rem,
+  ),
+  label: (
+    font-size: 1.4rem,
+    line-height: 2rem,
+  ),
+  small: (
+    font-size: 1.2rem,
+    line-height: 1.6rem,
+  ),
+  weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+    extra-bold: 900
+  ),
+);

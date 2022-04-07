@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Layouts Footer
+   ========================================================================== */
+
+.footer {
+  padding: 40px 0;
+  background-color: color(white);
+  @include shadow(4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  &__copyright {
+    text-align: center;
+    &__el {
+      margin-bottom: 0;
+      @include extra-small {
+        @include font-size(label);
+      }
+    }
+  }
+}

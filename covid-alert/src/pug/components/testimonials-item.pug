@@ -1,0 +1,24 @@
+//-------------------------------------------------------------------------------
+  @name: Testimonials Item
+  -------------------------------------------------------------------------------//
+
+//testimonials-item
+.testimonials__item
+  .testimonials__avatar
+    ='\n'
+    img.testimonials__avatar__el(src='assets/img/dummy/'+val.img alt=testimonials.title)/
+    ='\n'
+  .testimonials__rating
+    ='\n'
+    i.ri-star
+    ='\n'
+    i.ri-star
+    ='\n'
+    i.ri-star
+    ='\n'
+    i.ri-star.disabled
+    ='\n'
+    i.ri-star.disabled
+    ='\n'
+  p.testimonials__caption !{val.caption}
+  p.testimonials__name !{val.name}

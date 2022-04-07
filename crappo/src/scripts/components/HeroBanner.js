@@ -2,6 +2,7 @@
 @name: Hero Banner
 @description: Hero Banner
 --------------------------------------------------------------------------------- */
+
 // --- utilities
 import {
   Scrolllable,

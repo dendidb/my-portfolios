@@ -1,0 +1,64 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoImg: 'rzf-software.svg',
+    logoAlt: 'RZF Software',
+    to: 'index.html',
+    menuList: [
+      {
+        text: 'Tentang',
+        to: '#tentang',
+        navActive: 'about'
+      },
+      {
+        text: 'Fitur',
+        to: '#fitur',
+        navActive: 'feature'
+      },
+      {
+        text: 'Promo',
+        to: '#promo',
+        navActive: 'promo'
+      },
+      {
+        text: 'Testimoni',
+        to: '#testimoni',
+        navActive: 'testimony'
+      },
+      {
+        text: 'Dokumentasi',
+        to: '#dokumentasi',
+        navActive: 'documentation'
+      },
+    ],
+  }
+
+//header
+.header
+  .container
+    .header__content
+      ='\n'
+      a.header__logo(href=dataHeader.to)
+        ='\n'
+        img.header__logo__el(src='assets/img/logo/'+dataHeader.logoImg alt=dataHeader.logoAlt)/
+        ='\n'
+      .overlay
+      ='\n'
+      button.burger-menu.js-burger-menu(type='button')
+        ='\n'
+        each val in [0,1,2]
+          span.burger-menu__bar
+          ='\n'
+      ='\n'
+      ul.header__list.js-mobile-menu
+        each val in dataHeader.menuList
+          - data = val;
+          li.header__item
+            ='\n'
+            a.header__link(href=val.to class=(navActive == val.navActive ? 'header__link--active' : '')) !{val.text}
+            ='\n'
+='\n'
+//end-header

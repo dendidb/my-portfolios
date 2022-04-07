@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: Presenting
+  -------------------------------------------------------------------------------//
+
+//presenting
+.presenting
+  .container
+    .presenting__head
+      h3.presenting__title
+        | !{presenting.title}
+    .presenting__body.js-slide-presenting
+      each val in presenting.list
+        - data = val;
+        include ../components/presenting-item.pug
+='\n'
+//end-presenting

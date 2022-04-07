@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Components Hero Banner Item
+   ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  background-image: url(../img/bg/floating-elements.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom bottom;
+  // background-attachment: fixed;
+  &__list {
+    @include clearfix;
+  }
+  #{$hb} {
+    &__list {
+      width: 30%;
+      float: right;
+      @include large {
+        width: 40%;
+      }
+      @include medium {
+        width: 100%;
+        float: none;
+        margin-bottom: 24px;
+      }
+    }
+    &__img {
+      &__el {
+        display: block;
+        min-height: 458px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        @include small {
+          @include font-size(h3);
+          min-height: 280px;
+        }
+      }
+    }
+    &__txt {
+      width: 60%;
+      float: left;
+      max-width: 572px;
+      display: table;
+      min-height: 480px;
+      @include medium {
+        min-height: 280px;
+      }
+      @include small {
+        min-height: 340px;
+      }
+      &__wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        @include medium {
+          vertical-align: top;
+        }
+      }
+      @include medium {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &__title {
+      font-family: $font-title;
+      @include font-size(h2);
+      margin-bottom: 24px;
+      transition: all .3s ease;
+      @include small {
+        @include font-size(h3);
+        margin-bottom: 16px;
+      }
+    }
+    &__desc {
+      @include font-size(h5);
+      font-weight: fw(regular);
+      margin-bottom: 40px;
+      @include medium {
+        margin-bottom: 32px;
+      }
+      @include small {
+        @include font-size(h6);
+        margin-bottom: 24px;
+      }
+    }
+    &__btn {
+      @include small {
+        display: block;
+        .btn--primary {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

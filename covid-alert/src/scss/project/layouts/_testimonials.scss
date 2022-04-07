@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Layouts Testimonials
+   ========================================================================== */
+
+.testimonials {
+  $t: &;
+  padding: 64px 0 72px;
+  overflow: hidden;
+  background-color: color(secondary);
+  @include large {
+    padding: 56px 0 64px;
+  }
+  @include medium {
+    padding: 48px 0 56px;
+  }
+  @include small {
+    padding: 32px 0 40px;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__head {
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    @include font-size(h2);
+    font-family: $font-title;
+    margin-bottom: 0;
+    @include medium {
+      @include font-size(h2-accent);
+    }
+    @include small {
+      @include font-size(h3);
+    }
+  }
+  &__body {
+    @include clearfix;
+    position: relative;
+    @include medium {
+      margin-left: 32px;
+    }
+    @include extra-small {
+      margin-left: -24px;
+      margin-right: -48px;
+      padding-left: 48px;
+      padding-bottom: 24px;
+      white-space: nowrap;
+      overflow-y: hidden;
+      overflow-x: auto;
+      @include scroll('x', 'touch', 'hide');
+    }
+  }
+  .owl-stage-outer {
+    overflow: initial;
+  }
+
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: zi(banner-owl-nav-dots);
+    }
+    .owl-nav {
+      top: -55px;
+      transform: translateY(-50%);
+      @include small {
+        display: none;
+      }
+    }
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        bottom: 0;
+        z-index: zi(banner-owl-nav-prev-next);
+        color: color(white);
+        background-color: transparent;
+        @include font-size(h5);
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 2px solid color(primary) !important;
+        border-radius: 50%;
+        transition: all 350ms ease;
+        @include medium {
+          opacity: 1;
+        }
+        &:hover {
+          background-color: color(primary);
+          i {
+            color: color(white);
+          }
+        }
+      }
+      .owl-prev {
+        right: -523px;
+        transform: none;
+        // &.disabled {
+        //   visibility: hidden;
+        //   opacity: 0;
+        // }
+        @include large {
+          right: -420px;
+          top: -32px;
+        }
+        @include medium {
+          transform: none;
+          right: -254px;
+          top: -6px;
+        }
+        @include extra-small {
+          right: 126px;
+        }
+      }
+      .owl-next {
+        left: 544px;
+        transform: none;
+        // &.disabled {
+        //   visibility: hidden;
+        //   opacity: 0;
+        // }
+        @include large {
+          left: 440px;
+          top: -32px;
+        }
+        @include medium {
+          transform: none;
+          left: 280px;
+          top: -6px;
+        }
+        @include extra-small {
+          left: 126px;
+        }
+      }
+      i {
+        vertical-align: middle;
+        @include font-size(body);
+        font-weight: fw(regular);
+        color: color(primary);
+        @include extra-small {
+          @include font-size(small);
+        }
+      }
+    }
+  }
+}

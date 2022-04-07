@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Solution
+  -------------------------------------------------------------------------------//
+
+//solution
+.solution
+  .container
+    h3.solution__title !{solution.title}
+    .solution__wrapper
+      .solution__img
+        ='\n'
+        img.solution__img__el(src='assets/img/dummy/'+solution.img alt=solution.title)/
+        ='\n'
+      .solution__txt
+        ul.solution__list
+          each val in solution.list
+            - data = val;
+              li.solution__item
+                | !{val.text}
+='\n'
+//end-solution

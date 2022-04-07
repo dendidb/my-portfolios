@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Elements Icons
+   ========================================================================== */
+
+[class^="ri-"], [class*=" ri-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'RZF-Software' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ri-pen:before {
+  content: "\e919";
+}
+.ri-eye:before {
+  content: "\e90d";
+}
+.ri-invisible-eye:before {
+  content: "\e915";
+}
+.ri-play:before {
+  content: "\e905";
+}
+.ri-download:before {
+  content: "\e900";
+}
+.ri-phone-call:before {
+  content: "\e91d";
+}
+.ri-instagram:before {
+  content: "\e90a";
+}
+.ri-mail:before {
+  content: "\e913";
+}
+.ri-trash:before {
+  content: "\e917";
+}
+.ri-close:before {
+  content: "\e916";
+}
+.ri-min:before {
+  content: "\e918";
+}
+.ri-plus:before {
+  content: "\e914";
+}
+.ri-arrow-down:before {
+  content: "\e901";
+}
+.ri-arrow-left:before {
+  content: "\e902";
+}
+.ri-arrow-right:before {
+  content: "\e903";
+}
+.ri-arrow-up:before {
+  content: "\e904";
+}
+.ri-chevron-down:before {
+  content: "\e906";
+}
+.ri-chevron-left:before {
+  content: "\e907";
+}
+.ri-chevron-right:before {
+  content: "\e908";
+}
+.ri-chevron-up:before {
+  content: "\e909";
+}
+.ri-phone:before {
+  content: "\e90c";
+}
+.ri-search:before {
+  content: "\e90e";
+}
+.ri-telegram:before {
+  content: "\e90f";
+}
+.ri-twitter:before {
+  content: "\e910";
+}
+.ri-user:before {
+  content: "\e911";
+}
+.ri-whatsapp:before {
+  content: "\e912";
+}
+.ri-facebook:before {
+  content: "\e90b";
+}
+.ri-linkedin:before {
+  content: "\eac9";
+}
+.ri-envelope:before {
+  content: "\e91b";
+}
+.ri-star:before {
+  content: "\e91c";
+}

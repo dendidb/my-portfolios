@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: Excellence
+  -------------------------------------------------------------------------------//
+
+//excellence
+.excellence#fitur
+  .container
+    .excellence__head
+      h3.excellence__ttl
+        | !{excellence.title}
+    .excellence__body
+      each val in excellence.list
+        - data = val;
+        include ../components/excellence-item.pug
+='\n'
+//end-excellence

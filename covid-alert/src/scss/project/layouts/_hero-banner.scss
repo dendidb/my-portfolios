@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Layouts Hero Banner
+   ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  position: relative;
+  @include clearfix;
+  overflow: hidden;
+  padding: 68px 0;
+  @include large {
+    padding: 56px 0;
+  }
+  @include medium {
+    padding: 48px 0;
+  }
+  @include small {
+    padding: 32px 0;
+  }
+  &__img {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: all 1.1s ease 0s;
+    transition-delay: all 1.1s ease 0s;
+  }
+
+  &--standalone,
+  .owl-item.active {
+    display: inline-block;
+    #{$hb} {
+      &__img {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .8s;
+      }
+    }
+  }
+
+  .owl-carousel {
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      transition: all 500ms ease;
+      background-color: color(black, 1);
+      opacity: .1;
+      @include extra-small {
+        width: 6px;
+        height: 6px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 32px;
+        background-color: color(primary);
+        opacity: 1;
+      }
+      &s {
+        position: absolute;
+        bottom: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include medium {
+          bottom: -24px;
+        }
+        @include small {
+          bottom: -16px;
+        }
+      }
+    }
+  }
+}
+

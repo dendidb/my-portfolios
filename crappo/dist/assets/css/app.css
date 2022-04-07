@@ -1234,10 +1234,25 @@ b {
 }
 .crypto__box:hover {
   background-color: #2b076e;
+  -webkit-transform: translateY(-4px);
+     -moz-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+       -o-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 .crypto__box:hover .crypto__box__title,
 .crypto__box:hover .crypto__box__desc {
   color: #fff;
+}
+.crypto__box:hover__btn {
+  min-width: 62px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.crypto__box:hover__btn--round {
+  font-size: 16px;
 }
 @media only screen and (max-width: 991.98px) {
   .crypto__box {
@@ -1286,26 +1301,6 @@ b {
   color: #828282;
   margin-bottom: 24px;
 }
-.crypto__box__btn {
-  min-width: 62px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.crypto__box__btn .crypto__box__btn__txt {
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  margin-right: 24px;
-}
-.crypto__box__btn .crypto__box__btn__icon {
-  background-color: #fff;
-  background-image: url(../img/icons/arrow-right-small.svg);
-  -moz-background-size: 8px auto;
-       background-size: 8px auto;
-  margin-left: 8px;
-}
 
 .crypto__link {
   position: absolute;
@@ -1313,7 +1308,7 @@ b {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: -1;
 }
 
 /* ==========================================================================

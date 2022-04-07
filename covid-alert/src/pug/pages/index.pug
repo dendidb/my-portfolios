@@ -1,0 +1,38 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Aplikasi Medis';
+    classActive = 'beranda';
+
+//- Body
+block siteContent
+
+  //- Hero Banner
+  include home/hero-banner.pug
+  
+  //- Problem
+  include home/problem.pug
+
+  //- Solution
+  include home/solution.pug
+  
+  //- Excellence
+  include home/excellence.pug
+
+  //- Sale
+  include home/sale.pug
+
+  //- Benefits
+  include home/benefits.pug
+
+  //- Presenting
+  include home/presenting.pug
+
+  //- Testimonials
+  include home/testimonials.pug
+
+
+  //- Documentation
+  include home/documentation.pug

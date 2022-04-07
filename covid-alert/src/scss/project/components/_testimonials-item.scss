@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Components Testimonials Item
+   ========================================================================== */
+
+.testimonials {
+  $t: &;
+  #{$t}__item {
+    background-color: color(white);
+    @include shadow(2);
+    float: left;
+    width: 440px;
+    margin-right: 60px;
+    padding: 32px 24px 48px 64px;
+    position: relative;
+    border-radius: 8px;
+    z-index: 1;
+    @include small {
+      float: none;
+      width: 296px;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 24px 24px 24px 48px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: url(../img/bg/quotes-mark.svg);
+      background-repeat: no-repeat;
+      bottom: 32px;
+      right: 32px;
+      width: 80px;
+      height: 80px;
+
+      @include small {
+        width: 78px;
+        height: 78px;
+        right: 16px;
+        bottom: 8px;
+      }
+    }
+  }
+  &__avatar {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 50%;
+    transform: translate(-100px, -50%);
+    @include small {
+      width: 64px;
+      height: 64px;
+      transform: translate(-81px, -50%);
+    }
+    &__el {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__rating {
+    margin-bottom: 0;
+    i {
+      @include font-size(h5);
+      color: color(gold);
+      &.disabled {
+        opacity: .1;
+        color: color(black, 1);
+      }
+    }
+  }
+  &__caption {
+    margin-bottom: 16px;
+    @include small {
+      white-space: normal;
+      z-index: 2;
+      position: relative;
+    }
+    @include extra-small {
+      @include font-size(label);
+    }
+  }
+  &__name {
+    font-weight: fw(medium);
+    @include font-size(h5);
+    margin-bottom: 0;
+    @include small {
+      z-index: 2;
+      position: relative;
+      @include font-size(h6);
+    }
+    @include extra-small {
+      white-space: normal;
+    }
+  }
+}
