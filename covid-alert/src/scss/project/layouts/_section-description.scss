@@ -59,6 +59,7 @@
     color: color(black, 1);
     @include font-size(h6);
     margin-bottom: 32px;
+    text-align: justify;
   }
   &__img {
     float: left;
