@@ -60,6 +60,9 @@
       border: 1px solid color(secondary);
       color: color(white);
     }
+    @include small {
+      background-color: color(tertiary);
+    }
   }
   &--tertiary {
     position: relative;

@@ -37,9 +37,28 @@
   &__txt {
     float: right;
     width: 50%;
+    display: table;
+    min-height: 400px;
+    &__wrapper {
+      display: table-cell;
+      vertical-align: middle;
+    }
     @include medium {
       width: 100%;
     }
+  }
+  &__label {
+    color: color(primary);
+    margin-bottom: 8px;
+  }
+  &__title {
+    color: color(black, 1);
+    margin-bottom: 16px;
+  }
+  &__desc {
+    color: color(black, 1);
+    @include font-size(h4);
+    margin-bottom: 32px;
   }
   &__img {
     float: left;
@@ -50,46 +69,6 @@
     }
     @include small {
       margin-bottom: 24px;
-    }
-  }
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    max-width: 622px;
-    float: left;
-    @include medium {
-      max-width: initial;
-      float: none;
-    }
-  }
-  &__item {
-    background-color: color(white);
-    @include shadow(2);
-    padding: 16px 24px 16px 64px;
-    @include font-size(h4);
-    margin-bottom: 24px;
-    border-radius: 8px;
-    position: relative;
-    min-width: 480px;
-    &:nth-child(2),
-    &:nth-child(4) {
-      transform: scale(1.04);
-      @include shadow(1);
-      @include small {
-        transform: scale(1.02);
-      }
-    }
-    @include medium {
-      min-width: initial;
-    }
-    @include small {
-      @include font-size(label);
-      margin-bottom: 16px;
-      padding: 12px 20px 12px 40px;
-    }
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }

@@ -65,6 +65,6 @@
         each val in dataHeader.headerButton
           - data = val;
             ='\n'
-            a.header__btn.btn.btn--secondary(href=val.to class=(navActive == val.navActive ? 'header__link--active' : '')) !{val.text}
+            a.btn.btn--secondary(href=val.to class=(navActive == val.navActive ? 'header__link--active' : '')) !{val.text}
 ='\n'
 //end-header
