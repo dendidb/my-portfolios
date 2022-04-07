@@ -57,7 +57,7 @@
   }
   &__desc {
     color: color(black, 1);
-    @include font-size(h4);
+    @include font-size(h6);
     margin-bottom: 32px;
   }
   &__img {
@@ -65,10 +65,7 @@
     width: 40%;
     @include medium {
       width: 100%;
-      margin-bottom: 32px;
-    }
-    @include small {
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
   }
 }

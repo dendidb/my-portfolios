@@ -15,7 +15,7 @@
   overflow: hidden;
   border: 1px solid transparent;
   @include font-size(h6);
-  font-weight: fw(regular);
+  font-weight: fw(semi-bold);
   background-color: transparent;
   @include remove-tap-highlight;
   transition: all .3s ease;
