@@ -18,7 +18,7 @@
   font-weight: fw(semi-bold);
   background-color: transparent;
   @include remove-tap-highlight;
-  transition: all .3s ease;
+  transition: all 0.2s ease;
   &--block {
     display: block;
     width: 100%;
@@ -42,7 +42,7 @@
       background-color: color(secondary);
       transform: scaleX(0);
       transform-origin: right center;
-      transition: transform .4s ease .1s;
+      transition: transform .3s ease .1s;
     }
     &:hover {
       &::before {
@@ -82,7 +82,7 @@
       background-color: color(primary);
       transform: scaleX(0);
       transform-origin: right center;
-      transition: transform .4s ease .1s;
+      transition: transform .3s ease .1s;
     }
     &:hover {
       color: color(white);
