@@ -5,6 +5,7 @@
 .hero-banner {
   $hb: &;
   position: relative;
+  &__headline,
   &__title,
   &__desc,
   &__btn {
@@ -19,14 +20,13 @@
     transition: all 2s ease;
   }
 
-  &--single,
+  &--standalone,
   .owl-item.active {
     #{$hb} {
       &__item {
         &::before {
           opacity: 1;
           transform: none;
-          // transition: all 1.75s ease;
         }
       }
 
@@ -36,11 +36,16 @@
         transition-delay: .8s;
       }
 
+      &__headline,
       &__title,
       &__desc,
       &__btn {
         opacity: 1;
         transform: none;
+      }
+
+      &__headline {
+        transition-delay: .4s;
       }
 
       &__title {

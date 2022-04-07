@@ -5,18 +5,22 @@
 //section-description
 .section-description
   .container
-    h3.section-description__title
-      | !{sectionDescription.title}
     .section-description__wrapper
       .section-description__img
         ='\n'
         img.section-description__img__el(src='assets/img/dummy/'+sectionDescription.img alt=sectionDescription.title)/
         ='\n'
       .section-description__txt
-        ul.section-description__list
-          each val in sectionDescription.list
-            - data = val;
-              li.section-description__item
-                | !{val.text}
+        h4.section-description__label
+          | !{sectionDescription.label}
+        h3.section-description__title
+          | !{sectionDescription.title}
+        p.section-description__desc
+          | !{sectionDescription.desc}
+        ='\n'
+        a.btn.btn--tertiary(href=sectionDescription.button.to)
+          | !{sectionDescription.button.text}
+        ='\n'
+        
 ='\n'
 //end-solution

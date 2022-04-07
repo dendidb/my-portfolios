@@ -71,13 +71,19 @@
       max-width: initial;
     }
   }
+  &__headline {
+    text-transform: uppercase;
+    color: color(primary);
+    font-weight: fw(bold);
+    margin-bottom: 16px;
+  }
 
   &__title {
     font-family: ff(family-title);
     @include font-size(h1);
     font-weight: fw(bold);
     color: color(black, 1);
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     max-width: 500px;
     @include large {
       @include font-size(h2);

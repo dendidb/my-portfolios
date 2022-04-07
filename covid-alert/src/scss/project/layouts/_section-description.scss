@@ -43,7 +43,7 @@
   }
   &__img {
     float: left;
-    width: 50%;
+    width: 40%;
     @include medium {
       width: 100%;
       margin-bottom: 32px;
@@ -90,24 +90,6 @@
     }
     &:last-child {
       margin-bottom: 0;
-    }
-    &::before {
-      background: url(../img/icons/checklist.svg);
-      background-size: cover;
-      content: '';
-      width: 28px;
-      height: 26px;
-      position: absolute;
-      left: 20px;
-      top: 18px;
-      margin-right: 12px;
-      background-repeat: no-repeat;
-      @include small {
-        top: 16px;
-        left: 14px;
-        width: 14px;
-        height: 12px;
-      }
     }
   }
 }
