@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Components Help Form
+   ========================================================================== */
+
+.help {
+  padding: 48px 0;
+  &__wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  &__title {
+    text-align: center;
+    color: color(thirdiary);
+    margin-bottom: 62px;
+  }
+  &__form {
+    &__btn {
+      position: relative;
+    }
+  }
+}

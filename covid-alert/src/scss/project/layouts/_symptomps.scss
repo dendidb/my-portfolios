@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Layouts Symptomps
+   ========================================================================== */
+
+.symptomps {
+  padding: 32px 0 56px;
+  @include small {
+    padding: 48px 0;
+  }
+  @include extra-small {
+    padding: 32px 0;
+  }
+  &__head {
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    @include small {
+      margin-bottom: 12px;
+    }
+  }
+  &__body {
+
+  }
+  &__img {
+    &__el {
+      margin: 0 auto;
+      height: 470px;
+      object-fit: cover;
+      display: block;
+      @include small {
+        width: 100%;
+        height: 260px;
+      }
+    }
+  }
+}

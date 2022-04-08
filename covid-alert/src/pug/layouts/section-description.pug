@@ -18,10 +18,9 @@
             | !{sectionDescription.title}
           p.section-description__desc
             | !{sectionDescription.desc}
-          ='\n'
-          a.btn.btn--tertiary(href=sectionDescription.button.to)
-            | !{sectionDescription.button.text}
-          ='\n'
-        
+          .section-description__btn
+            ='\n'
+            a.btn.btn--tertiary(href=sectionDescription.button.to)
+              | !{sectionDescription.button.text}
 ='\n'
 //end-solution

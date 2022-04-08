@@ -11,10 +11,14 @@
       ='\n'
     .hero-banner__txt
       .hero-banner__txt__align
-        h4.hero-banner__headline !{data.headline}
-        h2.hero-banner__title !{data.title}
-        p.hero-banner__desc !{data.desc}
+        h4.hero-banner__headline
+          | !{data.headline}
+        h2.hero-banner__title
+          | !{data.title}
+        p.hero-banner__desc
+          | !{data.desc}
         .hero-banner__btn
           ='\n'
           a.btn.btn--primary(href=data.btn.to) !{data.btn.text}
+          ='\n'
 ='\n'

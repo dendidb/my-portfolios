@@ -1,0 +1,105 @@
+/* ==========================================================================
+Components: Input form
+========================================================================== */
+
+.fi {
+  &-row {
+    position: relative;
+    margin-bottom: 32px;
+    font-size: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    i {
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      z-index: zi(fi-icon);
+      @include font-size(h6);
+      color: color(black, 3);
+      @include medium {
+        padding: 4px 0;
+        top: 10px;
+      }
+    }
+  }
+
+  &-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding-right: 24px;
+    @include extra-small {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &-label {
+    display: block;
+    @include font-size(h5);
+    font-weight: fw(regular);
+    color: color(black, 1);
+    margin-bottom: 12px;
+    @include small {
+      @include font-size(h6);
+    }
+  }
+
+  &-multiline,
+  &-single-line {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 16px 164px 16px 24px;
+    @include font-size(h6);
+    background-color: color(white);
+    transition: all .3s ease;
+    border-radius: 56px;
+    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+    @include small {
+      @include font-size(label);
+      padding: 14px;
+    }
+    &:focus {
+      border-color: color(primary);
+    }
+    @include retina {
+      @include font-size(small);
+    }
+  }
+  &-multiline {
+    resize: none;
+    height: 96px;
+  }
+
+  &-alert {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    z-index: zi(fi-alert);
+    @include font-size(small);
+    font-weight: fw(regular);
+    color: red;
+    text-align: left;
+    margin-bottom: 0;
+    transform: translateX(-8px);
+    transition: all 0.35s ease;
+    .error & {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+  }
+}
