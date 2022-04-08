@@ -34,8 +34,8 @@
     float: right;
     width: 50%;
     display: table;
-    min-height: 400px;
-    &__wrapper {
+    min-height: 340px;
+    &__align {
       display: table-cell;
       vertical-align: middle;
     }
@@ -68,6 +68,7 @@
   &__img {
     float: left;
     width: 40%;
+    height: 340px;
     @include medium {
       width: 100%;
       margin-bottom: 0;
