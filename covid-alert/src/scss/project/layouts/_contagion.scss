@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Layouts Contagion
+   ========================================================================== */
+
+.contagion {
+  $c: &;
+  overflow: hidden;
+  padding: 56px 0;
+  @include small {
+    padding: 48px 0;
+  }
+  @include extra-small {
+    padding: 32px 0;
+  }
+  &__head {
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__body {
+    @include clearfix;
+    @include small {
+      margin-left: -16px;
+      margin-right: -16px;
+      white-space: nowrap;
+      overflow-y: hidden;
+      padding: 16px 0;
+      @include scroll('x', 'touch', 'hide');
+    }
+  }
+  #{$c}__item {
+    float: left;
+    width: 33.3333333%;
+    padding: 16px;
+    @include medium {
+      width: 50%;
+    }
+    @include small {
+      display: inline-block;
+      width: 340px;
+      float: none;
+      // margin-right: 16px;
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    }
+  }
+}

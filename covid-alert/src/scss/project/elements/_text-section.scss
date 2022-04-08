@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Text Section
+   ========================================================================== */
+
+.text {
+  text-align: center;
+  &-label {
+    color: color(primary);
+    margin-bottom: 8px;
+  }
+  &-title {
+    margin-bottom: 16px;
+    color: color(black, 1);
+    @include font-size(h3);
+  }
+  &-desc {
+    margin-bottom: 0;
+  }
+}

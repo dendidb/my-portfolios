@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------
+  @name: Contagion Item
+  -------------------------------------------------------------------------------//
+
+//contagion-item
+.contagion__item
+  .contagion__card
+    .contagion__img
+      ='\n'
+      img.contagion__img__el(src='assets/img/dummy/'+val.img alt=val.title)/
+      ='\n'
+    .contagion__txt
+      h3.contagion__txt__title
+        | !{val.title}
+      p.contagion__txt__desc
+        | !{val.desc}
+='\n'
+//end-contagion-item

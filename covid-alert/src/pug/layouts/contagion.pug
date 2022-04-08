@@ -1,0 +1,17 @@
+//-------------------------------------------------------------------------------
+  @name: Contagion
+  -------------------------------------------------------------------------------//
+
+//contagion
+.contagion
+  .container
+    .contagion__head
+      h5.text.text-label !{contagion.label}
+      h3.text.text-title !{contagion.title}
+      p.text.text-desc !{contagion.desc}
+    .contagion__body
+      each val in contagion.list
+        - data = val;
+        include ../components/contagion-item.pug
+='\n'
+//end-contagion
