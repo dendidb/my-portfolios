@@ -19,15 +19,18 @@
     @include medium {
       margin-bottom: 24px;
     }
+    @include small {
+      margin-bottom: 12px;
+    }
   }
   &__body {
     @include clearfix;
     @include small {
-      margin-left: -16px;
-      margin-right: -16px;
+      margin-left: -24px;
+      margin-right: -24px;
+      padding: 16px 12px;
       white-space: nowrap;
       overflow-y: hidden;
-      padding: 16px 0;
       @include scroll('x', 'touch', 'hide');
     }
   }
@@ -40,9 +43,9 @@
     }
     @include small {
       display: inline-block;
-      width: 340px;
       float: none;
-      // margin-right: 16px;
+      width: 340px;
+      margin-right: 12px;
       // &:last-child {
       //   margin-right: 0;
       // }
