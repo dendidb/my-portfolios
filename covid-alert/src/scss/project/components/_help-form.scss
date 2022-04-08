@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .help {
-  padding: 48px 0;
+  padding: 48px 0 24px;
   overflow: hidden;
   position: relative;
   &::before {
@@ -11,12 +11,11 @@
     background: url(../img/bg/covid-red.svg);
     background-repeat: no-repeat;
     position: absolute;
-    // background-size: 150px auto;
     width: 150px;
     height: 154px;
     z-index: 2;
-    right: 66px;
-    bottom: 71px;
+    right: 186px;
+    bottom: 141px;
   }
   &::after {
     content: '';
@@ -27,8 +26,8 @@
     width: 373px;
     height: 383px;
     z-index: 2;
-    right: -820px;
-    bottom: 20px;
+    right: -164px;
+    bottom: -140px;
   }
   &__head {
     max-width: 400px;

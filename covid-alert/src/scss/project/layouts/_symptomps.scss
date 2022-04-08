@@ -3,6 +3,30 @@
    ========================================================================== */
 
 .symptomps {
+  position: relative;
+  &::before {
+    content: '';
+    background: url(../img/bg/path-1.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 150px;
+    height: 154px;
+    z-index: 2;
+    right: 0;
+    bottom: 141px;
+  }
+  &::after {
+    content: '';
+    background: url(../img/bg/path-2.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 320px auto;
+    // width: 128px;
+    // height: 183px;
+    z-index: 2;
+    left: 240px;
+    bottom: -140px;
+  }
   padding: 32px 0 56px;
   @include small {
     padding: 48px 0;

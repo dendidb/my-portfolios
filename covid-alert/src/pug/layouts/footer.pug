@@ -2,10 +2,73 @@
   @name: Footer
   -------------------------------------------------------------------------------//
 
+-
+  footer = {
+    logo: 'covid-alert.svg',
+    alt: 'Covid Alert Logo',
+    nav: [
+      {
+        to: '#overview',
+        text: 'Overview'
+      },
+      {
+        to: '#symptomps',
+        text: 'Symptomps'
+      },
+      {
+        to: '#prevention',
+        text: 'Prevention'
+      },
+      {
+        to: '#treatment',
+        text: 'Treatment'
+      }
+    ],
+    sosmed: [
+      {
+        to: '#facebook',
+        classSosmed: 'facebook'
+      },
+      {
+        to: '#youtube',
+        classSosmed: 'youtube'
+      },
+      {
+        to: '#vtube',
+        classSosmed: 'vtube'
+      },
+      {
+        to: '#twitter',
+        classSosmed: 'twitter'
+      }
+    ]
+  }
 //footer
 .footer
   .container
-    .footer__copyright
-      p.footer__copyright__el Copyright RZF Software 2022. All Rights Reserved
+    .footer__top
+      ='\n'
+      a.footer__logo(href='#')
+        ='\n'
+        img.footer__logo__el(src='assets/img/logo/'+footer.logo alt=footer.alt)
+        ='\n'
+      ul.footer__nav
+        each val in footer.nav
+          - data = val;
+          li.footer__nav__list
+            ='\n'
+            a.footer__nav__link(href=val.to)
+              | !{val.text}
+      ul.footer__sosmed
+        each val in footer.sosmed
+          - data = val;
+          li.footer__sosmed__list
+            ='\n'
+            a.footer__sosmed__link(href='#') Tes
+              ='\n'
+              span.footer__sosmed__icon(class='ri-'+classSosmed)
+              ='\n'
+    .footer__bottom
+      p.footer__copyright__el 2022 @ All rights reserved by pixelspark.co
 ='\n'
 //end-footer
