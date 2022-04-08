@@ -4,8 +4,34 @@
 
 .help {
   padding: 48px 0;
-  &__wrapper {
-    max-width: 420px;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: '';
+    background: url(../img/bg/covid-red.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    // background-size: 150px auto;
+    width: 150px;
+    height: 154px;
+    z-index: 2;
+    right: 66px;
+    bottom: 71px;
+  }
+  &::after {
+    content: '';
+    background: url(../img/bg/covid-red.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 373px auto;
+    width: 373px;
+    height: 383px;
+    z-index: 2;
+    right: -820px;
+    bottom: 20px;
+  }
+  &__head {
+    max-width: 400px;
     margin: 0 auto;
   }
   &__title {
@@ -16,6 +42,8 @@
     font-weight: fw(bold);
   }
   &__form {
+    max-width: 520px;
+    margin: 0 auto;
     &__btn {
       position: relative;
     }

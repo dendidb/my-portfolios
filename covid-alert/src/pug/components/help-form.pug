@@ -5,17 +5,17 @@
 //help-form
 .help
   .container
-    .help__wrapper
+    .help__head
       h3.help__title
         | !{help.title}
-      .help__form
-        form(action='#' method='GET')
-          each val in help.helpForm
-            - data = val;
-            include ../components/input-form.pug
-          .help__form__btn
-            ='\n'
-            button.btn.btn--primary.btn--help(type='submit') Send
-            ='\n'
+    .help__form
+      form(action='#' method='GET')
+        each val in help.helpForm
+          - data = val;
+          include ../components/input-form.pug
+        .help__form__btn
+          ='\n'
+          button.btn.btn--primary.btn--help(type='submit') Send
+          ='\n'
 ='\n'
 //end-help-form
