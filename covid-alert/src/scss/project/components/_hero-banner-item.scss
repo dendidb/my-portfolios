@@ -91,6 +91,7 @@
     }
     @include medium {
       margin-bottom: 16px;
+      @include font-size(h5);
     }
     @include small {
       @include font-size(h6);
@@ -128,6 +129,7 @@
       max-width: initial;
       @include font-size(body);
       margin-bottom: 24px;
+      max-width: 320px;
     }
     @include small {
       margin-bottom: 16px;

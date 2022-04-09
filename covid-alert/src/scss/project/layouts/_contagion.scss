@@ -25,6 +25,17 @@
   }
   &__body {
     @include clearfix;
+    position: relative;
+    &::before {
+      background: url(../img/bg/covid-red-dark.svg);
+      position: absolute;
+      background-size: cover;
+      left: -126px;
+      bottom: 45px;
+      z-index: zi(before-body-contagion);
+      width: 254px;
+      height: 260px;
+    }
     @include small {
       margin-left: -24px;
       margin-right: -24px;
@@ -46,9 +57,9 @@
       float: none;
       width: 340px;
       margin-right: 12px;
-      // &:last-child {
-      //   margin-right: 0;
-      // }
+    }
+    @include extra-small {
+      width: 300px;
     }
   }
 }

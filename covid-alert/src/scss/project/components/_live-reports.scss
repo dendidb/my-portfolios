@@ -12,7 +12,7 @@
     width: 60%;
     display: table;
     min-height: 528px;
-    @include small {
+    @include medium {
       width: 100%;
       min-height: 0;
       margin-bottom: 32px;
@@ -33,7 +33,7 @@
     background-color: color(white);
     padding: 24px;
     box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
-    @include small {
+    @include medium {
       width: 100%;
     }
   }

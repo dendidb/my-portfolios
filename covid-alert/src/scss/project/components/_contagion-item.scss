@@ -13,8 +13,8 @@
     overflow: hidden;
     position: relative;
     transition: all 0.2s ease;
-    @include small{
-      padding: 24px;
+    @include small {
+      padding: 18px;
     }
     &::after {
       content: '';
@@ -49,6 +49,10 @@
     width: 208px;
     height: 200px;
     margin: 0 auto 32px;
+    @include small {
+      height: 200px;
+      margin-bottom: 16px;
+    }
     &__el {
       object-fit: cover;
       width: 100%;
