@@ -12,6 +12,11 @@
     width: 60%;
     display: table;
     min-height: 528px;
+    @include small {
+      width: 100%;
+      min-height: 0;
+      margin-bottom: 32px;
+    }
     &__img {
       display: table-cell;
       vertical-align: middle;
@@ -28,11 +33,18 @@
     background-color: color(white);
     padding: 24px;
     box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+    @include small {
+      width: 100%;
+    }
   }
   &__title {
     margin-bottom: 32px;
     color: color(thirdiary);
     @include font-size(h3);
+    @include small {
+      @include font-size(h6);
+      margin-bottom: 16px;
+    }
   }
   &__list {
     list-style: none;
@@ -42,22 +54,39 @@
   &__item {
     margin-bottom: 40px;
     position: relative;
+    @include small {
+      margin-bottom: 24px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
-  &__nation {
+  &__img {
     display: inline-block;
     vertical-align: middle;
-    width: 50%;
+    width: 10%;
+    width: 32px;
+    &__el {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
   }
   &__txt {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 16px;
+    width: 55%;
+    margin-left: 8px;
     font-weight: fw(bold);
     @include font-size(h4);
     color: color(thirdiary);
+    &__el {
+      @include small {
+        @include font-size(label);
+      }
+    }
   }
   &__number {
     position: absolute;
@@ -65,11 +94,19 @@
     right: 0;
     font-weight: fw(bold);
     color: color(thirdiary);
+    @include small {
+      @include font-size(label);
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   &__icon {
-    padding-left: 16px;
+    padding-left: 12px;
     &__el {
-      width: 16px;
+      width: 10px;
+      @include small {
+        @include font-size(h6);
+      }
     }
   }
 }
