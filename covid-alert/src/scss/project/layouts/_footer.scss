@@ -14,9 +14,9 @@
     float: left;
     height: 72px;
     width: 19%;
+    @include remove-tap-highlight;
     @include small {
       height: 48px;
-      display: block;
       width: 100%;
       margin-bottom: 48px;
     }
@@ -56,6 +56,7 @@
       text-decoration: none;
       color: color(black, 1);
       transition: all 0.2s ease;
+      @include remove-tap-highlight;
       &:hover {
         color: color(primary);
       }
