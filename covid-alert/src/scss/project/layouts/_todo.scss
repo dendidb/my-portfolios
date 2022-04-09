@@ -15,7 +15,7 @@
       margin-bottom: 12px;
     }
   }
-  &__body {
-    @include clearfix;
+  &__item {
+    background-color: salmon;
   }
 }

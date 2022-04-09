@@ -11,7 +11,7 @@
       p.text.text-desc !{dataTodo.desc}
     each val in dataTodo.list
       - data = val;
-          .todo__body(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
+          .todo__item(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
               include ../components/todo.pug
 ='\n'
 //end-todo

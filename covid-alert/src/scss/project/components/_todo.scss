@@ -7,7 +7,7 @@
   @include clearfix;
   &__img {
     float: right;
-    width: 50%;
+    width: 40%;
     &__el {
       height: 400px;
       display: block;
@@ -15,12 +15,42 @@
   }
   &__txt {
     float: left;
-    width: 50%;
+    width: 60%;
     display: table;
     min-height: 400px;
+    max-width: 532px;
     &__align {
       display: table-cell;
       vertical-align: middle;
+    }
+    &__number {
+      background-color: color(tertiary);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      vertical-align: top;
+      padding: 12px;
+      &__el {
+        color: color(primary);
+        @include font-size(h4);
+        font-weight: fw(bold);
+      }
+    }
+    &__detail {
+      display: inline-block;
+      vertical-align: top;
+      width: 478px;
+      padding-left: 32px;
+    }
+    &__title {
+      margin-bottom: 16px;
+      font-weight: fw(bold);
+      @include font-size(h3);
+    }
+    &__desc {
+      @include font-size(h6);
+      margin-bottom: 0;
     }
   }
   // -- modifier
