@@ -27,19 +27,19 @@
     sosmed: [
       {
         to: '#facebook',
-        classSosmed: 'facebook'
+        sosmedClass: 'facebook'
       },
       {
         to: '#youtube',
-        classSosmed: 'youtube'
+        sosmedClass: 'youtube'
       },
       {
         to: '#vtube',
-        classSosmed: 'vtube'
+        sosmedClass: 'vtube'
       },
       {
         to: '#twitter',
-        classSosmed: 'twitter'
+        sosmedClass: 'twitter'
       }
     ]
   }
@@ -66,7 +66,7 @@
             ='\n'
             a.footer__sosmed__link(href='#') Tes
               ='\n'
-              span.footer__sosmed__icon(class='ri-'+classSosmed)
+              i(class='ca-'+sosmedClass)
               ='\n'
     .footer__bottom
       p.footer__copyright__el 2022 @ All rights reserved by pixelspark.co

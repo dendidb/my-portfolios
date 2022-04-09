@@ -81,11 +81,10 @@
     }
   }
   &__headline {
-    text-transform: uppercase;
     color: color(primary);
     font-weight: fw(bold);
-    margin-bottom: 16px;
-    @include font-size(h2);
+    margin-bottom: 8px;
+    @include font-size(h3);
     @include large {
       @include font-size(h3);
     }
