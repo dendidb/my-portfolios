@@ -42,8 +42,8 @@
     @include large {
       right: 0;
       bottom: -56px;
-      width: 660px;
-      height: 372px;
+      width: 720px;
+      height: 580px;
     }
     @include medium {
       position: relative;
@@ -73,7 +73,7 @@
       vertical-align: middle;
     }
     @include large {
-      max-width: 500px;
+      max-width: 580px;
     }
     @include medium {
       max-width: initial;
@@ -85,9 +85,9 @@
     color: color(primary);
     font-weight: fw(bold);
     margin-bottom: 16px;
+    @include font-size(h2);
     @include large {
-      @include font-size(h2);
-      margin-bottom: 32px;
+      @include font-size(h3);
     }
     @include medium {
       margin-bottom: 16px;
