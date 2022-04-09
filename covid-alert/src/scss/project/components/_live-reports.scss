@@ -4,22 +4,35 @@
 
 .live-report {
   padding: 48px 0;
-  background-color: salmon;
   &__wrapper {
     @include clearfix;
   }
   &__map {
     float: left;
     width: 60%;
+    display: table;
+    min-height: 528px;
+    &__img {
+      display: table-cell;
+      vertical-align: middle;
+      &__el {
+        width: 998px;
+        height: 570px;
+        display: block;
+      }
+    }
   }
   &__box {
-    float: left;
-    width: 40%;
+    float: right;
+    width: 35%;
     background-color: color(white);
     padding: 24px;
+    box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
   }
   &__title {
     margin-bottom: 32px;
+    color: color(thirdiary);
+    @include font-size(h3);
   }
   &__list {
     list-style: none;
@@ -42,10 +55,21 @@
     display: inline-block;
     vertical-align: middle;
     padding-left: 16px;
+    font-weight: fw(bold);
+    @include font-size(h4);
+    color: color(thirdiary);
   }
   &__number {
     position: absolute;
     top: 0;
-    right: 56px;
+    right: 0;
+    font-weight: fw(bold);
+    color: color(thirdiary);
+  }
+  &__icon {
+    padding-left: 16px;
+    &__el {
+      width: 16px;
+    }
   }
 }

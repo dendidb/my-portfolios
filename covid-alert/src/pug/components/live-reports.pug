@@ -7,8 +7,9 @@
   .container
     .live-report__wrapper
       .live-report__map
-        ='\n'
-        img.live-report__el(src='assets/img/dummy/'+liveReports.img alt=liveReports.title)/
+        .live-report__map__img
+          ='\n'
+          img.live-report__img__el(src='assets/img/dummy/'+liveReports.mapImg alt=liveReports.mapAlt)/
         ='\n'
       .live-report__box
         h3.live-report__title
@@ -28,8 +29,13 @@
                   ='\n'
               .live-report__number
                 ='\n'
-                span.live-report__number__el !{val.number}
+                span.live-report__number__el
+                  | !{val.number}
                 ='\n'
+                span.live-report__icon
+                  ='\n'
+                  img.live-report__icon__el(src='assets/img/icons/'+val.arrowImg alt=arrowName)/
+                  ='\n'
                   
 ='\n'
 //end-live-report
