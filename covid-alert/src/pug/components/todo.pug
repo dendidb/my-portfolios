@@ -3,9 +3,21 @@
   -------------------------------------------------------------------------------//
 
 //todo
-//- .todo
-//-   .container
-//-     .todo__wrapper
-
+.todo__box
+  .todo__img
+    ='\n'
+    img.todo__img__el(src='assets/img/dummy/'+val.img alt=val.title)
+    ='\n'
+  .todo__txt
+    .todo__txt__align
+      .todo__txt__number
+        ='\n'
+        span.todo__txt__number__el
+          | !{val.number} 
+        ='\n'
+        h3.text-title.text-title--left
+          | !{val.title}
+        p.text-desc.text-desc--left
+          | !{val.desc}
 ='\n'
 //end-todo

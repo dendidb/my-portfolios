@@ -9,24 +9,9 @@
       h5.text.text-label !{dataTodo.label}
       h3.text.text-title !{dataTodo.title}
       p.text.text-desc !{dataTodo.desc}
-    .todo__wrapper(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
-      each val in dataTodo.list
-        - data = val;
-        .todo__box
-          .todo__img
-            ='\n'
-            img.todo__img__el(src='assets/img/dummy/'+val.img alt=val.title)
-            ='\n'
-          .todo__txt
-            .todo__txt__align
-              .todo__txt__number
-                ='\n'
-                span.todo__txt__number__el
-                  | !{val.number} 
-                ='\n'
-                h3.text-title.text-title--left
-                  | !{val.title}
-                p.text-desc.text-desc--left
-                  | !{val.desc}
+    each val in dataTodo.list
+      - data = val;
+          .todo__body(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
+              include ../components/todo.pug
 ='\n'
 //end-todo

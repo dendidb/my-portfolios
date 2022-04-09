@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Layouts Todo
+   ========================================================================== */
+
+.todo {
+  padding: 48px 0;
+  &__head {
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      margin-bottom: 12px;
+    }
+  }
+  &__body {
+    @include clearfix;
+  }
+}

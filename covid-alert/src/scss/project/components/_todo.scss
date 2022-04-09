@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Components Todo
+   ========================================================================== */
+
+.todo {
+  $t: &;
+  @include clearfix;
+  &__img {
+    float: right;
+    width: 50%;
+    &__el {
+      height: 400px;
+      display: block;
+    }
+  }
+  &__txt {
+    float: left;
+    width: 50%;
+    display: table;
+    min-height: 400px;
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  // -- modifier
+  &--reverse {
+    #{$t}__img {
+      float: left;
+      @include small {
+        float: none;
+      }
+      &__el {
+        display: block;
+        @include medium {
+          margin: 0 auto;
+        }
+      }
+    }
+    #{$t}__txt {
+      float: right;
+    }
+  }
+}
