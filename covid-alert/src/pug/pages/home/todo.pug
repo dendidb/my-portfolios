@@ -32,4 +32,6 @@
       }
     ]
   }
-include ../../layouts/todo.pug
+each val in dataTodo.list
+  - data = val;
+  include ../../layouts/todo.pug

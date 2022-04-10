@@ -5,6 +5,10 @@
 .todo {
   $t: &;
   @include clearfix;
+  overflow: hidden;
+  &__item {
+    background-color: salmon;
+  }
   &__img {
     float: right;
     width: 40%;
@@ -14,6 +18,12 @@
     &__el {
       height: 400px;
       display: block;
+      @include medium {
+        height: 100%;
+        float: none;
+        margin: 0 auto;
+        height: 320px;
+      }
     }
   }
   &__txt {
@@ -24,6 +34,7 @@
     max-width: 532px;
     @include medium {
       width: 100%;
+      min-height: initial;
     }
     &__align {
       display: table-cell;
@@ -48,6 +59,11 @@
       vertical-align: top;
       width: 478px;
       padding-left: 24px;
+      @include medium {
+        padding-left: 0;
+        display: block;
+        width: 100%;
+      }
     }
     &__title {
       margin-bottom: 16px;
@@ -70,11 +86,17 @@
         display: block;
         @include medium {
           margin: 0 auto;
+          height: 320px;
         }
       }
     }
     #{$t}__txt {
       float: right;
+      @include medium {
+        width: 100%;
+        display: block;
+        float: none;
+      }
     }
   }
 }

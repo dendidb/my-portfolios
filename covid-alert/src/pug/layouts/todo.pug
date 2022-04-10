@@ -3,15 +3,8 @@
   -------------------------------------------------------------------------------//
 
 //todo
-.todo
+.todo(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
   .container
-    .todo__head
-      h5.text.text-label !{dataTodo.label}
-      h3.text.text-title !{dataTodo.title}
-      p.text.text-desc !{dataTodo.desc}
-    each val in dataTodo.list
-      - data = val;
-          .todo__item(class=data.modifier !== undefined ? 'todo--' + data.modifier : '')
-              include ../components/todo.pug
+    include ../components/todo.pug
 ='\n'
 //end-todo
