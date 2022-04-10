@@ -90,11 +90,18 @@
       display: inline-block;
       vertical-align: middle;
       padding-right: 6.6%;
+      @include small {
+        width: 100%;
+        margin-bottom: 32px;
+      }
     }
     &__btn {
       width: 25%;
       display: inline-block;
       vertical-align: middle;
+      @include small {
+        width: 100%;
+      }
     }
   }
 }

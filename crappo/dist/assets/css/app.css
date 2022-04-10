@@ -964,6 +964,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   background-color: #0d0d2b;
+  color: #222;
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -1441,10 +1442,21 @@ b {
   vertical-align: middle;
   padding-right: 6.6%;
 }
+@media only screen and (max-width: 767.98px) {
+  .subscribe__form__row {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
 .subscribe__form__btn {
   width: 25%;
   display: inline-block;
   vertical-align: middle;
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__form__btn {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -1509,11 +1521,11 @@ Components: Input form
   width: 100%;
   border: 0;
   outline: 0;
-  padding-bottom: 8px;
   font-size: 1.6rem;
   line-height: 2.8rem;
   color: #fff;
-  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   background-color: transparent;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1524,7 +1536,6 @@ Components: Input form
   .fi-single-line {
     font-size: 1.4rem;
     line-height: 2rem;
-    padding: 14px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1903,6 +1914,19 @@ Components: Input form
   border-color: #fff;
   color: #fff;
 }
+.btn--subscribe {
+  background-color: #fff;
+}
+@media only screen and (max-width: 767.98px) {
+  .btn--subscribe {
+    width: 100%;
+  }
+}
+.btn--subscribe:hover {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
 .btn--calculate {
   background-color: #3671e9;
   border-color: #3671e9;
@@ -2013,6 +2037,16 @@ Components: Input form
   justify-self: center;
 }
 
+.swal2-success-ring {
+  color: #08ab53 !important;
+  border: solid 2px #08ab53 !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  background-color: #08ab53 !important;
+  border: solid 2px #08ab53 !important;
+}
+
 .swal2-icon {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -2029,6 +2063,7 @@ Components: Input form
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
+  border-color: #222;
   font-family: inherit;
   line-height: 5em;
   cursor: default;
@@ -2043,6 +2078,7 @@ Components: Input form
   max-width: 100%;
   padding: 0 !important;
   margin: 0 0 16px !important;
+  color: #222 !important;
   font-size: 2rem;
   line-height: 2.8rem;
   text-align: center;
@@ -2061,6 +2097,7 @@ Components: Input form
   padding: 0;
   max-width: 370px;
   overflow: auto;
+  color: #222 !important;
   font-size: 1.8rem;
   line-height: 2.4rem;
   text-align: center;

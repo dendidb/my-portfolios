@@ -59,15 +59,14 @@ Components: Input form
     width: 100%;
     border: 0;
     outline: 0;
-    padding-bottom: 8px;
     @include font-size(h6);
     color: color(white);
-    border-bottom: 1px solid color(white);
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,.4);
     background-color: transparent;
     transition: all .3s ease;
     @include small {
       @include font-size(label);
-      padding: 14px;
     }
     @include retina {
       @include font-size(small);

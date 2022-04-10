@@ -95,6 +95,17 @@
       color: color(white);
     }
   }
+  &--subscribe {
+    background-color: color(white);
+    @include small {
+      width: 100%;
+    }
+    &:hover {
+      background-color: transparent;
+      border-color: color(white);
+      color: color(white);
+    }
+  }
   &--calculate {
     background-color: color(tertiary);
     border-color: color(tertiary);
