@@ -50,11 +50,9 @@ const Subscribe = (() => {
           text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
           icon: 'success',
           confirmButtonColor: '#0d0d2b',
-          confirmButtonText: 'Tutup',
+          confirmButtonText: 'Close',
           confirmButtonColor: '#0d0d2b',
           width: 500,
-          height: 800,
-          width: 550,
           padding: '22px',
           textMargin: '24px',
         })

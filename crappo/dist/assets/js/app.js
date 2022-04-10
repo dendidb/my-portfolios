@@ -439,8 +439,8 @@ var Subscribe = function () {
           text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
           icon: 'success',
           confirmButtonColor: '#0d0d2b',
-          confirmButtonText: 'Tutup'
-        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#0d0d2b'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "height", 800), _defineProperty(_swalWithBootstrapBut, "width", 550), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
+          confirmButtonText: 'Close'
+        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#0d0d2b'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
       }
     });
   }; // --- init
