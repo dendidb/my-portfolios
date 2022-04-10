@@ -41,13 +41,13 @@ const Subscribe = (() => {
         e.preventDefault();
         const swalWithBootstrapButton = Swal.mixin({
           customClass: {
-            confirmButton: 'btn btn--primary btn--popup mr-12 w-100',
+            confirmButton: 'btn btn--confirm btn--popup mr-12 w-100',
           },
           buttonsStyling: false
         })
         swalWithBootstrapButton.fire({
-          title: 'Berhasil!',
-          text: 'Terima kasih telah subscribe. Kami akan selalu mengirim kabar terbaru kepada Anda',
+          title: 'Success',
+          text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
           icon: 'success',
           confirmButtonColor: '#0d0d2b',
           confirmButtonText: 'Tutup',

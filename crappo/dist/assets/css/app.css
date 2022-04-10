@@ -1914,6 +1914,16 @@ Components: Input form
   border-color: #fff;
   color: #fff;
 }
+.btn--confirm {
+  background-color: #3671e9;
+  border-color: #3671e9;
+  color: #fff;
+}
+.btn--confirm:hover {
+  background-color: transparent;
+  border-color: #3671e9;
+  color: #3671e9;
+}
 .btn--subscribe {
   background-color: #fff;
 }
