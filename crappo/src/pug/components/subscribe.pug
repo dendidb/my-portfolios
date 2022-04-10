@@ -11,13 +11,14 @@
           | !{dataSubscribe.title}
         p.subscribe__desc
           | !{dataSubscribe.desc}
-      form.subscribe__form(action='#' method='post')
+      form.subscribe__form(action='#' method='POST')
         .subscribe__form__row
           each val in dataSubscribe.form
             - data = val;
             include ../components/input-form.pug
               ='\n'
         .subscribe__form__btn
+          ='\n'
           button.btn.btn--subscribe.js-alert-subscribe.js-subscribe(type='submit') Subscribe
           ='\n'
 ='\n'
