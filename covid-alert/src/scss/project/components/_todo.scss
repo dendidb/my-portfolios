@@ -6,9 +6,6 @@
   $t: &;
   @include clearfix;
   overflow: hidden;
-  &__item {
-    background-color: salmon;
-  }
   &__img {
     float: right;
     width: 40%;
