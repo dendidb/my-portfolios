@@ -134,7 +134,7 @@
   <!--main-site-->
   <div class="main-site main-site--hide js-main-site">
     <!--hero-banner-->
-    <div class="hero-banner js-hero-banner">
+    <div class="hero-banner js-hero-banner" id="products">
       <!--hero-banner-item-->
       <div class="hero-banner__item">
         <div class="container">
@@ -304,7 +304,7 @@
     </div>
     <!--end-calculator-->
     <!--crypto-->
-    <div class="crypto">
+    <div class="crypto" id="features">
       <div class="container">
         <div class="crypto__wrapper">
           <div class="crypto__head">
@@ -377,7 +377,7 @@
     </div>
     <!--end-crypto-->
     <!--market-->
-    <div class="market">
+    <div class="market" id="about">
       <div class="container">
         <div class="market__head">
           <h3 class="market__head__title">Market sentiments, portfolio, and run the infrastructure of your choice</h3>
@@ -400,7 +400,7 @@
     </div>
     <!--end-market-->
     <!--statistics-->
-    <div class="statistics">
+    <div class="statistics" id="contact">
       <div class="container">
         <div class="statistics__wrapper">
           <div class="statistics__img">
@@ -438,7 +438,7 @@
     </div>
     <!--end-grow-profit-->
     <!--subscribe-->
-    <div class="subscribe">
+    <div class="subscribe" id="login">
       <div class="container">
         <div class="subscribe__box">
           <div class="subscribe__txt">
@@ -446,11 +446,16 @@
             <p class="subscribe__desc">Join now with CRAPPO to get the latest news and start mining now</p>
           </div>
           <form class="subscribe__form" action="#" method="post">
-            <div class="subscribe__input">
-              <input class="subscribe__email" type="email" name="emailInput" id="emailInput" placeholder="Enter your email" autocomplete="off" />
+            <div class="subscribe__form__row">
+              <!--input-form-->
+              <div class="fi-row">
+
+                <input class="fi-single-line" type="text" id="email" name="email" placeholder="Enter your email" data-target="alertEmail" autocomplete="off" />
+                <p class="fi-alert" id="alertEmail" data-req="Email is required!" data-invalid="Email invalid!"></p>
+              </div>
+              <!--end-input-form-->
             </div>
-            <div class="subscribe__btn">
-              <button class="btn btn--secondary" type="submit">Subscribe</button>
+            <div class="subscribe__form__btn"><button class="btn btn--secondary btn--subscribe js-alert-subscribe js-subscribe" type="submit">Subscribe</button>
             </div>
           </form>
         </div>

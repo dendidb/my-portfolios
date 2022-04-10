@@ -2,5 +2,17 @@
   dataSubscribe = {
     title: 'Start mining now',
     desc: 'Join now with CRAPPO to get the latest news and start mining now',
+    form: [
+      {
+        placeholder: 'Enter your email',
+        type: 'text',
+        name: 'email',
+        target: 'alertEmail',
+        class: 'fi-single-line',
+        id: 'email',
+        required: 'Email is required!',
+        invalid: 'Email invalid!'
+      }
+    ]
   }
 include ../../components/subscribe.pug

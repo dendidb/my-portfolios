@@ -21,6 +21,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   @include font-size(h1);
   font-weight: fw(bold);

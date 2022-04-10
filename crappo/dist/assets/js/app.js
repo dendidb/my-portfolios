@@ -40,6 +40,8 @@ var App = function () {
 
       _components.Reveal.init();
 
+      _components.Subscribe.init();
+
       _components.WindowResize.init();
 
       _components.WindowScroll.init();
@@ -70,7 +72,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":8,"./utilities":12}],2:[function(require,module,exports){
+},{"./components":9,"./utilities":13}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -171,6 +173,18 @@ var Header = function () {
         $('body').addClass('show-menu');
       }
     });
+  };
+
+  var handleClickMenu = function handleClickMenu() {
+    $('.header__link').on('click', function (e) {
+      if ($(window).width() <= 992) {
+        if ($('body').hasClass('show-menu')) {
+          _utilities.Scrolllable.enable();
+
+          $('body').removeClass('show-menu');
+        }
+      }
+    });
   }; // --- handleDestroyMobileMenu
 
 
@@ -187,6 +201,7 @@ var Header = function () {
 
   var init = function init() {
     handleMobileMenu();
+    handleClickMenu();
   }; // --- return
 
 
@@ -199,7 +214,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":12}],4:[function(require,module,exports){
+},{"../utilities":13}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -269,7 +284,7 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{"../utilities":12}],5:[function(require,module,exports){
+},{"../utilities":13}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -380,6 +395,79 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _utilities = require("../utilities");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Form Validation
+var ElementSelector = [{
+  id: 'email',
+  validation: {
+    required: true,
+    email: true
+  }
+}];
+var ElementEvents = ['input', 'blur']; // --- Subscribe
+
+var Subscribe = function () {
+  // Handle Run Validation
+  var handleRunValidation = function handleRunValidation() {
+    _utilities.Validation.config(ElementEvents, ElementSelector);
+  }; // Handle Click Success Alert
+
+
+  var handleClickAlert = function handleClickAlert() {
+    $('.js-alert-subscribe').on('click', function (e) {
+      $.each(ElementSelector, function (i, v) {
+        $('#' + v.id).blur();
+      });
+
+      if ($('.error').length > 0) {
+        e.preventDefault();
+      } else {
+        var _swalWithBootstrapBut;
+
+        e.preventDefault();
+        var swalWithBootstrapButton = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn--primary btn--popup mr-12 w-100'
+          },
+          buttonsStyling: false
+        });
+        swalWithBootstrapButton.fire((_swalWithBootstrapBut = {
+          title: 'Berhasil!',
+          text: 'Terima kasih telah subscribe. Kami akan selalu mengirim kabar terbaru kepada Anda',
+          icon: 'success',
+          confirmButtonColor: '#0d0d2b',
+          confirmButtonText: 'Tutup'
+        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#0d0d2b'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "height", 800), _defineProperty(_swalWithBootstrapBut, "width", 550), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
+      }
+    });
+  }; // --- init
+
+
+  var init = function init() {
+    handleClickAlert();
+    handleRunValidation();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Subscribe;
+exports["default"] = _default;
+
+},{"../utilities":13}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 var _index = require("./index");
 
 /* ------------------------------------------------------------------------------
@@ -437,7 +525,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":8}],7:[function(require,module,exports){
+},{"./index":9}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -521,7 +609,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -551,6 +639,12 @@ Object.defineProperty(exports, "Reveal", {
     return _Reveal["default"];
   }
 });
+Object.defineProperty(exports, "Subscribe", {
+  enumerable: true,
+  get: function get() {
+    return _Subscribe["default"];
+  }
+});
 Object.defineProperty(exports, "WindowResize", {
   enumerable: true,
   get: function get() {
@@ -570,6 +664,8 @@ var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
 var _Reveal = _interopRequireDefault(require("./Reveal"));
 
+var _Subscribe = _interopRequireDefault(require("./Subscribe"));
+
 var _WindowResize = _interopRequireDefault(require("./WindowResize"));
 
 var _WindowScroll = _interopRequireDefault(require("./WindowScroll"));
@@ -578,7 +674,7 @@ var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./Reveal":5,"./WindowResize":6,"./WindowScroll":7}],9:[function(require,module,exports){
+},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./Reveal":5,"./Subscribe":6,"./WindowResize":7,"./WindowScroll":8}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -624,7 +720,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -658,7 +754,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -784,7 +880,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":15}],12:[function(require,module,exports){
+},{"../variables":16}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -825,7 +921,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":9,"./Scrolllable":10,"./Validation":11,"./isOS":13}],13:[function(require,module,exports){
+},{"./BrowserCheck":10,"./Scrolllable":11,"./Validation":12,"./isOS":14}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -866,7 +962,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -891,7 +987,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -911,6 +1007,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":14}]},{},[1])
+},{"./Regex":15}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map
