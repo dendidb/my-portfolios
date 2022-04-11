@@ -9,13 +9,10 @@ import {
   Header,
   HeroBanner,
   WinScroll,
-  WindowResize,
-  Problem,
-  Countdown,
   Reveal,
-  Testimonials,
-  Presenting,
-  Footer
+  Footer,
+  Subscribe,
+  WindowResize
 } from 'components';
 
 // --- App
@@ -32,12 +29,6 @@ const App = (() => {
     Scrolllable.enable();
   }
 
-    // --- call vendor
-    const callVendor = () => {
-      // popup image
-      const $gallery = new SimpleLightbox('.js-popup-image');
-    }
-
   // --- ready
   const ready = () => {
     (($) => {
@@ -48,18 +39,14 @@ const App = (() => {
       runTransition();
       showSiteContent();
       BrowserCheck.init();
-      callVendor();
 
       // --- Project
       Header.init();
       HeroBanner.init();
       WinScroll.init();
-      Problem.init();
-      Testimonials.init();
-      Presenting.init();
-      Countdown.init();
       Reveal.init();
       Footer.init();
+      Subscribe.init();
       WindowResize.init();
     })(jQuery);
   }

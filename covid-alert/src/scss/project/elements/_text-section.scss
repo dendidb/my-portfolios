@@ -22,7 +22,7 @@
   }
   &-desc {
     margin-bottom: 0;
-    @include font-size(h5);
+    @include font-size(h6);
     @include medium {
       @include font-size(label);
     }

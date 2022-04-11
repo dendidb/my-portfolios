@@ -100,5 +100,17 @@
     right: 0;
     top: -84px;
     min-width: 120px;
+    @include small {
+      top: -80px;
+    }
+  }
+  &--confirm {
+    background-color: color(primary);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      color: color(primary);
+      border-color: color(primary);
+    }
   }
 }

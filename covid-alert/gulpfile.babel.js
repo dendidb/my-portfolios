@@ -83,10 +83,8 @@ const DEV_PATH = {
     vendor: {
       order: [
         `${SRC}/scripts/vendors/jquery-3.6.0.min.js`,
-        `${SRC}/scripts/vendors/owl.carousel.min.js`,
-        `${SRC}/scripts/vendors/simple-lightbox.min.js`,
-        `${SRC}/scripts/vendors/jquery.countdown.min.js`,
         `${SRC}/scripts/vendors/scrollreveal.js`,
+        `${SRC}/scripts/vendors/sweetalert2.all.min.js`,
         `${SRC}/scripts/vendors/*.js`
       ],
       concat: "vendor.js"

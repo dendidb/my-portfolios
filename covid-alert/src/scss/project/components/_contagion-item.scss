@@ -69,8 +69,11 @@
       margin-bottom: 8px;
     }
     &__desc {
-      @include font-size(label);
+      @include font-size(h6);
       margin-bottom: 0;
+      @include medium {
+        @include font-size(label);
+      }
     }
   }
 }

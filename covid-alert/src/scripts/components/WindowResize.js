@@ -5,9 +5,6 @@
 
 // --- components
 import {
-  Testimonials,
-  Presenting,
-  Problem,
 } from 'components';
 
 // --- WindowResize
@@ -37,10 +34,6 @@ const WindowResize = (() => {
       _timeout = false;
       // Run Function on Resize end
       $('body').removeClass('hold-transition');
-      Testimonials.destroyCarousel();
-      Testimonials.checkHeight();
-      Presenting.destroyCarousel();
-      Problem.destroyCarousel();
     }
   }
 

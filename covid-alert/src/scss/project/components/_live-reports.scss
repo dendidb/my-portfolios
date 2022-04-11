@@ -80,8 +80,11 @@
     width: 55%;
     margin-left: 8px;
     font-weight: fw(bold);
-    @include font-size(h4);
+    @include font-size(h5);
     color: color(thirdiary);
+    @include medium {
+      @include font-size(h6);
+    }
     &__el {
       @include small {
         @include font-size(label);
