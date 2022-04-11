@@ -1007,6 +1007,10 @@ body.hold-transition *, body.hold-transition::before, body.hold-transition::afte
   transition: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-weight: 700;
   font-size: 8rem;
@@ -1915,8 +1919,8 @@ b {
 }
 @media only screen and (max-width: 991.98px) {
   .header {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
   .header::before {
     content: "";
@@ -2148,6 +2152,12 @@ b {
          -o-transition-delay: 100ms;
             transition-delay: 100ms;
   }
+  .header__nav__item:nth-child(5) {
+    -webkit-transition-delay: 70ms;
+       -moz-transition-delay: 70ms;
+         -o-transition-delay: 70ms;
+            transition-delay: 70ms;
+  }
   .show-nav .header__nav__item {
     -webkit-transform: none;
        -moz-transform: none;
@@ -2180,6 +2190,12 @@ b {
          -o-transition-delay: 550ms;
             transition-delay: 550ms;
   }
+  .show-nav .header__nav__item:nth-child(5) {
+    -webkit-transition-delay: 600ms;
+       -moz-transition-delay: 600ms;
+         -o-transition-delay: 600ms;
+            transition-delay: 600ms;
+  }
   .header__nav__item:last-child {
     margin-bottom: 0;
   }
@@ -2197,29 +2213,6 @@ b {
 }
 .header__nav__item--active {
   color: #212353;
-  font-weight: 700;
-}
-@media only screen and (max-width: 991.98px) {
-  .header__nav__item--active .header__nav__link {
-    padding-left: 40px;
-  }
-  .header__nav__item--active .header__nav__link::after {
-    content: "";
-    position: absolute;
-    border-bottom: solid 4px #fff;
-    top: 50%;
-    width: 32px;
-    left: 0;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
-    -webkit-transform: translateY(-50%);
-       -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-         -o-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-color: #fff;
-  }
 }
 .header__nav__link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -2322,8 +2315,11 @@ b {
     display: block;
     position: absolute;
     z-index: 10;
-    right: -8px;
-    top: -4px;
+    right: -14px;
+    top: -3px;
+    -webkit-border-radius: 1px;
+       -moz-border-radius: 1px;
+            border-radius: 1px;
   }
   .header .burger-menu__bar {
     -webkit-transition: all 0.3s ease 0.6s;

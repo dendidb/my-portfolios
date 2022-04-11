@@ -35,6 +35,18 @@ const Header = (() => {
     });
   }
 
+  const handleClickMenu = () => {
+    $('.header__nav__link').on('click', (e) => {
+      if ($(window).width() <= 992) {
+        if ($('body').hasClass('show-nav')) {
+          Scrolllable.enable();
+          $('body').removeClass('show-nav');
+        }
+      }
+    });
+  }
+
+
   // --- handleCheckClass
   const handleCheckClass = () => {
     if ($(window).width() >= 992) {
@@ -46,6 +58,7 @@ const Header = (() => {
   // - init
   const init = () => {
     handleMobileNav();
+    handleClickMenu();
     handleScrollMobileMenu();
   }
 

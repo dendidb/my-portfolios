@@ -242,6 +242,18 @@ var Header = function () {
         $('body').removeClass('on-scroll-mobile-menu');
       }
     });
+  };
+
+  var handleClickMenu = function handleClickMenu() {
+    $('.header__nav__link').on('click', function (e) {
+      if ($(window).width() <= 992) {
+        if ($('body').hasClass('show-nav')) {
+          _utilities.Scrolllable.enable();
+
+          $('body').removeClass('show-nav');
+        }
+      }
+    });
   }; // --- handleCheckClass
 
 
@@ -256,6 +268,7 @@ var Header = function () {
 
   var init = function init() {
     handleMobileNav();
+    handleClickMenu();
     handleScrollMobileMenu();
   };
 
