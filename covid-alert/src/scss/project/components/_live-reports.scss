@@ -97,14 +97,21 @@
     right: 0;
     font-weight: fw(bold);
     color: color(thirdiary);
+    @include large {
+      padding-right: 24px;
+    }
     @include small {
       @include font-size(label);
       top: 50%;
       transform: translateY(-50%);
+      padding-right: 18px;
     }
   }
   &__icon {
     padding-left: 12px;
+    position: absolute;
+    right: 0;
+    transform: translateY(-10%);
     &__el {
       width: 10px;
       @include small {
