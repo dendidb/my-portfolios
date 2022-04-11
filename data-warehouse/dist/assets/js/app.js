@@ -34,19 +34,21 @@ var App = function () {
       _utilities.BrowserCheck.init(); // --- Project
 
 
-      _components.WindowScroll.init();
-
       _components.WindowResize.init();
 
-      _components.Header.init();
+      _components.WindowScroll.init();
+
+      _components.Features.init();
 
       _components.HeroBanner.init();
 
-      _components.Testimonials.init();
+      _components.Header.init();
+
+      _components.Reveal.init();
 
       _components.Footer.init();
 
-      _components.Blog.init();
+      _components.Testimony.init();
     })(jQuery);
   }; // --- load
 
@@ -72,7 +74,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":9,"./utilities":12}],2:[function(require,module,exports){
+},{"./components":10,"./utilities":13}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -81,43 +83,51 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 /* ------------------------------------------------------------------------------
-@name: Blog
-@description: Blog
+@name: Features
+@description: Features
 --------------------------------------------------------------------------------- */
-var Blog = function () {
-  // --- handleCheckHeight
-  var setHeight = function setHeight() {
-    handleResetHeight();
+// --- Features
+var Features = function () {
+  // --- handleSet
+  var handleSet = function handleSet() {
+    handleCheckHeight();
+  }; // --- handleCheckHeight
+
+
+  var handleCheckHeight = function handleCheckHeight() {
     var _height = 0;
-    $('.blog__list .blog__item').each(function (i, e) {
-      if (_height < $(e).find('.blog__txt').height()) {
-        _height = $(e).find('.blog__txt').height();
+    handleResetHeight();
+    $('.js-features-list .features__item').each(function (i, e) {
+      if (_height < $(e).find('.features__txt__wrapper').height()) {
+        _height = $(e).find('.features__txt__wrapper').height();
       }
     });
-    $('.blog__txt').height(_height);
+    $('.features__txt__wrapper').height(_height);
   }; // --- handleResetHeight
 
 
   var handleResetHeight = function handleResetHeight() {
-    var _attr = $('.blog__txt').attr('style');
+    var _attr = $('.features__txt__wrapper').attr('style'); // For some browsers, `attr` is undefined; for others,
+    // `attr` is false.  Check for both.
+
 
     if (typeof _attr !== 'undefined' && _attr !== false) {
-      $('.blog__txt').removeAttr('style');
+      $('.features__txt__wrapper').removeAttr('style');
     }
-  }; // init
+  }; // --- init
 
 
-  var init = function init() {
-    setHeight();
-  };
+  var init = function init() {// handleSet();
+  }; // --- return
+
 
   return {
-    init: init,
-    checkHeight: setHeight
+    init: init // checkHeight: handleSet
+
   };
 }();
 
-var _default = Blog;
+var _default = Features;
 exports["default"] = _default;
 
 },{}],3:[function(require,module,exports){
@@ -132,22 +142,27 @@ exports["default"] = void 0;
 @name: Footer
 @description: Footer
 --------------------------------------------------------------------------------- */
+// --- Footer
 var Footer = function () {
-  var _width = 767.98; // handleRunCarousel
+  var _width = 767.98; // handleDropDown
 
-  var handleClickAccordion = function handleClickAccordion() {
-    $('.js-footer-accordion .footer__title').on('click', function (e) {
+  var handleDropDown = function handleDropDown() {
+    $('.js-accordion-footer .footer__title').on('click', function (e) {
       var _this = $(e.currentTarget);
 
-      if ($(window).width() <= _width) {
-        if (_this.parents('.footer__menu__item').hasClass("footer__menu__item--showed")) {
-          _this.parents('.footer__menu__item').removeClass("footer__menu__item--showed").find(".footer__nav").slideUp();
-        } else {
-          // _this.parents('.js-footer-accordion').find('.footer__menu__item').removeClass("footer__menu__item--showed").find(".footer__nav").slideUp();
-          // _this.parents('.footer__menu__item').addClass("footer__menu__item--showed").find(".footer__nav").slideDown();
-          _this.parents('.footer__menu__item').siblings('.footer__menu__item').removeClass("footer__menu__item--showed").find(".footer__nav").slideUp();
+      var _parents = _this.parents('.footer__list__item');
 
-          _this.parents('.footer__menu__item').find(".footer__nav").slideDown().parents('.footer__menu__item').addClass("footer__menu__item--showed");
+      if ($(window).width() <= _width) {
+        if (_this.parents('.footer__list__item').hasClass('footer__list__item--show')) {
+          _this.parents('.footer__list__item').find('.footer__nav').slideUp(300);
+
+          _this.parents('.footer__list__item').removeClass('footer__list__item--show');
+        } else {
+          _parents.siblings('.footer__list__item').removeClass('footer__list__item--show').find('.footer__nav').slideUp(300);
+
+          _this.parents('.footer__list__item').find('.footer__nav').slideDown(300);
+
+          _this.parents('.footer__list__item').addClass('footer__list__item--show');
         }
       }
     });
@@ -155,8 +170,8 @@ var Footer = function () {
 
 
   var handleDestroyAccordion = function handleDestroyAccordion() {
-    if ($(window).width() > _width) {
-      $('.js-footer-accordion .footer__menu__item').removeClass('footer__menu__item--showed').find('.footer__nav').removeAttr('style');
+    if ($(window).width() > 575.86) {
+      $('.js-accordion-footer .footer__list__item').removeClass('footer__list__item--show').find('.footer__nav').removeAttr('style');
     }
   }; // handle padding bottom
 
@@ -169,18 +184,17 @@ var Footer = function () {
     } else {
       $('.main-site').removeAttr('style');
     }
-  }; // init
-
+  };
 
   var init = function init() {
-    handleClickAccordion();
+    handleDropDown();
     handleFooterSticky();
   };
 
   return {
     init: init,
-    footerSticky: handleFooterSticky,
-    destroyAccordion: handleDestroyAccordion
+    destroyAccordion: handleDestroyAccordion,
+    footerSticky: handleFooterSticky
   };
 }();
 
@@ -202,69 +216,72 @@ var _utilities = require("../utilities");
 @description: Header
 --------------------------------------------------------------------------------- */
 // --- utilities
-// --- Header
 var Header = function () {
-  // --- windowTemp
-  var _windowTemp = $(window).width(); // --- handleMobileMenu
-
-
-  var handleMobileMenu = function handleMobileMenu() {
-    $('.js-mobile-menu').on('click', function (e) {
-      var _this = $(e.currentTarget);
-
-      if ($('body').hasClass('show-menu')) {
+  // --- handleMobileNav
+  var handleMobileNav = function handleMobileNav() {
+    // nav open
+    $('.js-nav').on('click', function () {
+      if ($('body').hasClass('show-nav')) {
         _utilities.Scrolllable.enable();
 
-        $('body').removeClass('show-menu');
+        $('body').removeClass('show-nav');
       } else {
         _utilities.Scrolllable.disable();
 
-        $('body').addClass('show-menu');
+        $('body').addClass('show-nav');
       }
     });
-  }; // --- handleClickMenu
+  }; // --- handleScrollMobileMenu
 
+
+  var handleScrollMobileMenu = function handleScrollMobileMenu() {
+    $('.js-mobile-menu').on('scroll', function (e) {
+      if ($(e.currentTarget).scrollTop() > 4) {
+        $('body').addClass('on-scroll-mobile-menu');
+      } else {
+        $('body').removeClass('on-scroll-mobile-menu');
+      }
+    });
+  };
 
   var handleClickMenu = function handleClickMenu() {
-    $('.header__nav__link').on('click', function () {
+    $('.header__nav__link').on('click', function (e) {
       if ($(window).width() <= 992) {
-        if ($('body').hasClass('show-menu')) {
+        if ($('body').hasClass('show-nav')) {
           _utilities.Scrolllable.enable();
 
-          $('body').removeClass('show-menu');
+          $('body').removeClass('show-nav');
         }
       }
     });
-  }; // --- handle destroy mobile menu
+  }; // --- handleCheckClass
 
 
-  var handleDestroyMobileMenu = function handleDestroyMobileMenu() {
+  var handleCheckClass = function handleCheckClass() {
     if ($(window).width() >= 992) {
-      if ($('body').hasClass('show-menu')) {
-        _utilities.Scrolllable.enable();
+      _utilities.Scrolllable.enable();
 
-        $('body').removeClass('show-menu');
-      }
+      $('body').removeClass('show-nav');
     }
-  }; // --- init
+  }; // - init
 
 
   var init = function init() {
-    handleMobileMenu();
+    handleMobileNav();
     handleClickMenu();
-  }; // --- return
-
+    handleScrollMobileMenu();
+  };
 
   return {
     init: init,
-    destroyMobileMenu: handleDestroyMobileMenu
+    checkClass: handleCheckClass
   };
 }();
 
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":12}],5:[function(require,module,exports){
+},{"../utilities":13}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -340,34 +357,122 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 /* ------------------------------------------------------------------------------
-@name: Testimonials
+@name: Reveal
+@description: Reveal
 --------------------------------------------------------------------------------- */
-var Testimonials = function () {
+var Reveal = function () {
+  // --- handleRevealConfig
+  var handleRevealConfig = function handleRevealConfig() {
+    var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 50;
+    var distance = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '24px';
+    var interval = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 50;
+    var origin = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'bottom';
+    var _config = {
+      duration: 900,
+      distance: distance,
+      delay: delay,
+      interval: interval,
+      origin: origin
+    };
+    return _config;
+  }; // --- handleRunScrollReveal
+
+
+  var handleRunScrollReveal = function handleRunScrollReveal() {
+    // -- homepage section
+    ScrollReveal().reveal('.section-description__box', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'left'));
+    ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'right'));
+    ScrollReveal().reveal('.features__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.features__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__box', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimony__list', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimony__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.footer__trial__title', handleRevealConfig(65, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.footer__trial__desc', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.footer__trial__btn', handleRevealConfig(65, '24px', 50, 'bottom'));
+
+    if ($(window).width() <= 767.98) {
+      ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    }
+  }; // --- init
+
+
+  var init = function init() {
+    handleRunScrollReveal();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Reveal;
+exports["default"] = _default;
+
+},{}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+/* ------------------------------------------------------------------------------
+@name: Testimony
+@description: Testimony
+--------------------------------------------------------------------------------- */
+var Testimony = function () {
   // handleRunCarousel
   var handleRunCarousel = function handleRunCarousel() {
-    var selector = $('.js-testimonials');
-    var itemLength = $('.js-testimonials .testimonials__item').length;
-    var itemRun = 1; // destroy carousel
+    var _selector = $('.js-testimony-list');
 
-    selector.owlCarousel('destroy'); // --- check if itemLength > itemRun
+    var _itemLength = $('.js-testimony-list .testimony__item').length;
+    var _itemRun = 1; // destroy carousel
 
-    if (itemLength > itemRun) {
+    if (_selector.hasClass('owl-carousel')) {
+      _selector.owlCarousel('destroy').removeClass('owl-carousel');
+    } // --- check if itemLength > itemRun
+
+
+    if (_itemLength > _itemRun) {
       // --- init carousel
-      selector.addClass('owl-carousel').owlCarousel({
+      _selector.addClass('owl-carousel').owlCarousel({
         items: 1,
+        rewind: false,
+        autoplay: true,
+        autoHeight: true,
+        autoWidth: true,
         dots: true,
         nav: true,
-        navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
+        loop: false,
         touchDrag: true,
-        mouseDrag: false,
+        mouseDrag: true,
         autoplayHoverPause: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        autoplayTimeout: 7000,
+        autoplayTimeout: 8000,
         dotsSpeed: 1000,
+        navSpeed: 1000,
         autoplaySpeed: 1000,
-        dragEndSpeed: 800
+        dragEndSpeed: 800,
+        responsive: {
+          0: {
+            margin: 16
+          },
+          992: {
+            margin: 24
+          }
+        }
       });
+    } else {
+      if (_selector.hasClass('owl-carousel')) {
+        _selector.removeClass('owl-carousel');
+      }
+
+      _selector.addClass('testimony--single');
     }
   }; // init
 
@@ -377,14 +482,15 @@ var Testimonials = function () {
   };
 
   return {
-    init: init
+    init: init,
+    checkCarousel: handleRunCarousel
   };
 }();
 
-var _default = Testimonials;
+var _default = Testimony;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -427,13 +533,9 @@ var WindowResize = function () {
 
       $('body').removeClass('hold-transition');
 
-      _index.Header.destroyMobileMenu();
-
       _index.Footer.footerSticky();
 
-      _index.Footer.destroyAccordion();
-
-      _index.Blog.checkHeight();
+      _index.Testimony.checkCarousel();
     }
   }; // --- init
 
@@ -451,7 +553,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":9}],8:[function(require,module,exports){
+},{"./index":10}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -460,19 +562,15 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 /* ------------------------------------------------------------------------------
-@name: Window Scroll
-@description: Window Scroll
+@name: WindowScroll
+@description: WindowScroll
 --------------------------------------------------------------------------------- */
 // --- WindowScroll
 var WindowScroll = function () {
   var _lastScrollTop = 0;
   var _delta = 4;
-  var _deltaCalc = 4;
 
-  var _headerHeight = $('.header').height() / 2; // --- windowTemp
-
-
-  var _windowTemp = $(window).width(); // --- handleHeaderScroll
+  var _headerHeight = $('.header').height() / 2; // --- handleHeaderScroll
 
 
   var handleHeaderScroll = function handleHeaderScroll() {
@@ -486,9 +584,7 @@ var WindowScroll = function () {
 
 
     if (_scrollTop > _lastScrollTop && _scrollTop > _headerHeight) {
-      if (!$('body').hasClass('show-menu')) {
-        $('body').addClass('scroll-down');
-      }
+      $('body').addClass('scroll-down');
     } else {
       // --- Scroll Up
       if (_scrollTop + $(window).height() < $(document).height()) {
@@ -524,6 +620,7 @@ var WindowScroll = function () {
 
 
   var init = function init() {
+    handleHeaderScroll();
     handleScroll();
   }; // --- return
 
@@ -536,16 +633,16 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Blog", {
+Object.defineProperty(exports, "Features", {
   enumerable: true,
   get: function get() {
-    return _Blog["default"];
+    return _Features["default"];
   }
 });
 Object.defineProperty(exports, "Footer", {
@@ -566,10 +663,16 @@ Object.defineProperty(exports, "HeroBanner", {
     return _HeroBanner["default"];
   }
 });
-Object.defineProperty(exports, "Testimonials", {
+Object.defineProperty(exports, "Reveal", {
   enumerable: true,
   get: function get() {
-    return _Testimonials["default"];
+    return _Reveal["default"];
+  }
+});
+Object.defineProperty(exports, "Testimony", {
+  enumerable: true,
+  get: function get() {
+    return _Testimony["default"];
   }
 });
 Object.defineProperty(exports, "WindowResize", {
@@ -585,23 +688,25 @@ Object.defineProperty(exports, "WindowScroll", {
   }
 });
 
-var _WindowResize = _interopRequireDefault(require("./WindowResize"));
-
 var _WindowScroll = _interopRequireDefault(require("./WindowScroll"));
 
-var _Header = _interopRequireDefault(require("./Header"));
+var _WindowResize = _interopRequireDefault(require("./WindowResize"));
+
+var _Features = _interopRequireDefault(require("./Features"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
-var _Testimonials = _interopRequireDefault(require("./Testimonials"));
+var _Reveal = _interopRequireDefault(require("./Reveal"));
+
+var _Header = _interopRequireDefault(require("./Header"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
-var _Blog = _interopRequireDefault(require("./Blog"));
+var _Testimony = _interopRequireDefault(require("./Testimony"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Testimonials":6,"./WindowResize":7,"./WindowScroll":8}],10:[function(require,module,exports){
+},{"./Features":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Reveal":6,"./Testimony":7,"./WindowResize":8,"./WindowScroll":9}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -647,7 +752,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -681,7 +786,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -714,7 +819,7 @@ var _Scrolllable = _interopRequireDefault(require("./Scrolllable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":10,"./Scrolllable":11,"./isOS":13}],13:[function(require,module,exports){
+},{"./BrowserCheck":11,"./Scrolllable":12,"./isOS":14}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

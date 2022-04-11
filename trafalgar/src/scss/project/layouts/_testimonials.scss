@@ -12,7 +12,6 @@
   @include small {
     padding: 48px 0;
   }
-
   &__box {
     position: relative;
     padding: 64px 0 88px;
@@ -27,7 +26,6 @@
     @include small {
       padding: 48px 0 64px;
     }
-
     &::before {
       content: '';
       position: absolute;
@@ -87,7 +85,6 @@
       }
     }
   }
-
   &__head {
     text-align: center;
     margin-bottom: 56px;
@@ -98,9 +95,9 @@
       margin-bottom: 0;
     }
   }
-
   .owl-item.active {
     #{$t} {
+      &__avatar,
       &__customer,
       &__desc {
         opacity: 1;
@@ -109,7 +106,6 @@
       }
     }
   }
-
   .owl-carousel {
     .owl-nav,
     .owl-dots {
@@ -128,7 +124,6 @@
         bottom: -116px;
       }
     }
-
     .owl-nav {
       @include extra-small {
         bottom: 260px;
@@ -152,7 +147,6 @@
           opacity: .3;
         }
       }
-
       .owl-prev {
         right: 137px;
         @include small {
@@ -160,7 +154,6 @@
           bottom: -360px;
         }
       }
-
       .owl-next {
         left: 137px;
         @include small {
@@ -169,7 +162,6 @@
         }
       }
     }
-
     .owl-dot {
       display: inline-block;
       vertical-align: middle;
@@ -195,7 +187,6 @@
         }
       }
     }
-
     .owl-dot.active {
       opacity: 1;
       transform: scale(1.2);

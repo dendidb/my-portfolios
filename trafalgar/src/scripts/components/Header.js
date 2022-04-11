@@ -29,6 +29,18 @@ const Header = (() => {
     });
   }
 
+  // --- handleClickMenu
+  const handleClickMenu = () => {
+    $('.header__nav__link').on('click', () => {
+      if($(window).width() <= 992) {
+        if($('body').hasClass('show-menu')) {
+          Scrolllable.enable();
+          $('body').removeClass('show-menu');
+        }
+      }
+    });
+  }
+
   // --- handle destroy mobile menu
   const handleDestroyMobileMenu = () => {
     if ($(window).width() >= 992) {
@@ -42,6 +54,7 @@ const Header = (() => {
   // --- init
   const init = () => {
     handleMobileMenu();
+    handleClickMenu();
   }
 
   // --- return

@@ -2,15 +2,17 @@
   @name: Testimonials
   -------------------------------------------------------------------------------//
 
-// Testimonials
-.testimonials
+//testimonials
+.testimonials#testimonials
   .container
     .testimonials__box
       .testimonials__head
-        h3.text-title.text-title--white !{data.title}
+        h3.text-title.text-title--white
+          | !{data.title}
       .testimonials__body.js-testimonials
         each val in data.list
           -
             data = val;
           include ../components/testimonials-item.pug
 ='\n'
+//end-testimonials

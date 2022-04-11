@@ -89,16 +89,16 @@
   &__txt {
     float: left;
     width: 52%;
-    padding-top: 150px;
-    padding-right: 74px;
-    @include large {
-      padding-top: 93px;
-    }
+    display: table;
+    min-height: 485px;
     @include medium {
       float: none;
       width: auto;
-      padding-top: 0;
-      padding-right: 0;
+      min-height: initial;
+    }
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 
@@ -125,6 +125,7 @@
     font-weight: fw(semi-bold);
     margin-bottom: 32px;
     color: color(grey);
+    max-width: 520px;
     @include large {
       margin-bottom: 24px;
     }

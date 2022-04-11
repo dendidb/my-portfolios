@@ -1310,6 +1310,10 @@ body.hold-transition *::after {
   transition: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-weight: 700;
   font-size: 4.8rem;
@@ -1467,21 +1471,19 @@ b {
 .hero-banner__txt {
   float: left;
   width: 52%;
-  padding-top: 150px;
-  padding-right: 74px;
-}
-@media only screen and (max-width: 1199.98px) {
-  .hero-banner__txt {
-    padding-top: 93px;
-  }
+  display: table;
+  min-height: 485px;
 }
 @media only screen and (max-width: 991.98px) {
   .hero-banner__txt {
     float: none;
     width: auto;
-    padding-top: 0;
-    padding-right: 0;
+    min-height: initial;
   }
+}
+.hero-banner__txt__align {
+  display: table-cell;
+  vertical-align: middle;
 }
 .hero-banner__title {
   max-width: 440px;
@@ -1515,6 +1517,7 @@ b {
   font-weight: 600;
   margin-bottom: 32px;
   color: #7d7987;
+  max-width: 520px;
 }
 @media only screen and (max-width: 1199.98px) {
   .hero-banner__desc {
@@ -2115,7 +2118,7 @@ b {
   height: 2px;
   display: inline-block;
   margin-bottom: 6px;
-  background-color: #7d7987;
+  background-color: #444;
   -webkit-border-radius: 1px;
      -moz-border-radius: 1px;
           border-radius: 1px;
@@ -2725,12 +2728,11 @@ b {
 .header__nav__link {
   text-decoration: none;
   display: block;
-  color: #1f1534;
   opacity: 0.5;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2749,6 +2751,13 @@ b {
     width: 100%;
     height: 100%;
     padding: 8px 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .header__nav__link:hover {
+    color: #444;
   }
 }
 .header__nav__link--active {
@@ -3138,39 +3147,66 @@ b {
 }
 .hero-banner__item::before {
   opacity: 0;
-  -webkit-transform: translateY(-32px);
-     -moz-transform: translateY(-32px);
-      -ms-transform: translateY(-32px);
-       -o-transform: translateY(-32px);
-          transform: translateY(-32px);
+  -webkit-transform: translateX(-32px);
+     -moz-transform: translateX(-32px);
+      -ms-transform: translateX(-32px);
+       -o-transform: translateX(-32px);
+          transform: translateX(-32px);
   -webkit-transition: all 1.75s ease;
   -o-transition: all 1.75s ease;
   -moz-transition: all 1.75s ease;
   transition: all 1.75s ease;
 }
+@media only screen and (max-width: 991.98px) {
+  .hero-banner__item::before {
+    -webkit-transform: translateY(-32px);
+       -moz-transform: translateY(-32px);
+        -ms-transform: translateY(-32px);
+         -o-transform: translateY(-32px);
+            transform: translateY(-32px);
+  }
+}
 .hero-banner__img__el {
   opacity: 0;
-  -webkit-transform: translateY(-16px);
-     -moz-transform: translateY(-16px);
-      -ms-transform: translateY(-16px);
-       -o-transform: translateY(-16px);
-          transform: translateY(-16px);
+  -webkit-transform: translateX(-32px);
+     -moz-transform: translateX(-32px);
+      -ms-transform: translateX(-32px);
+       -o-transform: translateX(-32px);
+          transform: translateX(-32px);
   -webkit-transition: all 1s ease 0s;
   -o-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
+@media only screen and (max-width: 991.98px) {
+  .hero-banner__img__el {
+    -webkit-transform: translateY(-32px);
+       -moz-transform: translateY(-32px);
+        -ms-transform: translateY(-32px);
+         -o-transform: translateY(-32px);
+            transform: translateY(-32px);
+  }
+}
 .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
   opacity: 0;
-  -webkit-transform: translateY(16px);
-     -moz-transform: translateY(16px);
-      -ms-transform: translateY(16px);
-       -o-transform: translateY(16px);
-          transform: translateY(16px);
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transform: translateX(32px);
+     -moz-transform: translateX(32px);
+      -ms-transform: translateX(32px);
+       -o-transform: translateX(32px);
+          transform: translateX(32px);
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
+    -webkit-transform: translateY(32px);
+       -moz-transform: translateY(32px);
+        -ms-transform: translateY(32px);
+         -o-transform: translateY(32px);
+            transform: translateY(32px);
+  }
 }
 .hero-banner--single .hero-banner__item::before,
 .hero-banner .owl-item.active .hero-banner__item::before {
@@ -3214,10 +3250,10 @@ b {
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-  -webkit-transition: all 1.75s ease;
-  -o-transition: all 1.75s ease;
-  -moz-transition: all 1.75s ease;
-  transition: all 1.75s ease;
+  -webkit-transition: all 1.25s ease;
+  -o-transition: all 1.25s ease;
+  -moz-transition: all 1.25s ease;
+  transition: all 1.25s ease;
 }
 .hero-banner--single .hero-banner__title,
 .hero-banner .owl-item.active .hero-banner__title {
@@ -3235,10 +3271,10 @@ b {
 }
 .hero-banner--single .hero-banner__btn,
 .hero-banner .owl-item.active .hero-banner__btn {
-  -webkit-transition-delay: 2s;
-     -moz-transition-delay: 2s;
-       -o-transition-delay: 2s;
-          transition-delay: 2s;
+  -webkit-transition-delay: 1.4s;
+     -moz-transition-delay: 1.4s;
+       -o-transition-delay: 1.4s;
+          transition-delay: 1.4s;
 }
 .hero-banner.owl-carousel .hero-banner__img__el,
 .hero-banner.owl-carousel .owl-item img {
@@ -3619,7 +3655,7 @@ b {
 .testimonials__head .text-title {
   margin-bottom: 0;
 }
-.testimonials .owl-item.active .testimonials__customer, .testimonials .owl-item.active .testimonials__desc {
+.testimonials .owl-item.active .testimonials__avatar, .testimonials .owl-item.active .testimonials__customer, .testimonials .owl-item.active .testimonials__desc {
   opacity: 1;
   -webkit-transform: none;
      -moz-transform: none;

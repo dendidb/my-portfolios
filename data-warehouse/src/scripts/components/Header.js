@@ -35,6 +35,7 @@ const Header = (() => {
     });
   }
 
+  // --- handleClickMenu
   const handleClickMenu = () => {
     $('.header__nav__link').on('click', (e) => {
       if ($(window).width() <= 992) {
