@@ -97,6 +97,7 @@
     right: 0;
     font-weight: fw(bold);
     color: color(thirdiary);
+    padding-right: 26px;
     @include large {
       padding-right: 24px;
     }
