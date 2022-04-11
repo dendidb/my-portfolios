@@ -1236,6 +1236,7 @@ b {
      -moz-box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
           box-shadow: 0 40px 40px 0 rgba(57, 23, 119, 0.03);
   position: relative;
+  background-color: #fff;
 }
 .crypto__box:hover {
   background-color: #2b076e;
@@ -1251,7 +1252,7 @@ b {
 }
 .crypto__box:hover .btn--round {
   background-color: #3671e9;
-  border-color: #3671e9;
+  border-color: transparent;
   padding: 14px 16px 14px 24px;
   color: #fff;
   font-size: 1.6rem;

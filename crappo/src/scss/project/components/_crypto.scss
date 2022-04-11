@@ -11,6 +11,7 @@
     transition: all 0.2s ease;
     box-shadow: 0 40px 40px 0 rgba(57, 23, 119, .03);
     position: relative;
+    background-color: color(white);
     &:hover {
       background-color: color(secondary);
       transform: translateY(-4px);
@@ -20,7 +21,7 @@
       }
       .btn--round {
         background-color: color(tertiary);
-        border-color: color(tertiary);
+        border-color: transparent;
         padding: 14px 16px 14px 24px;
         color:#fff;
         @include font-size(h6);
