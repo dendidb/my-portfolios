@@ -27,7 +27,6 @@ const Reveal = (() => {
     ScrollReveal().reveal('.features__title', handleRevealConfig(50, '24px', 50, 'top'));
     ScrollReveal().reveal('.features__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
-    ScrollReveal().reveal('.features__box',handleRevealConfig(60, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.testimony__list', handleRevealConfig(50, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.testimony__title', handleRevealConfig(50, '24px', 50, 'top'));
     ScrollReveal().reveal('.footer__trial__title', handleRevealConfig(65, '24px', 50, 'bottom'));
@@ -35,7 +34,6 @@ const Reveal = (() => {
     ScrollReveal().reveal('.footer__trial__btn', handleRevealConfig(65, '24px', 50, 'bottom'));
 
     if ($(window).width() <= 767.98) {
-      ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
       ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'bottom'));
       ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
       

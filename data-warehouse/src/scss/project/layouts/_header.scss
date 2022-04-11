@@ -32,7 +32,7 @@
       background-color: rgba(color(black), 0.75);
       transition: all .65s ease .7s;
       @include medium {
-        top: 72px;
+        top: 64px;
       }
       .show-nav & {
         opacity: 1;
@@ -89,7 +89,7 @@
       position: fixed;
       @include scroll("y", "touch", "show");
       width: 100%;
-      top: 72px;
+      top: 64px;
       left: 0;
       bottom: 0;
       margin-left: 0;
@@ -105,7 +105,7 @@
       }
     }
     @include small {
-      top: 72px;
+      top: 64px;
       padding: 40px 24px 56px;
     }
   }
@@ -229,7 +229,7 @@
       position: absolute;
       z-index: zi(header-burger-menu);
       right: -14px;
-      top: -3px;
+      top: -8px;
       border-radius: 1px;
       &__bar {
         transition: all 0.3s ease 0.6s;
