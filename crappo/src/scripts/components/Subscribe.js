@@ -44,7 +44,7 @@ const Subscribe = (() => {
             confirmButton: 'btn btn--confirm btn--popup mr-12 w-100',
           },
           buttonsStyling: false
-        })
+        });
         swalWithBootstrapButton.fire({
           title: 'Success',
           text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
@@ -55,7 +55,7 @@ const Subscribe = (() => {
           width: 500,
           padding: '22px',
           textMargin: '24px',
-        })
+        });
       }
     });
   }

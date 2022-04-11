@@ -1451,6 +1451,7 @@ b {
   .subscribe__form__row {
     width: 100%;
     margin-bottom: 32px;
+    padding-right: 0;
   }
 }
 .subscribe__form__btn {
