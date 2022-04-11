@@ -136,23 +136,6 @@
     font-size: 0;
     border-radius: 30px;
     padding: 14px;
-    transition: all .5s ease;
-    &:hover {
-      background-color: color(tertiary);
-      padding: 14px 16px 14px 24px;
-      #{$b} {
-        &__txt {
-          color: color(white);
-          @include font-size(h6);
-          margin-right: 14px;
-        }
-        &__icon {
-          background-color: color(white);
-          background-image: url(../img/icons/arrow-right-small.svg);
-          background-size: 8px auto;
-        }
-      }
-    }
   }
   &__txt {
     display: inline-block;

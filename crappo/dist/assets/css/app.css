@@ -1249,15 +1249,18 @@ b {
 .crypto__box:hover .crypto__box__desc {
   color: #fff;
 }
-.crypto__box:hover__btn {
-  min-width: 62px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.crypto__box:hover .btn--round {
+  background-color: #3671e9;
+  border-color: #3671e9;
+  padding: 14px 16px 14px 24px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
 }
-.crypto__box:hover__btn--round {
-  font-size: 16px;
+.crypto__box:hover .btn--round .btn__icon {
+  background-color: #fff;
+  background-image: url(../img/icons/arrow-right-small.svg);
+  margin-left: 24px;
 }
 @media only screen and (max-width: 991.98px) {
   .crypto__box {
@@ -1306,14 +1309,13 @@ b {
   color: #828282;
   margin-bottom: 24px;
 }
-
-.crypto__link {
+.crypto .crypto__link {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1967,26 +1969,6 @@ Components: Input form
      -moz-border-radius: 30px;
           border-radius: 30px;
   padding: 14px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.btn--round:hover {
-  background-color: #3671e9;
-  padding: 14px 16px 14px 24px;
-}
-.btn--round:hover .btn__txt {
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  margin-right: 14px;
-}
-.btn--round:hover .btn__icon {
-  background-color: #fff;
-  background-image: url(../img/icons/arrow-right-small.svg);
-  -moz-background-size: 8px auto;
-       background-size: 8px auto;
 }
 .btn__txt {
   display: inline-block;

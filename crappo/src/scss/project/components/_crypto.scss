@@ -2,29 +2,42 @@
    Components Crypto
    ========================================================================== */
 
-.crypto__box {
-  $cb: &;
-  padding: 48px 24px;
-  border-radius: 16px;
-  text-align: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 40px 40px 0 rgba(57, 23, 119, .03);
-  position: relative;
-  &:hover {
-    background-color: color(secondary);
-    transform: translateY(-4px);
-    #{$cb}__title,
-    #{$cb}__desc {
-      color: color(white);
-    }
-    &__btn {
-      min-width: 62px;
-      transition: all .3s ease;
-      $bt: &;
-      &--round {
-        font-size: 16px;
+.crypto {
+  &__box {
+    $cb: &;
+    padding: 48px 24px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 40px 40px 0 rgba(57, 23, 119, .03);
+    position: relative;
+    &:hover {
+      background-color: color(secondary);
+      transform: translateY(-4px);
+      #{$cb}__title,
+      #{$cb}__desc {
+        color: color(white);
       }
-    }
+      .btn--round {
+        background-color: color(tertiary);
+        border-color: color(tertiary);
+        padding: 14px 16px 14px 24px;
+        color:#fff;
+        @include font-size(h6);
+        .btn__icon {
+          background-color: color(white);
+          background-image: url(../img/icons/arrow-right-small.svg);
+          margin-left: 24px;
+        }
+      }
+    // &__btn {
+    //   min-width: 62px;
+    //   transition: all .3s ease;
+    //   $bt: &;
+    //   &--round {
+    //     font-size: 16px;
+    //   }
+    // }
   }
   @include medium {
     padding: 40px 16px;
@@ -62,12 +75,13 @@
     margin-bottom: 24px;
   }
 }
-.crypto__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: zi(link-after);
-  @include remove-tap-highlight;
+  .crypto__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: zi(link-after);
+    @include remove-tap-highlight;
+  }
 }
