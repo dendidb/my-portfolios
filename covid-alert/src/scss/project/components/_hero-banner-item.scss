@@ -84,13 +84,12 @@
     color: color(primary);
     font-weight: fw(bold);
     margin-bottom: 8px;
-    @include font-size(h3);
+    @include font-size(h4);
     @include large {
-      @include font-size(h3);
+      @include font-size(h5);
     }
     @include medium {
       margin-bottom: 16px;
-      @include font-size(h5);
     }
     @include small {
       @include font-size(h6);

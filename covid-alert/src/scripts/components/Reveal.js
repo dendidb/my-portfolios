@@ -22,6 +22,15 @@ const Reveal = (() => {
     ScrollReveal().reveal('.problem__title', handleRevealConfig());
 
     // -- homepage section
+    ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.problem__body', handleRevealConfig(50, '24px', 50, 'bottom'));
 
     // -- responsive config

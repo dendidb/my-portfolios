@@ -38,6 +38,7 @@
     margin: 24px 0;
     width: 63%;
     display: inline-block;
+    vertical-align: top;
     text-align: center;
     @include medium {
       text-align: left;
@@ -71,10 +72,11 @@
   }
   &__sosmed {
     display: inline-block;
+    vertical-align: top;
     width: 17%;
     margin: 0;
     padding: 0;
-    margin: 24px 0;
+    margin: 12px 0;
     list-style: none;
     text-align: right;
     @include medium {
@@ -87,6 +89,9 @@
     &__list {
       display: inline-block;
       margin-right: 8px;
+      @include large {
+        margin-right: 6px;
+      }
       &:last-child {
         margin-right: 0;
       }
