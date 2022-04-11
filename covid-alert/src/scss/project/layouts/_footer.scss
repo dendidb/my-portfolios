@@ -3,13 +3,14 @@
    ========================================================================== */
 
 .footer {
-  padding: 40px 0;
+  $f: &;
+  padding: 24px 0;
   position: absolute;
   bottom: 0;
   width: 100%;
   left: 0;
   background-color: color(white);
-  @include medium {
+  @include small {
     position: relative;
   }
   &__top {
@@ -99,10 +100,11 @@
       display: inline-block;
       text-decoration: none;
       background-color: transparent;
+      @include remove-tap-highlight;
       transition: all 0.35s ease;
       &:hover {
         transform: translateY(-4px);
-        .footer__sosmed__link__icon {
+        #{$f}__sosmed__link__icon {
           transition: all .3s ease;
           &.ca-facebook {
             color: color(social-media, facebook);

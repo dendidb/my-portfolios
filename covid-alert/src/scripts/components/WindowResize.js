@@ -5,6 +5,7 @@
 
 // --- components
 import {
+  Footer,
 } from 'components';
 
 // --- WindowResize
@@ -34,6 +35,7 @@ const WindowResize = (() => {
       _timeout = false;
       // Run Function on Resize end
       $('body').removeClass('hold-transition');
+        Footer.footerSticky();
     }
   }
 
