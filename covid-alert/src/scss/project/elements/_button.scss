@@ -65,6 +65,8 @@
     }
     @include small {
       background-color: color(tertiary);
+      border-color: color(tertiary);
+      color: color(primary);
     }
   }
   &--tertiary {

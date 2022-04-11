@@ -65,6 +65,7 @@
         each val in dataHeader.headerButton
           - data = val;
             ='\n'
+          li.header__item
             a.btn.btn--secondary(href=val.to)
               | !{val.text}
 ='\n'
