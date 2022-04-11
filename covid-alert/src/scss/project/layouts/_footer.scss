@@ -85,9 +85,41 @@
     }
     &__list {
       display: inline-block;
-      margin-right: 24px;
+      margin-right: 8px;
       &:last-child {
         margin-right: 0;
+      }
+    }
+    &__link {
+      width: 40px;
+      height: 40px;
+      line-height: 44px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      text-decoration: none;
+      background-color: transparent;
+      transition: all 0.35s ease;
+      &:hover {
+        transform: translateY(-4px);
+        .footer__sosmed__link__icon {
+          transition: all .3s ease;
+          &.ca-facebook {
+            color: color(social-media, facebook);
+          }
+          &.ca-youtube {
+            color: color(social-media, youtube);
+          }
+          &.ca-vtube {
+            color: color(social-media, vtube);
+          }
+          &.ca-twitter {
+            color: color(social-media, twitter);
+          }
+        }
+      }
+      &__icon {
+        @include font-size(h4);
       }
     }
   }
