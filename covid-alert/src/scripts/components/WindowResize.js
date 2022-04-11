@@ -39,8 +39,6 @@ const WindowResize = (() => {
 
   // --- init
   const init = () => {
-    handleResize();
-
   }
 
   // --- return

@@ -9,12 +9,13 @@
     border-radius: 10px;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
     padding: 24px 32px;
-    min-height: 380px;
+    min-height: 420px;
     overflow: hidden;
     position: relative;
     transition: all 0.2s ease;
     @include small {
       padding: 18px;
+      min-height: 380px;
     }
     &::after {
       content: '';

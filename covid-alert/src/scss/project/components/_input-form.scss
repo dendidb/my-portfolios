@@ -94,8 +94,11 @@ Components: Input form
     color: red;
     text-align: left;
     margin-bottom: 0;
-    transform: scale(0.69);
+    transform: tranlateY(-6px);
     transition: all 0.2s ease;
+    @include medium {
+      left: 16px;
+    }
     .error & {
       opacity: 1;
       transform: none;

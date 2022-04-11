@@ -56,8 +56,8 @@
       visibility: hidden;
       // transition: all .5s ease;
       // transition-delay: 0.88s;
-      transition: all .35s ease;
-      transition-delay: .1s;
+      transition: all .5s ease;
+      transition-delay: .3s;
       .show-menu & {
         visibility: visible;
         opacity: 1;
@@ -85,11 +85,8 @@
       background-color: color(primary);
       z-index: zi(header);
       transform: translateX(100%);
-      transform-origin: right center;
-      // transition: all .55s ease;
-      // transition-delay: .70s;
-      transition: all .35s ease;
-      transition-delay: .1s;
+      transition: all .60s ease;
+      transition-delay: .30s;
       overflow-y: auto;
       overflow-x: hidden;
       .show-menu & {
@@ -120,7 +117,7 @@
       opacity: 0;
       transition: all .3s ease 0s;
       @for $i from 1 through 6 {
-        $d: 475;
+        $d: 375;
         &:nth-child(#{$i}) {
           transition-delay: ($d - ($i * 65) + ms);
         }
@@ -130,7 +127,7 @@
         opacity: 1;
         visibility: visible;
         @for $i from 1 through 6 {
-          $d: 475;
+          $d: 375;
           &:nth-child(#{$i}) {
             transition-delay: ($d + ($i * 65) + ms);
           }
