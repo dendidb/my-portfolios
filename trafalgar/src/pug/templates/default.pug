@@ -11,18 +11,18 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no,minimal-ui')/
     ='\n\n'
 
-    // primary information
+    //primary information
     title #{siteTitle + ' '+ suffixSiteTitle}
     meta(name='description', content=siteTitle + ' '+ suffixSiteDescription)/
     meta(name='keywords', content=siteTitle + ', ' + suffixSiteKeywords)/
 
     //- HTML5 IE
     ='\n\n'
-    // ie fix for html5 tags
+    //ie fix for html5 tags
     //[if lt IE 9]><script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script><![endif]
     ='\n\n'
 
-    // author
+    //author
     meta(name='author' content=author)/
     meta(name='copyright' content=copyright)/
 
@@ -35,7 +35,7 @@ html(lang='en')
       -
         robotsContent = 'index, follow';
 
-    // user agent crawler
+    //user agent crawler
     meta(name='robots', content=robotsContent)/
     meta(name='googlebot', content=robotsContent)/
     meta(name='googlebot-news', content=robotsContent)/
@@ -46,14 +46,14 @@ html(lang='en')
 
     //- canonical
     if seoFriendly
-      // canonical
+      //canonical
       link(rel='canonical', href=cannonical)/
 
     ='\n\n'
 
     //- og facebook
     if ogFacebook.enable
-      // og facebook general
+      //og facebook general
       meta(property='og:locale' content='en_US')/
       meta(property='og:type', content=ogFacebook.type)/
       meta(property='og:title', content=siteTitle + ' '+ suffixSiteTitle)/
@@ -67,7 +67,7 @@ html(lang='en')
 
     //- Twitter Card
     if twitterCard.enable
-      // twitter card
+      //twitter card
       meta(name='twitter:card' content=twitterCard.sizeCard)/
       meta(name='twitter:title', content=siteTitle + ' '+ suffixSiteTitle)/
       meta(name='twitter:description', content=siteTitle + ' '+ suffixSiteDescription)/
@@ -79,13 +79,13 @@ html(lang='en')
 
     ='\n\n'
 
-    // ============ icon ============
-    // web favicon
+    //============ icon ============
+    //web favicon
     link(rel='shortcut icon' href=icons.webFavicon)/
 
     ='\n\n'
 
-    // android add to home screen
+    //android add to home screen
     link(rel='manifest' href=manifest)/
     meta(name='mobile-web-app-capable' content='yes')/
     meta(name='theme-color' content=siteTheme)/
@@ -97,13 +97,13 @@ html(lang='en')
 
     ='\n\n'
 
-    // windows microsoft
+    //windows microsoft
     meta(name='msapplication-TileColor' content=siteTheme)/
     meta(name='msapplication-TileImage' content=icons.homescreen.microsoft.s144)/
 
     ='\n\n'
 
-    // apple add to home screen
+    //apple add to home screen
     meta(name='apple-mobile-web-app-capable' content='yes')/
     meta(name='apple-mobile-web-app-status-bar-style' content=siteTheme)/
     link(rel='apple-touch-icon' href=icons.homescreen.iOS.default)/
@@ -119,7 +119,7 @@ html(lang='en')
     link(rel='apple-touch-startup-image' href=icons.homescreen.iOS.default)/
     ='\n\n'
 
-    // style
+    //style
     link(rel='stylesheet', href=cssMain)/
     ='\n\n'
 
@@ -134,7 +134,7 @@ html(lang='en')
     include ../layouts/footer.pug
 
     ='\n\n'
-    // script
+    //script
     script(src=jsVendor)
     script(src=jsMain)
     ='\n\n'
