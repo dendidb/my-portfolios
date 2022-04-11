@@ -6,6 +6,12 @@
   padding: 48px 0 24px;
   overflow: hidden;
   position: relative;
+  @include small {
+    padding: 48px 0;
+  }
+  @include extra-small {
+    padding: 16px 0;
+  }
   &::before {
     content: '';
     background: url(../img/bg/covid-red.svg);
@@ -38,6 +44,11 @@
     margin-bottom: 48px;
     @include font-size(h3);
     font-weight: fw(bold);
+    @include small {
+      @include font-size(h4);
+      max-width: 280px;
+      margin: 0 auto 24px;
+    }
   }
   &__form {
     max-width: 520px;

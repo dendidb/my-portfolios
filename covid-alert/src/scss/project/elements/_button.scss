@@ -19,6 +19,9 @@
   background-color: transparent;
   @include remove-tap-highlight;
   transition: all 0.2s ease;
+  @include small {
+    @include font-size(label);
+  }
   &--block {
     display: block;
     width: 100%;

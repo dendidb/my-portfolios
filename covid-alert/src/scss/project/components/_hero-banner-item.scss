@@ -131,7 +131,7 @@
       max-width: 320px;
     }
     @include small {
-      margin-bottom: 16px;
+      @include font-size(label);
     }
   }
 }

@@ -21,6 +21,9 @@
         margin: 0 auto;
         height: 320px;
       }
+      @include small {
+        height: 220px;
+      }
     }
   }
   &__txt {
@@ -32,6 +35,7 @@
     @include medium {
       width: 100%;
       min-height: initial;
+      max-width: initial;
     }
     &__align {
       display: table-cell;
@@ -45,10 +49,23 @@
       display: inline-block;
       vertical-align: top;
       padding: 12px;
+      @include medium {
+        padding: 12px;
+        margin-bottom: 8px;
+      }
+      @include small {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 4px;
+      }
       &__el {
         color: color(primary);
         @include font-size(h4);
         font-weight: fw(bold);
+        @include small {
+          @include font-size(h6);
+        }
       }
     }
     &__detail {
@@ -66,10 +83,21 @@
       margin-bottom: 16px;
       font-weight: fw(bold);
       @include font-size(h3);
+      @include font-size(h3);
+      @include medium {
+        @include font-size(h4);
+        margin-bottom: 8px;
+      }
     }
     &__desc {
       @include font-size(h6);
       margin-bottom: 0;
+      @include medium {
+        @include font-size(h4);
+      }
+      @include small {
+        @include font-size(label);
+      }
     }
   }
   // -- modifier
@@ -84,6 +112,9 @@
         @include medium {
           margin: 0 auto;
           height: 320px;
+        }
+        @include small {
+          height: 220px;
         }
       }
     }

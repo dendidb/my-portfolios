@@ -10,7 +10,7 @@
     padding: 48px 0;
   }
   @include extra-small {
-    padding: 32px 0;
+    padding: 16px 0;
   }
   &__head {
     max-width: 570px;
@@ -36,9 +36,9 @@
       width: 254px;
       height: 260px;
     }
-    @include small {
-      margin-left: -24px;
-      margin-right: -24px;
+    @include medium {
+      margin-left: -32px;
+      margin-right: -32px;
       padding: 16px 12px;
       white-space: nowrap;
       overflow-y: hidden;
@@ -52,7 +52,7 @@
     @include medium {
       width: 50%;
     }
-    @include small {
+    @include medium {
       display: inline-block;
       float: none;
       width: 340px;

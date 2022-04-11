@@ -66,8 +66,10 @@
     &__title {
       @include font-size(h4);
       transition: all 0.2s ease;
+      margin-bottom: 8px;
     }
     &__desc {
+      @include font-size(label);
       margin-bottom: 0;
     }
   }

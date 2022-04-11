@@ -7,13 +7,24 @@
   &-label {
     color: color(primary);
     margin-bottom: 6px;
+    @include font-size(h6);
+    @include medium {
+      @include font-size(label);
+    }
   }
   &-title {
     margin-bottom: 12px;
     color: color(black, 1);
     @include font-size(h3);
+    @include medium {
+      @include font-size(h4);
+    }
   }
   &-desc {
     margin-bottom: 0;
+    @include font-size(h5);
+    @include medium {
+      @include font-size(label);
+    }
   }
 }

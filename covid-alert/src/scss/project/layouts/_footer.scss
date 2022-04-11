@@ -4,8 +4,14 @@
 
 .footer {
   padding: 40px 0;
-  background-color: color(white);
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  left: 0;
+  background-color: color(white);
+  @include medium {
+    position: relative;
+  }
   &__top {
     @include clearfix;
     margin-bottom: 24px;
