@@ -136,6 +136,7 @@
           &::after {
             transform: rotateX(180deg);
             transition: all 0.5s ease 0.35s;
+            color: color(purple, 1);
           }
         }
         #{$f}__item {

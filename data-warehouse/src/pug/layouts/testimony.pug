@@ -8,9 +8,10 @@
     .testimony__wrapper
       h2.testimony__title
         | !{dataTestimony.title}
-      //testimony-list
       .testimony__list.js-testimony-list
         each val in dataTestimony.list
           -
             data = val
           include ../components/testimony.pug
+='\n'
+//end-testimony

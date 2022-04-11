@@ -6,31 +6,31 @@
   dataHeader = {
     logoSrc: 'logo.svg',
     logoLink: 'index.html',
-    logoAlt: 'Dara Warehouse',
+    logoAlt: 'Data Warehouse',
     menu: [
       {
-        to: 'about.html',
+        to: '#about',
         text: 'About',
         classActive: 'about'
       },
       {
-        to: 'help.html',
+        to: '#help',
         text: 'Help',
         classActive: 'help'
       },
       {
-        to: 'features.html',
+        to: '#features',
         text: 'Features',
         classActive: 'features'
       },
       {
-        to: 'signup.html',
+        to: '#signup',
         text: 'Signup',
         classActive: 'signup'
       }
     ],
     demo: {
-      to: '#',
+      to: '#request-demo',
       text: 'Request Demo'
     }
   }
@@ -48,12 +48,14 @@
         each val in [1, 2, 3]
           ='\n'
           span.burger-menu__bar
+          ='\n'
       .header__scroll-mobile
         ul.header__nav
           each val in dataHeader.menu
             li.header__nav__item(class=(navActive == val.classActive ? 'header__nav__item--active' : ''))
               ='\n'
               a.header__nav__link(href=val.to) !{val.text}
+              ='\n'
         .header__demo
           ='\n'
           a.btn.btn--white(href=dataHeader.demo.to) !{dataHeader.demo.text}

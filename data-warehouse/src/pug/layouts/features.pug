@@ -10,9 +10,10 @@
         | !{dataFeatures.title}
       h6.features__desc
         | !{dataFeatures.desc}
-    //features-list
     .features__list
       each val in dataFeatures.list
         -
           data = val
         include ../components/features.pug
+='\n'
+//end-features

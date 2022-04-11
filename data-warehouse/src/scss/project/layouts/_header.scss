@@ -31,8 +31,8 @@
       transform-origin: top center;
       background-color: rgba(color(black), 0.75);
       transition: all .65s ease .7s;
-      @include small {
-        top: 64px;
+      @include medium {
+        top: 72px;
       }
       .show-nav & {
         opacity: 1;
@@ -89,7 +89,7 @@
       position: fixed;
       @include scroll("y", "touch", "show");
       width: 100%;
-      top: 64px;
+      top: 72px;
       left: 0;
       bottom: 0;
       margin-left: 0;
@@ -99,16 +99,13 @@
       transition: all 0.45s ease;
       transform-origin: top center;
       transition-delay: 0.55s;
-      @include small {
-        top: 64px;
-      }
       .show-nav & {
         transform: none;
         transition-delay: .2s;
       }
     }
     @include small {
-      top: 64px;
+      top: 72px;
       padding: 40px 24px 56px;
     }
   }

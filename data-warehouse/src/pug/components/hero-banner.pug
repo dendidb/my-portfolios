@@ -8,9 +8,12 @@
     .hero-banner__img
       ='\n'
       img.hero-banner__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+      ='\n'
     .hero-banner__txt
-      h2.hero-banner__title !{data.title}
-      p.hero-banner__desc !{data.desc}
+      h2.hero-banner__title
+        | !{data.title}
+      p.hero-banner__desc
+        | !{data.desc}
       .hero-banner__btn
         ='\n'
         a.btn.btn--primary(href=data.btn.to) !{data.btn.text}

@@ -9,6 +9,7 @@ import {
   WindowScroll,
   WindowResize,
   Features,
+  Reveal,
   HeroBanner,
   Header,
   Footer,
@@ -47,6 +48,7 @@ const App = (() => {
       Features.init();
       HeroBanner.init();
       Header.init();
+      Reveal.init();
       Footer.init();
       Testimony.init();
 
