@@ -18,7 +18,6 @@ const Testimony = (() => {
 
     // --- check if itemLength > itemRun
     if (_itemLength > _itemRun) {
-      console.log(1);
       // --- init carousel
       _selector.addClass('owl-carousel').owlCarousel({
         items: 1,

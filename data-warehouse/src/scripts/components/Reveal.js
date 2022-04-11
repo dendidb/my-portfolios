@@ -36,6 +36,9 @@ const Reveal = (() => {
 
     if ($(window).width() <= 767.98) {
       ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+      
     }
   }
 
