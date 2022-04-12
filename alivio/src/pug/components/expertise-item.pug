@@ -1,0 +1,13 @@
+//- ------------------------------------------------------------------------ -//
+//- Expertise Item                                                            -//
+//- ------------------------------------------------------------------------ -//
+
+//expertise-item
+.expertise__item
+  .expertise__img
+    ='\n'
+    img.expertise__img__el(src='assets/img/dummy/'+data.img, alt=data.title)/
+    ='\n'
+  .expertise__txt
+    h5.expertise__txt__title
+      | !{data.title}

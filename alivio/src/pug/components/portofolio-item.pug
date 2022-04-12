@@ -1,0 +1,17 @@
+//- ------------------------------------------------------------------------ -//
+//- Portofolio Item                                                            -//
+//- ------------------------------------------------------------------------ -//
+
+//portofolio-item
+.portofolio__item
+  .portofolio__box
+    ='\n'
+    a.portofolio__link(href=data.to target='_blank')
+    ='\n'
+    .portofolio__img
+      ='\n'
+      img.portofolio__img__el(src='assets/img/dummy/'+data.img, alt=data.title)/
+      ='\n'
+    .portofolio__txt
+      h5.portofolio__txt__title
+        | View Portfolio

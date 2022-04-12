@@ -1,0 +1,33 @@
+//- ------------------------------------------------------------------------ -//
+//- Contact Us                                                                 -//
+//- ------------------------------------------------------------------------ -//
+
+//contact-us
+.contact-us(id="contact-us")
+  .container
+    .contact-us__wrapper
+      .contact-us__box
+        .contact-us__head
+          h2.text-title
+            | !{contactUs.title}
+          p.contact-us__desc.text-desc
+            | !{contactUs.desc}
+        .contact-us__img
+          ='\n'
+          img.contact-us__img__el(src='assets/img/dummy/'+contactUs.bg alt=bgAlt)/
+          ='\n'
+        //contact-us-form
+        .contact-us__form
+          form(action='#' method='POST')
+            each val in contactUs.list
+              - data = val;
+              include ../components/input-form.pug
+            .fi-row
+              ='\n'
+              button.btn.btn--primary.btn--block.js-alert-message.js-message(type='submit')
+                | Send
+              ='\n'
+            ='\n'
+        //end-contact-us-form
+='\n'
+//end-contact-us

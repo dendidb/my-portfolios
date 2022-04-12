@@ -2,66 +2,106 @@
  Init: Fonts
  ========================================================================== */
 
- @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Medium.eot');
-  src: url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Rubik-Medium.woff2') format('woff2'),
-      url('../fonts/Rubik-Medium.woff') format('woff'),
-      url('../fonts/Rubik-Medium.ttf') format('truetype'),
-      url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Regular.eot');
-  src: url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Rubik-Regular.woff2') format('woff2'),
-      url('../fonts/Rubik-Regular.woff') format('woff'),
-      url('../fonts/Rubik-Regular.ttf') format('truetype'),
-      url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Bold.eot');
-  src: url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Rubik-Bold.woff2') format('woff2'),
-      url('../fonts/Rubik-Bold.woff') format('woff'),
-      url('../fonts/Rubik-Bold.ttf') format('truetype'),
-      url('../fonts/Rubik-Bold.svg#Rubik-Bold') format('svg');
+  font-family: 'Georgia';
+  src: url('../fonts/Georgia-Bold.eot');
+  src: url('../fonts/Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Georgia-Bold.woff2') format('woff2'),
+  url('../fonts/Georgia-Bold.woff') format('woff'),
+  url('../fonts/Georgia-Bold.ttf') format('truetype'),
+  url('../fonts/Georgia-Bold.svg#Georgia-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-SemiBold.eot');
-  src: url('../fonts/Rubik-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
-      url('../fonts/Rubik-SemiBold.woff') format('woff'),
-      url('../fonts/Rubik-SemiBold.ttf') format('truetype'),
-      url('../fonts/Rubik-SemiBold.svg#Rubik-SemiBold') format('svg');
-  font-weight: 600;
+  font-family: 'Georgia';
+  src: url('../fonts/Georgia.eot');
+  src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Georgia.woff2') format('woff2'),
+  url('../fonts/Georgia.woff') format('woff'),
+  url('../fonts/Georgia.ttf') format('truetype'),
+  url('../fonts/Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'crappo-icons';
-  src: url('../fonts/crappo-icons.eot?1xn3wm');
-  src: url('../fonts/crappo-icons.eot?1xn3wm#iefix') format('embedded-opentype'),
-    url('../fonts/crappo-icons.ttf?1xn3wm') format('truetype'),
-    url('../fonts/crappo-icons.woff?1xn3wm') format('woff'),
-    url('../fonts/crappo-icons.svg?1xn3wm#crappo-icons') format('svg');
+  font-family: 'Georgia';
+  src: url('../fonts/Georgia_1.eot');
+  src: url('../fonts/Georgia_1.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Georgia_1.woff2') format('woff2'),
+  url('../fonts/Georgia_1.woff') format('woff'),
+  url('../fonts/Georgia_1.ttf') format('truetype'),
+  url('../fonts/Georgia_1.svg#Georgia') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('../fonts/Georgia-Bold_1.eot');
+  src: url('../fonts/Georgia-Bold_1.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Georgia-Bold_1.woff2') format('woff2'),
+  url('../fonts/Georgia-Bold_1.woff') format('woff'),
+  url('../fonts/Georgia-Bold_1.ttf') format('truetype'),
+  url('../fonts/Georgia-Bold_1.svg#Georgia-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.eot');
+  src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+  url('Lato-Bold.woff2') format('woff2'),
+  url('Lato-Bold.woff') format('woff'),
+  url('Lato-Bold.ttf') format('truetype'),
+  url('Lato-Bold.svg#Lato-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Light.eot');
+  src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+  url('Lato-Light.woff2') format('woff2'),
+  url('Lato-Light.woff') format('woff'),
+  url('Lato-Light.ttf') format('truetype'),
+  url('Lato-Light.svg#Lato-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Black.eot');
+  src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+  url('Lato-Black.woff2') format('woff2'),
+  url('Lato-Black.woff') format('woff'),
+  url('Lato-Black.ttf') format('truetype'),
+  url('Lato-Black.svg#Lato-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.eot');
+  src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('Lato-Regular.woff2') format('woff2'),
+  url('Lato-Regular.woff') format('woff'),
+  url('Lato-Regular.ttf') format('truetype'),
+  url('Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

@@ -1,0 +1,68 @@
+/* -------------------------------------------------------------------------- */
+/* Layouts: Contact Us                                                          */
+/* -------------------------------------------------------------------------- */
+
+.contact-us {
+  padding-top: 64px;
+  padding-bottom: 40px;
+  &__wrapper {
+    font-size: 0;
+  }
+  &__box {
+    width: 100%;
+    border-radius: 48px;
+    padding: 32px 72px 32px 32px;
+    background-color: rgba(color(secondary, 1), 0.15);
+    font-size: 0;
+    @include medium {
+      padding: 32px;
+    }
+    @include small {
+      border-radius: 32px;
+      padding: 32px 32px 48px;
+    }
+    @include x-small {
+      padding: 24px 24px 32px;
+    }
+  }
+  &__head {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 64px;
+    @include small {
+      margin-bottom: 24px;
+    }
+  }
+  &__desc {
+    max-width: 548px;
+    margin: 0 auto;
+  }
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    @include medium {
+      width: 100%;
+      text-align: center;
+    }
+    &__el {
+      margin: 0 auto 32px;
+      @include medium {
+        display: block;
+      }
+    }
+  }
+  &__form {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 32px;
+    width: 50%;
+    @include large {
+      padding-left: 40px;
+    }
+    @include medium {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}

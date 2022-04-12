@@ -1,30 +1,79 @@
 /* ==========================================================================
-   Init: Button
-   ========================================================================== */
-   
+  Elements Button
+  ========================================================================== */
+
 .btn {
-  min-height: 60px;
-  border-radius: 32px;
   display: inline-block;
-  outline: 0;
-  border: none;
+  vertical-align: middle;
+  min-width: 200px;
+  padding: 14px 24px;
+  border-radius: 55px;
   text-decoration: none;
-  font-weight: fw(regular);
-  @include font-size(h5);
-  border: 1px solid transparent;
+  outline: 0;
+  cursor: pointer;
   text-align: center;
-  min-width: 148px;
-  padding: 16px 32px;
-  transition: all .3s ease;
+  overflow: hidden;
+  border: 1px solid transparent;
+  @include font-size(h6);
+  background-color: transparent;
+  @include remove-tap-highlight;
+  transition: all 350ms ease;
+  font-weight: fw(bold);
   &--primary {
-    background-color: color(tertiary);
-    &-reverse {
-      background-color: color(tertiary);
-      color: color(white);
-      &:hover {
-        background-color: transparent;
-        border-color: color(white);
+    background-color: color(primary, 1);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      color: color(primary, 1);
+      border-color: color(primary, 1);
+    }
+  }
+  &--secondary {
+    background-color: color(secondary, 1);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      color: color(secondary, 1);
+      border-color: color(secondary, 1);
+    }
+  }
+  &--white {
+    background-color: color(white);
+    color: color(black, 1);
+    width: 204px;
+    @include shadow(8);
+    text-align: center;
+    &::before {
+      content: '\e900';
+      font-family: 'rzf-icons';
+      display: inline-block;
+      vertical-align: top;
+      color: color(primary, 1);
+      @include font-size(h6);
+      position: relative;
+      top: -3px;
+      margin-right: 14px;
+      transition: all 0.3s ease;
+      @include medium {
+        top: -2px;
       }
     }
+    &:hover {
+      background-color: color(primary, 1);
+      color: color(white);
+      @include medium {
+        color: color(primary, 1);
+        background-color: color(white);
+      }
+      &::before {
+        color: color(white);
+        @include medium {
+          color: color(primary, 1);
+        }
+      }
+    }
+  }
+  &--block {
+    width: 100%;
   }
 }

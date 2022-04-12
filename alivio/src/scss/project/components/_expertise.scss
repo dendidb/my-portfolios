@@ -1,0 +1,50 @@
+/* -------------------------------------------------------------------------- */
+/* Components: Expertise Item                                                       */
+/* -------------------------------------------------------------------------- */
+
+.expertise {
+  $f: &;
+  &__item {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  &__img {
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 55.56%;
+    &__el {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  &__txt {
+    &__title {
+      font-family: ff(family-title);
+      @include font-size(h4);
+      font-weight: fw(regular);
+      color: color(black, 1);
+      user-select: text;
+      text-align: center;
+      margin-bottom: 0;
+      @include medium {
+      }
+      @include small {
+        @include font-size(h5);
+      }
+      @include x-small {
+        @include font-size(h6);
+      }
+    }
+  }
+}

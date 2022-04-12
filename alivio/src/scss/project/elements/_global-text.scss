@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Elements Global Text
+  ========================================================================== */
+
+.text {
+  &-title {
+    margin-bottom: 24px;
+    @include font-size(h2-accent);
+    color: color(black, 1);
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      @include font-size(h3);
+      margin-bottom: 12px;
+    }
+  }
+  &-desc {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include font-size(h5);
+    font-weight: fw(medium);
+    @include small {
+      @include font-size(label);
+    }
+  }
+}
+  

@@ -1,0 +1,40 @@
+-
+  contactUs = {
+    title: 'Contact Us',
+    desc: 'Ada yang ingin ditanyakan? Anda dapat menghubungi kami melalui form di bawah ini.',
+    bg: 'sent-message.svg',
+    bgAlt: 'Sent Message',
+    list: [ 
+      {
+        label: 'Name',
+        type: 'text',
+        class: 'fi-single-line',
+        target: 'alertName',
+        id: 'name',
+        name: 'name',
+        placeholder: 'Enter your name',
+        required: 'Name is required!'
+      },
+      {
+        label: 'Phone',
+        type: 'text',
+        class: 'fi-single-line number-only',
+        target: 'alertPhone',
+        id: 'phone',
+        name: 'phone',
+        placeholder: 'Enter your phone',
+        required: 'Phone is required!'
+      },
+      {
+        label: 'Your Message',
+        class: 'fi-multiline',
+        target: 'alertMultiline',
+        id: 'message',
+        name: 'message',
+        placeholder: 'Enter your message',
+        required: 'Message is required!'
+      },
+    ]
+  };
+
+include ../../layouts/contact-us.pug

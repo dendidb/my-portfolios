@@ -1,3 +1,120 @@
 /* ==========================================================================
-   Components Hero Banner
-   ========================================================================== */
+  Components: Hero Banner
+  ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  height: 100vh;
+  min-height: 568px;
+  max-height: 1200px;
+  &__item {
+    width: 100%;
+    height: 100%;
+    padding: 104px 0 160px;
+    overflow: hidden;
+    position: relative;
+    background-color: color(white);
+    @include large {
+      padding: 88px 0 104px;
+    }
+    @include medium {
+      padding: 64px 0 88px;
+    }
+    @include small {
+      padding: 40px 0 72px;
+    }
+    @include x-small {
+      padding: 40px 0 64px;
+    }
+    @include retina {
+      padding: 32px 0 56px;
+    }
+  }
+
+  .container {
+    // position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // right: -128px;
+    // width: 800px;
+    // height: 500px;
+    // bottom: -112px;
+    z-index: zi(banner-img-el);
+    @include large {
+      right: 0;
+      bottom: -56px;
+      width: 660px;
+      height: 412px;
+    }
+    @include medium {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+    }
+    &__el {
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__txt {
+    position: relative;
+    z-index: zi(banner-txt);
+    max-width: 645px;
+    display: table;
+    min-height: 568px;
+    @include large {
+      max-width: 500px
+    }
+    @include medium {
+      max-width: initial;
+    }
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    font-family: ff(family-title);
+    @include font-size(h1);
+    font-weight: fw(bold);
+    color: color(black, 1);
+    margin-bottom: 24px;
+    @include large {
+      @include font-size(h2);
+      margin-bottom: 32px;
+    }
+    @include small {
+      @include font-size(h3);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__desc {
+    max-width: 372px;
+    @include font-size(h5);
+    font-weight: fw(medium);
+    color: color(black, 2);
+    margin-bottom: 32px;
+    @include large {
+      margin-bottom: 24px;
+    }
+    @include medium {
+      max-width: initial;
+      @include font-size(label);
+    }
+  }
+}

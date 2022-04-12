@@ -1,16 +1,66 @@
 /* ==========================================================================
-   Layouts Hero Banner
-   ========================================================================== */
+   Layout: Hero Banner
+  ========================================================================== */
 
 .hero-banner {
-  @include clearfix;
-  color: color(white);
-  padding: 24px 0 104px;
-  background-image: url(../img/bg/headline-bg.png);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  &__content {
-    background-color: salmon;
+  $hb: &;
+  position: relative;
+
+  &__img__el {
+    opacity: 0;
+    transform: scale(1.18);
+    transition: all 3500ms ease 0s;
+  }
+
+  &__title,
+  &__desc,
+  &__btn {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: all .5s ease 0s;
+  }
+
+  &--single,
+  .owl-item.active {
+    #{$hb} {
+      &__item {
+        &::before {
+          opacity: 1;
+          transform: none;
+          transition: all 1.75s ease;
+        }
+      }
+
+      &__img__el {
+        opacity: 1;
+        transform: none;
+        transition: opacity 3.5 ease, transform 5s ease;
+        transition-delay: .8s;
+      }
+
+      &__title,
+      &__desc,
+      &__btn {
+        opacity: 1;
+        transform: none;
+        // transition: all 1.75s ease;
+        transition: all 1.25s ease 0s;
+      }
+
+      &__title {
+        // transition-delay: 1s;
+        transition-delay: 1.2s;
+      }
+
+      &__desc {
+        // transition-delay: 1.5s;
+        transition-delay: 1.5s;
+      }
+
+      &__btn {
+        // transition-delay: 2s;
+        transition-delay: 1.8s;
+      }
+    }
   }
 }

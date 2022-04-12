@@ -1,0 +1,96 @@
+/* ==========================================================================
+  Components: Section Description
+  ========================================================================== */
+
+.section-description {
+  padding: 112px 0 64px;
+  @include large {
+    padding: 96px 0 48px;
+  }
+  @include medium {
+    padding: 72px 0 40px;
+  }
+  @include small {
+    padding: 32px 0 24px;
+  }
+  &__box {
+    width: 100%;
+    border-radius: 48px;
+    padding: 32px 72px 32px 32px;
+    background-color: rgba(color(secondary, 1), 0.15);
+    font-size: 0;
+    @include medium {
+      padding: 32px 32px 32px 24px;
+    }
+    @include small {
+      border-radius: 32px;
+      padding: 32px 32px 48px;
+    }
+    @include x-small {
+      padding: 24px 24px 32px;
+    }
+  }
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 42%;
+    @include small {
+      display: block;
+      width: 100%;
+      margin: 0 auto 32px;
+      max-width: 480px;
+    }
+    @include x-small {
+      margin-bottom: 24px;
+    }
+    &__el {
+      display: block;
+    }
+  }
+  &__txt {
+    display: inline-block;
+    vertical-align: middle;
+    width: 58%;
+    padding-left: 64px;
+    @include large {
+      padding-left: 40px;
+    }
+    @include medium {
+      padding-left: 32px;
+    }
+    @include small {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  &__title {
+    font-family: ff(family-title);
+    max-width: 480px;
+    @include font-size(h2);
+    margin-bottom: 24px;
+    color: color(black, 1);
+    @include large {
+      margin-bottom: 24px;
+    }
+    @include medium {
+      @include font-size(h3);
+    }
+    @include small {
+      @include font-size(h5);
+      max-width: initial;
+      margin-bottom: 16px;
+    }
+  }
+  &__desc {
+    max-width: 480px;
+    @include font-size(h5);
+    margin-bottom: 0;
+    @include medium {
+      @include font-size(label);
+    }
+    @include small {
+      max-width: initial;
+    }
+  }
+}

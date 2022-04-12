@@ -1,0 +1,48 @@
+/* ==========================================================================
+  Components Floating Chat
+========================================================================== */
+
+.floating-chat {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 8;
+  transition: all .3s ease;
+  transform: none;
+  &:hover {
+    transform: scale(1.09);
+  }
+  @include medium {
+    bottom: 24px;
+    right: 24px;
+  }
+  @include small {
+    bottom: 12px;
+    right: 12px;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: zi(floating-chat-chat);
+    @include remove-tap-highlight;
+    @include small {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  &__img {
+    width: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: zi(floating-chat-img);
+    @include small {
+      width: 70px;
+    }
+  }
+}

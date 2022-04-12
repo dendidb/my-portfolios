@@ -1,51 +1,75 @@
 //-------------------------------------------------------------------------------
   @name: Header
   -------------------------------------------------------------------------------//
+
 -
   dataHeader = {
-    logoImg: 'crappo.svg',
-    logoAlt: 'Crappo Logo',
-    menuList: [
+    logoSrc: 'alivio.svg',
+    logoLink: 'index.html',
+    logoAlt: 'Alivio Logo',
+    menu: [
       {
-        text: 'Products',
-        to: 'products.html'
+        to: '#why-alivio',
+        text: 'Why Alivio',
+        classActive: 'why-alivio'
       },
       {
-        text: 'Features',
-        to: 'features.html'
+        to: '#solutions',
+        text: 'Solutions',
+        classActive: 'solutions'
       },
       {
-        text: 'About',
-        to: 'about.html'
+        to: '#community',
+        text: 'Community',
+        classActive: 'community'
       },
       {
-        text: 'Contact',
-        to: 'contact.html'
+        to: '#pricing',
+        text: 'Pricing',
+        classActive: 'pricing'
+      },
+    ],
+    auth: [
+      {
+        to: '#signin',
+        text: 'Sign in'
       },
       {
-        text: 'Login',
-        to: 'login.html'
-      },
-      {
-        text: 'Register',
-        to: 'register.html'
+        to: '#start-trial',
+        text: 'Start Trial'
       }
     ]
   }
-
 //header
 .header
   .container
-    ='\n'
-    a.header__logo
-    ='\n'
-    img(src='assets/img/logo/'+dataHeader.logoImg alt=dataHeader.logoAlt)/
-    ='\n'
-
-
-
+    .header__content
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__el(src="assets/img/logo/"+dataHeader.logoSrc alt=dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      button.burger-menu.js-nav(type='button')
+        ='\n'
+        each val in [1, 2, 3]
+          span.burger-menu__bar
+          ='\n'
+      ='\n'
+      .header__scroll-mobile
+        ul.header__nav
+          each val in dataHeader.menu
+            li.header__nav__item(class=(navActive == val.classActive ? 'header__nav__item--active' : ''))
+              ='\n'
+              a.header__nav__link(href=val.to)
+                | !{val.text}
+              ='\n'
+        .header__demo
+          each val in dataHeader.auth
+            - data = val;
+            ='\n'
+            a.btn.btn--white.js-nav-scroll(href=val.to)
+              | !{val.text}
+            ='\n'
 ='\n'
 //end-header
-
-
-

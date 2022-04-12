@@ -4,20 +4,33 @@
 
 // colors
 $colors: (
-  primary: #0d0d2b,
-  secondary: #2b076e,
-  tertiary: #3671e9,
-  grey: (
-    0: #f2f2f2,
-    1: #e0e0e0,
-    2: #bdbdbd,
-    3: #828282,
+  primary: (
+    1: #5f9e5f,
+    2: #eff5ef,
+    3: #ceb4f1,
   ),
+  secondary: (
+    1: #ffc655,
+    2: #fde8f4,
+    3: #fdeff8,
+  ),
+  tertiary: (
+    1: #68c9ba,
+    2: #f0faf8,
+  ),
+  black: (
+    1: #212353,
+    2: #4b5d68,
+    3: #4f4f4f,
+  ),
+  success: (
+    1: #08ab53,
+    2: #e3f9e9
+  ),
+  grey: #ddd,
   white: #fff,
-  overlay: rgba(#000, 0.7),
-  shadow: rgba(#000, 0.1),
-  shadow-hover: rgba(#000, 0.2),
-  number-transparent: rgba(255,255,255,.1),
+  overlay: rgba(#000, 0.4),
+  opacity: rgba(#9c69e2, 0.2),
   social-media: (
     facebook: #1877f2,
     twitter: #1da1f2,

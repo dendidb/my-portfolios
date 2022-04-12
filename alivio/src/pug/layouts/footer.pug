@@ -3,173 +3,20 @@
   -------------------------------------------------------------------------------//
 
 -
-  footer = {
-    logo: {
-      to: 'index.html',
-      logoSrc: 'crappo.svg',
-      logoAlt: 'Crappo'
-    },
-    menu: [
-      {
-        title: 'Quick Link',
-        nav: [
-          {
-            to: 'index.html',
-            text: 'Home'
-          },
-          {
-            to: 'products.html',
-            text: 'Products'
-          },
-          {
-            to: 'about.html',
-            text: 'About'
-          },
-          {
-            to: 'features.html',
-            text: 'Features'
-          },
-          {
-            to: 'contact.html',
-            text: 'Contact'
-          },
-        ]
-      },
-      {
-        title: 'Resources',
-        nav: [
-          {
-            to: 'download-whitepaper.html',
-            text: 'Download Whitepaper'
-          },
-          {
-            to: 'smart-token.html',
-            text: 'Smart Token'
-          },
-          {
-            to: 'blockhain-explorer.html',
-            text: 'Blockhain Explorer'
-          },
-          {
-            to: 'crypto-api.html',
-            text: 'Crypto API'
-          },
-          {
-            to: 'interest.html',
-            text: 'Interest'
-            },
-          ]
-        },
-      ],
-      payments: {
-        title: 'We accept following payment systems',
-        item: [
-          {
-            to: '#visa',
-            text: 'Visa',
-            imgIcon: 'visa.svg',
-            imgAlt: 'Visa'
-          },
-          {
-            to: '#mastercard',
-            text: 'Mastercard',
-            imgIcon: 'mastercard.svg',
-            imgAlt: 'Mastercard'
-          },
-          {
-            to: '#bitcoin',
-            text: 'Bitcoin',
-            imgIcon: 'bitcoin.svg',
-            imgAlt: 'Bitcoin'
-          },
-        ]
-      },
-      copyright: {
-        text: '© 2021 CRAPPO. All rights reserved',
-      },
-      sosmed: {
-        item: [
-          {
-          to: '#facebook',
-          text: 'Facebook',
-          class: 'facebook',
-          iconImg: 'facebook.svg',
-          iconAlt: 'Facebook'
-        },
-        {
-          to: '#instagram',
-          text: 'Instagram',
-          class: 'instagram',
-          iconImg: 'instagram.svg',
-          iconAlt: 'Instagram'
-        },
-        {
-          to: '#youtube',
-          text: 'Youtube',
-          class: 'youtube',
-          iconImg: 'youtube.svg',
-          iconAlt: 'Youtube'
-        },
-        {
-          to: '#twitter',
-          text: 'Twitter',
-          class: 'twitter',
-          iconImg: 'twitter.svg',
-          iconAlt: 'Twitter'
-        },
-        {
-          to: '#linkedin',
-          text: 'Linkedin',
-          class: 'linkedin',
-          iconImg: 'linkedin.svg',
-          iconAlt: 'Linkedin'
-        },
-      ]
+  data = {
+    copyright: '&copy; 2022 RZF Software&trade;. All Rights Reserved.<br /> Information and Technology Company',
+    btn: {
+      to: 'https://api.whatsapp.com/send?phone=6285864772042&text=Hi%20RZF%20Software',
     }
   }
 
-//footer
 .footer
-  .container
-    .footer__wrapper
-      ='\n'
-      a.footer__logo(href=footer.logo.to)
-        ='\n'
-        img.footer__logo__el(src='assets/img/logo/'+footer.logo.logoSrc alt=footer.logo.logoAlt)/
-      ='\n'
-      .footer__menu.js-footer-menu
-        each val in footer.menu
-          .footer__menu__item
-            h4.footer__menu__title
-              | !{val.title}
-            ul.footer__nav
-              each item in val.nav
-                li.footer__nav__item
-                  ='\n'
-                  a.footer__nav__link(href=item.to)
-                    | !{item.text}
-                  ='\n'
-        .footer__payments
-          h4.footer__payments__title
-            | !{footer.payments.title}
-          each paymentsItem in footer.payments.item
-            li.footer__payments__item
-              ='\n'
-              a.footer__payments__link(href=paymentsItem.to)
-                ='\n'
-                img.footer__payments__img(src='assets/img/logo/'+paymentsItem.imgIcon alt=paymentsItem.imgAlt)/
-                ='\n'
-    .footer__bottom
-      p.footer__bottom__copyright__title
-        | !{footer.copyright.text}
-      .footer__bottom__sosmed
-        ul.footer__bottom__sosmed__nav
-          each sosmedItem in footer.sosmed.item
-            li.footer__bottom__sosmed__item
-              ='\n'
-              a.footer__bottom__sosmed__link(href=sosmedItem.to)
-                ='\n'
-                img.footer__bottom__sosmed__el(class=sosmedItem.class, src='assets/img/sosmed/'+sosmedItem.iconImg alt=sosmedItem.iconAlt)/
-                  
+  //footer-copyright
+  .footer__copyright
+    .container
+      p.footer__copyright__txt
+        | !{data.copyright}
+  //end-footer-copyright
+
 ='\n'
 //end-footer

@@ -1,0 +1,20 @@
+//-------------------------------------------------------------------------------
+  @name: client
+  -------------------------------------------------------------------------------//
+
+//client
+.client(id="client")
+  .container
+    .client__head
+      h2.text-title
+        | !{data.title}
+      p.client__desc.text-desc
+        | !{data.desc}
+    //client-list
+    .client__list.js-client
+      each val in data.img
+        - data = val;
+        include ../components/client.pug
+    //end-client-list
+='\n'
+//end-client

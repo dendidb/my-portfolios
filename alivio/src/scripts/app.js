@@ -6,7 +6,16 @@ import {
 
 // --- components
 import {
-  Footer
+  WinScroll,
+  WindowResize,
+  Header,
+  Footer,
+  HeroBanner,
+  Expertise,
+  Client,
+  Reveal,
+  InputForm,
+  ContactUs
 } from 'components';
 
 // --- App
@@ -23,6 +32,14 @@ const App = (() => {
     Scrolllable.enable();
   }
 
+    // --- call vendor
+    const callVendor = () => {
+      // scroll
+      const navbar = document.querySelector('.header');
+      const scrollspy = VanillaScrollspy(navbar);
+      scrollspy.init();
+    }
+
   // --- ready
   const ready = () => {
     (($) => {
@@ -33,9 +50,19 @@ const App = (() => {
       runTransition();
       showSiteContent();
       BrowserCheck.init();
+      callVendor();
 
       // --- Project
+      WindowResize.init();
+      WinScroll.init();
+      Header.init();
       Footer.init();
+      HeroBanner.init();
+      Expertise.init();
+      Client.init();
+      Reveal.init();
+      InputForm.init();
+      ContactUs.init();
     })(jQuery);
   }
 

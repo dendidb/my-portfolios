@@ -3,7 +3,9 @@
   -------------------------------------------------------------------------------//
 
 //hero-banner
-
-
+.hero-banner.js-hero-banner
+  each val in data
+    - data = val;
+    include ../components/hero-banner.pug
 ='\n'
 //end-hero-banner

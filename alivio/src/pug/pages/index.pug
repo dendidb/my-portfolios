@@ -3,25 +3,26 @@ extends ../templates/default.pug
 //- Head
 block siteHeader
   -
-    siteTitle = 'Home';
+    navActive = "alivio";
+    siteTitle = 'Alivio';
 
 //- Body
 block siteContent
-  //- //- Hero Banner
-  //- include ../layouts/hero-banner.pug
-  //- //- Number
-  include ../layouts/number.pug
-  //- //- Why Crappo
-  //- include ../layouts/why-crappo.pug
-  //- //- Calculator
-  //- include ../layouts/calculator.pug
-  //- //- Crypto
-  //- include ../layouts/header.pug
-  //- //- Market
-  include ../layouts/market.pug
-  //- //- Header
-  //- include ../layouts/statistics.pug
-  //- //- Grow Profit
-  //- include ../layouts/grow-profit.pug
-  //- //- Subscribe
-  //- include ../layouts/subscribe.pug
+
+  //- Hero Banner
+  include home/hero-banner.pug
+
+  //- Section Description
+  include home/section-description.pug
+
+  //- Expertise
+  //- include home/expertise.pug
+
+  //- //- Our Client
+  //- include home/client.pug
+
+  //- //- Portofolio
+  //- include home/portofolio.pug
+
+  //- Contact Us
+  include home/contact-us.pug

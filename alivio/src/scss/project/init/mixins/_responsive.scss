@@ -2,6 +2,13 @@
    Mixin: Responsive
    ========================================================================== */
 
+// x-large
+@mixin x-large {
+  @media only screen and (max-width: screen(x-large)) {
+    @content;
+  }
+}
+
 // large
 @mixin large {
   @media only screen and (max-width: screen(large)) {
@@ -23,9 +30,9 @@
   }
 }
 
-// extra-small
-@mixin extra-small {
-  @media only screen and (max-width: screen(extra-small)) {
+// x-small
+@mixin x-small {
+  @media only screen and (max-width: screen(x-small)) {
     @content;
   }
 }

@@ -2,8 +2,22 @@
   @name: Hero Banner
   -------------------------------------------------------------------------------//
 
-//hero-banner
-
-
+//hero-banner-item
+.hero-banner__item
+  .container
+    .hero-banner__img
+      ='\n'
+      img.hero-banner__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+      ='\n'
+    .hero-banner__txt
+      .hero-banner__txt__align
+        h2.hero-banner__title
+          | !{data.title}
+        p.hero-banner__desc
+          | !{data.desc}
+        .hero-banner__btn
+          ='\n'
+          a.btn.btn--primary(href=data.btn.to) !{data.btn.text}
+          ='\n'
 ='\n'
-//end-hero-banner
+//end-hero-banner-item

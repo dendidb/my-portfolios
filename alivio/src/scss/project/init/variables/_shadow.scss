@@ -3,10 +3,10 @@
    ========================================================================== */
 
 $shadow: (
-  0: 0 2px 24px map-get($colors, shadow),
-  1: 0 2px 32px map-get($colors, shadow-hover),
-  2: 0 4px 40px map-get($colors, shadow),
-  3: 0 4px 48px map-get($colors, shadow-hover),
-  4: 0 4px 64px map-get($colors, shadow),
-  5: 0 4px 72px map-get($colors, shadow-hover),
+  s4: 0 2px 8px rgba(#000, 0.10),
+  s8: 0 5px 5px rgba(color(black, 2), 0.1),
+  s10: 0 4px 14px rgba(#000, .1),
+  s14: 0 8px 10px 1px rgba(#000, 7%),
+  s16: 0 4px 16px rgba(97, 71, 74, 0.4),
+  s32: 0px 4px 32px 4px rgba(0, 0, 0, 0.04),
 );
