@@ -19,14 +19,6 @@ var App = function () {
     $('.js-main-site').removeClass('main-site--hide'); // --- disable scroll
 
     _utilities.Scrolllable.enable();
-  }; // --- call vendor
-
-
-  var callVendor = function callVendor() {
-    // scroll
-    var navbar = document.querySelector('.header');
-    var scrollspy = VanillaScrollspy(navbar);
-    scrollspy.init();
   }; // --- ready
 
 
@@ -39,9 +31,8 @@ var App = function () {
       runTransition();
       showSiteContent();
 
-      _utilities.BrowserCheck.init();
+      _utilities.BrowserCheck.init(); // --- Project
 
-      callVendor(); // --- Project
 
       _components.WindowResize.init();
 
@@ -52,10 +43,6 @@ var App = function () {
       _components.Footer.init();
 
       _components.HeroBanner.init();
-
-      _components.Expertise.init();
-
-      _components.Client.init();
 
       _components.Reveal.init();
 
@@ -87,77 +74,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":12,"./utilities":16}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-/* ------------------------------------------------------------------------------
-@name: Client
-@description: Client
---------------------------------------------------------------------------------- */
-var Client = function () {
-  // --- handleRunCarousel
-  var handleRunCarousel = function handleRunCarousel() {
-    var _width = 575;
-
-    var _selector = $('.js-client');
-
-    var _itemLength = $('.js-client .client__item').length;
-    var _itemRun = 4; // destroy carousel
-
-    if (_selector.hasClass('owl-carousel')) {
-      _selector.owlCarousel('destroy').removeClass('owl-carousel');
-    } // --- check if window > _witdh
-
-
-    if ($(window).width() > _width) {
-      // --- check if itemLength > itemRun
-      if (_itemLength > _itemRun) {
-        // --- init carousel
-        _selector.addClass('owl-carousel').owlCarousel({
-          dots: false,
-          nav: false,
-          mouseDrag: true,
-          touchDrag: true,
-          autoWidth: true,
-          autoplayHover: true,
-          autoplayTimeout: 5000,
-          autoplayHoverPause: true,
-          rewind: true,
-          loop: true,
-          dragEndSpeed: 650,
-          smartSpeed: 650,
-          rewindSpeed: 650,
-          autoplay: true
-        });
-      } else {
-        if (_selector.hasClass('owl-carousel')) {
-          _selector.removeClass('owl-carousel');
-        }
-      }
-    }
-  }; // --- init
-
-
-  var init = function init() {
-    handleRunCarousel();
-  }; // --- return
-
-
-  return {
-    init: init,
-    destroyCarousel: handleRunCarousel
-  };
-}();
-
-var _default = Client;
-exports["default"] = _default;
-
-},{}],3:[function(require,module,exports){
+},{"./components":10,"./utilities":14}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -260,73 +177,7 @@ var AboutUs = function () {
 var _default = AboutUs;
 exports["default"] = _default;
 
-},{"../utilities":16}],4:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-/* ------------------------------------------------------------------------------
-@name: Expertise
-@description: Expertise
---------------------------------------------------------------------------------- */
-// --- Expertise
-var Expertise = function () {
-  // handleRunCarousel
-  var handleRunCarousel = function handleRunCarousel() {
-    var _selector = $('.js-expertise');
-
-    var _itemLength = $('.js-expertise .expertise__item').length;
-    var _itemRun = 3; // destroy carousel
-
-    if (_selector.hasClass('owl-carousel')) {
-      _selector.owlCarousel('destroy').removeClass('owl-carousel');
-    } // init carousel more medium
-
-
-    if ($(window).width() > 992.98) {
-      // --- check if itemLength > itemRun
-      if (_itemLength > _itemRun) {
-        // --- init carousel
-        _selector.addClass('owl-carousel').owlCarousel({
-          rewind: false,
-          autoplay: false,
-          dots: false,
-          nav: true,
-          navText: ["<i class='rzf-arrow-left'></i>", "<i class='rzf-arrow-right'></i>"],
-          loop: false,
-          touchDrag: true,
-          mouseDrag: true,
-          smartSpeed: 550,
-          dragEndSpeed: 550,
-          navSpeed: 550
-        });
-      } else {
-        if (_selector.hasClass('owl-carousel')) {
-          _selector.removeClass('owl-carousel');
-        }
-      }
-    }
-  }; // --- init
-
-
-  var init = function init() {
-    handleRunCarousel();
-  }; // --- return
-
-
-  return {
-    init: init,
-    runCarousel: handleRunCarousel
-  };
-}();
-
-var _default = Expertise;
-exports["default"] = _default;
-
-},{}],5:[function(require,module,exports){
+},{"../utilities":14}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -397,7 +248,7 @@ var Footer = function () {
 var _default = Footer;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -479,7 +330,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":16}],7:[function(require,module,exports){
+},{"../utilities":14}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -514,7 +365,7 @@ var HeroBanner = function () {
         dots: false,
         nav: false,
         loop: false,
-        touchDrag: true,
+        touchDrag: false,
         mouseDrag: false,
         autoplayHoverPause: false,
         animateOut: 'fadeOut',
@@ -546,7 +397,7 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -624,7 +475,7 @@ var InputForm = function () {
 var _default = InputForm;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -702,7 +553,7 @@ var Reveal = function () {
 var _default = Reveal;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -786,7 +637,7 @@ var WinScroll = function () {
 var _default = WinScroll;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -853,28 +704,16 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":12}],12:[function(require,module,exports){
+},{"./index":10}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Client", {
-  enumerable: true,
-  get: function get() {
-    return _Client["default"];
-  }
-});
 Object.defineProperty(exports, "ContactUs", {
   enumerable: true,
   get: function get() {
     return _ContactUs["default"];
-  }
-});
-Object.defineProperty(exports, "Expertise", {
-  enumerable: true,
-  get: function get() {
-    return _Expertise["default"];
   }
 });
 Object.defineProperty(exports, "Footer", {
@@ -930,10 +769,6 @@ var _Footer = _interopRequireDefault(require("./Footer"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
-var _Expertise = _interopRequireDefault(require("./Expertise"));
-
-var _Client = _interopRequireDefault(require("./Client"));
-
 var _Reveal = _interopRequireDefault(require("./Reveal"));
 
 var _InputForm = _interopRequireDefault(require("./InputForm"));
@@ -942,7 +777,7 @@ var _ContactUs = _interopRequireDefault(require("./ContactUs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Client":2,"./ContactUs":3,"./Expertise":4,"./Footer":5,"./Header":6,"./HeroBanner":7,"./InputForm":8,"./Reveal":9,"./WinScroll":10,"./WindowResize":11}],13:[function(require,module,exports){
+},{"./ContactUs":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./InputForm":6,"./Reveal":7,"./WinScroll":8,"./WindowResize":9}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -988,7 +823,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1022,7 +857,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],15:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1148,7 +983,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":19}],16:[function(require,module,exports){
+},{"../variables":17}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1189,7 +1024,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":13,"./Scrolllable":14,"./Validation":15,"./isOS":17}],17:[function(require,module,exports){
+},{"./BrowserCheck":11,"./Scrolllable":12,"./Validation":13,"./isOS":15}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1230,7 +1065,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],18:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1255,7 +1090,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],19:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1275,6 +1110,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":18}]},{},[1])
+},{"./Regex":16}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

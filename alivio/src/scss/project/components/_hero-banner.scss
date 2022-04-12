@@ -41,10 +41,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    // right: -128px;
-    // width: 800px;
-    // height: 500px;
-    // bottom: -112px;
     z-index: zi(banner-img-el);
     @include large {
       right: 0;
@@ -91,7 +87,7 @@
     font-family: ff(family-title);
     @include font-size(h1);
     font-weight: fw(bold);
-    color: color(black, 1);
+    color: color(primary, 1);
     margin-bottom: 24px;
     @include large {
       @include font-size(h2);
@@ -108,7 +104,7 @@
     @include font-size(h5);
     font-weight: fw(medium);
     color: color(black, 2);
-    margin-bottom: 32px;
+    margin-bottom: 56px;
     @include large {
       margin-bottom: 24px;
     }

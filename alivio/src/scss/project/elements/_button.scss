@@ -7,18 +7,17 @@
   vertical-align: middle;
   min-width: 200px;
   padding: 14px 24px;
-  border-radius: 55px;
+  border-radius: 4px;
   text-decoration: none;
   outline: 0;
   cursor: pointer;
   text-align: center;
   overflow: hidden;
   border: 1px solid transparent;
-  @include font-size(h6);
+  @include font-size(h4);
   background-color: transparent;
   @include remove-tap-highlight;
   transition: all 350ms ease;
-  font-weight: fw(bold);
   &--primary {
     background-color: color(primary, 1);
     color: color(white);

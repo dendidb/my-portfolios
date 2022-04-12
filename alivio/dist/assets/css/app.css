@@ -1009,8 +1009,8 @@ html {
 
 h1 {
   font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 6.2rem;
+  font-size: 6.4rem;
+  line-height: 8rem;
 }
 
 h2 {
@@ -1210,10 +1210,10 @@ b {
 }
 .hero-banner__title {
   font-family: "Georgia", serif;
-  font-size: 4.8rem;
-  line-height: 6.2rem;
+  font-size: 6.4rem;
+  line-height: 8rem;
   font-weight: 700;
-  color: #212353;
+  color: #5f9e5f;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -1236,7 +1236,7 @@ b {
   line-height: 2.4rem;
   font-weight: 500;
   color: #4b5d68;
-  margin-bottom: 32px;
+  margin-bottom: 56px;
 }
 @media only screen and (max-width: 1199.98px) {
   .hero-banner__desc {
@@ -2009,17 +2009,17 @@ Components: Input form
   vertical-align: middle;
   min-width: 200px;
   padding: 14px 24px;
-  -webkit-border-radius: 55px;
-     -moz-border-radius: 55px;
-          border-radius: 55px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
   text-decoration: none;
   outline: 0;
   cursor: pointer;
   text-align: center;
   overflow: hidden;
   border: 1px solid transparent;
-  font-size: 1.6rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 2.6rem;
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
@@ -2030,7 +2030,6 @@ Components: Input form
   -o-transition: all 350ms ease;
   -moz-transition: all 350ms ease;
   transition: all 350ms ease;
-  font-weight: 700;
 }
 .btn--primary {
   background-color: #5f9e5f;
