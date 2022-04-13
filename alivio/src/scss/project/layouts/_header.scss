@@ -12,6 +12,7 @@ Layout: Header
   z-index: zi(header);
   @include medium {
     padding: 16px 0;
+    height: 64px;
   }
   @include medium {
     &::before {
@@ -23,10 +24,10 @@ Layout: Header
       width: 100%;
       opacity: 0;
       visibility: hidden;
-      background-color: rgba(color(black, 1), 0.75);
+      background-color: rgba(color(black, 1), .75);
       transition: all 0.75s ease;
       @include small {
-        top: 72px;
+        top: 64px;
       }
       .show-nav & {
         opacity: 1;
@@ -76,11 +77,8 @@ Layout: Header
       padding: 4px 0;
     }
     &__el {
-      height: 40px;
+      height: 24px;
       display: block;
-      @include small {
-        height: 32px;
-      }
     }
   }
   &__scroll-mobile {
@@ -88,11 +86,11 @@ Layout: Header
       position: fixed;
       @include scroll("y", "touch", "show");
       width: 100%;
-      top: 72px;
+      top: 64px;
       left: 0;
       bottom: 0;
       margin-left: 0;
-      background-color: color(primary, 1);
+      background-color: color(tertiary, 1);
       padding: 56px 24px 64px;
       transform: scaleY(0);
       transition: all 0.45s ease;
@@ -104,7 +102,6 @@ Layout: Header
       }
     }
     @include small {
-      top: 72px;
       padding: 40px 24px 56px;
     }
   }
@@ -147,7 +144,7 @@ Layout: Header
         transform: translateY(12px);
         opacity: 0;
         transition: all 0.5s ease;
-        @for $i from 1 through 4 {
+        @for $i from 1 through 5 {
           $delay: 220 - ($i * 30) + ms;
           &:nth-child(#{$i}) {
             transition-delay: $delay;
@@ -156,7 +153,7 @@ Layout: Header
         .show-nav & {
           transform: none;
           opacity: 1;
-          @for $i from 1 through 4 {
+          @for $i from 1 through 5 {
             $delay: 350 + ($i * 50) + ms;
             &:nth-child(#{$i}) {
               transition-delay: $delay;
@@ -230,13 +227,13 @@ Layout: Header
       width: 100%;
       transform: translateY(12px);
       transition: opacity 0.75s ease 0s, transform 0.75s ease 50ms,
-        background-color 0.2s ease;
+      background-color 0.2s ease;
     }
     .show-nav & {
       transform: none;
       opacity: 1;
       transition: opacity 0.75s ease 0.65s, transform 0.75s ease 0.65s,
-        background-color 0.2s ease;
+      background-color 0.2s ease;
     }
   }
   .burger-menu {
@@ -246,11 +243,11 @@ Layout: Header
       position: absolute;
       z-index: zi(header-burger-menu);
       right: -8px;
-      top: 0;
+      top: -4px;
       &__bar {
         transition: all 0.3s ease 0.6s;
         .show-nav & {
-          background-color: color(primary, 1);
+          background-color: color(tertiary, 1);
           transition-delay: 0s;
           &:nth-child(1) {
             transform: rotate(45deg) translate(7px, 6px);

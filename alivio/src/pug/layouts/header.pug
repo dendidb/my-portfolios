@@ -28,12 +28,13 @@
         text: 'Pricing',
         classActive: 'pricing'
       },
-    ],
-    auth: [
       {
-        to: '#signin',
-        text: 'Sign in'
-      },
+        to: '#sign-in',
+        text: 'Sign In',
+        classActive: 'sign-in'
+      }
+    ],
+    trial: [
       {
         to: '#start-trial',
         text: 'Start Trial'
@@ -65,10 +66,10 @@
                 | !{val.text}
               ='\n'
         .header__demo
-          each val in dataHeader.auth
+          each val in dataHeader.trial
             - data = val;
             ='\n'
-            a.btn.btn--white.js-nav-scroll(href=val.to)
+            a.btn.btn--demo.js-nav-scroll(href=val.to)
               | !{val.text}
             ='\n'
 ='\n'

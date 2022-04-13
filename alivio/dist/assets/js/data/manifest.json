@@ -1,6 +1,6 @@
 {
-  "short_name": "RZF Portfolio",
-  "name": "RZF Portfolio",
+  "short_name": "Alivio",
+  "name": "Alivio",
   "start_url": "../../../.",
   "icons": [
     {
@@ -40,7 +40,7 @@
       "density": "4.0"
     }
   ],
-  "background_color": "#5f9e5f",
-  "theme_color": "#5f9e5f",
+  "background_color": "#245852",
+  "theme_color": "#245852",
   "display": "standalone"
 }

@@ -1091,12 +1091,12 @@ b {
 }
 @media only screen and (max-width: 991.98px) {
   .main-site {
-    padding-top: 88px;
+    padding-top: 56px;
   }
 }
 @media only screen and (max-width: 767.98px) {
   .main-site {
-    padding-top: 72px;
+    padding-top: 56px;
   }
 }
 .header-on-scroll .main-site {
@@ -1118,6 +1118,11 @@ b {
   height: 100vh;
   min-height: 568px;
   max-height: 1200px;
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-banner {
+    min-height: 592px;
+  }
 }
 .hero-banner__item {
   width: 100%;
@@ -1152,6 +1157,9 @@ b {
     padding: 32px 0 56px;
   }
 }
+.hero-banner .container {
+  position: relative;
+}
 .hero-banner__img {
   position: absolute;
   width: 100%;
@@ -1160,22 +1168,9 @@ b {
   left: 0;
   z-index: 1;
 }
-@media only screen and (max-width: 1199.98px) {
-  .hero-banner__img {
-    right: 0;
-    bottom: -56px;
-    width: 660px;
-    height: 412px;
-  }
-}
 @media only screen and (max-width: 991.98px) {
   .hero-banner__img {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: 100%;
-    height: auto;
-    margin-bottom: 24px;
+    min-height: 720px;
   }
 }
 .hero-banner__img__el {
@@ -1202,6 +1197,7 @@ b {
 @media only screen and (max-width: 991.98px) {
   .hero-banner__txt {
     max-width: initial;
+    min-height: initial;
   }
 }
 .hero-banner__txt__align {
@@ -2049,51 +2045,22 @@ Components: Input form
   color: #ffc655;
   border-color: #ffc655;
 }
-.btn--white {
-  background-color: #fff;
-  color: #212353;
+.btn--demo {
+  color: #fff;
+  background-color: #5f9e5f;
   width: 204px;
   -webkit-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
      -moz-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
           box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
   text-align: center;
 }
-.btn--white::before {
-  content: "\e900";
-  font-family: "rzf-icons";
-  display: inline-block;
-  vertical-align: top;
-  color: #5f9e5f;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  position: relative;
-  top: -3px;
-  margin-right: 14px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-@media only screen and (max-width: 991.98px) {
-  .btn--white::before {
-    top: -2px;
-  }
-}
-.btn--white:hover {
+.btn--demo:hover {
   background-color: #5f9e5f;
   color: #fff;
 }
 @media only screen and (max-width: 991.98px) {
-  .btn--white:hover {
-    color: #5f9e5f;
+  .btn--demo:hover {
     background-color: #fff;
-  }
-}
-.btn--white:hover::before {
-  color: #fff;
-}
-@media only screen and (max-width: 991.98px) {
-  .btn--white:hover::before {
     color: #5f9e5f;
   }
 }
@@ -2370,6 +2337,7 @@ Layout: Header
 @media only screen and (max-width: 991.98px) {
   .header {
     padding: 16px 0;
+    height: 64px;
   }
 }
 @media only screen and (max-width: 991.98px) {
@@ -2391,7 +2359,7 @@ Layout: Header
 }
 @media only screen and (max-width: 991.98px) and (max-width: 767.98px) {
   .header::before {
-    top: 72px;
+    top: 64px;
   }
 }
 @media only screen and (max-width: 991.98px) {
@@ -2477,13 +2445,8 @@ Layout: Header
   }
 }
 .header__logo__el {
-  height: 40px;
+  height: 24px;
   display: block;
-}
-@media only screen and (max-width: 767.98px) {
-  .header__logo__el {
-    height: 32px;
-  }
 }
 @media only screen and (max-width: 991.98px) {
   .header__scroll-mobile {
@@ -2492,11 +2455,11 @@ Layout: Header
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     width: 100%;
-    top: 72px;
+    top: 64px;
     left: 0;
     bottom: 0;
     margin-left: 0;
-    background-color: #5f9e5f;
+    background-color: #245852;
     padding: 56px 24px 64px;
     -webkit-transform: scaleY(0);
        -moz-transform: scaleY(0);
@@ -2531,7 +2494,6 @@ Layout: Header
 }
 @media only screen and (max-width: 767.98px) {
   .header__scroll-mobile {
-    top: 72px;
     padding: 40px 24px 56px;
   }
 }
@@ -2628,6 +2590,12 @@ Layout: Header
          -o-transition-delay: 100ms;
             transition-delay: 100ms;
   }
+  .header__nav__item:nth-child(5) {
+    -webkit-transition-delay: 70ms;
+       -moz-transition-delay: 70ms;
+         -o-transition-delay: 70ms;
+            transition-delay: 70ms;
+  }
   .show-nav .header__nav__item {
     -webkit-transform: none;
        -moz-transform: none;
@@ -2659,6 +2627,12 @@ Layout: Header
        -moz-transition-delay: 550ms;
          -o-transition-delay: 550ms;
             transition-delay: 550ms;
+  }
+  .show-nav .header__nav__item:nth-child(5) {
+    -webkit-transition-delay: 600ms;
+       -moz-transition-delay: 600ms;
+         -o-transition-delay: 600ms;
+            transition-delay: 600ms;
   }
 }
 .header__nav__item:last-child {
@@ -2793,7 +2767,7 @@ Layout: Header
     position: absolute;
     z-index: 2;
     right: -8px;
-    top: 0;
+    top: -4px;
   }
   .header .burger-menu__bar {
     -webkit-transition: all 0.3s ease 0.6s;
@@ -2802,7 +2776,7 @@ Layout: Header
     transition: all 0.3s ease 0.6s;
   }
   .show-nav .header .burger-menu__bar {
-    background-color: #5f9e5f;
+    background-color: #245852;
     -webkit-transition-delay: 0s;
        -moz-transition-delay: 0s;
          -o-transition-delay: 0s;
