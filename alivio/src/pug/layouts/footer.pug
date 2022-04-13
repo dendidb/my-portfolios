@@ -3,20 +3,44 @@
   -------------------------------------------------------------------------------//
 
 -
-  data = {
-    copyright: '&copy; 2022 RZF Software&trade;. All Rights Reserved.<br /> Information and Technology Company',
-    btn: {
-      to: 'https://api.whatsapp.com/send?phone=6285864772042&text=Hi%20RZF%20Software',
-    }
+  dataFooter = {
+    logoSrc: 'alivio-white.svg',
+    logoAlt: 'Alivio Logo',
+    menu: [
+      {
+        to: '#why-alivio',
+        text: 'Why Alivio'
+      },
+      {
+        to: '#solutions',
+        text: 'Solutions'
+      },
+      {
+        to: '#community',
+        text: 'Community'
+      },
+      {
+        to: '#pricing',
+        text: 'Pricing'
+      },
+    ]
   }
 
+//footer
 .footer
-  //footer-copyright
-  .footer__copyright
-    .container
-      p.footer__copyright__txt
-        | !{data.copyright}
-  //end-footer-copyright
-
+  .container
+    .footer__wrapper
+      ='\n'
+      a.footer__logo(href='#home')
+        ='\n'
+        img.footer__logo__el(src='assets/img/logo/'+dataFooter.logoSrc alt=dataFooter.logoAlt)/
+        ='\n'
+      .footer__menu.js-footer-menu
+        ul.footer__list
+          each val in dataFooter.menu
+            li.footer__item
+              ='\n'
+              a.footer__link(href=val.to)
+                | !{val.text}
 ='\n'
 //end-footer

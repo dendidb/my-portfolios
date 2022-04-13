@@ -1127,7 +1127,6 @@ b {
 .hero-banner__item {
   width: 100%;
   height: 100%;
-  padding: 104px 0 160px;
   overflow: hidden;
   position: relative;
   background-color: #fff;
@@ -1167,11 +1166,6 @@ b {
   top: 0;
   left: 0;
   z-index: 1;
-}
-@media only screen and (max-width: 991.98px) {
-  .hero-banner__img {
-    min-height: 720px;
-  }
 }
 .hero-banner__img__el {
   display: block;
@@ -2641,10 +2635,9 @@ Layout: Header
   .header__nav__item--active .header__nav__link {
     padding-left: 40px;
   }
-  .header__nav__item--active .header__nav__link::after {
+  .header__nav__item--active .header__nav__link::before {
     content: "";
     position: absolute;
-    border-bottom: solid 2px #fff;
     -webkit-transform: none;
        -moz-transform: none;
         -ms-transform: none;
@@ -2658,9 +2651,7 @@ Layout: Header
     width: 0;
     top: 50%;
     left: 0;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
+    border-bottom: solid 1px #fff;
     -webkit-transform: translateY(-50%);
        -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -2672,7 +2663,7 @@ Layout: Header
     -moz-transition: all 0.3s ease 550ms;
     transition: all 0.3s ease 550ms;
   }
-  .show-nav .header__nav__item--active .header__nav__link::after {
+  .show-nav .header__nav__item--active .header__nav__link::before {
     width: 24px;
     -webkit-transition: all 0.3s ease 0;
     -o-transition: all 0.3s ease 0;
@@ -2726,6 +2717,16 @@ Layout: Header
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__nav__link::after {
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+    display: none;
+  }
 }
 .header__nav__link:hover::after {
   -webkit-transform: scaleX(1);
@@ -2825,39 +2826,89 @@ Layout: Footer
   bottom: 0;
   width: 100%;
   left: 0;
-  background-color: #fff;
+  padding: 96px 0 144px;
+  background-color: #245852;
+}
+@media only screen and (max-width: 1199.98px) {
+  .footer {
+    padding: 80px 0 128px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .footer {
+    padding: 64px 0 112px;
+  }
 }
 @media only screen and (max-width: 767.98px) {
   .footer {
     position: relative;
+    padding: 48px 0 96px;
   }
 }
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 3px solid #01996d;
-  opacity: 0.2;
+.footer__logo {
+  padding-bottom: 60px;
+  display: inline-block;
 }
 @media only screen and (max-width: 767.98px) {
-  .footer::before {
-    border-width: 2px;
+  .footer__logo {
+    padding-bottom: 52px;
   }
 }
-.footer__copyright {
-  padding: 24px 0;
+@media only screen and (max-width: 575.86px) {
+  .footer__logo {
+    padding-bottom: 48px;
+  }
+}
+.footer__logo__el {
+  display: block;
+  width: 108px;
 }
 @media only screen and (max-width: 991.98px) {
-  .footer__copyright {
-    padding: 16px 0;
+  .footer__logo__el {
+    width: 80px;
   }
 }
-.footer__copyright__txt {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  margin-bottom: 0;
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__item {
+  padding-bottom: 56px;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__item {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .footer__item {
+    padding-bottom: 32px;
+  }
+}
+.footer__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  padding: 4px 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__link {
+    display: block;
+  }
+}
+.footer__link:hover {
+  color: #000;
 }
 
 /* ==========================================================================

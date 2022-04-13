@@ -7,8 +7,6 @@
 import {
   Header,
   Footer,
-  Expertise,
-  Client,
 
 } from 'components';
 
@@ -42,8 +40,6 @@ const WindowResize = (() => {
       $('body').removeClass('hold-transition');
       Header.checkClass();
       Footer.footerSticky();
-      Expertise.runCarousel();
-      Client.destroyCarousel();
     }
 
   }
