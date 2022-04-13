@@ -7,11 +7,11 @@ Layout: Header
   position: fixed;
   width: 100%;
   background-color: color(white);
-  padding: 24px 0;
+  padding: 16px 0;
   transition: all 3s ease;
   z-index: zi(header);
+  @include shadow(10);
   @include medium {
-    padding: 16px 0;
     height: 64px;
   }
   @include medium {
@@ -46,17 +46,6 @@ Layout: Header
   .scroll-down & {
     box-shadow: none;
     transform: translateY(-100%);
-  }
-
-  .header-on-scroll & {
-    padding: 24px 0;
-    @include shadow(10);
-    @include large {
-      padding: 16px 0;
-    }
-    @include small {
-      padding: 16px 0;
-    }
   }
 
   &__content {
@@ -109,12 +98,14 @@ Layout: Header
     $n: &;
     float: left;
     list-style: none;
-    padding: 0;
-    margin: 8px 0;
+    margin: 0;
+    font-size: 0;
+    padding: 10px 0;
     @include medium {
       float: none;
       width: 100%;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+      padding: 0;
       &:after {
         content: "";
         display: block;
@@ -135,12 +126,12 @@ Layout: Header
     &__item {
       display: inline-block;
       vertical-align: middle;
-      margin-right: 40px;
+      margin-right: 72px;
       font-weight: fw(medium);
       @include medium {
         display: block;
         margin-right: 0;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         transform: translateY(12px);
         opacity: 0;
         transition: all 0.5s ease;
@@ -166,8 +157,7 @@ Layout: Header
       }
       &:hover {
         #{$n}__link {
-          color: color(black, 1);
-          opacity: 1;
+          color: color(primary, 1);
         }
       }
       &--active {
@@ -202,24 +192,36 @@ Layout: Header
       text-decoration: none;
       display: inline-block;
       transition: all 0.3s ease;
-      padding: 12px 0;
       position: relative;
       @include remove-tap-highlight;
-      opacity: .9;
+      @include font-size(h4);
+      transition: all 0.2s ease;
       @include medium {
         @include font-size(h4);
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding: 16px 0;
         display: block;
         color: color(white);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-color: color(primary, 1);
+        bottom: -30px;
+        height: 4px;
+        left: 0;
+        transform: scaleX(0);
+        transition: all .3s ease;
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        } 
       }
     }
   }
   &__demo {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
+    float: right;
     @include medium {
       position: relative;
       opacity: 0;

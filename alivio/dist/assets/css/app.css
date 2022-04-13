@@ -913,7 +913,7 @@ th {
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato-Bold.eot");
-  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("Lato-Bold.woff2") format("woff2"), url("Lato-Bold.woff") format("woff"), url("Lato-Bold.ttf") format("truetype"), url("Lato-Bold.svg#Lato-Bold") format("svg");
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype"), url("../fonts/Lato-Bold.svg#Lato-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -921,7 +921,7 @@ th {
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato-Light.eot");
-  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("Lato-Light.woff2") format("woff2"), url("Lato-Light.woff") format("woff"), url("Lato-Light.ttf") format("truetype"), url("Lato-Light.svg#Lato-Light") format("svg");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype"), url("../fonts/Lato-Light.svg#Lato-Light") format("svg");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -929,7 +929,7 @@ th {
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato-Black.eot");
-  src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("Lato-Black.woff2") format("woff2"), url("Lato-Black.woff") format("woff"), url("Lato-Black.ttf") format("truetype"), url("Lato-Black.svg#Lato-Black") format("svg");
+  src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.ttf") format("truetype"), url("../fonts/Lato-Black.svg#Lato-Black") format("svg");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -937,7 +937,7 @@ th {
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato-Regular.eot");
-  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("Lato-Regular.woff2") format("woff2"), url("Lato-Regular.woff") format("woff"), url("Lato-Regular.ttf") format("truetype"), url("Lato-Regular.svg#Lato-Regular") format("svg");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg#Lato-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -985,7 +985,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   background-color: #fff;
-  color: #4b5d68;
+  color: #484848;
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -1064,7 +1064,7 @@ b {
    ========================================================================== */
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1370px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1083,7 +1083,7 @@ b {
 }
 
 .main-site {
-  padding-top: 108px;
+  padding-top: 80px;
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
@@ -1209,7 +1209,7 @@ b {
   font-size: 6.4rem;
   line-height: 8rem;
   font-weight: 700;
-  color: #5f9e5f;
+  color: #01996d;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -1231,7 +1231,7 @@ b {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 500;
-  color: #4b5d68;
+  color: #484848;
   margin-bottom: 56px;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -1345,7 +1345,7 @@ b {
   font-size: 4rem;
   line-height: 5.2rem;
   margin-bottom: 24px;
-  color: #212353;
+  color: #000;
 }
 @media only screen and (max-width: 1199.98px) {
   .section-description__title {
@@ -1430,7 +1430,7 @@ b {
   font-size: 2rem;
   line-height: 2.6rem;
   font-weight: 400;
-  color: #212353;
+  color: #000;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
@@ -1804,7 +1804,7 @@ Components: Input form
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 400;
-  color: #212353;
+  color: #000;
   margin-bottom: 12px;
 }
 @media only screen and (max-width: 767.98px) {
@@ -1837,7 +1837,7 @@ Components: Input form
   }
 }
 .fi-dropdown:focus, .fi-multiline:focus, .fi-single-line:focus {
-  border-color: #5f9e5f;
+  border-color: #01996d;
 }
 @media only screen and (max-width: 320px) {
   .fi-dropdown, .fi-multiline, .fi-single-line {
@@ -1868,7 +1868,7 @@ Components: Input form
 }
 .fi-dropdown__text {
   margin-bottom: 0;
-  color: #212353;
+  color: #000;
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -1876,7 +1876,7 @@ Components: Input form
 }
 .fi-dropdown + i {
   display: inline-block;
-  color: #212353;
+  color: #000;
   font-size: 2.4rem;
   line-height: 3.2rem;
   top: 14px;
@@ -1907,9 +1907,9 @@ Components: Input form
       -ms-transform: translateY(8px);
        -o-transform: translateY(8px);
           transform: translateY(8px);
-  -webkit-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
-     -moz-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
-          box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+  -webkit-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
+     -moz-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
+          box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -1926,7 +1926,7 @@ Components: Input form
 }
 .fi-dropdown-item {
   display: block;
-  color: #212353;
+  color: #000;
   padding: 12px 24px;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -2028,13 +2028,13 @@ Components: Input form
   transition: all 350ms ease;
 }
 .btn--primary {
-  background-color: #5f9e5f;
+  background-color: #01996d;
   color: #fff;
 }
 .btn--primary:hover {
   background-color: transparent;
-  color: #5f9e5f;
-  border-color: #5f9e5f;
+  color: #01996d;
+  border-color: #01996d;
 }
 .btn--secondary {
   background-color: #ffc655;
@@ -2047,21 +2047,25 @@ Components: Input form
 }
 .btn--demo {
   color: #fff;
-  background-color: #5f9e5f;
-  width: 204px;
-  -webkit-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
-     -moz-box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
-          box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+  background-color: #01996d;
+  min-width: 187px;
+  min-height: 48px;
+  padding: 10px 48px;
+  -webkit-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
+     -moz-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
+          box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
   text-align: center;
 }
 .btn--demo:hover {
-  background-color: #5f9e5f;
-  color: #fff;
+  background-color: transparent;
+  color: #01996d;
+  border-color: #01996d;
 }
 @media only screen and (max-width: 991.98px) {
   .btn--demo:hover {
     background-color: #fff;
-    color: #5f9e5f;
+    color: #000;
+    border-color: #01996d;
   }
 }
 .btn--block {
@@ -2181,7 +2185,7 @@ Components: Input form
      -moz-border-radius: 1px;
           border-radius: 1px;
   margin: 6px auto;
-  background-color: #4b5d68;
+  background-color: #484848;
 }
 
 /* ==========================================================================
@@ -2191,7 +2195,7 @@ Components: Input form
   margin-bottom: 24px;
   font-size: 3.2rem;
   line-height: 3.4rem;
-  color: #212353;
+  color: #000;
 }
 @media only screen and (max-width: 991.98px) {
   .text-title {
@@ -2284,7 +2288,7 @@ Components: Input form
   max-width: 100%;
   padding: 0 !important;
   margin: 0 0 16px !important;
-  color: #4b5d68 !important;
+  color: #484848 !important;
   font-size: 2rem;
   line-height: 2.6rem;
   text-align: center;
@@ -2303,7 +2307,7 @@ Components: Input form
   padding: 0;
   max-width: 370px;
   overflow: auto;
-  color: #4b5d68 !important;
+  color: #484848 !important;
   font-size: 1.8rem;
   line-height: 2.4rem;
   line-height: 2rem !important;
@@ -2327,16 +2331,18 @@ Layout: Header
   position: fixed;
   width: 100%;
   background-color: #fff;
-  padding: 24px 0;
+  padding: 16px 0;
   -webkit-transition: all 3s ease;
   -o-transition: all 3s ease;
   -moz-transition: all 3s ease;
   transition: all 3s ease;
   z-index: 9;
+  -webkit-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 991.98px) {
   .header {
-    padding: 16px 0;
     height: 64px;
   }
 }
@@ -2350,7 +2356,7 @@ Layout: Header
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    background-color: rgba(33, 35, 83, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     -webkit-transition: all 0.75s ease;
     -o-transition: all 0.75s ease;
     -moz-transition: all 0.75s ease;
@@ -2392,22 +2398,6 @@ Layout: Header
       -ms-transform: translateY(-100%);
        -o-transform: translateY(-100%);
           transform: translateY(-100%);
-}
-.header-on-scroll .header {
-  padding: 24px 0;
-  -webkit-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-     -moz-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 1199.98px) {
-  .header-on-scroll .header {
-    padding: 16px 0;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .header-on-scroll .header {
-    padding: 16px 0;
-  }
 }
 .header__content {
   position: relative;
@@ -2500,14 +2490,16 @@ Layout: Header
 .header__nav {
   float: left;
   list-style: none;
-  padding: 0;
-  margin: 8px 0;
+  margin: 0;
+  font-size: 0;
+  padding: 10px 0;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav {
     float: none;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+    padding: 0;
   }
   .header__nav:after {
     content: "";
@@ -2547,14 +2539,14 @@ Layout: Header
 .header__nav__item {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 40px;
+  margin-right: 72px;
   font-weight: 500;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__item {
     display: block;
     margin-right: 0;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     -webkit-transform: translateY(12px);
        -moz-transform: translateY(12px);
         -ms-transform: translateY(12px);
@@ -2639,11 +2631,10 @@ Layout: Header
   margin-right: 0;
 }
 .header__nav__item:hover .header__nav__link {
-  color: #212353;
-  opacity: 1;
+  color: #01996d;
 }
 .header__nav__item--active {
-  color: #212353;
+  color: #000;
   font-weight: 700;
 }
 @media only screen and (max-width: 991.98px) {
@@ -2696,34 +2687,55 @@ Layout: Header
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  padding: 12px 0;
   position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  opacity: 0.9;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__link {
     font-size: 2rem;
     line-height: 2.6rem;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 16px 0;
     display: block;
     color: #fff;
   }
 }
-.header__demo {
+.header__nav__link::after {
+  content: "";
   position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-     -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-       -o-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  width: 100%;
+  background-color: #01996d;
+  bottom: -30px;
+  height: 4px;
+  left: 0;
+  -webkit-transform: scaleX(0);
+     -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__nav__link:hover::after {
+  -webkit-transform: scaleX(1);
+     -moz-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+       -o-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.header__demo {
+  float: right;
 }
 @media only screen and (max-width: 991.98px) {
   .header__demo {
@@ -2826,7 +2838,7 @@ Layout: Footer
   top: 0;
   left: 0;
   width: 100%;
-  border-top: 3px solid #5f9e5f;
+  border-top: 3px solid #01996d;
   opacity: 0.2;
 }
 @media only screen and (max-width: 767.98px) {
@@ -3112,7 +3124,7 @@ Layout: Footer
 }
 .expertise .owl-carousel .owl-nav .owl-prev:hover,
 .expertise .owl-carousel .owl-nav .owl-next:hover {
-  background-color: #5f9e5f;
+  background-color: #01996d;
   color: #fff;
 }
 .expertise .owl-carousel .owl-nav .owl-prev i,

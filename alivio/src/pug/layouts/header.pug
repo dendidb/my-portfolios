@@ -28,16 +28,18 @@
         text: 'Pricing',
         classActive: 'pricing'
       },
-      {
-        to: '#sign-in',
-        text: 'Sign In',
-        classActive: 'sign-in'
-      }
     ],
     trial: [
       {
+        to: '#sign-in',
+        text: 'Sign In',
+        classActive: 'sign-in',
+        classBtn: false
+      },
+      {
         to: '#start-trial',
-        text: 'Start Trial'
+        text: 'Start Trial',
+        classBtn: true
       }
     ]
   }
@@ -66,11 +68,13 @@
                 | !{val.text}
               ='\n'
         .header__demo
-          each val in dataHeader.trial
-            - data = val;
+          li.header__nav__item
             ='\n'
-            a.btn.btn--demo.js-nav-scroll(href=val.to)
-              | !{val.text}
+            a.header__nav__link(href='#sign-in') Sign in
+            ='\n'
+          li.header__nav__item
+            ='\n'
+            a.btn.btn--demo.js-nav-scroll(href='#start-trial') Start Trial
             ='\n'
 ='\n'
 //end-header

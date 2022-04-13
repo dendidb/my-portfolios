@@ -39,15 +39,19 @@
   &--demo {
     color: color(white);
     background-color: color(primary, 1);
-    width: 204px;
+    min-width: 187px;
+    min-height: 48px;
+    padding: 10px 48px;
     @include shadow(8);
     text-align: center;
     &:hover {
-      background-color: color(primary, 1);
-      color: color(white);
+      background-color: transparent;
+      color: color(primary, 1);
+      border-color: color(primary, 1);
       @include medium {
         background-color: color(white);
-        color: color(primary, 1);
+        color: color(black, 1);
+        border-color: color(primary, 1);
       }
     }
   }
