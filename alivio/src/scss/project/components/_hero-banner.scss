@@ -4,33 +4,12 @@
 
 .hero-banner {
   $hb: &;
-  height: 100vh;
-  min-height: 568px;
-  max-height: 1200px;
-  @include small {
-    min-height: 592px;
-  }
+  // min-height: 568px;
+  // max-height: 1200px;
   &__item {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-    position: relative;
     background-color: color(white);
-    @include large {
-      padding: 88px 0 104px;
-    }
-    @include medium {
-      padding: 64px 0 88px;
-    }
-    @include small {
-      padding: 40px 0 72px;
-    }
-    @include x-small {
-      padding: 40px 0 64px;
-    }
-    @include retina {
-      padding: 32px 0 56px;
-    }
+    min-height: 100vh;
   }
 
   .container {
@@ -38,27 +17,27 @@
   }
 
   &__img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
     z-index: zi(banner-img-el);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     &__el {
+      width: 100%;
+      height: 100%;
       display: block;
       object-fit: cover;
       object-position: center center;
-      width: 100%;
-      height: 100%;
     }
   }
 
   &__txt {
     position: relative;
     z-index: zi(banner-txt);
-    max-width: 645px;
     display: table;
-    min-height: 568px;
+    max-width: 645px;
+    min-height: 100vh;
     @include large {
       max-width: 500px
     }
