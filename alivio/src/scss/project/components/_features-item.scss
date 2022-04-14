@@ -3,29 +3,45 @@
 ========================================================================== */
 
 .features {
+  $f: &;
   &__box {
     border-radius: 8px;
   }
-  &__txt {
-
-  }
-&__title {
-  font-weight: fw(bold);
-  color: black, 1;
-  font-family: $font-title;
-  position: relative;
-  margin-bottom: 8px;
-  &::before {
-    content: "0" counter(number);
-    font-size: 15rem;
-    line-height: 22.5rem;
-    color: color(primary, 1);
-    opacity: .2;
-    font-weight: fw(regular);
-    @include medium {
-      font-size: 11rem;
-      line-height: 10.5rem;
+  &__img {
+    overflow: hidden;
+    border-radius: 8px;
+    &:hover {
+      #{$f}__img__el {
+        transform: scale(1.08);
+      }
     }
+    &__el {
+      display: block;
+      width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: all .3s ease;
+    }
+  }
+  &__title {
+    font-weight: fw(bold);
+    color: black, 1;
+    font-family: $font-title;
+    position: relative;
+    margin-bottom: 8px;
+    &::before {
+      content: "0" counter(number);
+      font-size: 15rem;
+      line-height: 22.5rem;
+      color: color(primary, 1);
+      opacity: .2;
+      font-weight: fw(regular);
+      @include medium {
+        font-size: 11rem;
+        line-height: 10.5rem;
+      }
     }
     &__el {
       position: absolute;
