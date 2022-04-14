@@ -1225,9 +1225,9 @@ b {
     padding-top: 40px;
   }
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 767.98px) {
   .presenting {
-    padding: 56px 0 16px;
+    padding-top: 24px;
   }
 }
 .presenting__wrapper {
@@ -1239,11 +1239,32 @@ b {
   width: 40%;
   margin-right: 112px;
 }
+@media only screen and (max-width: 1338px) {
+  .presenting__left {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .presenting__left {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__left {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
 .presenting__left__label {
   margin-bottom: 8px;
   font-size: 2.4rem;
   line-height: 3.2rem;
-  font-family: "Georgia", serif;
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__left__label {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
 }
 .presenting__left__title {
   font-size: 4.8rem;
@@ -1252,15 +1273,32 @@ b {
   color: #01996d;
   font-family: "Georgia", serif;
 }
+@media only screen and (max-width: 767.98px) {
+  .presenting__left__title {
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+  }
+}
 .presenting__right {
   width: 50%;
   display: inline-block;
   vertical-align: bottom;
 }
+@media only screen and (max-width: 767.98px) {
+  .presenting__right {
+    width: 100%;
+  }
+}
 .presenting__right__desc {
   margin-bottom: 0;
   font-size: 2.4rem;
   line-height: 3.2rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__right__desc {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }
 
 /* ==========================================================================

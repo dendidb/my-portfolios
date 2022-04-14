@@ -10,11 +10,10 @@
   @include medium {
     padding-top: 40px;
   }
-  @include large {
-    padding: 56px 0 16px;
+  @include small {
+    padding-top: 24px;
   }
   &__wrapper {
-    // @include clearfix;
     font-size: 0;
   }
   &__left {
@@ -22,25 +21,46 @@
     vertical-align: bottom;
     width: 40%;
     margin-right: 112px;
+    @include mq(1338px) {
+      margin-right: 0;
+    }
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      width: 100%;
+      margin-bottom: 16px;
+    }
     &__label {
       margin-bottom: 8px;
       @include font-size(h3);
-      font-family: $font-title;
+      @include small {
+        @include font-size(h4);
+      }
     }
     &__title {
       @include font-size(h1-accent);
       margin-bottom: 0;
       color: color(primary, 1);
       font-family: $font-title;
+      @include small {
+        @include font-size(h2-accent);
+      }
     }
   }
   &__right {
     width: 50%;
     display: inline-block;
     vertical-align: bottom;
+    @include small {
+      width: 100%;
+    }
     &__desc {
       margin-bottom: 0;
       @include font-size(h3);
+      @include small {
+        @include font-size(h6);
+      }
     }
   }
 }
