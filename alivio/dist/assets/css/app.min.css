@@ -2391,6 +2391,11 @@ Layout: Our Product
 .our-product {
   padding: 104px 0;
 }
+@media only screen and (max-width: 991.98px) {
+  .our-product {
+    padding: 88px 0;
+  }
+}
 .our-product__wrapper::before, .our-product__wrapper::after {
   content: " ";
   display: table;
@@ -2404,9 +2409,11 @@ Layout: Our Product
   position: relative;
   padding-bottom: 72px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .our-product__img {
     width: 100%;
+    float: none;
+    margin-bottom: 24px;
   }
 }
 .our-product__img__small {
@@ -2457,7 +2464,7 @@ Layout: Our Product
 }
 .our-product__img__small__item {
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
   margin-bottom: 16px;
 }
@@ -2475,9 +2482,12 @@ Layout: Our Product
   display: table-cell;
   vertical-align: top;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .our-product__txt {
     width: 100%;
+    float: none;
+    padding-left: 0;
+    min-height: initial;
   }
 }
 .our-product__txt__label {

@@ -4,6 +4,9 @@ Layout: Our Product
 
 .our-product {
   padding: 104px 0;
+  @include medium {
+    padding: 88px 0;
+  }
   &__wrapper {
     @include clearfix;
   }
@@ -12,8 +15,10 @@ Layout: Our Product
     width: 50%;
     position: relative;
     padding-bottom: 72px;
-    @include small {
+    @include medium {
       width: 100%;
+      float: none;
+      margin-bottom: 24px;
     }
     &__small {
       left: -60px;
@@ -54,8 +59,7 @@ Layout: Our Product
       }
       &__item {
         text-align: left;
-        font-size: 1.1rem;
-        line-height: 1.6rem;
+        @include font-size(small);
         margin-bottom: 16px;
         &:last-child {
           margin-bottom: 0;
@@ -73,8 +77,11 @@ Layout: Our Product
       display: table-cell;
       vertical-align: top;
     }
-    @include small {
+    @include medium {
       width: 100%;
+      float: none;
+      padding-left: 0;
+      min-height: initial;
     }
     &__label {
       font-weight: fw(semi-bold);
