@@ -2570,6 +2570,11 @@ Layout: Success Story
   min-height: 473px;
   color: #fff;
 }
+@media only screen and (max-width: 1338px) {
+  .success-story__txt {
+    min-height: initial;
+  }
+}
 .success-story__txt__align {
   display: table-cell;
   vertical-align: middle;
@@ -2592,8 +2597,15 @@ Layout: Success Story
   line-height: 5.6rem;
   margin-bottom: 32px;
 }
+@media only screen and (max-width: 1338px) {
+  .success-story__txt__title {
+    margin-bottom: 16px;
+  }
+}
 .success-story__txt__desc {
   margin-bottom: 56px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 @media only screen and (max-width: 1338px) {
   .success-story__txt__desc {

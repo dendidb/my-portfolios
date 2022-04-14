@@ -47,6 +47,9 @@ Layout: Success Story
     display: table;
     min-height: 473px;
     color: #fff;
+    @include mq(1338px) {
+      min-height: initial;
+    }
     &__align {
       display: table-cell;
       vertical-align: middle;
@@ -63,9 +66,13 @@ Layout: Success Story
       font-weight: fw(bold);
       @include font-size(h1-accent);
       margin-bottom: 32px;
+      @include mq(1338px) {
+        margin-bottom: 16px;
+      }
     }
     &__desc {
       margin-bottom: 56px;
+      @include font-size(h3);
       @include mq(1338px) {
         margin-bottom: 24px;
       }
