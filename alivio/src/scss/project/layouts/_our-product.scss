@@ -3,5 +3,91 @@ Layout: Our Product
 ========================================================================== */
 
 .our-product {
-  padding: 48px 0 24px;
+  padding: 104px 0;
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: left;
+    width: 50%;
+    position: relative;
+    padding-bottom: 72px;
+    @include small {
+      width: 100%;
+    }
+    &__small {
+      left: -60px;
+      max-width: 296px;
+      position: absolute;
+      bottom: 0;
+      max-height: 293px;
+      border-radius: 4px;
+      background-color: color(white);
+      box-shadow: 0 4px 16px 0 rgb(165 165 165 / 25%);
+      text-align: center;
+      padding: 24px 56px 32px;
+      &__title {
+        @include font-size(label);
+        font-weight: fw(semi-bold);
+        color: color(black, 1);
+        &::after {
+          content: "";
+          background-color: color(black, 1);
+          margin: 8px auto 8px;
+          display: block;
+          height: 2px;
+          width: 110px;
+        }
+      }
+      &__el {
+        border-radius: 50%;
+        margin-bottom: 8px;
+        width: 57px;
+        height: 57px;
+      }
+      &__name {
+        margin-bottom: 16px;
+        @include font-size(small);
+      }
+      &__list {
+        margin-bottom: 0;
+      }
+      &__item {
+        text-align: left;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__txt {
+    padding-left: 88px;
+    float: left;
+    width: 50%;
+    display: table;
+    min-height: 601px;
+    &__align {
+      display: table-cell;
+      vertical-align: top;
+    }
+    @include small {
+      width: 100%;
+    }
+    &__label {
+      font-weight: fw(semi-bold);
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-family: $font-title;
+      color: color(primary, 1);
+      margin-bottom: 24px;
+    }
+    &__desc {
+      @include font-size(h4);
+      margin-bottom: 40px;
+    }
+  }
 }

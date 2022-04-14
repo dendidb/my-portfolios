@@ -2389,7 +2389,110 @@ Layout: Footer
 Layout: Our Product
 ========================================================================== */
 .our-product {
-  padding: 48px 0 24px;
+  padding: 104px 0;
+}
+.our-product__wrapper::before, .our-product__wrapper::after {
+  content: " ";
+  display: table;
+}
+.our-product__wrapper::after {
+  clear: both;
+}
+.our-product__img {
+  float: left;
+  width: 50%;
+  position: relative;
+  padding-bottom: 72px;
+}
+@media only screen and (max-width: 767.98px) {
+  .our-product__img {
+    width: 100%;
+  }
+}
+.our-product__img__small {
+  left: -60px;
+  max-width: 296px;
+  position: absolute;
+  bottom: 0;
+  max-height: 293px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 16px 0 rgba(165, 165, 165, 0.25);
+     -moz-box-shadow: 0 4px 16px 0 rgba(165, 165, 165, 0.25);
+          box-shadow: 0 4px 16px 0 rgba(165, 165, 165, 0.25);
+  text-align: center;
+  padding: 24px 56px 32px;
+}
+.our-product__img__small__title {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  color: #000;
+}
+.our-product__img__small__title::after {
+  content: "";
+  background-color: #000;
+  margin: 8px auto 8px;
+  display: block;
+  height: 2px;
+  width: 110px;
+}
+.our-product__img__small__el {
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  margin-bottom: 8px;
+  width: 57px;
+  height: 57px;
+}
+.our-product__img__small__name {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.our-product__img__small__list {
+  margin-bottom: 0;
+}
+.our-product__img__small__item {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin-bottom: 16px;
+}
+.our-product__img__small__item:last-child {
+  margin-bottom: 0;
+}
+.our-product__txt {
+  padding-left: 88px;
+  float: left;
+  width: 50%;
+  display: table;
+  min-height: 601px;
+}
+.our-product__txt__align {
+  display: table-cell;
+  vertical-align: top;
+}
+@media only screen and (max-width: 767.98px) {
+  .our-product__txt {
+    width: 100%;
+  }
+}
+.our-product__txt__label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.our-product__txt__title {
+  font-family: "Georgia", serif;
+  color: #01996d;
+  margin-bottom: 24px;
+}
+.our-product__txt__desc {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 40px;
 }
 
 /* -------------------------------------------------------------------------- */
