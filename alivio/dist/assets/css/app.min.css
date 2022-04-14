@@ -1424,9 +1424,6 @@ b {
   min-width: 187px;
   min-height: 48px;
   padding: 10px 48px;
-  -webkit-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
-     -moz-box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
-          box-shadow: 0 5px 5px rgba(72, 72, 72, 0.1);
   text-align: center;
 }
 .btn--demo:hover {
