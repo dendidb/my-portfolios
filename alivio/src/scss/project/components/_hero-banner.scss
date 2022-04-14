@@ -4,18 +4,11 @@
 
 .hero-banner {
   $hb: &;
-  // min-height: 568px;
-  // max-height: 1200px;
   &__item {
     overflow: hidden;
     background-color: color(white);
     min-height: 100vh;
   }
-
-  .container {
-    position: relative;
-  }
-
   &__img {
     z-index: zi(banner-img-el);
     height: 100%;
@@ -43,7 +36,6 @@
     }
     @include medium {
       max-width: initial;
-      min-height: initial;
     }
     &__align {
       display: table-cell;
@@ -59,10 +51,9 @@
     margin-bottom: 24px;
     @include large {
       @include font-size(h2);
-      margin-bottom: 32px;
     }
     @include small {
-      @include font-size(h3);
+      @include font-size(h1-accent);
       margin-bottom: 16px;
     }
   }
@@ -73,12 +64,15 @@
     font-weight: fw(medium);
     color: color(black, 2);
     margin-bottom: 56px;
-    @include large {
-      margin-bottom: 24px;
-    }
     @include medium {
       max-width: initial;
       @include font-size(label);
+    }
+    @include small {
+      margin-bottom: 32px;
+    }
+    @include x-small {
+      @include font-size(h6);
     }
   }
 }

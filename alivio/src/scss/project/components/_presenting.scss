@@ -1,0 +1,47 @@
+/* ==========================================================================
+  Components Presenting
+========================================================================== */
+
+.presenting {
+  padding: 72px 0 24px;
+  @include large {
+    padding: 56px 0 16px;
+  }
+  @include medium {
+    padding-top: 40px;
+  }
+  @include large {
+    padding: 56px 0 16px;
+  }
+  &__wrapper {
+    // @include clearfix;
+    font-size: 0;
+  }
+  &__left {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 40%;
+    margin-right: 112px;
+    &__label {
+      margin-bottom: 8px;
+      @include font-size(h3);
+      font-family: $font-title;
+    }
+    &__title {
+      @include font-size(h1-accent);
+      margin-bottom: 0;
+      color: color(primary, 1);
+      font-family: $font-title;
+    }
+  }
+  &__right {
+    width: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+    &__desc {
+      margin-bottom: 0;
+      @include font-size(h3);
+    }
+  }
+}
+

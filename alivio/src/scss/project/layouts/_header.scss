@@ -54,7 +54,7 @@ Layout: Header
   }
   &__logo {
     float: left;
-    margin-right: 120px;
+    margin-right: 172px;
     transition: all 0.3s ease;
     padding: 10px 0;
     @include remove-tap-highlight;
@@ -161,8 +161,6 @@ Layout: Header
         }
       }
       &--active {
-        color: color(black, 1);
-        font-weight: fw(bold);
         #{$n}__link {
           @include medium {
             padding-left: 40px;
