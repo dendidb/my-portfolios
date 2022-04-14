@@ -43,12 +43,15 @@ Layout: Footer
     margin: 0;
   }
   &__item {
-    padding-bottom: 56px;
+    margin-bottom: 56px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include small {
-      padding-bottom: 48px;
+      margin-bottom: 48px;
     }
     @include x-small {
-      padding-bottom: 32px;
+      margin-bottom: 32px;
     }
   }
   &__link {
@@ -56,7 +59,7 @@ Layout: Footer
     color: color(white);
     @include font-size(h4);
     padding: 4px 0;
-    transition: all 0.2s ease;
+    transition: all .3s ease;
     @include remove-tap-highlight;
     @include small {
       display: block;
