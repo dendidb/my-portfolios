@@ -2592,6 +2592,14 @@ Layout: Success Story
   line-height: 5.6rem;
   margin-bottom: 32px;
 }
+.success-story__txt__desc {
+  margin-bottom: 56px;
+}
+@media only screen and (max-width: 1338px) {
+  .success-story__txt__desc {
+    margin-bottom: 24px;
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /* Layouts: Features

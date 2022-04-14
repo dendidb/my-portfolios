@@ -64,5 +64,11 @@ Layout: Success Story
       @include font-size(h1-accent);
       margin-bottom: 32px;
     }
+    &__desc {
+      margin-bottom: 56px;
+      @include mq(1338px) {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
