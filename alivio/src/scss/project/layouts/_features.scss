@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/* Layouts: Features
+/* -------------------------------------------------------------------------- */
+
+.features {
+  $f: &;
+  padding: 24px 0 160px;
+  &__list {
+    font-size: 0;
+  }
+  #{$f}__item {
+    width: 33.3333333%;
+    vertical-align: top;
+    display: inline-block;
+    counter-increment: number;
+    padding: 16px;
+    @include small {
+      width: 100%;
+      display: block;
+      padding: 0;
+    }
+  }
+}

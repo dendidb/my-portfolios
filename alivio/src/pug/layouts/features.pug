@@ -1,0 +1,13 @@
+//- ------------------------------------------------------------------------ -//
+  @name: Features
+  ------------------------------------------------------------------------ -//
+
+//features
+.features
+  .container
+    .features__list
+      each val in features.list
+        - data = val;
+        include ../components/features-item.pug
+='\n'
+//end-features

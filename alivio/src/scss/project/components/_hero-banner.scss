@@ -29,7 +29,6 @@
     position: relative;
     z-index: zi(banner-txt);
     display: table;
-    max-width: 645px;
     min-height: 100vh;
     @include large {
       max-width: 500px
@@ -40,6 +39,7 @@
     &__align {
       display: table-cell;
       vertical-align: middle;
+      max-width: 440px;
     }
   }
 

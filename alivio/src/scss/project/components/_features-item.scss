@@ -1,0 +1,55 @@
+/* ==========================================================================
+  Components Features Item
+========================================================================== */
+
+.features {
+  &__box {
+    border-radius: 8px;
+  }
+  &__txt {
+
+  }
+&__title {
+  font-weight: fw(bold);
+  color: black, 1;
+  font-family: $font-title;
+  position: relative;
+  margin-bottom: 8px;
+  &::before {
+    content: "0" counter(number);
+    font-size: 15rem;
+    line-height: 22.5rem;
+    color: color(primary, 1);
+    opacity: .2;
+    font-weight: fw(regular);
+    @include medium {
+      font-size: 11rem;
+      line-height: 10.5rem;
+    }
+    }
+    &__el {
+      position: absolute;
+      left: 40px;
+      bottom: 48px;
+      @include font-size(h2-accent);
+      font-weight: fw(bold);
+      color: color(black, 1);
+      @include medium {
+        @include font-size(h2-accent);
+        @include font-size(h3);
+        bottom: 8px;
+      }
+      @include small {
+        @include font-size(h3);
+      }
+    }
+  }
+  &__desc {
+    font-weight: fw(medium);
+    @include font-size(h4);
+    margin-bottom: 48px;
+    @include small {
+      @include font-size(h6);
+    }
+  }
+}

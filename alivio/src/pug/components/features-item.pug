@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Features Item
+  -------------------------------------------------------------------------------//
+
+//features-item
+.features__item
+  .features__box
+    .features__txt
+      h3.features__title
+        ='\n'
+        span.features__title__el !{val.title}
+        ='\n'
+      p.features__desc
+        | !{val.desc}
+    .features__img
+      ='\n'
+      img.features__img__el(src='assets/img/dummy/'+val.img alt=val.title)/
+      ='\n'
+  
+='\n'
+//features-item
