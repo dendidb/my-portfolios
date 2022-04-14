@@ -2505,11 +2505,107 @@ Layout: Our Product
   margin-bottom: 40px;
 }
 
+/* ==========================================================================
+Layout: Success Story
+========================================================================== */
+.success-story {
+  padding: 48px 0;
+  background-color: #245852;
+}
+@media only screen and (max-width: 1199.98px) {
+  .success-story {
+    padding: 80px 0 72px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .success-story {
+    padding: 64px 0 32px;
+  }
+}
+.success-story__wrapper::before, .success-story__wrapper::after {
+  content: " ";
+  display: table;
+}
+.success-story__wrapper::after {
+  clear: both;
+}
+.success-story__img {
+  float: right;
+  width: 60%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1199.98px) {
+  .success-story__img {
+    float: none;
+    width: 100%;
+  }
+}
+.success-story__img__el {
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.success-story__img__icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.success-story__txt {
+  float: left;
+  width: 40%;
+  display: table;
+  min-height: 473px;
+  color: #fff;
+}
+.success-story__txt__align {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 1338px) {
+  .success-story__txt {
+    padding-top: 32px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .success-story__txt {
+    float: none;
+    width: 100%;
+  }
+}
+.success-story__txt__title {
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  margin-bottom: 32px;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Layouts: Features
 /* -------------------------------------------------------------------------- */
 .features {
   padding: 24px 0 160px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .features {
+    padding: 0 0 80px;
+  }
 }
 .features__list {
   font-size: 0;

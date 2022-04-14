@@ -5,6 +5,9 @@
 .features {
   $f: &;
   padding: 24px 0 160px;
+  @include large {
+    padding: 0 0 80px;
+  }
   &__list {
     font-size: 0;
   }
