@@ -11,6 +11,9 @@ Layout: Success Story
   @include medium {
     padding: 64px 0 32px;
   }
+  @include small {
+    padding: 40px 0 24px;
+  }
   &__wrapper {
     @include clearfix;
   }
@@ -39,6 +42,10 @@ Layout: Success Story
       top: 50%;
       left: 45%;
       transform: translateY(-50%);
+      @include x-small {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   &__txt {
@@ -69,12 +76,24 @@ Layout: Success Story
       @include mq(1338px) {
         margin-bottom: 16px;
       }
+      @include small {
+        @include font-size(h3);
+      }
+      @include x-small {
+        @include font-size(h4);
+      }
     }
     &__desc {
       margin-bottom: 56px;
       @include font-size(h3);
       @include mq(1338px) {
         margin-bottom: 24px;
+      }
+      @include small {
+        @include font-size(h4);
+      }
+      @include x-small {
+        @include font-size(h6);
       }
     }
   }

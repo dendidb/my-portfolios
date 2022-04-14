@@ -1391,6 +1391,13 @@ b {
   .features__desc {
     font-size: 1.6rem;
     line-height: 2rem;
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .features__desc {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
 
@@ -2420,6 +2427,11 @@ Layout: Our Product
     padding: 88px 0;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .our-product {
+    padding: 64px 0;
+  }
+}
 .our-product__wrapper::before, .our-product__wrapper::after {
   content: " ";
   display: table;
@@ -2441,10 +2453,10 @@ Layout: Our Product
   }
 }
 .our-product__img__small {
-  left: -60px;
-  max-width: 296px;
   position: absolute;
+  left: -60px;
   bottom: 0;
+  max-width: 296px;
   max-height: 293px;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
@@ -2455,6 +2467,26 @@ Layout: Our Product
           box-shadow: 0 4px 16px 0 rgba(165, 165, 165, 0.25);
   text-align: center;
   padding: 24px 56px 32px;
+}
+@media only screen and (max-width: 1338px) {
+  .our-product__img__small {
+    left: -20px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .our-product__img__small {
+    padding: 16px 40px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .our-product__img__small {
+    left: 0;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .our-product__img__small {
+    padding: 16px 24px;
+  }
 }
 .our-product__img__small__title {
   font-size: 1.4rem;
@@ -2478,10 +2510,34 @@ Layout: Our Product
   width: 57px;
   height: 57px;
 }
+@media only screen and (max-width: 575.86px) {
+  .our-product__img__small__el {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+  }
+}
 .our-product__img__small__name {
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 575.86px) {
+  .our-product__img__small__name {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+.our-product__img__small__headline {
+  font-family: "Georgia", serif;
+  font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.6rem;
+  color: #000;
+}
+@media only screen and (max-width: 575.86px) {
+  .our-product__img__small__headline {
+    margin-bottom: 4px;
+  }
 }
 .our-product__img__small__list {
   margin-bottom: 0;
@@ -2494,6 +2550,11 @@ Layout: Our Product
 }
 .our-product__img__small__item:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 575.86px) {
+  .our-product__img__small__item {
+    margin-bottom: 0;
+  }
 }
 .our-product__txt {
   padding-left: 88px;
@@ -2523,10 +2584,28 @@ Layout: Our Product
   color: #01996d;
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 1199.98px) {
+  .our-product__txt__title {
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+    margin-bottom: 16px;
+  }
+}
 .our-product__txt__desc {
   font-size: 2rem;
   line-height: 2.6rem;
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .our-product__txt__desc {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .our-product__txt__desc {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }
 
 /* ==========================================================================
@@ -2544,6 +2623,11 @@ Layout: Success Story
 @media only screen and (max-width: 991.98px) {
   .success-story {
     padding: 64px 0 32px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .success-story {
+    padding: 40px 0 24px;
   }
 }
 .success-story__wrapper::before, .success-story__wrapper::after {
@@ -2590,6 +2674,12 @@ Layout: Success Story
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+@media only screen and (max-width: 575.86px) {
+  .success-story__img__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 .success-story__txt {
   float: left;
   width: 40%;
@@ -2629,6 +2719,18 @@ Layout: Success Story
     margin-bottom: 16px;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .success-story__txt__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .success-story__txt__title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
 .success-story__txt__desc {
   margin-bottom: 56px;
   font-size: 2.4rem;
@@ -2637,6 +2739,18 @@ Layout: Success Story
 @media only screen and (max-width: 1338px) {
   .success-story__txt__desc {
     margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .success-story__txt__desc {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .success-story__txt__desc {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
 
@@ -2649,6 +2763,11 @@ Layout: Success Story
 @media only screen and (max-width: 1199.98px) {
   .features {
     padding: 0 0 80px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .features {
+    padding-bottom: 40px;
   }
 }
 .features__list {

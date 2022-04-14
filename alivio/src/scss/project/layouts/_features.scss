@@ -8,6 +8,9 @@
   @include large {
     padding: 0 0 80px;
   }
+  @include small {
+    padding-bottom: 40px;
+  }
   &__list {
     font-size: 0;
   }

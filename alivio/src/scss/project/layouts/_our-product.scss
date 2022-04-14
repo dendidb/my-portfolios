@@ -7,6 +7,9 @@ Layout: Our Product
   @include medium {
     padding: 88px 0;
   }
+  @include small {
+    padding: 64px 0;
+  }
   &__wrapper {
     @include clearfix;
   }
@@ -21,16 +24,28 @@ Layout: Our Product
       margin-bottom: 24px;
     }
     &__small {
-      left: -60px;
-      max-width: 296px;
       position: absolute;
+      left: -60px;
       bottom: 0;
+      max-width: 296px;
       max-height: 293px;
       border-radius: 4px;
       background-color: color(white);
       box-shadow: 0 4px 16px 0 rgb(165 165 165 / 25%);
       text-align: center;
       padding: 24px 56px 32px;
+      @include mq(1338px) {
+        left: -20px;
+      }
+      @include large {
+        padding: 16px 40px;
+      }
+      @include small {
+        left: 0;
+      }
+      @include x-small {
+        padding: 16px 24px;
+      }
       &__title {
         @include font-size(label);
         font-weight: fw(semi-bold);
@@ -49,10 +64,27 @@ Layout: Our Product
         margin-bottom: 8px;
         width: 57px;
         height: 57px;
+        @include x-small {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 2px;
+        }
       }
       &__name {
         margin-bottom: 16px;
+        @include x-small {
+          margin-bottom: 8px;
+          @include font-size(small);
+        }
+      }
+      &__headline {
+        font-family: $font-title;
+        font-weight: fw(bold);
         @include font-size(small);
+        color: color(black, 1);
+        @include x-small {
+          margin-bottom: 4px;
+        }
       }
       &__list {
         margin-bottom: 0;
@@ -62,6 +94,9 @@ Layout: Our Product
         @include font-size(small);
         margin-bottom: 16px;
         &:last-child {
+          margin-bottom: 0;
+        }
+        @include x-small {
           margin-bottom: 0;
         }
       }
@@ -91,10 +126,20 @@ Layout: Our Product
       font-family: $font-title;
       color: color(primary, 1);
       margin-bottom: 24px;
+      @include large {
+        @include font-size(h2-accent);
+        margin-bottom: 16px;
+      }
     }
     &__desc {
       @include font-size(h4);
       margin-bottom: 40px;
+      @include large {
+        margin-bottom: 24px;
+      }
+      @include x-small {
+        @include font-size(h6);
+      }
     }
   }
 }

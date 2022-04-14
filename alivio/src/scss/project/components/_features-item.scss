@@ -66,6 +66,10 @@
     margin-bottom: 48px;
     @include small {
       @include font-size(h6);
+      margin-bottom: 24px;
+    }
+    @include x-small {
+      @include font-size(h6);
     }
   }
 }
