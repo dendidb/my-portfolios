@@ -51,13 +51,13 @@
   &__right {
     width: 50%;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
     @include medium {
       width: 100%;
     }
     &__desc {
       margin-bottom: 0;
-      @include font-size(h3);
+      @include font-size(h4);
       @include small {
         @include font-size(h6);
       }

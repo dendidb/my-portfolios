@@ -1028,7 +1028,7 @@ h3 {
 h4 {
   font-weight: 700;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
 }
 
 h5 {
@@ -1178,7 +1178,7 @@ b {
 @media only screen and (max-width: 767.98px) {
   .hero-banner__title {
     font-size: 4.8rem;
-    line-height: 5.6rem;
+    line-height: 6.4rem;
     margin-bottom: 16px;
   }
 }
@@ -1263,12 +1263,12 @@ b {
 @media only screen and (max-width: 767.98px) {
   .presenting__left__label {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 2.8rem;
   }
 }
 .presenting__left__title {
   font-size: 4.8rem;
-  line-height: 5.6rem;
+  line-height: 6.4rem;
   margin-bottom: 0;
   color: #01996d;
   font-family: "Georgia", serif;
@@ -1282,7 +1282,7 @@ b {
 .presenting__right {
   width: 50%;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 @media only screen and (max-width: 991.98px) {
   .presenting__right {
@@ -1291,8 +1291,8 @@ b {
 }
 .presenting__right__desc {
   margin-bottom: 0;
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
 }
 @media only screen and (max-width: 767.98px) {
   .presenting__right__desc {
@@ -1384,7 +1384,7 @@ b {
 .features__desc {
   font-weight: 500;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   margin-bottom: 48px;
 }
 @media only screen and (max-width: 767.98px) {
@@ -1422,7 +1422,7 @@ b {
   overflow: hidden;
   border: 1px solid transparent;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
@@ -1694,7 +1694,7 @@ b {
   margin: 0 0 16px !important;
   color: #484848 !important;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   text-align: center;
   text-transform: none;
   word-wrap: break-word;
@@ -2091,7 +2091,7 @@ Layout: Header
       -ms-user-select: none;
           user-select: none;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -2100,7 +2100,7 @@ Layout: Header
 @media only screen and (max-width: 991.98px) {
   .header__nav__link {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 2.8rem;
     padding: 16px 0;
     display: block;
     color: #fff;
@@ -2299,7 +2299,7 @@ Layout: Footer
   text-decoration: none;
   color: #fff;
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   padding: 4px 0;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -2596,7 +2596,7 @@ Layout: Our Product
 }
 .our-product__txt__desc {
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   margin-bottom: 40px;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -2714,7 +2714,7 @@ Layout: Success Story
   font-family: "Georgia", serif;
   font-weight: 700;
   font-size: 4.8rem;
-  line-height: 5.6rem;
+  line-height: 6.4rem;
   margin-bottom: 32px;
 }
 @media only screen and (max-width: 1338px) {
@@ -2731,7 +2731,7 @@ Layout: Success Story
 @media only screen and (max-width: 575.86px) {
   .success-story__txt__title {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 2.8rem;
   }
 }
 .success-story__txt__desc {
@@ -2747,7 +2747,7 @@ Layout: Success Story
 @media only screen and (max-width: 767.98px) {
   .success-story__txt__desc {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 2.8rem;
   }
 }
 @media only screen and (max-width: 575.86px) {
