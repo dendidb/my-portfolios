@@ -127,6 +127,7 @@ const BUILD_PATH = {
       `${BUILD}/assets/fonts`,
       `${BUILD}/assets/img`,
       `${BUILD}/assets/img/bg`,
+      `${BUILD}/assets/img/default`,
       `${BUILD}/assets/img/dummy`,
       `${BUILD}/assets/img/homescreen`,
       `${BUILD}/assets/img/icons`,

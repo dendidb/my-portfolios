@@ -132,6 +132,64 @@ html(lang='en')
       block siteContent
     //- footer
     include ../layouts/footer.pug
+    ='\n\n'
+    if schema.enable
+      //schema organization
+      script(type='application/ld+json').
+        {
+
+          "@context": "http://schema.org",
+          "@id": !{JSON.stringify(schema.url + '#organization')},
+          "@type": "Organization",
+          "name": !{JSON.stringify(schema.name)},
+          "url": !{JSON.stringify(schema.url)},
+          "logo": !{JSON.stringify(schema.logo)},
+          "contactPoint":[
+            !{''}
+            {
+              "@type": "ContactPoint",
+              "telephone": !{JSON.stringify(schema.contactPoint.telephone)},
+              "contactType": !{JSON.stringify(schema.contactPoint.contactType)},
+              "areaServed": !{JSON.stringify(schema.contactPoint.areaServed)}
+            }
+          ],
+          "sameAs": !{JSON.stringify(schema.sameAs)}
+        }
+      ='\n\n'
+      //schema website
+      if schema.search.enable
+        script(type='application/ld+json').
+          {
+            "@context": "http://schema.org",
+            "@id": !{JSON.stringify(schema.url + '#website')},
+            "@type": "WebSite",
+            "url": !{JSON.stringify(schema.url)},
+            "name": !{JSON.stringify(schema.name)},
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": !{JSON.stringify(schema.search.url)},
+              "query-input": "required name=search_term_string"
+            }
+          }
+      else
+        script(type='application/ld+json').
+          {
+            "@context": "http://schema.org",
+            "@id": !{JSON.stringify(schema.url + '#website')},
+            "@type": "WebSite",
+            "url": !{JSON.stringify(schema.url)},
+            "name": !{JSON.stringify(schema.name)}
+          }
+      ='\n\n'
+      //schema webpage
+      script(type='application/ld+json').
+        {
+          "@context": "http://schema.org",
+          "@id": !{JSON.stringify(schema.url + '#webpage')}
+          "@type": "WebPage",
+          "url": !{JSON.stringify(schema.url)},
+          "name": !{JSON.stringify(schema.name)}
+        }
 
     ='\n\n'
     //script

@@ -49,6 +49,29 @@
     sizeCard: 'summary_large_image',
     image: 'assets/img/default/twitter-card.jpg'
   };
+  
+  // schema
+  schema = {
+    enable: true,
+    url: siteURL,
+    name: siteAppName,
+    logo: siteURL + '/assets/img/logo/logo.svg',
+    contactPoint: {
+      telephone: '+62-818-068-18424',
+      contactType: 'sales',
+      areaServed: 'ID'
+    },
+    sameAs: [
+      'https://www.youtube.com',
+      'https://www.linkedin.com',
+      'https://www.facebook.com',
+      'https://www.twitter.com'
+    ],
+    search: {
+      enable: false,
+      url: 'https://www.bilik.id/search/{search_term_string}?src=mc_google'
+    }
+  };
 
   // Manifest
   manifest = 'assets/js/data/manifest.json';
