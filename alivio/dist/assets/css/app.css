@@ -1159,7 +1159,7 @@ b {
 .hero-banner__txt__align {
   display: table-cell;
   vertical-align: middle;
-  max-width: 440px;
+  max-width: 480px;
 }
 .hero-banner__title {
   font-family: "Georgia", serif;
