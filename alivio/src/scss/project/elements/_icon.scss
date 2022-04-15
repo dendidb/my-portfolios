@@ -2,76 +2,21 @@
    Elements Icons
    ========================================================================== */
 
-   [class^="rzf-"], [class*=" rzf-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'rzf-icons' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .rzf-launch:before {
-    content: "\e905";
-  }
-  .rzf-user:before {
-    content: "\e900";
-  }
-  .rzf-instagram:before {
-    content: "\e90a";
-  }
-  .rzf-mail:before {
-    content: "\e913";
-  }
-  .rzf-close:before {
-    content: "\e916";
-  }
-  .rzf-arrow-down:before {
-    content: "\e901";
-  }
-  .rzf-arrow-left:before {
-    content: "\e902";
-  }
-  .rzf-arrow-right:before {
-    content: "\e903";
-  }
-  .rzf-arrow-up:before {
-    content: "\e904";
-  }
-  .rzf-chevron-down:before {
-    content: "\e906";
-  }
-  .rzf-chevron-left:before {
-    content: "\e907";
-  }
-  .rzf-chevron-right:before {
-    content: "\e908";
-  }
-  .rzf-chevron-up:before {
-    content: "\e909";
-  }
-  .rzf-phone:before {
-    content: "\e90c";
-  }
-  .rzf-search:before {
-    content: "\e90e";
-  }
-  .rzf-telegram:before {
-    content: "\e90f";
-  }
-  .rzf-twitter:before {
-    content: "\e910";
-  }
-  .rzf-whatsapp:before {
-    content: "\e912";
-  }
-  .rzf-facebook:before {
-    content: "\e90b";
-  }
-  
+  i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'alivio' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.a-close:before {
+  content: "\e900";
+}

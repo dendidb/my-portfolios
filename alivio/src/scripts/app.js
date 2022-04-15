@@ -9,11 +9,10 @@ import {
   WinScroll,
   WindowResize,
   Header,
-  Footer,
+  Popup,
   HeroBanner,
   Reveal,
-  InputForm,
-  ContactUs
+  Footer,
 } from 'components';
 
 // --- App
@@ -45,11 +44,10 @@ const App = (() => {
       WindowResize.init();
       WinScroll.init();
       Header.init();
-      Footer.init();
+      Popup.init();
       HeroBanner.init();
       Reveal.init();
-      InputForm.init();
-      ContactUs.init();
+      Footer.init();
     })(jQuery);
   }
 

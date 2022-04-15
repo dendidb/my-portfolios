@@ -942,6 +942,13 @@ th {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "alivio";
+  src: url("../fonts/icon/alivio.ttf?sk71ou") format("truetype"), url("../fonts/icon/alivio.woff?sk71ou") format("woff"), url("../fonts/icon/alivio.svg?sk71ou#alivio") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 /* ==========================================================================
    Variable Index
    ========================================================================== */
@@ -1302,6 +1309,98 @@ b {
 }
 
 /* ==========================================================================
+  Components Presenting
+========================================================================== */
+.presenting {
+  padding: 72px 0 24px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .presenting {
+    padding: 56px 0 16px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .presenting {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting {
+    padding-top: 24px;
+  }
+}
+.presenting__wrapper {
+  font-size: 0;
+}
+.presenting__left {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 40%;
+  margin-right: 112px;
+}
+@media only screen and (max-width: 1338px) {
+  .presenting__left {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .presenting__left {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__left {
+    margin-bottom: 16px;
+  }
+}
+.presenting__left__label {
+  margin-bottom: 8px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__left__label {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+.presenting__left__title {
+  font-size: 4.8rem;
+  line-height: 6.4rem;
+  margin-bottom: 0;
+  color: #01996d;
+  font-family: "Georgia", serif;
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__left__title {
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+  }
+}
+.presenting__right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 991.98px) {
+  .presenting__right {
+    width: 100%;
+  }
+}
+.presenting__right__desc {
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .presenting__right__desc {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+/* ==========================================================================
   Components Features Item
 ========================================================================== */
 .features__box {
@@ -1402,6 +1501,129 @@ b {
 }
 
 /* ==========================================================================
+  Components Popup
+  ========================================================================== */
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.35s ease 0.3s;
+  -o-transition: all 0.35s ease 0.3s;
+  -moz-transition: all 0.35s ease 0.3s;
+  transition: all 0.35s ease 0.3s;
+}
+@media only screen and (max-width: 575.86px) {
+  .popup {
+    width: 100%;
+  }
+}
+.popup.show-popup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.35s ease 0s;
+  -o-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+}
+.popup.show-popup .popup__body {
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: all 0.35s ease 0.3s;
+  -o-transition: all 0.35s ease 0.3s;
+  -moz-transition: all 0.35s ease 0.3s;
+  transition: all 0.35s ease 0.3s;
+}
+.popup__head {
+  padding: 16px;
+}
+.popup__head::before, .popup__head::after {
+  content: " ";
+  display: table;
+}
+.popup__head::after {
+  clear: both;
+}
+.popup__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+.popup__close::before {
+  color: #fff;
+  content: "Close";
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .popup__close::before {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+}
+.popup__content {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.popup__box {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.popup__body {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 1120px;
+  height: 680px;
+  background-color: #fff;
+  -webkit-transform: translateY(32px);
+     -moz-transform: translateY(32px);
+      -ms-transform: translateY(32px);
+       -o-transform: translateY(32px);
+          transform: translateY(32px);
+  -webkit-transition: all 0.35s ease 0s;
+  -o-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+}
+@media only screen and (max-width: 1199.98px) {
+  .popup__body {
+    width: 920px;
+    height: 580px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .popup__body {
+    width: 100%;
+    height: 480px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .popup__body {
+    height: 260px;
+  }
+}
+.popup__body iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
   Elements Index
    ========================================================================== */
 /* ==========================================================================
@@ -1463,6 +1685,13 @@ b {
   background-color: #01996d;
   color: #fff;
 }
+@media only screen and (max-width: 767.98px) {
+  .btn--inset {
+    padding: 12px 32px;
+    min-height: 52px;
+    min-width: 180px;
+  }
+}
 .btn--inset:hover {
   color: #01996d;
   -webkit-box-shadow: inset 0 0 0 50px #fff;
@@ -1479,9 +1708,9 @@ b {
 /* ==========================================================================
    Elements Icons
    ========================================================================== */
-[class^=rzf-], [class*=" rzf-"] {
+i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "rzf-icons" !important;
+  font-family: "alivio" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -1493,80 +1722,8 @@ b {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.rzf-launch:before {
-  content: "\e905";
-}
-
-.rzf-user:before {
+.a-close:before {
   content: "\e900";
-}
-
-.rzf-instagram:before {
-  content: "\e90a";
-}
-
-.rzf-mail:before {
-  content: "\e913";
-}
-
-.rzf-close:before {
-  content: "\e916";
-}
-
-.rzf-arrow-down:before {
-  content: "\e901";
-}
-
-.rzf-arrow-left:before {
-  content: "\e902";
-}
-
-.rzf-arrow-right:before {
-  content: "\e903";
-}
-
-.rzf-arrow-up:before {
-  content: "\e904";
-}
-
-.rzf-chevron-down:before {
-  content: "\e906";
-}
-
-.rzf-chevron-left:before {
-  content: "\e907";
-}
-
-.rzf-chevron-right:before {
-  content: "\e908";
-}
-
-.rzf-chevron-up:before {
-  content: "\e909";
-}
-
-.rzf-phone:before {
-  content: "\e90c";
-}
-
-.rzf-search:before {
-  content: "\e90e";
-}
-
-.rzf-telegram:before {
-  content: "\e90f";
-}
-
-.rzf-twitter:before {
-  content: "\e910";
-}
-
-.rzf-whatsapp:before {
-  content: "\e912";
-}
-
-.rzf-facebook:before {
-  content: "\e90b";
 }
 
 /* ==========================================================================
@@ -2564,7 +2721,7 @@ Layout: Our Product
   float: left;
   width: 50%;
   display: table;
-  min-height: 601px;
+  min-height: 614px;
 }
 .our-product__txt__align {
   display: table-cell;

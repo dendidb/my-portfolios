@@ -40,15 +40,13 @@ var App = function () {
 
       _components.Header.init();
 
-      _components.Footer.init();
+      _components.Popup.init();
 
       _components.HeroBanner.init();
 
       _components.Reveal.init();
 
-      _components.InputForm.init();
-
-      _components.ContactUs.init();
+      _components.Footer.init();
     })(jQuery);
   }; // --- load
 
@@ -74,110 +72,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":10,"./utilities":14}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _utilities = require("../utilities");
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// Form Validation
-var ElementSelector = [{
-  id: 'name',
-  validation: {
-    required: true
-  }
-}, {
-  id: 'email',
-  validation: {
-    required: true,
-    email: true
-  }
-}, {
-  id: 'phone',
-  validation: {
-    required: true,
-    phone: true
-  }
-}, {
-  id: 'message',
-  validation: {
-    required: true
-  }
-}];
-var ElementEvents = ['input', 'blur']; // --- AboutUs
-
-var AboutUs = function () {
-  // Handle Run Validation
-  var handleRunValidation = function handleRunValidation() {
-    _utilities.Validation.config(ElementEvents, ElementSelector);
-  }; // Handle Click Validation
-
-
-  var handleClickValidation = function handleClickValidation() {
-    $('button[type="submit"]').on('click', function (e) {
-      $.each(ElementSelector, function (i, v) {
-        $('#' + v.id).blur();
-      });
-
-      if ($('.error').length > 0) {
-        e.preventDefault();
-      }
-    });
-  }; // Handle Click Success Alert
-
-
-  var handleClickAlert = function handleClickAlert() {
-    $('.js-alert-message').on('click', function (e) {
-      $.each(ElementSelector, function (i, v) {
-        $('#' + v.id).blur();
-      });
-
-      if ($('.error').length > 0) {
-        e.preventDefault();
-      } else {
-        var _swalWithBootstrapBut;
-
-        e.preventDefault();
-        var swalWithBootstrapButton = Swal.mixin({
-          customClass: {
-            confirmButton: 'btn btn--primary btn--popup mr-12 w-100'
-          },
-          buttonsStyling: false
-        });
-        swalWithBootstrapButton.fire((_swalWithBootstrapBut = {
-          title: 'Message has been sent!',
-          text: 'Thank you. Have a nice day!',
-          icon: 'success',
-          confirmButtonColor: '#5f9e5f',
-          confirmButtonText: 'Close'
-        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#5f9e5f'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "height", 800), _defineProperty(_swalWithBootstrapBut, "width", 550), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
-      }
-    });
-  }; // --- init
-
-
-  var init = function init() {
-    handleRunValidation();
-    handleClickValidation();
-    handleClickAlert();
-  }; // --- return
-
-
-  return {
-    init: init
-  };
-}();
-
-var _default = AboutUs;
-exports["default"] = _default;
-
-},{"../utilities":14}],3:[function(require,module,exports){
+},{"./components":9,"./utilities":13}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -248,7 +143,7 @@ var Footer = function () {
 var _default = Footer;
 exports["default"] = _default;
 
-},{}],4:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -396,7 +291,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":14}],5:[function(require,module,exports){
+},{"../utilities":13}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -463,7 +358,7 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -471,65 +366,78 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-/* ------------------------------------------------------------------------------
-@name: InputForm
-@description: InputForm
---------------------------------------------------------------------------------- */
-// --- InputForm
-var InputForm = function () {
-  // --- handleClickDropdown
-  var handleClickDropdown = function handleClickDropdown() {
-    // handle click dropdown
-    $('.fi-dropdown').on('click', function (e) {
-      var _this = $(e.currentTarget);
+var _utilities = require("../utilities");
 
-      if (_this.parents('.fi-row').hasClass('fi-dropdown--show')) {
-        _this.parents('.fi-row').removeClass('fi-dropdown--show');
+/* ------------------------------------------------------------------------------
+@name: Popup
+@description: Popup
+--------------------------------------------------------------------------------- */
+// --- utilities
+// --- Popup
+var Popup = function () {
+  // -- handleClickPopup
+  var handleClickPopup = function handleClickPopup() {
+    $('.js-show-popup').on('click', function (e) {
+      var _this = $(e.currentTarget),
+          _embed = _this.attr('data-video'),
+          _parents = _this.parents('body').find('.popup'),
+          _contentItem = '<iframe class="iframe-embed" src="https://www.youtube.com/embed/' + _embed + '?autoplay=1" frameborder="0" allow="autoplay"></iframe>';
+
+      if (_parents.hasClass('show-popup')) {
+        _parents.removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
       } else {
-        _this.parents('.fi-row').addClass('fi-dropdown--show');
+        _utilities.Scrolllable.disable();
+
+        _parents.addClass('show-popup');
+
+        _parents.find('.js-result-popup').html(_contentItem);
       }
-    }); // --- handle click body
+    }); // --- handleHidePopup
+
+    $('.js-hide-popup').on('click', function (e) {
+      if ($('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
+      }
+    }); // --- handleClickBody
 
     $('body').on('click', function (e) {
-      if ($('.fi-dropdown').parents('.fi-row').hasClass('fi-dropdown--show')) {
-        $('.fi-dropdown').parents('.fi-row').removeClass('fi-dropdown--show');
-      }
-    }); // stop progation
+      if ($('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
 
-    $('body').on('click', '.fi-dropdown', function (e) {
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
+      }
+    }); // stopPropagation
+
+    $('body').on('click', '.js-show-popup, .popup__body', function (e) {
       e.stopPropagation();
     });
-  }; // --- handleKeyupDropdown
+  }; // --- handleKeyupPopup
 
 
-  var handleKeyupDropdown = function handleKeyupDropdown() {
+  var handleKeyupPopup = function handleKeyupPopup() {
     $('body').on('keyup', function (e) {
-      if (e.which == 27 && $('.fi-dropdown').parents('.fi-row').hasClass('fi-dropdown--show')) {
-        $('.fi-row').removeClass('fi-dropdown--show');
+      if (e.which == 27 && $('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
       }
-    });
-  }; // handleSelectDropdown
-
-
-  var handleSelectDropdown = function handleSelectDropdown() {
-    $('.fi-dropdown-item').on('click', function (e) {
-      var _this = $(e.currentTarget);
-
-      var _val = _this.attr('data-value');
-
-      var _text = _this.text();
-
-      _this.parents('.fi-dropdown').find('.fi-dropdown__input').attr('value', _val);
-
-      _this.parents('.fi-dropdown').find('.fi-dropdown__text').text(_text);
     });
   }; // --- init
 
 
   var init = function init() {
-    handleClickDropdown();
-    handleKeyupDropdown();
-    handleSelectDropdown();
+    handleClickPopup();
+    handleKeyupPopup();
   }; // --- return
 
 
@@ -538,10 +446,10 @@ var InputForm = function () {
   };
 }();
 
-var _default = InputForm;
+var _default = Popup;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{"../utilities":13}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -619,7 +527,7 @@ var Reveal = function () {
 var _default = Reveal;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -703,7 +611,7 @@ var WinScroll = function () {
 var _default = WinScroll;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -766,17 +674,11 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":10}],10:[function(require,module,exports){
+},{"./index":9}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-Object.defineProperty(exports, "ContactUs", {
-  enumerable: true,
-  get: function get() {
-    return _ContactUs["default"];
-  }
 });
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
@@ -796,10 +698,10 @@ Object.defineProperty(exports, "HeroBanner", {
     return _HeroBanner["default"];
   }
 });
-Object.defineProperty(exports, "InputForm", {
+Object.defineProperty(exports, "Popup", {
   enumerable: true,
   get: function get() {
-    return _InputForm["default"];
+    return _Popup["default"];
   }
 });
 Object.defineProperty(exports, "Reveal", {
@@ -827,19 +729,17 @@ var _WindowResize = _interopRequireDefault(require("./WindowResize"));
 
 var _Header = _interopRequireDefault(require("./Header"));
 
-var _Footer = _interopRequireDefault(require("./Footer"));
+var _Popup = _interopRequireDefault(require("./Popup"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
 var _Reveal = _interopRequireDefault(require("./Reveal"));
 
-var _InputForm = _interopRequireDefault(require("./InputForm"));
-
-var _ContactUs = _interopRequireDefault(require("./ContactUs"));
+var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./ContactUs":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./InputForm":6,"./Reveal":7,"./WinScroll":8,"./WindowResize":9}],11:[function(require,module,exports){
+},{"./Footer":2,"./Header":3,"./HeroBanner":4,"./Popup":5,"./Reveal":6,"./WinScroll":7,"./WindowResize":8}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -885,7 +785,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -919,7 +819,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],13:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1045,7 +945,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":17}],14:[function(require,module,exports){
+},{"../variables":16}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1086,7 +986,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":11,"./Scrolllable":12,"./Validation":13,"./isOS":15}],15:[function(require,module,exports){
+},{"./BrowserCheck":10,"./Scrolllable":11,"./Validation":12,"./isOS":14}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1127,7 +1027,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],16:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1152,7 +1052,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],17:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1172,6 +1072,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":16}]},{},[1])
+},{"./Regex":15}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

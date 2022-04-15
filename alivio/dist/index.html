@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -262,7 +262,7 @@
   <div class="success-story" id="community">
     <div class="container">
       <div class="success-story__wrapper">
-        <div class="success-story__img js-play-video">
+        <div class="success-story__img js-show-popup" data-video="https://www.youtube.com/embed/vNzXXDcbqtA?autoplay=1">
           <img class="success-story__img__el" src="assets/img/dummy/thumbnail.jpg" alt="Let's hear about Kayla's success story">
           <img class="success-story__img__icon" src="assets/img/icon/play.png">
         </div>
@@ -342,7 +342,12 @@
 </div>
 <!--popup-->
 <div class="popup">
-  <div class="container"></div>
+  <div class="popup__content">
+    <button class="popup__close js-hide-popup"></button>
+    <div class="popup__box">
+      <div class="popup__body js-result-popup"> </div>
+    </div>
+  </div>
 </div>
 <!--end-popup-->
 
