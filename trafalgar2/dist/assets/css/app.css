@@ -1233,7 +1233,7 @@ html.os-html > .os-host > .os-scrollbar {
    ========================================================================== */
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1353,11 +1353,13 @@ b {
 /* ==========================================================================
    Components: Hero Banner
   ========================================================================== */
+.hero-banner {
+  overflow: hidden;
+}
 .hero-banner__item {
   width: 100%;
   padding: 24px 0 48px;
   min-height: 930px;
-  overflow: hidden;
   position: relative;
   z-index: 1;
   background-color: #fff;
@@ -1480,7 +1482,7 @@ b {
   line-height: 5.6rem;
   font-weight: 700;
   margin-bottom: 24px;
-  color: #000;
+  color: #fff;
 }
 @media only screen and (max-width: 1199.98px) {
   .hero-banner__title {
@@ -1505,7 +1507,7 @@ b {
   line-height: 2.8rem;
   font-weight: 600;
   margin-bottom: 32px;
-  color: #7d7987;
+  color: #fff;
 }
 @media only screen and (max-width: 1199.98px) {
   .hero-banner__desc {
@@ -2135,9 +2137,9 @@ b {
   vertical-align: middle;
   min-width: 200px;
   padding: 12px 40px;
-  -webkit-border-radius: 55px;
-     -moz-border-radius: 55px;
-          border-radius: 55px;
+  -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
+          border-radius: 32px;
   text-decoration: none;
   outline: 0;
   cursor: pointer;
