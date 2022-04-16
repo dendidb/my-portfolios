@@ -1,0 +1,18 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = "home";
+    siteTitle = 'Home';
+
+//- Body
+block siteContent
+  //- Hero Banner
+  include home/hero-banner.pug
+
+  //- Section Description
+  include home/section-description.pug
+
+  //- Testimonials
+  include home/testimonials.pug

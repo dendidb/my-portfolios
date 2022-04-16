@@ -1,0 +1,26 @@
+//-------------------------------------------------------------------------------
+  @name: Blog
+  -------------------------------------------------------------------------------//
+
+//blog-item
+.blog__item
+  .blog__box
+    ='\n'
+    a.blog__link(href=data.btn.to)
+    ='\n'
+    .blog__img
+      ='\n'
+      img.blog__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+      ='\n'
+    .blog__txt
+      h3.blog__txt__title
+        | !{data.title}
+      p.blog__txt__desc
+        | !{data.desc}
+      ='\n'
+      button.btn-forward(type='button') !{data.btn.text}
+        ='\n'
+        i.icon-arrow-right
+        ='\n'
+='\n'
+//end-blog-item
