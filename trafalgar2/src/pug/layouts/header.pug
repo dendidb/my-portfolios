@@ -69,16 +69,16 @@
             ='\n'
             a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
             ='\n'
-      ul.header__sosmed
-        each val in dataHeader.sosmed
-          - data = val;
-          li.header__sosmed__item
-            ='\n'
-            a.header__sosmed__link(href=val.href class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+        ul.header__sosmed
+          each val in dataHeader.sosmed
+            - data = val;
+            li.header__sosmed__item
               ='\n'
-              img.header__sosmed__link__el(src='assets/img/icons/'+val.icon alt=val.alt)/
-              ='\n'
-      ='\n'
+              a.header__sosmed__link(href=val.href class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+                ='\n'
+                img.header__sosmed__link__el(src='assets/img/icons/'+val.icon alt=val.alt)/
+                ='\n'
+        ='\n'
       button.burger-menu.js-mobile-menu(type='button')
         ='\n'
         each val in [0, 1, 2]
