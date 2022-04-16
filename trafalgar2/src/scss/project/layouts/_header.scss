@@ -52,6 +52,8 @@
       position: relative;
       margin: 8px 0;
       z-index: 9;
+      left: 44px;
+      top: 16px;
     }
     @include small {
       margin: 8px 0;
@@ -61,11 +63,8 @@
       width: auto;
       height: 60px;
       transition: all .3s ease;
-      .header-on-scroll & {
-        height: 50px;
-      }
       @include medium {
-        height: 32px;
+        height: 40px;
       }
     }
   }
@@ -239,7 +238,7 @@
   &__sosmed {
     position: absolute;
     right: 32px;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
     padding: 0;
     margin: 0;
@@ -250,6 +249,9 @@
       top: 440px;
       height: 32px;
       width: 100%;
+    }
+    @include small {
+      top: 400px;
     }
     &__item {
       display: inline-block;

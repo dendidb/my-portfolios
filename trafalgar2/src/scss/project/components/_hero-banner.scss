@@ -15,6 +15,7 @@
 
     @include medium {
       padding: 40px 0 56px;
+      min-height: 428px;
     }
 
     @include retina {
@@ -84,6 +85,7 @@
       @include medium {
         width: auto;
         max-width: 100%;
+        min-height: 360px;
       }
       @include small {
         width: 100%;

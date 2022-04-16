@@ -1233,7 +1233,7 @@ html.os-html > .os-host > .os-scrollbar {
    ========================================================================== */
 .container {
   width: 100%;
-  max-width: 1243px;
+  max-width: 1210px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1257,6 +1257,16 @@ html.os-html > .os-host > .os-scrollbar {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media only screen and (max-width: 991.98px) {
+  .main-site {
+    padding-top: 80px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .main-site {
+    padding-top: 72px;
+  }
 }
 .header-on-scroll .main-site {
   padding-top: 88px;
@@ -1367,6 +1377,7 @@ b {
 @media only screen and (max-width: 991.98px) {
   .hero-banner__item {
     padding: 40px 0 56px;
+    min-height: 428px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1452,6 +1463,7 @@ b {
   .hero-banner__img__el {
     width: auto;
     max-width: 100%;
+    min-height: 360px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -2469,6 +2481,8 @@ b {
     position: relative;
     margin: 8px 0;
     z-index: 9;
+    left: 44px;
+    top: 16px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -2485,12 +2499,9 @@ b {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.header-on-scroll .header__logo__img {
-  height: 50px;
-}
 @media only screen and (max-width: 991.98px) {
   .header__logo__img {
-    height: 32px;
+    height: 40px;
   }
 }
 .header__nav {
@@ -2791,7 +2802,7 @@ b {
 .header__sosmed {
   position: absolute;
   right: 32px;
-  top: 50%;
+  top: 20%;
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -2812,6 +2823,11 @@ b {
     top: 440px;
     height: 32px;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .header__sosmed {
+    top: 400px;
   }
 }
 .header__sosmed__item {
