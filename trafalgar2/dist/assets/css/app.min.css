@@ -1233,7 +1233,7 @@ html.os-html > .os-host > .os-scrollbar {
    ========================================================================== */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1243px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2387,16 +2387,16 @@ b {
 ========================================================================== */
 .header {
   position: fixed;
-  padding: 56px 0;
+  padding: 48px 0;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9;
   background-color: transparent;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media only screen and (max-width: 1199.98px) {
   .header {
@@ -2434,7 +2434,7 @@ b {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
      -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 24px 0;
+  padding: 16px 0;
   background-color: #fff;
 }
 @media only screen and (max-width: 991.98px) {
@@ -2479,7 +2479,14 @@ b {
 .header__logo__img {
   display: block;
   width: auto;
-  height: 40px;
+  height: 60px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header-on-scroll .header__logo__img {
+  height: 50px;
 }
 @media only screen and (max-width: 991.98px) {
   .header__logo__img {
@@ -2583,7 +2590,7 @@ b {
 .header__nav__menu {
   float: left;
   list-style: none;
-  padding: 6px 0;
+  padding: 16px 0;
   margin: 0;
 }
 @media only screen and (max-width: 991.98px) {
@@ -2622,7 +2629,7 @@ b {
 }
 .header__nav__item {
   float: left;
-  margin-right: 20px;
+  margin-right: 32px;
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: 400;
@@ -2727,23 +2734,25 @@ b {
 .header__nav__link {
   text-decoration: none;
   display: block;
-  opacity: 0.5;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   color: #fff;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__nav__link:hover {
+  color: #458ff6;
 }
 .header-on-scroll .header__nav__link {
   color: #000;
 }
-.header__nav__link:hover {
-  opacity: 1;
+.header-on-scroll .header__nav__link:hover {
+  color: #458ff6;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__link {
@@ -2758,9 +2767,6 @@ b {
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-  .header__nav__link:hover {
-    color: #444;
   }
 }
 .header__nav__link--active {
@@ -2786,8 +2792,47 @@ b {
     background-color: #fff;
   }
 }
-.header__nav__sosmed {
-  float: right;
+.header__sosmed {
+  position: absolute;
+  right: 18%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+}
+.header__sosmed__item {
+  display: inline-block;
+  margin-right: 24px;
+}
+.header__sosmed__item:last-child {
+  margin-right: 0;
+}
+.header__sosmed__link {
+  width: 40px;
+  height: 40px;
+}
+.header__sosmed__link__el {
+  height: 24px;
+  width: 24px;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header-on-scroll .header__sosmed__link__el {
+  color: #000;
+}
+.header__sosmed__link__el:hover {
+  -webkit-transform: translateY(-4px);
+     -moz-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+       -o-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 .header .burger-menu {
   display: none;
@@ -3153,11 +3198,11 @@ b {
 }
 .hero-banner__item::before {
   opacity: 0;
-  -webkit-transform: translateX(-32px);
-     -moz-transform: translateX(-32px);
-      -ms-transform: translateX(-32px);
-       -o-transform: translateX(-32px);
-          transform: translateX(-32px);
+  -webkit-transform: translateY(-32px);
+     -moz-transform: translateY(-32px);
+      -ms-transform: translateY(-32px);
+       -o-transform: translateY(-32px);
+          transform: translateY(-32px);
   -webkit-transition: all 1.75s ease;
   -o-transition: all 1.75s ease;
   -moz-transition: all 1.75s ease;
@@ -3174,11 +3219,11 @@ b {
 }
 .hero-banner__img__el {
   opacity: 0;
-  -webkit-transform: translateX(-32px);
-     -moz-transform: translateX(-32px);
-      -ms-transform: translateX(-32px);
-       -o-transform: translateX(-32px);
-          transform: translateX(-32px);
+  -webkit-transform: translateY(-32px);
+     -moz-transform: translateY(-32px);
+      -ms-transform: translateY(-32px);
+       -o-transform: translateY(-32px);
+          transform: translateY(-32px);
   -webkit-transition: all 1s ease 0s;
   -o-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;
@@ -3195,11 +3240,11 @@ b {
 }
 .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
   opacity: 0;
-  -webkit-transform: translateX(32px);
-     -moz-transform: translateX(32px);
-      -ms-transform: translateX(32px);
-       -o-transform: translateX(32px);
-          transform: translateX(32px);
+  -webkit-transform: translateY(32px);
+     -moz-transform: translateY(32px);
+      -ms-transform: translateY(32px);
+       -o-transform: translateY(32px);
+          transform: translateY(32px);
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
   -moz-transition: all 0.2s ease 0s;
@@ -3320,11 +3365,11 @@ b {
   bottom: 16px;
   left: 50%;
   line-height: 1;
-  -webkit-transform: translateX(-50%);
-     -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .service {

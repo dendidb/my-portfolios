@@ -5,13 +5,13 @@
 .header {
   $h: &;
   position: fixed;
-  padding: 56px 0;
+  padding: 48px 0;
   top: 0;
   left: 0;
   width: 100%;
   z-index: zi(header);
   background-color: transparent;
-  transition: all .5s ease;
+  transition: all .3s ease;
   @include large {
     padding: 32px 0;
   }
@@ -31,7 +31,7 @@
   }
   .header-on-scroll & {
     @include shadow(10);
-    padding: 24px 0;
+    padding: 16px 0;
     background-color: color(white);
     @include medium {
       padding: 16px 0;
@@ -59,7 +59,11 @@
     &__img {
       display: block;
       width: auto;
-      height: 40px;
+      height: 60px;
+      transition: all .3s ease;
+      .header-on-scroll & {
+        height: 50px;
+      }
       @include medium {
         height: 32px;
       }
@@ -119,7 +123,7 @@
     &__menu {
       float: left;
       list-style: none;
-      padding: 6px 0;
+      padding: 16px 0;
       margin: 0;
       @include medium {
         visibility: hidden;
@@ -147,7 +151,7 @@
 
     &__item {
       float: left;
-      margin-right: 20px;
+      margin-right: 32px;
       @include font-size(18);
       font-weight: fw(regular);
       &:last-child {
@@ -187,15 +191,17 @@
     &__link {
       text-decoration: none;
       display: block;
-      opacity: .5;
-      transition: all .3s ease;
       color: color(white);
       @include remove-tap-highlight;
+      transition: all .3s ease;
+      &:hover {
+        color: color(blue, 1);
+      }
       .header-on-scroll & {
         color: color(black);
-      }
-      &:hover {
-        opacity: 1;
+        &:hover {
+          color: color(blue, 1);
+        }
       }
       @include medium {
         position: relative;
@@ -206,9 +212,6 @@
         height: 100%;
         padding: 8px 0;
         transition: all .3s ease;
-        &:hover {
-          color: color(black-thin);
-        }
       }
 
       &--active {
@@ -231,8 +234,36 @@
         }
       }
     }
-    &__sosmed {
-      float: right;
+  }
+  &__sosmed {
+    position: absolute;
+    right: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    &__item {
+      display: inline-block;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      width: 40px;
+      height: 40px;
+      &__el {
+        height: 24px;
+        width: 24px;
+        background-color: color(black);
+        transition: all .3s ease;
+        .header-on-scroll & {
+          color: color(black);
+        }
+        &:hover {
+          transform: translateY(-4px);
+        }
+      }
     }
   }
 

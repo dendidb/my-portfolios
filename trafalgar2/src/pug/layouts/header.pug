@@ -24,11 +24,6 @@
         classActive: 'pricing'
       },
       {
-        link: '#testimonials',
-        text: 'Testimonials',
-        classActive: 'testimonials'
-      },
-      {
         link: '#about',
         text: 'About',
         classActive: 'about'
@@ -74,14 +69,14 @@
             ='\n'
             a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
             ='\n'
-      ul.header__nav__sosmed
+      ul.header__sosmed
         each val in dataHeader.sosmed
           - data = val;
-          li.header__nav__item
+          li.header__sosmed__item
             ='\n'
-            a.header__nav__link(href=val.href class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+            a.header__sosmed__link(href=val.href class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
               ='\n'
-              img.header__nav__link__el(src='assets/img/icons/'+val.icon alt=val.alt)/
+              img.header__sosmed__link__el(src='assets/img/icons/'+val.icon alt=val.alt)/
               ='\n'
       ='\n'
       button.burger-menu.js-mobile-menu(type='button')
