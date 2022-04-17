@@ -238,6 +238,9 @@
       }
       .header-on-scroll & {
         color: color(black);
+        @include medium {
+          color: color(white);
+        }
         &:hover {
           color: color(blue, 1);
         }
@@ -282,7 +285,6 @@
     display: inline-block;
     transform: translateY(-50%);
     margin: 0;
-    background-color: salmon;
     @include medium {
       left: 24px;
       bottom: 0px;
@@ -335,6 +337,9 @@
         color: color(white);
         .header-on-scroll & {
           color: color(black);
+          @include medium {
+            color: color(white);
+          }
         }
         &:hover {
           transform: translateY(-4px);
