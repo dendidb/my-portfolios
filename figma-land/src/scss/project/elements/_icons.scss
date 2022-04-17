@@ -2,9 +2,9 @@
    Elements Icons
   ========================================================================== */
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="fl-"], [class*=" fl-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'trafalgar-icon' !important;
+  font-family: 'figma-land' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -12,32 +12,48 @@
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
+  /* =========== Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down:before {
+
+.fl-envelope:before {
   content: "\e900";
 }
-.icon-arrow-left:before {
+.fl-facebook-square:before {
   content: "\e901";
 }
-.icon-arrow-right:before {
+.fl-feature-1:before {
   content: "\e902";
 }
-.icon-arrow-up:before {
+.fl-feature-2:before {
   content: "\e903";
 }
-.icon-chevron-down:before {
+.fl-feature-3:before {
+  content: "\e904";
+}
+.fl-linked-in:before {
+  content: "\e905";
+}
+.fl-location:before {
+  content: "\e906";
+}
+.fl-location-white:before {
   content: "\e907";
 }
-.icon-chevron-left:before {
+.fl-phone:before {
   content: "\e908";
 }
-.icon-chevron-right:before {
+.fl-phone-white:before {
   content: "\e909";
 }
-.icon-chevron-up:before {
+.fl-play:before {
   content: "\e90a";
+}
+.fl-twitter:before {
+  content: "\e90b";
+}
+.fl-facebook:before {
+  content: "\e90c";
 }
