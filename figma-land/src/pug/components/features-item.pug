@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Features Item
+  -------------------------------------------------------------------------------//
+
+//features-item
+.features__item
+  .features__card
+    .features__box
+      .features__img
+        ='\n'
+        img.features__img__el(src='assets/img/icons/'+val.img alt=val.alt)/
+        ='\n'
+      .features__txt
+        h3.features__ttl
+          | !{val.title}
+        p.features__dsc
+          | !{val.desc}
+='\n'
+//end-features-item

@@ -60,11 +60,6 @@
       background-size: contain;
       background-position: center center;
       transition: all .3s ease;
-      opacity: 1;
-      background-image: url(../img/logo/figma-land-black.svg);
-      .header-on-scroll, .logo::before {
-        opacity: 0;
-      }
     }
     &::after {
       content: "";
@@ -74,18 +69,10 @@
       position: absolute;
       top: 0;
       left: 0;
-      opacity: 0;
-      background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
+      background-repeat: no-repeat;
       transition: all .3s ease;
-      .header-on-scroll & {
-        &:hover {
-          background-image: url(../img/logo/figma-land-white.svg);
-        }
-        opacity: 1;
-        background-image: url(../img/logo/figma-land-black.svg);
-      }
     }
     @include medium {
       position: relative;
@@ -342,7 +329,7 @@
           }
         }
         &:hover {
-          transform: translateY(-4px);
+          transform: translateY(-2px);
           &.fl-facebook {
             color: color(social-media, facebook);
           }

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Layouts Features
+  ========================================================================== */
+
+.features {
+  $f: &;
+  padding: 48px 0;
+  &__head {
+    text-align: center;
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__desc {
+    margin-bottom: 0;
+  }
+  &__body {
+    @include clearfix;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  #{$f}__item {
+    float: left;
+    width: 33.3333333%;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Components: Features Item
+  ========================================================================== */
+
+.features {
+  &__item {
+
+  }
+  &__card {
+    background-color: salmon;
+    padding: 24px;
+    text-align: center;
+    min-height: 260px;
+  }
+  &__img {
+    margin-bottom: 20px;
+    &__el {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &__txt {
+
+  }
+  &__ttl {
+    margin-bottom: 16px;
+  }
+  &__dsc {
+    margin-bottom: 0;
+  }
+}
