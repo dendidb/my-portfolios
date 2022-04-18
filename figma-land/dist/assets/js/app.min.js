@@ -44,6 +44,8 @@ var App = function () {
 
       _components.Popup.init();
 
+      _components.Subscribe.init();
+
       _components.Testimonials.init();
 
       _components.Footer.init();
@@ -74,7 +76,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":10,"./utilities":13}],2:[function(require,module,exports){
+},{"./components":11,"./utilities":15}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -266,7 +268,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":13}],5:[function(require,module,exports){
+},{"../utilities":15}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -424,7 +426,80 @@ var Popup = function () {
 var _default = Popup;
 exports["default"] = _default;
 
-},{"../utilities":13}],7:[function(require,module,exports){
+},{"../utilities":15}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _utilities = require("../utilities");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Form Validation
+var ElementSelector = [{
+  id: 'email',
+  validation: {
+    required: true,
+    email: true
+  }
+}];
+var ElementEvents = ['input', 'blur']; // --- Subscribe
+
+var Subscribe = function () {
+  // Handle Run Validation
+  var handleRunValidation = function handleRunValidation() {
+    _utilities.Validation.config(ElementEvents, ElementSelector);
+  }; // Handle Click Success Alert
+
+
+  var handleClickAlert = function handleClickAlert() {
+    $('.js-alert-subscribe').on('click', function (e) {
+      $.each(ElementSelector, function (i, v) {
+        $('#' + v.id).blur();
+      });
+
+      if ($('.error').length > 0) {
+        e.preventDefault();
+      } else {
+        var _swalWithBootstrapBut;
+
+        e.preventDefault();
+        var swalWithBootstrapButton = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn--confirm btn--popup mr-12 w-100'
+          },
+          buttonsStyling: false
+        });
+        swalWithBootstrapButton.fire((_swalWithBootstrapBut = {
+          title: 'Success',
+          text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
+          icon: 'success',
+          confirmButtonColor: '#458ff6',
+          confirmButtonText: 'Close'
+        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#458ff6'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
+      }
+    });
+  }; // --- init
+
+
+  var init = function init() {
+    handleClickAlert();
+    handleRunValidation();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Subscribe;
+exports["default"] = _default;
+
+},{"../utilities":15}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -477,7 +552,7 @@ var Testimonials = function () {
 var _default = Testimonials;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -544,7 +619,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":10}],9:[function(require,module,exports){
+},{"./index":11}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -629,7 +704,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -665,6 +740,12 @@ Object.defineProperty(exports, "Popup", {
     return _Popup["default"];
   }
 });
+Object.defineProperty(exports, "Subscribe", {
+  enumerable: true,
+  get: function get() {
+    return _Subscribe["default"];
+  }
+});
 Object.defineProperty(exports, "Testimonials", {
   enumerable: true,
   get: function get() {
@@ -692,6 +773,8 @@ var _Header = _interopRequireDefault(require("./Header"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
+var _Subscribe = _interopRequireDefault(require("./Subscribe"));
+
 var _Popup = _interopRequireDefault(require("./Popup"));
 
 var _Testimonials = _interopRequireDefault(require("./Testimonials"));
@@ -702,7 +785,7 @@ var _Blog = _interopRequireDefault(require("./Blog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./Testimonials":7,"./WindowResize":8,"./WindowScroll":9}],11:[function(require,module,exports){
+},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./Subscribe":7,"./Testimonials":8,"./WindowResize":9,"./WindowScroll":10}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -748,7 +831,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -782,7 +865,133 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _variables = require("../variables");
+
+/* ------------------------------------------------------------------------------
+@name: Validation
+@description: Validation
+--------------------------------------------------------------------------------- */
+// --- variables
+var Validation = function () {
+  // - handleInput
+  var handleInput = function handleInput(eventsEl, selectorEl) {
+    $.each(eventsEl, function (ie, ve) {
+      $.each(selectorEl, function (i, v) {
+        $('#' + v.id).on(ve, function (e) {
+          var _this = $(e.currentTarget),
+              _val = _this.val(),
+              _target = _this.attr('data-target'),
+              _alertEl = $('#' + _target);
+
+          var _errorMessage; // Condition if validation does not error
+
+
+          _alertEl.removeClass('error');
+
+          _this.parent().removeClass('error'); // Minimum Validation
+
+
+          if (v.validation.minimum) {
+            if (_val.length < v.validation.minimumChar) {
+              _errorMessage = _alertEl.attr('data-invalid');
+            }
+          } // Maximum Validation
+
+
+          if (v.validation.maximum) {
+            if (_val.length < v.validation.maximumChar) {
+              _errorMessage = _alertEl.attr('data-invalid');
+            }
+          } // Minimum Validation
+
+
+          if (v.validation.name) {
+            if (!_variables.PERSON_NAME.test(_val)) {
+              _errorMessage = _alertEl.attr('data-invalid');
+            }
+          } // Email validation
+
+
+          if (v.validation.email) {
+            if (!_variables.EMAIL.test(_val)) {
+              _errorMessage = _alertEl.attr('data-invalid');
+            }
+          } // Numeric validation
+
+
+          if (v.validation.phone) {
+            if (!_variables.PHONE_NUMBER.test(_val)) {
+              _errorMessage = _alertEl.attr('data-invalid-phone');
+            }
+          } // Required validation
+
+
+          if (_variables.WHITESPACE.test(_val)) {
+            _errorMessage = _alertEl.attr('data-req');
+          } // Error Message
+
+
+          if (_errorMessage !== undefined) {
+            _alertEl.text(_errorMessage);
+
+            _alertEl.addClass('error');
+
+            _this.parent().addClass('error');
+          }
+        });
+      });
+    }); // Return Handle keypress
+
+    handleKeypress();
+  }; // handleKeypress
+
+
+  var handleKeypress = function handleKeypress() {
+    $('.number-only').on('keypress', function (e) {
+      var _this = $(e.currentTarget),
+          _val = _this.val(),
+          _target = _this.attr('data-target'),
+          _alertEl = $('#' + _target);
+
+      var _errorMessage;
+
+      if (!_variables.NUMBERIC.test(e.key)) {
+        _errorMessage = _alertEl.attr('data-invalid');
+
+        _alertEl.text(_errorMessage);
+
+        _alertEl.addClass('error');
+
+        _this.parent().addClass('error'); // remove error after few second
+
+
+        setTimeout(function () {
+          _alertEl.removeClass('error');
+
+          _this.parent().removeClass('error');
+        }, 2000);
+        e.preventDefault();
+      }
+    });
+  };
+
+  return {
+    config: handleInput
+  };
+}();
+
+var _default = Validation;
+exports["default"] = _default;
+
+},{"../variables":18}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -800,6 +1009,12 @@ Object.defineProperty(exports, "Scrolllable", {
     return _Scrolllable["default"];
   }
 });
+Object.defineProperty(exports, "Validation", {
+  enumerable: true,
+  get: function get() {
+    return _Validation["default"];
+  }
+});
 Object.defineProperty(exports, "isOS", {
   enumerable: true,
   get: function get() {
@@ -813,9 +1028,11 @@ var _BrowserCheck = _interopRequireDefault(require("./BrowserCheck"));
 
 var _Scrolllable = _interopRequireDefault(require("./Scrolllable"));
 
+var _Validation = _interopRequireDefault(require("./Validation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":11,"./Scrolllable":12,"./isOS":14}],14:[function(require,module,exports){
+},{"./BrowserCheck":12,"./Scrolllable":13,"./Validation":14,"./isOS":16}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -856,6 +1073,51 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}]},{},[1])
+},{}],17:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WHITESPACE = exports.PHONE_NUMBER = exports.PERSON_NAME = exports.NUMBERIC = exports.FULL_NAME = exports.EMAIL = void 0;
+
+/* ------------------------------------------------------------------------------
+@name: Regex
+@description: Regex
+--------------------------------------------------------------------------------- */
+var WHITESPACE = /^ *$/;
+exports.WHITESPACE = WHITESPACE;
+var EMAIL = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+exports.EMAIL = EMAIL;
+var NUMBERIC = /[0-9]+$/i;
+exports.NUMBERIC = NUMBERIC;
+var PHONE_NUMBER = /^(0|\+62)+([0-9]){4,16}/i;
+exports.PHONE_NUMBER = PHONE_NUMBER;
+var FULL_NAME = /^(?:[\u00c0-\u01ffa-zA-Z-\s\.']){3,}(?:[\u00c0-\u01ffa-zA-Z-\s\.']{3,})+$/i;
+exports.FULL_NAME = FULL_NAME;
+var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
+exports.PERSON_NAME = PERSON_NAME;
+
+},{}],18:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Regex = require("./Regex");
+
+Object.keys(_Regex).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Regex[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Regex[key];
+    }
+  });
+});
+
+},{"./Regex":17}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

@@ -42,8 +42,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 186px;
-    height: 186px;
+    width: 100px;
+    height: 100px;
     outline: 0;
     border: none;
     margin: 0;
@@ -54,9 +54,15 @@
     transform: translate(-50%, -50%);
     background-color: color(blue, 1);
     transition: .2s ease-in-out 0s;
+    &:hover {
+      background-color: color(blue, 2);
+    }
     &__icon {
       color: color(white);
-      @include font-size(48);
+      @include font-size(36);
+      display: inline-block;
+      position: relative;
+      left: 4px;
     }
   }
 }

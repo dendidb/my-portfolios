@@ -11,6 +11,7 @@ import {
   Header,
   HeroBanner,
   Popup,
+  Subscribe,
   Testimonials,
   Footer,
   Blog
@@ -48,6 +49,7 @@ const App = (() => {
       Header.init();
       HeroBanner.init();
       Popup.init();
+      Subscribe.init();
       Testimonials.init();
       Footer.init();
       Blog.init();

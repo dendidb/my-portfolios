@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Elements Sweet Alert
+   ========================================================================== */
+
+// button sweet-alert
+.mr-12 {
+  margin: 0;
+}
+
+// font-size sweet-alert
+.swal2-title {
+  font-size: 28px !important;
+}
+
+.swal2-html-container {
+  font-size: 16px !important;
+}
+
+// box sweet-alert
+.swal2-container.swal2-center>.swal2-popup {
+  height: 320px !important;
+  width: 500px !important;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+}
+
+// icon sweet-alert
+.swal2-success-ring {
+  color: color(success, 1) !important;
+  border: solid 2px color(success, 1) !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  background-color: color(success, 1) !important;
+  border: solid 2px color(success, 1) !important;
+}
+
+.swal2-icon {
+  position: relative;
+  box-sizing: content-box;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  margin-bottom: 18px !important;
+  border-radius: 50%;
+  border-color: color(black);
+  font-family: inherit;
+  line-height: 5em;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// inner-content sweet-alert
+.swal2-title {
+  position: relative;
+  max-width: 100%;
+  padding: 0 !important;
+  margin: 0 0 16px !important;
+  color: color(black) !important;
+  @include font-size(20);
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+}
+
+.swal2-html-container {
+  z-index: 1;
+  justify-content: center;
+  margin: 0 auto 14px !important;
+  padding: 0;
+  max-width: 370px;
+  overflow: auto;
+  color: color(black) !important;
+  @include font-size(18);
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+  @include small {
+    max-width: 380px;
+  }
+}

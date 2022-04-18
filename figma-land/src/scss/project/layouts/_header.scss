@@ -41,7 +41,6 @@
     }
   }
   &__logo {
-    float: left;
     display: block;
     @include remove-tap-highlight;
     position: absolute;
@@ -84,11 +83,14 @@
     @include small {
       margin: 8px 0;
     }
-    &__img {
+    &__el {
       display: block;
       width: auto;
-      height: 60px;
+      height: 72px;
       transition: all .3s ease;
+      .header-on-scroll & {
+        height: 60px;
+      }
       @include medium {
         height: 40px;
       }
@@ -317,6 +319,7 @@
       width: 40px;
       height: 40px;
       text-decoration: none;
+      @include remove-tap-highlight;
       &__el {
         @include font-size(24);
         display: inline-block;

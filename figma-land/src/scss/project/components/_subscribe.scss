@@ -1,0 +1,57 @@
+/* ==========================================================================
+  Components Subscribe
+  ========================================================================== */
+
+.subscribe {
+  padding: 64px 0;
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: left;
+    width: 654px;
+  }
+  &__txt {
+    float: right;
+    width: 544px;
+    display: table;
+    min-height: 496px;
+    padding: 64px;
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &__label {
+    font-weight: fw(bold);
+    margin-bottom: 8px;
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__desc {
+    margin-bottom: 32px;
+  }
+  &__form {
+    &__row {
+      margin-bottom: 0;
+      width: 68%;
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 2.6%;
+      @include small {
+        width: 100%;
+        margin-bottom: 32px;
+        padding-right: 0;
+      }
+    }
+    &__btn {
+      display: inline-block;
+      vertical-align: top;
+      width: 0;
+      @include small {
+        width: 100%;
+      }
+    }
+  }
+}

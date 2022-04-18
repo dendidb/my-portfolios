@@ -6,12 +6,17 @@
 $colors: (
   blue: (
     1: #458ff6,
-    2: #5a98f2,
+    2: #2067ca,
     3: #67c3f3
   ),
+  success: (
+    1: #08ab53,
+    2: #e3f9e9
+  ),
+  danger: #cf000f,
   black: #000,
   black-thin: #444,
-  grey: #7d7987,
+  grey: #f4f4f4,
   white: #fff,
   purple: #1f1534,
   overlay: rgba(#000, 0.7),

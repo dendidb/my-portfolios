@@ -98,7 +98,7 @@
     <div class="container">
       <div class="header__nav">
         <a class="header__logo" href="index.html">
-          <img class="header__logo__img" src="assets/img/logo/figma-land-black.svg" alt="Trafalgar Logo" />
+          <img class="header__logo__el" src="assets/img/logo/figma-land-black.svg" alt="Trafalgar Logo" />
         </a>
         <ul class="header__nav__menu">
           <li class="header__nav__item">
@@ -222,7 +222,7 @@
         <div class="features__video">
           <div class="features__thumbnail">
             <img class="features__thumbnail__el" src="assets/img/dummy/feature-bg.png" alt="Feature Bg" />
-            <button class="features__button js-show-popup" data-video="Video goes here" type="button">
+            <button class="features__button js-show-popup" data-video="https://www.youtube.com/watch?v=xRqFgN3uCKU&amp;ab_channel=AdiHidayatOfficial" type="button">
               <i class="features__button__icon fl-play"></i>
             </button>
           </div>
@@ -250,6 +250,37 @@
       </div>
     </div>
     <!--try-for-free-->
+    <!--subscribe-->
+    <div class="subscribe">
+      <div class="container">
+        <div class="subscribe__wrapper">
+          <div class="subscribe__img">
+            <img class="subscribe__img__el" src="assets/img/dummy/subscribe.svg" alt="Lightning fast prototyping " />
+          </div>
+          <div class="subscribe__txt">
+            <div class="subscribe__txt__align">
+              <h5 class="subscribe__label">At your fingertips</h5>
+              <h3 class="subscribe__title">Lightning fast prototyping </h3>
+              <p class="subscribe__desc"><b>Subscribe to our Newsletter</b><br />Available exclusivery on Figmaland</p>
+              <form class="subscribe__form" action="#" method="POST">
+                <div class="subscribe__form__row">
+                  <!--input-form-->
+                  <div class="fi-row">
+                    <input class="fi-single-line" type="text" id="email" name="email" placeholder="Your email" data-target="alertEmail" autocomplete="off" />
+                    <p class="fi-alert" id="alertEmail" data-req="Email is required!" data-invalid="Email invalid!"></p>
+                  </div>
+                  <!--end-input-form-->
+                </div>
+                <div class="subscribe__form__btn">
+                  <button class="btn btn--subscribe js-alert-subscribe js-subscribe" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-subscribe-->
   </div>
   <!--footer-->
   <div class="footer">
