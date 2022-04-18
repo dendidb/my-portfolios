@@ -14,8 +14,10 @@
   }
   &__title {
     margin-bottom: 16px;
+    @include font-size(48);
   }
   &__desc {
+    @include font-size(24);
     margin-bottom: 0;
   }
   &__body {
@@ -26,6 +28,35 @@
   #{$f}__item {
     float: left;
     width: 33.3333333%;
-    padding: 16px;
+    padding: 12px;
+  }
+  &__video {
+  }
+  &__thumbnail {
+    position: relative;
+    &__el {
+      display: block;
+    }
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 186px;
+    height: 186px;
+    outline: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: color(blue, 1);
+    transition: .2s ease-in-out 0s;
+    &__icon {
+      color: color(white);
+      @include font-size(48);
+    }
   }
 }

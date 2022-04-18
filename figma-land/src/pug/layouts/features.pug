@@ -14,5 +14,14 @@
       each val in features.list
         - data = val;
         include ../components/features-item.pug
+    .features__video
+      .features__thumbnail
+        ='\n'
+        img.features__thumbnail__el(src='assets/img/dummy/feature-bg.png' alt='Feature Bg')/
+        ='\n'
+        button.features__button.js-show-popup(data-video='Video goes here')(type='button')
+          ='\n'
+          i.features__button__icon.fl-play
+          ='\n'
 ='\n'
 //end-features

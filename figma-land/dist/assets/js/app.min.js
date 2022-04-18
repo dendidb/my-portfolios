@@ -42,6 +42,8 @@ var App = function () {
 
       _components.HeroBanner.init();
 
+      _components.Popup.init();
+
       _components.Testimonials.init();
 
       _components.Footer.init();
@@ -72,7 +74,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":9,"./utilities":12}],2:[function(require,module,exports){
+},{"./components":10,"./utilities":13}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -264,7 +266,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":12}],5:[function(require,module,exports){
+},{"../utilities":13}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -339,6 +341,97 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _utilities = require("../utilities");
+
+/* ------------------------------------------------------------------------------
+@name: Popup
+@description: Popup
+--------------------------------------------------------------------------------- */
+// --- utilities
+// --- Popup
+var Popup = function () {
+  // -- handleClickPopup
+  var handleClickPopup = function handleClickPopup() {
+    $('.js-show-popup').on('click', function (e) {
+      var _this = $(e.currentTarget),
+          _embed = _this.attr('data-video'),
+          _parents = _this.parents('body').find('.popup'),
+          _contentItem = '<iframe class="iframe-embed" src="https://www.youtube.com/embed/' + _embed + '?autoplay=1" frameborder="0" allow="autoplay"></iframe>';
+
+      if (_parents.hasClass('show-popup')) {
+        _parents.removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
+      } else {
+        _utilities.Scrolllable.disable();
+
+        _parents.addClass('show-popup');
+
+        _parents.find('.js-result-popup').html(_contentItem);
+      }
+    }); // --- handleHidePopup
+
+    $('.js-hide-popup').on('click', function (e) {
+      if ($('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
+      }
+    }); // --- handleClickBody
+
+    $('body').on('click', function (e) {
+      if ($('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+
+        $('.iframe-embed').remove();
+      }
+    }); // stopPropagation
+
+    $('body').on('click', '.js-show-popup, .popup__body', function (e) {
+      e.stopPropagation();
+    });
+  }; // --- handleKeyupPopup
+
+
+  var handleKeyupPopup = function handleKeyupPopup() {
+    $('body').on('keyup', function (e) {
+      if (e.which == 27 && $('.popup').hasClass('show-popup')) {
+        $('.popup').removeClass('show-popup');
+
+        _utilities.Scrolllable.enable();
+      }
+    });
+  }; // --- init
+
+
+  var init = function init() {
+    handleClickPopup();
+    handleKeyupPopup();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Popup;
+exports["default"] = _default;
+
+},{"../utilities":13}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 /* ------------------------------------------------------------------------------
 @name: Testimonials
 --------------------------------------------------------------------------------- */
@@ -384,7 +477,7 @@ var Testimonials = function () {
 var _default = Testimonials;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -451,7 +544,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":9}],8:[function(require,module,exports){
+},{"./index":10}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -536,7 +629,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -566,6 +659,12 @@ Object.defineProperty(exports, "HeroBanner", {
     return _HeroBanner["default"];
   }
 });
+Object.defineProperty(exports, "Popup", {
+  enumerable: true,
+  get: function get() {
+    return _Popup["default"];
+  }
+});
 Object.defineProperty(exports, "Testimonials", {
   enumerable: true,
   get: function get() {
@@ -593,6 +692,8 @@ var _Header = _interopRequireDefault(require("./Header"));
 
 var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
+var _Popup = _interopRequireDefault(require("./Popup"));
+
 var _Testimonials = _interopRequireDefault(require("./Testimonials"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
@@ -601,7 +702,7 @@ var _Blog = _interopRequireDefault(require("./Blog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Testimonials":6,"./WindowResize":7,"./WindowScroll":8}],10:[function(require,module,exports){
+},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./Testimonials":7,"./WindowResize":8,"./WindowScroll":9}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -647,7 +748,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -681,7 +782,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -714,7 +815,7 @@ var _Scrolllable = _interopRequireDefault(require("./Scrolllable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":10,"./Scrolllable":11,"./isOS":13}],13:[function(require,module,exports){
+},{"./BrowserCheck":11,"./Scrolllable":12,"./isOS":14}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

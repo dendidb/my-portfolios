@@ -3,11 +3,7 @@
   ========================================================================== */
 
 .features {
-  &__item {
-
-  }
   &__card {
-    background-color: salmon;
     padding: 24px;
     text-align: center;
     min-height: 260px;
@@ -19,13 +15,13 @@
       display: block;
     }
   }
-  &__txt {
-
-  }
   &__ttl {
     margin-bottom: 16px;
+    font-weight: fw(bold);
+    @include font-size(20);
   }
   &__dsc {
     margin-bottom: 0;
+    @include font-size(16);
   }
 }

@@ -128,13 +128,17 @@ html(lang='en')
 
   body(class=holdTransitionClass)
 
+    //- Header
     include ../layouts/header.pug
 
     .main-site.main-site--hide.js-main-site
       //- site-content
       block siteContent
-
+    //- Footer
     include ../layouts/footer.pug
+    //- Popup
+    include ../components/popup.pug
+
     ='\n\n'
     if schema.enable
       //schema organization

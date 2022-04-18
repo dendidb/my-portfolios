@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Components Try For Free
+   ========================================================================== */
+
+.try-for-free {
+  padding: 48px 0;
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: right;
+    width: 50%;
+  }
+  &__txt {
+    float: left;
+    width: 50%;
+    display: table;
+    min-height: 347px;
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &__title {
+    margin-bottom: 16px;
+    font-weight: fw(regular);
+    @include font-size(48);
+  }
+  &__desc {
+    margin-bottom: 32px;
+    max-width: 532px;
+  }
+}

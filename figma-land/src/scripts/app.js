@@ -10,6 +10,7 @@ import {
   WindowResize,
   Header,
   HeroBanner,
+  Popup,
   Testimonials,
   Footer,
   Blog
@@ -46,6 +47,7 @@ const App = (() => {
       WindowResize.init();
       Header.init();
       HeroBanner.init();
+      Popup.init();
       Testimonials.init();
       Footer.init();
       Blog.init();

@@ -24,7 +24,7 @@
   .scroll-down & {
     padding: 24px 0;
     transform: translateY(-100%);
-    transition: all .8s ease;
+    transition: all .5s ease;
     @include medium {
       padding: 16px 0;
     }

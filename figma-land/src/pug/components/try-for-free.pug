@@ -1,0 +1,24 @@
+//-------------------------------------------------------------------------------
+  @name: Try For Free
+  -------------------------------------------------------------------------------//
+
+//try-for-free
+.try-for-free
+  .container
+    .try-for-free__wrapper
+      .try-for-free__img
+        ='\n'
+        img.try-for-free__img__el(src='assets/img/dummy/'+tryForFree.img alt=tryForFree.title)/
+        ='\n'
+      .try-for-free__txt
+        .try-for-free__txt__align
+          h3.try-for-free__title
+            | !{tryForFree.title}
+          p.try-for-free__desc
+            | !{tryForFree.desc}
+          .try-for-free__btn
+            ='\n'
+            a.btn.btn--primary(href=tryForFree.button.to) !{tryForFree.button.text}
+            ='\n'
+='\n'
+//try-for-free
