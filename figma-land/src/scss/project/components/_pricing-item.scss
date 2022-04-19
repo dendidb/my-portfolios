@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Components Pricing Item
+========================================================================== */
+
+.pricing {
+  $p: &;
+  padding: 48px 0;
+  text-align: center;
+  &__box {
+    padding: 72px 24px 110px;
+    border-radius: 8px;
+    background-color: color(white);
+    position: relative;
+    @include shadow(16);
+    transition: all .2s ease;
+    &:hover {
+      background-color: color(blue, 1);
+      transform: scale(1.04);
+      // #{$p}__btn {
+      //   background-color: color(white);
+      //   color: color(blue, 1);
+      // }
+    }
+    @include large {
+      padding: 24px 24px 120px;
+    }
+    @include medium {
+      padding: 24px 24px 112px;
+    }
+    @include small {
+      padding: 16px 16px 104px;
+    }
+    &__name {
+      margin-bottom: 16px;
+      @include font-size(24);
+    }
+    &__caption {
+      @include font-size(16);
+      margin-bottom: 24px;
+    }
+    &__number {
+      display: inline-block;
+      vertical-align: middle;
+      width: 64px;
+      &__el {
+        @include font-size(48);
+        font-weight: fw(bold);
+      }
+    }
+    &__txt {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+      &__currency,
+      &__period {
+        margin-bottom: 0;
+      }
+    }
+    #{$p} {
+      &__head {
+        margin-bottom: 24px;
+      }
+      &__body {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &__item {
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &__btn {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        right: 32px;
+        z-index: 1;
+      }
+    }
+  }
+}

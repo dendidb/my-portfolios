@@ -46,6 +46,8 @@ var App = function () {
 
       _components.Subscribe.init();
 
+      _components.PricingCard.init();
+
       _components.Testimonials.init();
 
       _components.Footer.init();
@@ -76,7 +78,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":11,"./utilities":15}],2:[function(require,module,exports){
+},{"./components":12,"./utilities":16}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -268,7 +270,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":15}],5:[function(require,module,exports){
+},{"../utilities":16}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -426,7 +428,68 @@ var Popup = function () {
 var _default = Popup;
 exports["default"] = _default;
 
-},{"../utilities":15}],7:[function(require,module,exports){
+},{"../utilities":16}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+/* ------------------------------------------------------------------------------
+@name: PricingCard
+@description: PricingCard
+--------------------------------------------------------------------------------- */
+// --- PricingCard
+var PricingCard = function () {
+  // --- handleSet
+  var handleSet = function handleSet() {
+    handleCheckHeight();
+  }; // --- handleCheckHeight
+
+
+  var handleCheckHeight = function handleCheckHeight() {
+    if ($(window).width() >= 991.98) {
+      if ($('.pricing__list').hasClass('js-pricing-card')) {
+        var _height = 0;
+        handleResetHeight();
+        $('.js-pricing-card').each(function (i, e) {
+          if (_height < $(e).find('.pricing__box').height()) {
+            _height = $(e).find('.pricing__box').height();
+          }
+        });
+        $('.pricing__box').height(_height);
+      }
+    }
+  }; // --- handleResetHeight
+
+
+  var handleResetHeight = function handleResetHeight() {
+    var _attr = $('.pricing__box').attr('style'); // For some browsers, `attr` is undefined; for others,
+    // `attr` is false.  Check for both.
+
+
+    if (typeof _attr !== 'undefined' && _attr !== false) {
+      $('.pricing__box').removeAttr('style');
+    }
+  }; // --- init
+
+
+  var init = function init() {
+    handleSet();
+  }; // --- return
+
+
+  return {
+    init: init,
+    checkHeight: handleSet
+  };
+}();
+
+var _default = PricingCard;
+exports["default"] = _default;
+
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -499,7 +562,7 @@ var Subscribe = function () {
 var _default = Subscribe;
 exports["default"] = _default;
 
-},{"../utilities":15}],8:[function(require,module,exports){
+},{"../utilities":16}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -552,7 +615,7 @@ var Testimonials = function () {
 var _default = Testimonials;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -601,7 +664,7 @@ var WindowResize = function () {
 
       _index.Footer.destroyAccordion();
 
-      _index.Blog.checkHeight();
+      _index.PricingCard.checkHeight();
     }
   }; // --- init
 
@@ -619,7 +682,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":11}],10:[function(require,module,exports){
+},{"./index":12}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -704,7 +767,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -738,6 +801,12 @@ Object.defineProperty(exports, "Popup", {
   enumerable: true,
   get: function get() {
     return _Popup["default"];
+  }
+});
+Object.defineProperty(exports, "PricingCard", {
+  enumerable: true,
+  get: function get() {
+    return _PricingCard["default"];
   }
 });
 Object.defineProperty(exports, "Subscribe", {
@@ -775,6 +844,8 @@ var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
 var _Subscribe = _interopRequireDefault(require("./Subscribe"));
 
+var _PricingCard = _interopRequireDefault(require("./PricingCard"));
+
 var _Popup = _interopRequireDefault(require("./Popup"));
 
 var _Testimonials = _interopRequireDefault(require("./Testimonials"));
@@ -785,7 +856,7 @@ var _Blog = _interopRequireDefault(require("./Blog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./Subscribe":7,"./Testimonials":8,"./WindowResize":9,"./WindowScroll":10}],12:[function(require,module,exports){
+},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./PricingCard":7,"./Subscribe":8,"./Testimonials":9,"./WindowResize":10,"./WindowScroll":11}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -831,7 +902,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -865,7 +936,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -991,7 +1062,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":18}],15:[function(require,module,exports){
+},{"../variables":19}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1032,7 +1103,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":12,"./Scrolllable":13,"./Validation":14,"./isOS":16}],16:[function(require,module,exports){
+},{"./BrowserCheck":13,"./Scrolllable":14,"./Validation":15,"./isOS":17}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1073,7 +1144,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1098,7 +1169,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1118,6 +1189,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":17}]},{},[1])
+},{"./Regex":18}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

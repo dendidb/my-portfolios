@@ -1828,6 +1828,101 @@ b {
 }
 
 /* ==========================================================================
+   Components Pricing Item
+========================================================================== */
+.pricing {
+  padding: 48px 0;
+  text-align: center;
+}
+.pricing__box {
+  padding: 72px 24px 110px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+     -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.pricing__box:hover {
+  background-color: #458ff6;
+  -webkit-transform: scale(1.04);
+     -moz-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+       -o-transform: scale(1.04);
+          transform: scale(1.04);
+}
+@media only screen and (max-width: 1199.98px) {
+  .pricing__box {
+    padding: 24px 24px 120px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .pricing__box {
+    padding: 24px 24px 112px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .pricing__box {
+    padding: 16px 16px 104px;
+  }
+}
+.pricing__box__name {
+  margin-bottom: 16px;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.pricing__box__caption {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 24px;
+}
+.pricing__box__number {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+}
+.pricing__box__number__el {
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  font-weight: 700;
+}
+.pricing__box__txt {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.pricing__box__txt__currency, .pricing__box__txt__period {
+  margin-bottom: 0;
+}
+.pricing__box .pricing__head {
+  margin-bottom: 24px;
+}
+.pricing__box .pricing__body {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing__box .pricing__body__item {
+  margin-bottom: 24px;
+}
+.pricing__box .pricing__body__item:last-child {
+  margin-bottom: 0;
+}
+.pricing__box .pricing__btn {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  z-index: 1;
+}
+
+/* ==========================================================================
 Components: Partners Item
 ========================================================================== */
 .partners__box {
@@ -1918,7 +2013,6 @@ Components: Input form
 .fi-single-line {
   display: inline-block;
   width: 100%;
-  width: 273px;
   border: 0;
   outline: 0;
   font-size: 1.6rem;
@@ -1932,10 +2026,10 @@ Components: Input form
           border-radius: 40px;
   background-color: transparent;
   padding: 14px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 767.98px) {
   .fi-single-line {
@@ -1944,9 +2038,31 @@ Components: Input form
     width: 100%;
   }
 }
+.fi-single-line:focus {
+  border: 1px solid #458ff6;
+}
 .fi-multiline {
   resize: none;
-  height: 96px;
+  display: inline-block;
+  width: 100%;
+  min-height: 194px;
+  border: 0;
+  outline: 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #000;
+  background-color: #f4f4f4;
+  padding-bottom: 8px;
+  border: 1px solid #e8e8e8;
+  background-color: transparent;
+  padding: 14px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.fi-multiline:focus {
+  border: 1px solid #458ff6;
 }
 .fi-dropdown {
   position: relative;
@@ -2652,33 +2768,24 @@ Components: Input form
    Elements Text Title
   ========================================================================== */
 .text-title {
-  position: relative;
   font-size: 3.6rem;
   line-height: 4.8rem;
   font-weight: 700;
-  padding-bottom: 34px;
-  margin-bottom: 40px;
-}
-@media only screen and (max-width: 1199.98px) {
-  .text-title {
-    padding-bottom: 30px;
-    margin-bottom: 32px;
-  }
 }
 @media only screen and (max-width: 767.98px) {
   .text-title {
     font-size: 2.4rem;
     line-height: 3rem;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
   }
+}
+.text-title--white {
+  color: #fff;
 }
 .text-desc {
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: 300;
   margin-bottom: 0;
-  color: #f4f4f4;
 }
 @media only screen and (max-width: 767.98px) {
   .text-desc {
@@ -2686,20 +2793,8 @@ Components: Input form
     line-height: 2.4rem;
   }
 }
-.text-desc--left {
-  max-width: 400px;
-  margin-bottom: 40px;
-}
-@media only screen and (max-width: 991.98px) {
-  .text-desc--left {
-    max-width: initial;
-    margin-bottom: 32px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .text-desc--left {
-    margin-bottom: 24px;
-  }
+.text-desc--white {
+  color: #fff;
 }
 
 /* ==========================================================================
@@ -3343,10 +3438,7 @@ Components: Input form
   width: 100%;
   padding: 96px 0 104px;
   overflow: hidden;
-  background-image: -webkit-linear-gradient(266.59deg, #67c3f3 -8.57%, #2067ca 82.96%);
-  background-image: -moz-linear-gradient(266.59deg, #67c3f3 -8.57%, #2067ca 82.96%);
-  background-image: -o-linear-gradient(266.59deg, #67c3f3 -8.57%, #2067ca 82.96%);
-  background-image: linear-gradient(183.41deg, #67c3f3 -8.57%, #2067ca 82.96%);
+  background-color: #252b42;
 }
 .footer::after {
   content: "";
@@ -3828,6 +3920,54 @@ Components: Input form
 }
 
 /* ==========================================================================
+   Layouts Contact Us
+   ========================================================================== */
+.contact-us {
+  padding: 48px 0;
+}
+.contact-us__head {
+  max-width: 552px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+@media only screen and (max-width: 991.98px) {
+  .contact-us__head {
+    margin-bottom: 24px;
+  }
+}
+.contact-us__body::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.contact-us__form {
+  padding: 32px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+     -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  float: left;
+  width: 40%;
+}
+.contact-us__form__ttl {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.contact-us__detail {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+     -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  float: right;
+  width: 60%;
+  padding-left: 48px;
+}
+
+/* ==========================================================================
    Layouts Partners
    ========================================================================== */
 .partners {
@@ -3922,6 +4062,36 @@ Components: Input form
     width: 268px;
     padding: 0;
   }
+}
+
+/* ==========================================================================
+   Layouts Pricing
+========================================================================== */
+.pricing {
+  padding: 48px 0;
+  background-color: #252b42;
+}
+.pricing__head {
+  max-width: 552px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+@media only screen and (max-width: 991.98px) {
+  .pricing__head {
+    margin-bottom: 24px;
+  }
+}
+.pricing__title, .pricing__desc {
+  color: #fff;
+}
+.pricing__list::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.pricing .pricing__card {
+  display: inline-block;
+  padding: 24px;
 }
 
 /* ==========================================================================

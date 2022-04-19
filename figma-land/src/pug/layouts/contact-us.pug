@@ -1,0 +1,25 @@
+//-------------------------------------------------------------------------------
+  @name: Contact Us
+  -------------------------------------------------------------------------------//
+
+//contact-us
+.contact-us
+  .container
+    .contact-us__head
+      h3.text-title
+        | !{contactUs.title}
+      p.text-desc
+        | !{contactUs.desc}
+    .contact-us__body
+      .contact-us__form
+        h3.contact-us__form__ttl Contact Us
+        form(action='#' method='POST')
+          each val in contactUs.contactForm
+            - data = val;
+            include ../components/input-form.pug
+      .contact-us__detail
+        .contact-us__sosmed
+
+
+='\n'
+//end-contact-us

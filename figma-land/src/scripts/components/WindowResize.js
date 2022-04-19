@@ -4,7 +4,12 @@
 --------------------------------------------------------------------------------- */
 
 // --- components
-import { Header, Footer, Blog } from 'components';
+import {
+  Header,
+  Footer,
+  Blog,
+  PricingCard,
+} from 'components';
 
 // --- WindowResize
 const WindowResize = (() => {
@@ -37,7 +42,7 @@ const WindowResize = (() => {
       Header.destroyMobileMenu();
       Footer.footerSticky();
       Footer.destroyAccordion();
-      Blog.checkHeight();
+      PricingCard.checkHeight();
     }
 
   }

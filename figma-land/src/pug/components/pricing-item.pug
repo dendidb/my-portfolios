@@ -1,0 +1,35 @@
+//-------------------------------------------------------------------------------
+  @name: Pricing Item
+  -------------------------------------------------------------------------------//
+
+//pricing-item
+.pricing__card
+  .pricing__box
+    .pricing__head
+      h3.pricing__box__name
+        | !{val.name}
+      p.pricing__box__caption
+        | !{val.caption}
+      ='\n'
+      .pricing__box__number
+        ='\n'
+        span.pricing__box__number__el
+          | !{val.number}
+      .pricing__box__txt
+        ='\n'
+        p.pricing__box__txt__currency $
+        ='\n'
+        p.pricing__box__txt__period
+          | !{val.period}
+      ='\n'
+    ul.pricing__body
+      each item in val.list
+        - data = val;
+        li.pricing__body__item
+         | !{item.text}
+      .pricing__btn
+        ='\n'
+        a.btn.btn--primary(href='#order-now') Order Now
+        ='\n'
+='\n'
+//end-pricing-item

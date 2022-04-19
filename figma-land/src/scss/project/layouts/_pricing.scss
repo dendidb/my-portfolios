@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Layouts Pricing
+========================================================================== */
+
+.pricing {
+  $p: &;
+  padding: 48px 0;
+  background-color: color(blue, 4);
+  &__head {
+    max-width: 552px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__title,
+  &__desc {
+    color: color(white);
+  }
+  &__list {
+    @include clearfix;
+  }
+  #{$p}__card {
+    // float: left;
+    // width: 33.3333333%;
+    // padding: 16px;
+    display: inline-block;
+    padding: 24px;
+  }
+}

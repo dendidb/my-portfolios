@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Layouts Contact Us
+   ========================================================================== */
+
+.contact-us {
+  padding: 48px 0;
+  &__head {
+    max-width: 552px;
+    margin: 0 auto 48px;
+    text-align: center;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__body {
+    @include clearfix;
+  }
+  &__form {
+    padding: 32px;
+    @include shadow(16);
+    border-radius: 8px;
+    float: left;
+    width: 40%;
+    &__ttl {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+  &__detail {
+    @include shadow(16);
+    border-radius: 8px;
+    float: right;
+    width: 60%;
+    padding-left: 48px;
+  }
+}

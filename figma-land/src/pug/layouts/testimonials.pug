@@ -9,10 +9,9 @@
       .testimonials__head
         h3.testimonials__title
           | !{testimonials.title}
-      .testimonials__body.js-testimonials
+      .testimonials__body
         each val in testimonials.list
-          -
-            data = val;
+          - data = val;
           include ../components/testimonials-item.pug
       .testimonials__btn
         ='\n'

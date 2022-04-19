@@ -1,0 +1,61 @@
+-
+  contactUs = {
+    title: 'Contact Us',
+    desc: 'Most calendars are designed for teams. Slate is designed for freelancers',
+    contactForm: [
+      {
+        placeholder: 'Your Name',
+        class: 'fi-single-line',
+        type: 'text',
+        name: 'name',
+        id: 'name',
+        required: 'Name is required!',
+        target: 'alertName'
+      },
+      {
+        placeholder: 'Your Email',
+        class: 'fi-single-line',
+        type: 'text',
+        name: 'email',
+        id: 'email',
+        invalid: 'Email invalid!',
+        required: 'Email is required!',
+        target: 'alertEmail'
+      },
+      {
+        placeholder: 'Your Message',
+        class: 'fi-multiline',
+        type: 'text',
+        name: 'message',
+        id: 'message',
+        required: 'Message is required!',
+        target: 'alertMessage'
+      }
+    ],
+    //- contactDetail: [
+    //-     {
+    //-       iconClass: 'location',
+    //-       text: '6386 Spring St undefined Anchorage,Georgia 12473 United States'
+    //-     },
+    //-     {
+    //-       iconClass: 'phone',
+    //-       text: '(843) 555-0130'
+    //-     },
+    //-     {
+    //-       iconClass: 'email',
+    //-       text: 'willie.jennings@example.com'
+    //-     }
+    //-   ]
+    //- sosmed: [
+    //-   {
+    //-     iconClass: 'twitter'
+    //-   },
+    //-   {
+    //-     iconClass: 'facebook'
+    //-   },
+    //-   {
+    //-     iconClass: 'linked-in'
+    //-   }
+    //- ];
+  }
+include ../../layouts/contact-us.pug
