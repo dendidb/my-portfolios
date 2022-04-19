@@ -237,7 +237,7 @@
           color: color(white);
         }
         &:hover {
-          color: color(blue, 1);
+          color: color(black);
         }
       }
       @include medium {
@@ -289,6 +289,7 @@
       width: 100%;
     }
     @include small {
+      padding-left: 0;
       top: 400px;
     }
     &__item {
@@ -338,7 +339,7 @@
           }
         }
         &:hover {
-          transform: translateY(-2px);
+          transform: scale(1.2);
           &.fl-facebook {
             color: color(social-media, facebook);
           }

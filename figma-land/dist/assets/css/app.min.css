@@ -3177,7 +3177,7 @@ Components: Input form
   }
 }
 .header-on-scroll .header__nav__link:hover {
-  color: #458ff6;
+  color: #000;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__link {
@@ -3246,6 +3246,7 @@ Components: Input form
 }
 @media only screen and (max-width: 767.98px) {
   .header__sosmed {
+    padding-left: 0;
     top: 400px;
   }
 }
@@ -3369,11 +3370,11 @@ Components: Input form
   }
 }
 .header__sosmed__link__el:hover {
-  -webkit-transform: translateY(-2px);
-     -moz-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-       -o-transform: translateY(-2px);
-          transform: translateY(-2px);
+  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .header__sosmed__link__el:hover.fl-facebook {
   color: #1877f2;
@@ -3927,6 +3928,7 @@ Components: Input form
    ========================================================================== */
 .contact-us {
   padding: 48px 0;
+  overflow: hidden;
 }
 .contact-us__head {
   max-width: 552px;
@@ -3957,6 +3959,12 @@ Components: Input form
      -moz-box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
 }
+@media only screen and (max-width: 767.98px) {
+  .contact-us__form {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
 .contact-us__form__ttl {
   text-align: center;
   margin-bottom: 24px;
@@ -3968,6 +3976,12 @@ Components: Input form
   float: right;
   padding: 24px 24px 24px 48px;
   width: 60%;
+}
+@media only screen and (max-width: 767.98px) {
+  .contact-us__detail {
+    width: 100%;
+    padding: 0;
+  }
 }
 .contact-us__detail__wrapper {
   margin-bottom: 24px;
@@ -3982,6 +3996,16 @@ Components: Input form
   width: 33.3333333%;
   text-align: center;
 }
+@media only screen and (max-width: 767.98px) {
+  .contact-us__box {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  .contact-us__box:last-child {
+    margin-bottom: 0;
+  }
+}
 .contact-us__box__img {
   margin-bottom: 6px;
 }
@@ -3992,6 +4016,11 @@ Components: Input form
   height: 24px;
   display: block;
   text-align: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .contact-us__box__img__el {
+    margin: 0;
+  }
 }
 .contact-us__box__txt__el {
   margin-bottom: 0;
@@ -4004,6 +4033,11 @@ Components: Input form
   display: block;
   width: 620px;
   height: 320px;
+}
+@media only screen and (max-width: 991.98px) {
+  .contact-us__map-embed iframe {
+    width: 100%;
+  }
 }
 .contact-us__sosmed__list {
   list-style: none;
@@ -4019,6 +4053,11 @@ Components: Input form
 }
 .contact-us__sosmed__link {
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .contact-us__sosmed__icon {
   font-size: 2.4rem;
