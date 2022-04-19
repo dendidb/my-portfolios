@@ -32,30 +32,33 @@
         target: 'alertMessage'
       }
     ],
-    //- contactDetail: [
-    //-     {
-    //-       iconClass: 'location',
-    //-       text: '6386 Spring St undefined Anchorage,Georgia 12473 United States'
-    //-     },
-    //-     {
-    //-       iconClass: 'phone',
-    //-       text: '(843) 555-0130'
-    //-     },
-    //-     {
-    //-       iconClass: 'email',
-    //-       text: 'willie.jennings@example.com'
-    //-     }
-    //-   ]
-    //- sosmed: [
-    //-   {
-    //-     iconClass: 'twitter'
-    //-   },
-    //-   {
-    //-     iconClass: 'facebook'
-    //-   },
-    //-   {
-    //-     iconClass: 'linked-in'
-    //-   }
-    //- ];
+    contactDetail: [
+        {
+          iconClass: 'location',
+          text: '6386 Spring St undefined Anchorage,Georgia 12473 United States'
+        },
+        {
+          iconClass: 'phone',
+          text: '(843) 555-0130'
+        },
+        {
+          iconClass: 'envelope',
+          text: 'willie.jennings@example.com'
+        }
+      ],
+    sosmed: [
+      {
+        iconClass: 'twitter',
+        to: '#twitter'
+      },
+      {
+        iconClass: 'facebook',
+        to: '#facebook'
+      },
+      {
+        iconClass: 'linked-in',
+        to: '#linked-in'
+      }
+    ]
   }
 include ../../layouts/contact-us.pug

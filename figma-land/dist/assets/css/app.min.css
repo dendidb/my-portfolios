@@ -2025,7 +2025,7 @@ Components: Input form
      -moz-border-radius: 40px;
           border-radius: 40px;
   background-color: transparent;
-  padding: 14px;
+  padding: 18px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -3945,26 +3945,77 @@ Components: Input form
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
      -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
+  -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
   float: left;
   width: 40%;
+  -webkit-box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+     -moz-box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
 }
 .contact-us__form__ttl {
   text-align: center;
   margin-bottom: 24px;
 }
 .contact-us__detail {
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-     -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
   float: right;
+  padding: 24px 24px 24px 48px;
   width: 60%;
-  padding-left: 48px;
+}
+.contact-us__detail__wrapper {
+  margin-bottom: 24px;
+}
+.contact-us__detail__wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.contact-us__box {
+  float: left;
+  width: 33.3333333%;
+  text-align: center;
+}
+.contact-us__box__img {
+  margin-bottom: 6px;
+}
+.contact-us__box__img__el {
+  color: #458ff6;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  display: block;
+  text-align: center;
+}
+.contact-us__box__txt__el {
+  margin-bottom: 0;
+}
+.contact-us__map-embed {
+  margin-bottom: 24px;
+}
+.contact-us__map-embed iframe {
+  margin: 0 auto;
+  display: block;
+  width: 620px;
+  height: 320px;
+}
+.contact-us__sosmed__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-us__sosmed__item {
+  display: inline-block;
+  margin-right: 32px;
+}
+.contact-us__sosmed__item:last-child {
+  margin-right: 0;
+}
+.contact-us__sosmed__link {
+  text-decoration: none;
 }
 
 /* ==========================================================================

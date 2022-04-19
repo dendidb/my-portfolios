@@ -18,8 +18,28 @@
             - data = val;
             include ../components/input-form.pug
       .contact-us__detail
+        .contact-us__detail__wrapper
+          each val in contactUs.contactDetail
+            - data = val;
+            .contact-us__box
+              .contact-us__box__img
+                ='\n'
+                i.contact-us__box__img__el(class='fl-'+val.iconClass)
+                ='\n'
+              .contact-us__box__txt
+                p.contact-us__box__txt__el
+                  | !{val.text}
+        .contact-us__map-embed
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11503367545!2d-122.18118259455991!3d37.402720918741856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20California%2C%20Amerika%20Serikat!5e0!3m2!1sid!2sid!4v1650358034642!5m2!1sid!2sid' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
         .contact-us__sosmed
-
-
+          ul.contact-us__sosmed__list
+            each val in contactUs.sosmed
+              - data = val;
+              li.contact-us__sosmed__item
+                ='\n'
+                a.contact-us__sosmed__link(href=val.to)
+                  ='\n'
+                  i.contact-us__sosmed__icon(class='fl-'+val.iconClass)
+                  ='\n'
 ='\n'
 //end-contact-us

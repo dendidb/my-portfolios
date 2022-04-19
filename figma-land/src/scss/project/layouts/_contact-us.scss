@@ -18,19 +18,70 @@
   &__form {
     padding: 32px;
     @include shadow(16);
-    border-radius: 8px;
+    border-radius: 20px;
     float: left;
     width: 40%;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
     &__ttl {
       text-align: center;
       margin-bottom: 24px;
     }
   }
   &__detail {
-    @include shadow(16);
     border-radius: 8px;
     float: right;
+    padding: 24px 24px 24px 48px;
     width: 60%;
-    padding-left: 48px;
+    &__wrapper {
+      @include clearfix;
+      margin-bottom: 24px;
+    }
+  }
+  &__box {
+    float: left;
+    width: 33.3333333%;
+    text-align: center;
+    &__img {
+      margin-bottom: 6px;
+      &__el {
+        color: color(blue, 1);
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        display: block;
+        text-align: center;
+      }
+    }
+    &__txt {
+      &__el {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__map-embed {
+    margin-bottom: 24px;
+    iframe {
+      margin: 0 auto;
+      display: block;
+      width: 620px;
+      height: 320px;
+    }
+  }
+  &__sosmed {
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    &__item {
+      display: inline-block;
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      text-decoration: none;
+    }
   }
 }
