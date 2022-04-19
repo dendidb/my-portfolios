@@ -2563,6 +2563,17 @@ Components: Input form
   color: #458ff6;
   background-color: transparent;
 }
+.btn--block {
+  width: 100%;
+  background-color: #458ff6;
+  border-color: #458ff6;
+  color: #fff;
+  min-width: 140px;
+}
+.btn--block:hover {
+  color: #458ff6;
+  background-color: transparent;
+}
 
 /* ==========================================================================
    Elements Button Forward
@@ -3974,7 +3985,7 @@ Components: Input form
      -moz-border-radius: 8px;
           border-radius: 8px;
   float: right;
-  padding: 24px 24px 24px 48px;
+  padding: 32px 32px 32px 48px;
   width: 60%;
 }
 @media only screen and (max-width: 767.98px) {
@@ -4031,8 +4042,8 @@ Components: Input form
 .contact-us__map-embed iframe {
   margin: 0 auto;
   display: block;
-  width: 620px;
-  height: 320px;
+  width: 624px;
+  height: 380px;
 }
 @media only screen and (max-width: 991.98px) {
   .contact-us__map-embed iframe {

@@ -17,6 +17,10 @@
           each val in contactUs.contactForm
             - data = val;
             include ../components/input-form.pug
+          .contact-us__form__btn
+            ='\n'
+            button.btn.btn--block(type='submit') Send
+            ='\n'
       .contact-us__detail
         .contact-us__detail__wrapper
           each val in contactUs.contactDetail

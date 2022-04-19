@@ -35,7 +35,7 @@
   &__detail {
     border-radius: 8px;
     float: right;
-    padding: 24px 24px 24px 48px;
+    padding: 32px 32px 32px 48px;
     width: 60%;
     @include small {
       width: 100%;
@@ -83,8 +83,8 @@
     iframe {
       margin: 0 auto;
       display: block;
-      width: 620px;
-      height: 320px;
+      width: 624px;
+      height: 380px;
       @include medium {
         width: 100%;
       }

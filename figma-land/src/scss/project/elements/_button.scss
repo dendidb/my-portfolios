@@ -61,4 +61,15 @@
       background-color: transparent;
     }
   }
+  &--block {
+    width: 100%;
+    background-color: color(blue, 1);
+    border-color: color(blue, 1);
+    color: color(white);
+    min-width: 140px;
+    &:hover {
+      color: color(blue, 1);
+      background-color: transparent;
+    }
+  }
 }
