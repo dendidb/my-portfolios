@@ -1828,6 +1828,33 @@ b {
 }
 
 /* ==========================================================================
+Components: Partners Item
+========================================================================== */
+.partners__box {
+  padding: 24px;
+  min-height: 180px;
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__box {
+    min-height: 160px;
+  }
+}
+.partners__name {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__name {
+    margin-bottom: 8px;
+  }
+}
+.partners__img__el {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
 Components: Input form
 ========================================================================== */
 .fi-row {
@@ -1903,6 +1930,7 @@ Components: Input form
   .fi-single-line {
     font-size: 1.6rem;
     line-height: 2.4rem;
+    width: 100%;
   }
 }
 .fi-multiline {
@@ -2248,12 +2276,34 @@ Components: Input form
   float: left;
   width: 654px;
 }
+@media only screen and (max-width: 991.98px) {
+  .subscribe__img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__img {
+    width: 100%;
+  }
+}
 .subscribe__txt {
   float: right;
   width: 544px;
   display: table;
   min-height: 496px;
   padding: 64px;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__txt {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .subscribe__txt {
+    width: 100%;
+    padding: 0;
+    min-height: initial;
+  }
 }
 .subscribe__txt__align {
   display: table-cell;
@@ -2309,11 +2359,21 @@ Components: Input form
   float: right;
   width: 50%;
 }
+@media only screen and (max-width: 767.98px) {
+  .try-for-free__img {
+    width: 100%;
+  }
+}
 .try-for-free__txt {
   float: left;
   width: 50%;
   display: table;
   min-height: 347px;
+}
+@media only screen and (max-width: 767.98px) {
+  .try-for-free__txt {
+    width: 100%;
+  }
 }
 .try-for-free__txt__align {
   display: table-cell;
@@ -2932,6 +2992,13 @@ Components: Input form
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  z-index: 6;
+}
+@media only screen and (max-width: 767.98px) {
+  .header__logo {
+    left: 60px;
+    top: 20px;
+  }
 }
 .header__logo::before {
   content: "";
@@ -2967,20 +3034,6 @@ Components: Input form
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-@media only screen and (max-width: 991.98px) {
-  .header__logo {
-    position: relative;
-    margin: 8px 0;
-    z-index: 9;
-    left: 44px;
-    top: 16px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .header__logo {
-    margin: 8px 0;
-  }
-}
 .header__logo__el {
   display: block;
   width: auto;
@@ -2991,7 +3044,7 @@ Components: Input form
   transition: all 0.3s ease;
 }
 .header-on-scroll .header__logo__el {
-  height: 60px;
+  height: 50px;
 }
 @media only screen and (max-width: 991.98px) {
   .header__logo__el {
@@ -3010,28 +3063,6 @@ Components: Input form
   .header__nav {
     margin-right: -12px;
   }
-  .header__nav::before {
-    content: "";
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 6;
-    background-color: #fff;
-    -webkit-transition: all 0.5s ease 0.65s;
-    -o-transition: all 0.5s ease 0.65s;
-    -moz-transition: all 0.5s ease 0.65s;
-    transition: all 0.5s ease 0.65s;
-  }
-  .show-menu .header__nav::before {
-    opacity: 1;
-    -webkit-transition-delay: 0.1s;
-       -moz-transition-delay: 0.1s;
-         -o-transition-delay: 0.1s;
-            transition-delay: 0.1s;
-  }
   .header__nav::after {
     content: "";
     position: fixed;
@@ -3049,7 +3080,7 @@ Components: Input form
          -o-transform: scale(0);
             transform: scale(0);
     background-position: center bottom;
-    background-color: purple;
+    background-color: #458ff6;
     -webkit-transition: all 0.6s ease 0.4s;
     -o-transition: all 0.6s ease 0.4s;
     -moz-transition: all 0.6s ease 0.4s;
@@ -3469,6 +3500,9 @@ Components: Input form
   .header .burger-menu {
     display: block;
     float: right;
+  }
+  .show-menu .header .burger-menu__bar {
+    background-color: #fff;
   }
   .show-menu .header .burger-menu__bar:nth-child(1) {
     -webkit-transform: rotate(135deg) translate(5px, -5px);
@@ -4001,6 +4035,94 @@ Components: Input form
 }
 
 /* ==========================================================================
+   Layouts Partners
+   ========================================================================== */
+.partners {
+  padding: 48px 0;
+}
+.partners__head {
+  text-align: center;
+  max-width: 552px;
+  margin: 0 auto 48px;
+}
+@media only screen and (max-width: 991.98px) {
+  .partners__head {
+    margin-bottom: 24px;
+  }
+}
+.partners__title {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 991.98px) {
+  .partners__title {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .partners__desc {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__desc {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+.partners__body {
+  text-align: center;
+}
+.partners__body::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__body {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+  .partners__body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+.partners .partners__item {
+  float: left;
+  width: 25%;
+  border: solid 1px #dfdfdf;
+}
+@media only screen and (max-width: 767.98px) {
+  .partners .partners__item {
+    float: none;
+    display: inline-block;
+    margin-right: 24px;
+    width: 268px;
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
    Layouts Features
   ========================================================================== */
 .features {
@@ -4038,6 +4160,16 @@ Components: Input form
   float: left;
   width: 33.3333333%;
   padding: 12px;
+}
+@media only screen and (max-width: 991.98px) {
+  .features .features__item {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .features .features__item {
+    width: 100%;
+  }
 }
 .features__thumbnail {
   position: relative;

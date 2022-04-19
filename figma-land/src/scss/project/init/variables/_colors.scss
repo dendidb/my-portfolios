@@ -16,7 +16,10 @@ $colors: (
   danger: #cf000f,
   black: #000,
   black-thin: #444,
-  grey: #f4f4f4,
+  grey: (
+    1: #dfdfdf,
+    2: #f4f4f4,
+  ),
   white: #fff,
   purple: #1f1534,
   overlay: rgba(#000, 0.7),

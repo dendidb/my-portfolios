@@ -6,6 +6,7 @@
   dataFooter = {
     logoSrc: 'alivio-white.svg',
     logoAlt: 'Alivio Logo',
+    logoTo: '#why-alivio',
     menu: [
       {
         to: '#why-alivio',
@@ -31,7 +32,7 @@
   .container
     .footer__wrapper
       ='\n'
-      a.footer__logo(href='#home')
+      a.footer__logo(href=dataFooter.logoTo)
         ='\n'
         img.footer__logo__el(src='assets/img/logo/'+dataFooter.logoSrc alt=dataFooter.logoAlt)/
         ='\n'

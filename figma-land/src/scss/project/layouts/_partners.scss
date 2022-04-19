@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Layouts Partners
+   ========================================================================== */
+
+.partners {
+  padding: 48px 0;
+  $p: &;
+  &__head {
+    text-align: center;
+    max-width: 552px;
+    margin: 0 auto 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    @include font-size(24);
+    @include medium {
+      @include font-size(18);
+    }
+    @include small {
+      @include font-size(16);
+    }
+  }
+  &__desc {
+    @include medium {
+      @include font-size(24);
+    }
+    @include small {
+      @include font-size(16);
+    }
+  }
+  &__body {
+    @include clearfix;
+    text-align: center;
+    @include small {
+      @include scroll('x', 'touch', 'hide');
+      white-space: nowrap;
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-right: 24px;
+      padding-left: 24px;
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+  }
+  #{$p}__item {
+    float: left;
+    width: 25%;
+    border: solid 1px color(grey, 1);
+    @include small {
+      float: none;
+      display: inline-block;
+      margin-right: 24px;
+      width: 268px;
+      padding: 0;
+    }
+  }
+}

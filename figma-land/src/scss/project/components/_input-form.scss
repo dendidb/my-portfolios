@@ -62,19 +62,16 @@ Components: Input form
     outline: 0;
     @include font-size(16);
     color: color(black);
-    background-color: color(grey);
+    background-color: color(grey, 2);
     padding-bottom: 8px;
     border: 1px solid #e8e8e8;
     border-radius: 40px;
     background-color: transparent;
     padding: 14px;
-    // width: 42%;
     transition: all .3s ease;
     @include small {
       @include font-size(16);
-    }
-    @include retina {
-      // @include font-size(12);
+      width: 100%;
     }
   }
   &-multiline {
@@ -139,7 +136,7 @@ Components: Input form
       @include remove-tap-highlight;
       transition: all 0.3s ease;
       &:hover {
-        background-color: color(grey);
+        background-color: color(grey, 2);
       }
     }
     &--show {

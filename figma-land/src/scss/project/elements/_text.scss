@@ -50,7 +50,7 @@
     @include font-size(18);
     font-weight: fw(light);
     margin-bottom: 0;
-    color: color(grey);
+    color: color(grey, 2);
     @include small {
       @include font-size(16);
     }

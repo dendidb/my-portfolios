@@ -1,0 +1,18 @@
+//-------------------------------------------------------------------------------
+  @name: Partners
+  -------------------------------------------------------------------------------//
+
+//partners
+.partners
+  .container
+    .partners__head
+      h3.partners__title
+        | !{partners.title}
+      p.partners__desc
+        | !{partners.desc}
+    .partners__body
+      each val in partners.list
+        - data = val;
+        include ../components/partners-item.pug
+='\n'
+//partners

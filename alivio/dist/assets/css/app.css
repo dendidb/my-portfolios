@@ -2411,6 +2411,11 @@ Layout: Footer
 .footer__logo {
   padding-bottom: 60px;
   display: inline-block;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media only screen and (max-width: 767.98px) {
   .footer__logo {

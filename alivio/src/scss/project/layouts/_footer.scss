@@ -23,6 +23,7 @@ Layout: Footer
   &__logo {
     padding-bottom: 60px;
     display: inline-block;
+    @include remove-tap-highlight;
     @include small {
       padding-bottom: 52px;
     }

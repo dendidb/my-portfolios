@@ -1,0 +1,15 @@
+//-------------------------------------------------------------------------------
+  @name: Partners Item
+  -------------------------------------------------------------------------------//
+
+//partners-item
+.partners__item
+  .partners__box
+    h5.partners__name
+      | !{val.name}
+    .partners__img
+      ='\n'
+      img.partners__img__el(src='assets/img/logo/'+val.img alt=val.title)/
+      ='\n'
+='\n'
+//end-partners-item

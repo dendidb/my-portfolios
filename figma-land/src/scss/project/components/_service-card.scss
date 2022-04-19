@@ -65,7 +65,7 @@
     @include font-size(16);
     font-weight: fw(light);
     margin-bottom: 0;
-    color: color(grey);
+    color: color(grey, 2);
     @include multiline-ellipsis(3);
   }
 }
