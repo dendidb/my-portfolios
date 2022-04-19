@@ -83,5 +83,22 @@
     &__link {
       text-decoration: none;
     }
+    &__icon {
+      @include font-size(24);
+      display: inline-block;
+      transition: all .3s ease;
+      &:hover {
+        transform: scale(1.2);
+        &.fl-twitter {
+          color: color(social-media, twitter);
+        }
+        &.fl-facebook {
+          color: color(social-media, facebook);
+        }
+        &.fl-linked-in {
+          color: color(social-media, linked-in);
+        }
+      }
+    }
   }
 }

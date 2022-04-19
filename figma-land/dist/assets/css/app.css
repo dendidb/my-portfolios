@@ -3381,6 +3381,9 @@ Components: Input form
 .header__sosmed__link__el:hover.fl-twitter {
   color: #1da1f2;
 }
+.header__sosmed__link__el:hover.fl-linked-in {
+  color: #0077b5;
+}
 .header .burger-menu {
   display: none;
 }
@@ -4016,6 +4019,31 @@ Components: Input form
 }
 .contact-us__sosmed__link {
   text-decoration: none;
+}
+.contact-us__sosmed__icon {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.contact-us__sosmed__icon:hover {
+  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.contact-us__sosmed__icon:hover.fl-twitter {
+  color: #1da1f2;
+}
+.contact-us__sosmed__icon:hover.fl-facebook {
+  color: #1877f2;
+}
+.contact-us__sosmed__icon:hover.fl-linked-in {
+  color: #0077b5;
 }
 
 /* ==========================================================================
