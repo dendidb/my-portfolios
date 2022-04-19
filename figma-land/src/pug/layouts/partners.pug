@@ -14,5 +14,10 @@
       each val in partners.list
         - data = val;
         include ../components/partners-item.pug
+    .partners__btn
+      ='\n'
+      a.btn.btn--primary(href=partners.button.to)
+       | !{partners.button.text}
+      ='\n'
 ='\n'
 //partners

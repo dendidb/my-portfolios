@@ -3,9 +3,15 @@ Components: Partners Item
 ========================================================================== */
 
 .partners {
+  $p: &;
   &__box {
     padding: 24px;
     min-height: 180px;
+    &:hover {
+      #{$p}__img__el {
+        transform: scale(1.06);
+      }
+    }
     @include small {
       min-height: 160px;
     }
@@ -21,6 +27,7 @@ Components: Partners Item
     &__el {
       display: block;
       margin: 0 auto;
+      transition: all .3s ease;
     }
   }
 }
