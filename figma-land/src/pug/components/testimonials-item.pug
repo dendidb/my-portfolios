@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------
-  @name: Testimonials
+  @name: Testimonials Item
   -------------------------------------------------------------------------------//
 
 //testimonials-item
@@ -10,8 +10,12 @@
       img.testimonials__avatar__img(src='assets/img/dummy/'+data.img alt=data.name)/
       ='\n'
     .testimonials__txt
-      h3.testimonials__customer__name !{data.name}
-      p.testimonials__customer__position !{data.position}
+      h3.testimonials__customer__name
+        | !{data.name}
+      p.testimonials__customer__position
+        | !{data.position}
   .testimonials__desc
-    p.testimonials__desc__txt !{data.desc}
+    p.testimonials__desc__txt
+      | !{data.desc}
 ='\n'
+//end-testimonials-item

@@ -7,12 +7,17 @@
   .container
     .testimonials__box
       .testimonials__head
-        h3.text-title.text-title--white
-          | !{data.title}
+        h3.testimonials__title
+          | !{testimonials.title}
       .testimonials__body.js-testimonials
-        each val in data.list
+        each val in testimonials.list
           -
             data = val;
           include ../components/testimonials-item.pug
+      .testimonials__btn
+        ='\n'
+        a.btn.btn--primary(href=testimonials.button.to)
+          | !{testimonials.button.text}
+        ='\n'
 ='\n'
 //end-testimonials
