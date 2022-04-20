@@ -2520,13 +2520,18 @@ Components: Input form
   font-weight: 700;
 }
 .btn--primary {
-  background-color: #458ff6;
   color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2067ca), to(#458ff6));
+  background-image: -webkit-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -moz-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -o-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: linear-gradient(to right, #2067ca 50%, #458ff6);
+  -moz-background-size: 202% 2px;
+       background-size: 202% 2px;
+  background-position: 60% center;
 }
 .btn--primary:hover {
-  background-color: transparent;
-  border-color: #458ff6;
-  color: #458ff6;
+  background-position: left center;
 }
 .btn--secondary {
   background-color: transparent;
@@ -2894,45 +2899,11 @@ Components: Input form
   left: 50%;
   z-index: 6;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .header__logo {
     left: 60px;
     top: 20px;
   }
-}
-.header__logo::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  -moz-background-size: contain;
-       background-size: contain;
-  background-position: center center;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.header__logo::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -moz-background-size: contain;
-       background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .header__logo__el {
   display: block;
@@ -4304,12 +4275,8 @@ Components: Input form
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 42%;
+  left: 46%;
   background-color: #458ff6;
   -webkit-transition: 0.2s ease-in-out 0s;
   -o-transition: 0.2s ease-in-out 0s;
@@ -4317,6 +4284,11 @@ Components: Input form
   transition: 0.2s ease-in-out 0s;
 }
 .features__button:hover {
+  -webkit-transform: scale(0.88);
+     -moz-transform: scale(0.88);
+      -ms-transform: scale(0.88);
+       -o-transform: scale(0.88);
+          transform: scale(0.88);
   background-color: #2067ca;
 }
 .features__button__icon {
