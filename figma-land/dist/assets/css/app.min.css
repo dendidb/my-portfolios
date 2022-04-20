@@ -3362,6 +3362,15 @@ Components: Input form
       -ms-user-select: none;
           user-select: none;
 }
+.header__sosmed__link.fl-facebook {
+  width: 40px;
+  height: 30px;
+  padding: 4px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  display: inline-block;
+}
 .header__sosmed__link__el {
   font-size: 2.4rem;
   line-height: 3rem;
@@ -3389,11 +3398,14 @@ Components: Input form
 }
 .header__sosmed__link__el:hover.fl-facebook {
   color: #1877f2;
+  background-color: #fff;
 }
 .header__sosmed__link__el:hover.fl-twitter {
+  background-color: #fff;
   color: #1da1f2;
 }
 .header__sosmed__link__el:hover.fl-linked-in {
+  background-color: #fff;
   color: #0077b5;
 }
 .header .burger-menu {
@@ -4042,8 +4054,7 @@ Components: Input form
 .contact-us__map-embed iframe {
   margin: 0 auto;
   display: block;
-  width: 624px;
-  height: 380px;
+  width: 100%;
 }
 @media only screen and (max-width: 991.98px) {
   .contact-us__map-embed iframe {
@@ -4057,7 +4068,7 @@ Components: Input form
 }
 .contact-us__sosmed__item {
   display: inline-block;
-  margin-right: 32px;
+  margin-right: 24px;
 }
 .contact-us__sosmed__item:last-child {
   margin-right: 0;

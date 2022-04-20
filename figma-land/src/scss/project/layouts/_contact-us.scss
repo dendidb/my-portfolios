@@ -83,8 +83,9 @@
     iframe {
       margin: 0 auto;
       display: block;
-      width: 624px;
-      height: 380px;
+      // width: 624px;
+      // height: 380px;
+      width: 100%;
       @include medium {
         width: 100%;
       }
@@ -98,7 +99,7 @@
     }
     &__item {
       display: inline-block;
-      margin-right: 32px;
+      margin-right: 24px;
       &:last-child {
         margin-right: 0;
       }

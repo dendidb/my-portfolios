@@ -12,6 +12,7 @@ import {
   HeroBanner,
   Popup,
   Subscribe,
+  ContactUs,
   PricingCard,
   Testimonials,
   Footer,
@@ -51,6 +52,7 @@ const App = (() => {
       HeroBanner.init();
       Popup.init();
       Subscribe.init();
+      ContactUs.init();
       PricingCard.init();
       Testimonials.init();
       Footer.init();

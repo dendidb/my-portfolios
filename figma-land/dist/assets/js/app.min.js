@@ -46,6 +46,8 @@ var App = function () {
 
       _components.Subscribe.init();
 
+      _components.ContactUs.init();
+
       _components.PricingCard.init();
 
       _components.Testimonials.init();
@@ -78,7 +80,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":12,"./utilities":16}],2:[function(require,module,exports){
+},{"./components":13,"./utilities":17}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -127,6 +129,89 @@ var _default = Blog;
 exports["default"] = _default;
 
 },{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _utilities = require("../utilities");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Form Validation
+var ElementSelector = [{
+  id: 'name',
+  validation: {
+    required: true
+  }
+}, {
+  id: 'contactEmail',
+  validation: {
+    required: true,
+    email: true
+  }
+}, {
+  id: 'message',
+  validation: {
+    required: true
+  }
+}];
+var ElementEvents = ['input', 'blur']; // --- Contact Us
+
+var ContactUs = function () {
+  // Handle Run Validation
+  var handleRunValidation = function handleRunValidation() {
+    _utilities.Validation.config(ElementEvents, ElementSelector);
+  }; // Handle Click Success Alert
+
+
+  var handleClickAlert = function handleClickAlert() {
+    $('.js-alert-contact, js-contact').on('click', function (e) {
+      $.each(ElementSelector, function (i, v) {
+        $('#' + v.id).blur();
+      });
+
+      if ($('.error').length > 0) {
+        e.preventDefault();
+      } else {
+        var _swalWithBootstrapBut;
+
+        e.preventDefault();
+        var swalWithBootstrapButton = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn--confirm btn--popup mr-12 w-100'
+          },
+          buttonsStyling: false
+        });
+        swalWithBootstrapButton.fire((_swalWithBootstrapBut = {
+          title: 'Success',
+          text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
+          icon: 'success',
+          confirmButtonColor: '#458ff6',
+          confirmButtonText: 'Close'
+        }, _defineProperty(_swalWithBootstrapBut, "confirmButtonColor", '#458ff6'), _defineProperty(_swalWithBootstrapBut, "width", 500), _defineProperty(_swalWithBootstrapBut, "padding", '22px'), _defineProperty(_swalWithBootstrapBut, "textMargin", '24px'), _swalWithBootstrapBut));
+      }
+    });
+  }; // --- init
+
+
+  var init = function init() {
+    handleClickAlert();
+    handleRunValidation();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = ContactUs;
+exports["default"] = _default;
+
+},{"../utilities":17}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -193,7 +278,7 @@ var Footer = function () {
 var _default = Footer;
 exports["default"] = _default;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -270,7 +355,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":16}],5:[function(require,module,exports){
+},{"../utilities":17}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -337,7 +422,7 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -428,7 +513,7 @@ var Popup = function () {
 var _default = Popup;
 exports["default"] = _default;
 
-},{"../utilities":16}],7:[function(require,module,exports){
+},{"../utilities":17}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -489,7 +574,7 @@ var PricingCard = function () {
 var _default = PricingCard;
 exports["default"] = _default;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -562,7 +647,7 @@ var Subscribe = function () {
 var _default = Subscribe;
 exports["default"] = _default;
 
-},{"../utilities":16}],9:[function(require,module,exports){
+},{"../utilities":17}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -615,7 +700,7 @@ var Testimonials = function () {
 var _default = Testimonials;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -682,7 +767,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./index":12}],11:[function(require,module,exports){
+},{"./index":13}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -767,7 +852,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -777,6 +862,12 @@ Object.defineProperty(exports, "Blog", {
   enumerable: true,
   get: function get() {
     return _Blog["default"];
+  }
+});
+Object.defineProperty(exports, "ContactUs", {
+  enumerable: true,
+  get: function get() {
+    return _ContactUs["default"];
   }
 });
 Object.defineProperty(exports, "Footer", {
@@ -844,6 +935,8 @@ var _HeroBanner = _interopRequireDefault(require("./HeroBanner"));
 
 var _Subscribe = _interopRequireDefault(require("./Subscribe"));
 
+var _ContactUs = _interopRequireDefault(require("./ContactUs"));
+
 var _PricingCard = _interopRequireDefault(require("./PricingCard"));
 
 var _Popup = _interopRequireDefault(require("./Popup"));
@@ -856,7 +949,7 @@ var _Blog = _interopRequireDefault(require("./Blog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./PricingCard":7,"./Subscribe":8,"./Testimonials":9,"./WindowResize":10,"./WindowScroll":11}],13:[function(require,module,exports){
+},{"./Blog":2,"./ContactUs":3,"./Footer":4,"./Header":5,"./HeroBanner":6,"./Popup":7,"./PricingCard":8,"./Subscribe":9,"./Testimonials":10,"./WindowResize":11,"./WindowScroll":12}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -902,7 +995,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -936,7 +1029,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1062,7 +1155,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{"../variables":19}],16:[function(require,module,exports){
+},{"../variables":20}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1103,7 +1196,7 @@ var _Validation = _interopRequireDefault(require("./Validation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":13,"./Scrolllable":14,"./Validation":15,"./isOS":17}],17:[function(require,module,exports){
+},{"./BrowserCheck":14,"./Scrolllable":15,"./Validation":16,"./isOS":18}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1144,7 +1237,7 @@ var isOS = {
 var _default = isOS;
 exports["default"] = _default;
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1169,7 +1262,7 @@ exports.FULL_NAME = FULL_NAME;
 var PERSON_NAME = /^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$/i;
 exports.PERSON_NAME = PERSON_NAME;
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1189,6 +1282,6 @@ Object.keys(_Regex).forEach(function (key) {
   });
 });
 
-},{"./Regex":18}]},{},[1])
+},{"./Regex":19}]},{},[1])
 
 //# sourceMappingURL=maps/app.js.map

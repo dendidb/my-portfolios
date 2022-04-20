@@ -8,6 +8,7 @@ import WindowScroll from "./WindowScroll";
 import Header from "./Header";
 import HeroBanner from "./HeroBanner";
 import Subscribe from "./Subscribe";
+import ContactUs from "./ContactUs";
 import PricingCard from "./PricingCard";
 import Popup from "./Popup";
 import Testimonials from "./Testimonials";
@@ -20,6 +21,7 @@ export {
   Header,
   HeroBanner,
   Subscribe,
+  ContactUs,
   PricingCard,
   Popup,
   Testimonials,

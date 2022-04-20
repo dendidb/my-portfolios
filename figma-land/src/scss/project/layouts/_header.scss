@@ -327,6 +327,13 @@
       height: 40px;
       text-decoration: none;
       @include remove-tap-highlight;
+      &.fl-facebook {
+        width: 40px;
+        height: 30px;
+        padding: 4px;
+        border-radius: 50%;
+        display: inline-block;
+      }
       &__el {
         @include font-size(24);
         display: inline-block;
@@ -342,11 +349,14 @@
           transform: scale(1.2);
           &.fl-facebook {
             color: color(social-media, facebook);
+            background-color: color(white);
           }
           &.fl-twitter {
+            background-color: color(white);
             color: color(social-media, twitter);
           }
           &.fl-linked-in {
+            background-color: color(white);
             color: color(social-media, linked-in);
           }
         }
