@@ -186,8 +186,8 @@ var ContactUs = function () {
           buttonsStyling: false
         });
         swalWithBootstrapButton.fire((_swalWithBootstrapBut = {
-          title: 'Success',
-          text: 'Thank you. We will give you the latest info. Have a Nice Day and see you!',
+          title: 'Message sent',
+          text: 'We will reply to your message soon',
           icon: 'success',
           confirmButtonColor: '#458ff6',
           confirmButtonText: 'Close'

@@ -31,10 +31,6 @@
       padding: 0;
       min-height: initial;
     }
-    &__align {
-      display: table-cell;
-      vertical-align: middle;
-    }
   }
   &__label {
     font-weight: fw(bold);
@@ -47,12 +43,14 @@
     margin-bottom: 32px;
   }
   &__form {
+    position: relative;
     &__row {
       margin-bottom: 0;
       width: 68%;
       display: inline-block;
       vertical-align: middle;
       padding-right: 2.6%;
+      position: relative;
       @include small {
         width: 100%;
         margin-bottom: 32px;

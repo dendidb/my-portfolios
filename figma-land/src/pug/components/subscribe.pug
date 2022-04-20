@@ -11,22 +11,20 @@
         img.subscribe__img__el(src='assets/img/dummy/'+subscribe.img alt=subscribe.title)/
         ='\n'
       .subscribe__txt
-        .subscribe__txt__align
-          h5.subscribe__label
-            | !{subscribe.label}
-          h3.subscribe__title
-            | !{subscribe.title}
-          p.subscribe__desc
-            | !{subscribe.desc}
-          form.subscribe__form(action='#' method='POST')
-            .subscribe__form__row
-              each val in subscribe.formList
-                - data = val;
-                include input-form.pug
-            .subscribe__form__btn
-              ='\n'
-              button.btn.btn--subscribe.js-alert-subscribe.js-subscribe(type='submit') Subscribe
-              ='\n'
-
+        h5.subscribe__label
+          | !{subscribe.label}
+        h3.subscribe__title
+          | !{subscribe.title}
+        p.subscribe__desc
+          | !{subscribe.desc}
+        form.subscribe__form(action='#' method='POST')
+          .subscribe__form__row
+            each val in subscribe.formList
+              - data = val;
+              include input-form.pug
+          .subscribe__form__btn
+            ='\n'
+            button.btn.btn--subscribe.js-alert-subscribe.js-subscribe(type='submit') Subscribe
+            ='\n'
 ='\n'
 //end-subscribe

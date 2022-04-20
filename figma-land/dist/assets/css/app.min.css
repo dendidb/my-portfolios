@@ -2251,10 +2251,6 @@ Components: Input form
     min-height: initial;
   }
 }
-.subscribe__txt__align {
-  display: table-cell;
-  vertical-align: middle;
-}
 .subscribe__label {
   font-weight: 700;
   margin-bottom: 8px;
@@ -2265,12 +2261,16 @@ Components: Input form
 .subscribe__desc {
   margin-bottom: 32px;
 }
+.subscribe__form {
+  position: relative;
+}
 .subscribe__form__row {
   margin-bottom: 0;
   width: 68%;
   display: inline-block;
   vertical-align: middle;
   padding-right: 2.6%;
+  position: relative;
 }
 @media only screen and (max-width: 767.98px) {
   .subscribe__form__row {
@@ -2558,6 +2558,7 @@ Components: Input form
   border-color: #458ff6;
   color: #fff;
   min-width: 140px;
+  min-height: 60px;
 }
 .btn--subscribe:hover {
   color: #458ff6;
