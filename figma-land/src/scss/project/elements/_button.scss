@@ -20,13 +20,11 @@
   transition: all 350ms ease;
   font-weight: fw(bold);
   &--primary {
-      color: color(white);
-      background-image: linear-gradient(to right, color(blue, 2) 50%, color(blue, 1));
-      background-size: 202% 2px;
-      background-position: 60% center;
+    color: color(white);
+    background-image: linear-gradient(to right, color(blue, 2) 50%, color(blue, 1));
+    background-size: 202% 2px;
+    background-position: 60% center;
     &:hover {
-      // border-color: color(blue, 1);
-      // color: color(blue, 1);
       background-position: left center;
     }
   }
@@ -54,25 +52,25 @@
     }
   }
   &--subscribe {
-    background-color: color(blue, 1);
-    border-color: color(blue, 1);
+    background-image: linear-gradient(to right, color(blue, 2) 50%, color(blue, 1));
     color: color(white);
+    background-size: 202% 2px;
+    background-position: 60% center;
     min-width: 140px;
     min-height: 60px;
     &:hover {
-      color: color(blue, 1);
-      background-color: transparent;
+      background-position: left center;
     }
   }
-  &--block {
-    width: 100%;
-    background-color: color(blue, 1);
-    border-color: color(blue, 1);
+  &--contact {
+    background-image: linear-gradient(to right, color(blue, 2) 50%, color(blue, 1));
     color: color(white);
-    min-width: 140px;
+    background-size: 202% 2px;
+    background-position: 60% center;
+    color: color(white);
+    width: 100%;
     &:hover {
-      color: color(blue, 1);
-      background-color: transparent;
+      background-position: left center;
     }
   }
 }

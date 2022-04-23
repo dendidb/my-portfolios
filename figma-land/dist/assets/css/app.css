@@ -1054,6 +1054,110 @@ html.os-html > .os-host > .os-scrollbar {
  Init: Fonts
  ========================================================================== */
 @font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Regular.eot");
+  src: url("../fonts/LexendDeca-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-Regular.woff2") format("woff2"), url("../fonts/LexendDeca-Regular.woff") format("woff"), url("../fonts/LexendDeca-Regular.ttf") format("truetype"), url("../fonts/LexendDeca-Regular.svg#LexendDeca-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Black.eot");
+  src: url("../fonts/LexendDeca-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-Black.woff2") format("woff2"), url("../fonts/LexendDeca-Black.woff") format("woff"), url("../fonts/LexendDeca-Black.ttf") format("truetype"), url("../fonts/LexendDeca-Black.svg#LexendDeca-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-ExtraBold.eot");
+  src: url("../fonts/LexendDeca-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-ExtraBold.woff2") format("woff2"), url("../fonts/LexendDeca-ExtraBold.woff") format("woff"), url("../fonts/LexendDeca-ExtraBold.ttf") format("truetype"), url("../fonts/LexendDeca-ExtraBold.svg#LexendDeca-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Medium.eot");
+  src: url("../fonts/LexendDeca-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-Medium.woff2") format("woff2"), url("../fonts/LexendDeca-Medium.woff") format("woff"), url("../fonts/LexendDeca-Medium.ttf") format("truetype"), url("../fonts/LexendDeca-Medium.svg#LexendDeca-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Bold.eot");
+  src: url("../fonts/LexendDeca-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-Bold.woff2") format("woff2"), url("../fonts/LexendDeca-Bold.woff") format("woff"), url("../fonts/LexendDeca-Bold.ttf") format("truetype"), url("../fonts/LexendDeca-Bold.svg#LexendDeca-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Light.eot");
+  src: url("../fonts/LexendDeca-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-Light.woff2") format("woff2"), url("../fonts/LexendDeca-Light.woff") format("woff"), url("../fonts/LexendDeca-Light.ttf") format("truetype"), url("../fonts/LexendDeca-Light.svg#LexendDeca-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-SemiBold.eot");
+  src: url("../fonts/LexendDeca-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/LexendDeca-SemiBold.woff2") format("woff2"), url("../fonts/LexendDeca-SemiBold.woff") format("woff"), url("../fonts/LexendDeca-SemiBold.ttf") format("truetype"), url("../fonts/LexendDeca-SemiBold.svg#LexendDeca-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Light.eot");
+  src: url("../fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Light.woff2") format("woff2"), url("../fonts/Poppins-Light.woff") format("woff"), url("../fonts/Poppins-Light.ttf") format("truetype"), url("../fonts/Poppins-Light.svg#Poppins-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-ExtraBold.eot");
+  src: url("../fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff") format("woff"), url("../fonts/Poppins-ExtraBold.ttf") format("truetype"), url("../fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.eot");
+  src: url("../fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.ttf") format("truetype"), url("../fonts/Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.eot");
+  src: url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("truetype"), url("../fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.eot");
+  src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.eot");
+  src: url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.ttf") format("truetype"), url("../fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "figma-land";
   src: url("../fonts/icon/figma-land.ttf?m8g85i") format("truetype"), url("../fonts/icon/figma-land.woff?m8g85i") format("woff"), url("../fonts/icon/figma-land.svg?m8g85i#figma-land") format("svg");
   font-weight: normal;
@@ -1152,7 +1256,7 @@ html.os-html > .os-host > .os-scrollbar {
    Init: Default
    ========================================================================== */
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -1315,7 +1419,6 @@ b {
   .hero-banner__img {
     float: none;
     width: auto;
-    margin-bottom: 32px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -1851,6 +1954,7 @@ b {
 }
 .pricing__box:hover {
   background-color: #458ff6;
+  color: #fff;
   -webkit-transform: scale(1.04);
      -moz-transform: scale(1.04);
       -ms-transform: scale(1.04);
@@ -2559,26 +2663,36 @@ Components: Input form
   background-color: transparent;
 }
 .btn--subscribe {
-  background-color: #458ff6;
-  border-color: #458ff6;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2067ca), to(#458ff6));
+  background-image: -webkit-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -moz-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -o-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: linear-gradient(to right, #2067ca 50%, #458ff6);
   color: #fff;
+  -moz-background-size: 202% 2px;
+       background-size: 202% 2px;
+  background-position: 60% center;
   min-width: 140px;
   min-height: 60px;
 }
 .btn--subscribe:hover {
-  color: #458ff6;
-  background-color: transparent;
+  background-position: left center;
 }
-.btn--block {
-  width: 100%;
-  background-color: #458ff6;
-  border-color: #458ff6;
+.btn--contact {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2067ca), to(#458ff6));
+  background-image: -webkit-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -moz-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: -o-linear-gradient(left, #2067ca 50%, #458ff6);
+  background-image: linear-gradient(to right, #2067ca 50%, #458ff6);
   color: #fff;
-  min-width: 140px;
+  -moz-background-size: 202% 2px;
+       background-size: 202% 2px;
+  background-position: 60% center;
+  color: #fff;
+  width: 100%;
 }
-.btn--block:hover {
-  color: #458ff6;
-  background-color: transparent;
+.btn--contact:hover {
+  background-position: left center;
 }
 
 /* ==========================================================================
@@ -3147,9 +3261,41 @@ Components: Input form
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  position: relative;
 }
-.header__nav__link:hover {
+.header__nav__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -2px;
+  border-bottom: solid 2px #fff;
+  width: 24px;
+  -webkit-transform: scaleX(0);
+     -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left center;
+     -moz-transform-origin: left center;
+      -ms-transform-origin: left center;
+       -o-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.header-on-scroll .header__nav__link::after {
+  border-bottom: solid 2px #458ff6;
+}
+.header__nav__link:hover::after {
   color: #458ff6;
+  -webkit-transform: scaleX(1);
+     -moz-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+       -o-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .header-on-scroll .header__nav__link {
   color: #000;
@@ -3160,7 +3306,12 @@ Components: Input form
   }
 }
 .header-on-scroll .header__nav__link:hover {
-  color: #000;
+  color: #458ff6;
+}
+@media only screen and (max-width: 991.98px) {
+  .header-on-scroll .header__nav__link:hover {
+    color: #000;
+  }
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__link {
@@ -3176,10 +3327,6 @@ Components: Input form
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-}
-.header__nav__link--active {
-  opacity: 1;
-  font-weight: 600;
 }
 @media only screen and (max-width: 991.98px) {
   .header__nav__link--active {
@@ -3370,14 +3517,11 @@ Components: Input form
 }
 .header__sosmed__link__el:hover.fl-facebook {
   color: #1877f2;
-  background-color: #fff;
 }
 .header__sosmed__link__el:hover.fl-twitter {
-  background-color: #fff;
   color: #1da1f2;
 }
 .header__sosmed__link__el:hover.fl-linked-in {
-  background-color: #fff;
   color: #0077b5;
 }
 .header .burger-menu {

@@ -3,12 +3,180 @@
  Init: Fonts
  ========================================================================== */
 
- @font-face {
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-Regular.eot');
+  src: url('../fonts/LexendDeca-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-Regular.woff2') format('woff2'),
+  url('../fonts/LexendDeca-Regular.woff') format('woff'),
+  url('../fonts/LexendDeca-Regular.ttf') format('truetype'),
+  url('../fonts/LexendDeca-Regular.svg#LexendDeca-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-Black.eot');
+  src: url('../fonts/LexendDeca-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-Black.woff2') format('woff2'),
+  url('../fonts/LexendDeca-Black.woff') format('woff'),
+  url('../fonts/LexendDeca-Black.ttf') format('truetype'),
+  url('../fonts/LexendDeca-Black.svg#LexendDeca-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-ExtraBold.eot');
+  src: url('../fonts/LexendDeca-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-ExtraBold.woff2') format('woff2'),
+  url('../fonts/LexendDeca-ExtraBold.woff') format('woff'),
+  url('../fonts/LexendDeca-ExtraBold.ttf') format('truetype'),
+  url('../fonts/LexendDeca-ExtraBold.svg#LexendDeca-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-Medium.eot');
+  src: url('../fonts/LexendDeca-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-Medium.woff2') format('woff2'),
+  url('../fonts/LexendDeca-Medium.woff') format('woff'),
+  url('../fonts/LexendDeca-Medium.ttf') format('truetype'),
+  url('../fonts/LexendDeca-Medium.svg#LexendDeca-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-Bold.eot');
+  src: url('../fonts/LexendDeca-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-Bold.woff2') format('woff2'),
+  url('../fonts/LexendDeca-Bold.woff') format('woff'),
+  url('../fonts/LexendDeca-Bold.ttf') format('truetype'),
+  url('../fonts/LexendDeca-Bold.svg#LexendDeca-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-Light.eot');
+  src: url('../fonts/LexendDeca-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-Light.woff2') format('woff2'),
+  url('../fonts/LexendDeca-Light.woff') format('woff'),
+  url('../fonts/LexendDeca-Light.ttf') format('truetype'),
+  url('../fonts/LexendDeca-Light.svg#LexendDeca-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/LexendDeca-SemiBold.eot');
+  src: url('../fonts/LexendDeca-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LexendDeca-SemiBold.woff2') format('woff2'),
+  url('../fonts/LexendDeca-SemiBold.woff') format('woff'),
+  url('../fonts/LexendDeca-SemiBold.ttf') format('truetype'),
+  url('../fonts/LexendDeca-SemiBold.svg#LexendDeca-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.eot');
+  src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Light.woff2') format('woff2'),
+  url('../fonts/Poppins-Light.woff') format('woff'),
+  url('../fonts/Poppins-Light.ttf') format('truetype'),
+  url('../fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraBold.eot');
+  src: url('../fonts/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Poppins-ExtraBold.woff') format('woff'),
+  url('../fonts/Poppins-ExtraBold.ttf') format('truetype'),
+  url('../fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.eot');
+  src: url('../fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Bold.woff2') format('woff2'),
+  url('../fonts/Poppins-Bold.woff') format('woff'),
+  url('../fonts/Poppins-Bold.ttf') format('truetype'),
+  url('../fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.eot');
+  src: url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Medium.woff2') format('woff2'),
+  url('../fonts/Poppins-Medium.woff') format('woff'),
+  url('../fonts/Poppins-Medium.ttf') format('truetype'),
+  url('../fonts/Poppins-Medium.svg#Poppins-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.eot');
+  src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Regular.woff2') format('woff2'),
+  url('../fonts/Poppins-Regular.woff') format('woff'),
+  url('../fonts/Poppins-Regular.ttf') format('truetype'),
+  url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.eot');
+  src: url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+  url('../fonts/Poppins-SemiBold.woff') format('woff'),
+  url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+  url('../fonts/Poppins-SemiBold.svg#Poppins-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'figma-land';
   src:
-    url('../fonts/icon/figma-land.ttf?m8g85i') format('truetype'),
-    url('../fonts/icon/figma-land.woff?m8g85i') format('woff'),
-    url('../fonts/icon/figma-land.svg?m8g85i#figma-land') format('svg');
+  url('../fonts/icon/figma-land.ttf?m8g85i') format('truetype'),
+  url('../fonts/icon/figma-land.woff?m8g85i') format('woff'),
+  url('../fonts/icon/figma-land.svg?m8g85i#figma-land') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

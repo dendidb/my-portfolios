@@ -54,7 +54,7 @@ const ContactUs = (() => {
         e.preventDefault();
         const swalWithBootstrapButton = Swal.mixin({
           customClass: {
-            confirmButton: 'btn btn--confirm btn--popup mr-12 w-100',
+            confirmButton: 'btn btn--primary btn--popup mr-12 w-100',
           },
           buttonsStyling: false
         });
