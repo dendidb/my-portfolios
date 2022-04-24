@@ -2285,8 +2285,10 @@ Components: Input form
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  bottom: -26px;
+  bottom: -18px;
   left: 12px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   font-weight: 400;
   color: #cf000f;
   text-align: left;
@@ -2309,6 +2311,68 @@ Components: Input form
        -o-transform: none;
           transform: none;
   visibility: visible;
+}
+
+/* ==========================================================================
+  Components Testimonials
+  ========================================================================== */
+.testimonials__item {
+  padding: 24px;
+}
+.testimonials__client {
+  margin-bottom: 48px;
+}
+.testimonials__client__img {
+  height: 60px;
+}
+.testimonials__customer__name {
+  margin-bottom: 16px;
+}
+.testimonials__customer__position {
+  margin-bottom: 0;
+}
+.testimonials__caption {
+  margin-bottom: 48px;
+}
+.testimonials__caption__el {
+  color: #374754;
+  margin-bottom: 0;
+}
+.testimonials__person {
+  font-size: 0;
+  text-align: left;
+}
+.testimonials__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.testimonials__img__el {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  width: 50px;
+  height: 50px;
+}
+.testimonials__txt {
+  padding-left: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.testimonials__txt__name {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+.testimonials__txt__position {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #374754;
 }
 
 /* ==========================================================================
@@ -2398,7 +2462,7 @@ Components: Input form
    Components Try For Free
    ========================================================================== */
 .try-for-free {
-  padding: 48px 0;
+  padding: 32px 0;
 }
 .try-for-free__wrapper::after {
   content: "";
@@ -4427,6 +4491,14 @@ Components: Input form
   -moz-transition: 0.2s ease-in-out 0s;
   transition: 0.2s ease-in-out 0s;
 }
+@media only screen and (max-width: 991.98px) {
+  .features__button {
+    width: 60px;
+    height: 60px;
+    top: 37%;
+    left: 42%;
+  }
+}
 .features__button:hover {
   -webkit-transform: scale(0.88);
      -moz-transform: scale(0.88);
@@ -4440,14 +4512,25 @@ Components: Input form
   font-size: 3.6rem;
   line-height: 4.8rem;
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   left: 4px;
 }
+@media only screen and (max-width: 991.98px) {
+  .features__button__icon {
+    font-size: 2rem;
+    line-height: 3rem;
+    left: 2px;
+  }
+}
 
+/* ==========================================================================
+  Components Testimonials
+  ========================================================================== */
 .testimonials {
   position: relative;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 48px 0;
 }
 @media only screen and (max-width: 1199.98px) {
   .testimonials {
@@ -4463,6 +4546,46 @@ Components: Input form
   .testimonials {
     padding: 48px 0;
   }
+}
+.testimonials__head {
+  margin-bottom: 48px;
+  text-align: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .testimonials__head {
+    margin-bottom: 24px;
+  }
+}
+.testimonials__title {
+  margin-bottom: 0;
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+}
+.testimonials__body {
+  margin-bottom: 48px;
+}
+.testimonials__body::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.testimonials .testimonials__item {
+  float: left;
+  width: 33.3333333%;
+  text-align: center;
+}
+@media only screen and (max-width: 991.98px) {
+  .testimonials .testimonials__item {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .testimonials .testimonials__item {
+    width: 100%;
+  }
+}
+.testimonials__btn {
+  text-align: center;
 }
 
 /* ==========================================================================

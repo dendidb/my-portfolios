@@ -172,10 +172,10 @@ Components: Input form
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    bottom: -26px;
+    bottom: -18px;
     left: 12px;
     z-index: zi(fi-alert);
-    // @include font-size(12);
+    @include font-size(12);
     font-weight: fw(regular);
     color: color(danger);
     text-align: left;

@@ -36,8 +36,6 @@
       width: 100%;
     }
   }
-  &__video {
-  }
   &__thumbnail {
     position: relative;
     &__el {
@@ -58,20 +56,29 @@
     border-radius: 50%;
     top: 42%;
     left: 46%;
-    // transform: translateX(-50%);
     background-color: color(blue, 1);
     transition: .2s ease-in-out 0s;
+    @include medium {
+      width: 60px;
+      height: 60px;
+      top: 37%;
+      left: 42%;
+    }
     &:hover {
       transform: scale(0.88);
-      // transform: translateX(-50%);
       background-color: color(blue, 2);
     }
     &__icon {
       color: color(white);
       @include font-size(36);
       display: inline-block;
+      vertical-align: middle;
       position: relative;
       left: 4px;
+      @include medium {
+        @include font-size(20);
+        left: 2px;
+      }
     }
   }
 }

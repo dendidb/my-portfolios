@@ -23,5 +23,6 @@
   &__dsc {
     margin-bottom: 0;
     @include font-size(16);
+    color: color(grey, 5);
   }
 }
