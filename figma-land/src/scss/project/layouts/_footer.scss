@@ -195,8 +195,8 @@
       &-el {
         color: color(white);
         margin-bottom: 0;
-        padding: 12px 0;
-        @include medium {
+        padding: 14px 0 0 6px;
+        @include small {
           padding: 6px 0;
         }
       }

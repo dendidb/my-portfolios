@@ -4049,9 +4049,9 @@ Components: Input form
 .footer__contact__txt-el {
   color: #fff;
   margin-bottom: 0;
-  padding: 12px 0;
+  padding: 14px 0 0 6px;
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   .footer__contact__txt-el {
     padding: 6px 0;
   }
