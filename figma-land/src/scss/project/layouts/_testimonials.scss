@@ -57,31 +57,31 @@
         opacity: 1;
         transform: none;
         transition: opacity .10 ease, transform .10s ease;
-        transition-delay: .2s;
-      }
-      &__name {
-        opacity: 1;
-        transform: none;
-        transition: opacity .10 ease, transform .10s ease;
-        transition-delay: .2s;
-      }
-      &__position {
-        opacity: 1;
-        transform: none;
-        transition: opacity .10 ease, transform .10s ease;
         transition-delay: .4s;
       }
-      &__desc {
+      &__caption__el {
         opacity: 1;
         transform: none;
         transition: opacity .10 ease, transform .10s ease;
         transition-delay: .6s;
       }
-      &__btn {
+      &__img__el {
         opacity: 1;
         transform: none;
         transition: opacity .10 ease, transform .10s ease;
         transition-delay: .8s;
+      }
+      &__txt__name {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: 1s;
+      }
+      &__txt__position {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: 1s;
       }
     }
   }
@@ -114,15 +114,7 @@
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
-        @include medium {
-          // bottom: 236px;
-        }
-        @include small {
-          // bottom: 250px;
-        }
-        @include extra-small {
-          // bottom: 247px;
-        }
+        display: none;
       }
     }
   }

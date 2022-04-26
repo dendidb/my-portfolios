@@ -8,42 +8,42 @@
   }
   &__client {
     margin-bottom: 48px;
-    opacity: 1;
-    transform: none;
-    transition: opacity .10 ease, transform .10s ease;
-    transition-delay: .4s;
     &__img {
       height: 60px;
       display: block;
       object-fit: contain;
       object-position: center center;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
   }
   &__customer {
     &__name {
       margin-bottom: 16px;
       opacity: 0;
-      transform: translateY(-4px);
-      transition: opacity .10 ease, transform .10s ease;
-      transition-delay: .6s;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
     &__position {
       margin-bottom: 0;
-      opacity: 1;
-      transform: translateY(-4px);
-      transition: opacity .10 ease, transform .10s ease;
-      transition-delay: .6s;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
   }
   &__caption {
     margin-bottom: 48px;
-    opacity: 1;
-    transform: translateY(-4px);
-    transition: opacity .10 ease, transform .10s ease;
-    transition-delay: .6s;
     &__el {
       color: color(grey, 3);
       margin-bottom: 0;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
   }
   &__person {
@@ -60,6 +60,10 @@
       height: 100%;
       width: 50px;
       height: 50px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
   }
   &__txt {
@@ -71,20 +75,20 @@
       margin-bottom: 0;
       @include font-size(16);
       font-weight: fw(semi-bold);
-      opacity: 1;
-      transform: none;
-      transition: opacity .10 ease, transform .10s ease;
-      transition-delay: .6s;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
     &__position {
       @include font-size(14);
       font-weight: fw(regular);
       margin-bottom: 0;
       color: color(grey, 3);
-      opacity: 1;
-      transform: none;
-      transition: opacity .10 ease, transform .10s ease;
-      transition-delay: .6s;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 1.1s ease 0s;
+      transition-delay: all 1.1s ease 0s;
     }
   }
 }

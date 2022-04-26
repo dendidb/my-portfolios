@@ -2277,22 +2277,6 @@ Components: Input form
 }
 .testimonials__client {
   margin-bottom: 48px;
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.4s;
-     -moz-transition-delay: 0.4s;
-       -o-transition-delay: 0.4s;
-          transition-delay: 0.4s;
 }
 .testimonials__client__img {
   height: 60px;
@@ -2301,67 +2285,75 @@ Components: Input form
      object-fit: contain;
   -o-object-position: center center;
      object-position: center center;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__customer__name {
   margin-bottom: 16px;
   opacity: 0;
-  -webkit-transform: translateY(-4px);
-     -moz-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-       -o-transform: translateY(-4px);
-          transform: translateY(-4px);
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.6s;
-     -moz-transition-delay: 0.6s;
-       -o-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__customer__position {
   margin-bottom: 0;
-  opacity: 1;
-  -webkit-transform: translateY(-4px);
-     -moz-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-       -o-transform: translateY(-4px);
-          transform: translateY(-4px);
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.6s;
-     -moz-transition-delay: 0.6s;
-       -o-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__caption {
   margin-bottom: 48px;
-  opacity: 1;
-  -webkit-transform: translateY(-4px);
-     -moz-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-       -o-transform: translateY(-4px);
-          transform: translateY(-4px);
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.6s;
-     -moz-transition-delay: 0.6s;
-       -o-transition-delay: 0.6s;
-          transition-delay: 0.6s;
 }
 .testimonials__caption__el {
   color: #374754;
   margin-bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__person {
   font-size: 0;
@@ -2379,6 +2371,20 @@ Components: Input form
   height: 100%;
   width: 50px;
   height: 50px;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__txt {
   padding-left: 16px;
@@ -2391,22 +2397,20 @@ Components: Input form
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 600;
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.6s;
-     -moz-transition-delay: 0.6s;
-       -o-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 .testimonials__txt__position {
   font-size: 1.4rem;
@@ -2414,22 +2418,20 @@ Components: Input form
   font-weight: 400;
   margin-bottom: 0;
   color: #374754;
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.6s;
-     -moz-transition-delay: 0.6s;
-       -o-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+     -moz-transform: translateY(24px);
+      -ms-transform: translateY(24px);
+       -o-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: all 1.1s ease 0s;
+  -o-transition: all 1.1s ease 0s;
+  -moz-transition: all 1.1s ease 0s;
+  transition: all 1.1s ease 0s;
+  -webkit-transition-delay: all 1.1s ease 0s;
+     -moz-transition-delay: all 1.1s ease 0s;
+       -o-transition-delay: all 1.1s ease 0s;
+          transition-delay: all 1.1s ease 0s;
 }
 
 /* ==========================================================================
@@ -4770,51 +4772,13 @@ Components: Input form
   -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
   transition: opacity 0.1 ease, transform 0.1s ease;
   transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-.testimonials--standalone .testimonials__name,
-.testimonials .owl-item.active .testimonials__name {
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
-  -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-.testimonials--standalone .testimonials__position,
-.testimonials .owl-item.active .testimonials__position {
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
-  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
-  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease;
-  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
   -webkit-transition-delay: 0.4s;
      -moz-transition-delay: 0.4s;
        -o-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
-.testimonials--standalone .testimonials__desc,
-.testimonials .owl-item.active .testimonials__desc {
+.testimonials--standalone .testimonials__caption__el,
+.testimonials .owl-item.active .testimonials__caption__el {
   opacity: 1;
   -webkit-transform: none;
      -moz-transform: none;
@@ -4832,8 +4796,8 @@ Components: Input form
        -o-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
-.testimonials--standalone .testimonials__btn,
-.testimonials .owl-item.active .testimonials__btn {
+.testimonials--standalone .testimonials__img__el,
+.testimonials .owl-item.active .testimonials__img__el {
   opacity: 1;
   -webkit-transform: none;
      -moz-transform: none;
@@ -4850,6 +4814,44 @@ Components: Input form
      -moz-transition-delay: 0.8s;
        -o-transition-delay: 0.8s;
           transition-delay: 0.8s;
+}
+.testimonials--standalone .testimonials__txt__name,
+.testimonials .owl-item.active .testimonials__txt__name {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 1s;
+     -moz-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.testimonials--standalone .testimonials__txt__position,
+.testimonials .owl-item.active .testimonials__txt__position {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 1s;
+     -moz-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
 }
 .testimonials .owl-carousel .owl-dot {
   display: inline-block;
@@ -4889,7 +4891,9 @@ Components: Input form
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
+  display: none;
 }
+
 /* ==========================================================================
    Pages Index
    ========================================================================== */

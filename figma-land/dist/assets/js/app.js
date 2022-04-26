@@ -675,14 +675,17 @@ var Testimonials = function () {
         nav: true,
         navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
         touchDrag: true,
-        mouseDrag: false,
-        autoplayHoverPause: true,
+        mouseDrag: true,
+        autoplayHoverPause: false,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
+        autoplay: true,
         autoplayTimeout: 7000,
         dotsSpeed: 1000,
         autoplaySpeed: 1000,
-        dragEndSpeed: 800
+        dragEndSpeed: 800,
+        loop: true,
+        rewind: true
       });
     } else {
       if (selector.hasClass('owl-carousel')) {
