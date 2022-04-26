@@ -21,11 +21,26 @@ const Reveal = (() => {
   const handleRunScrollReveal = () => {
 
     // -- homepage section
-    ScrollReveal().reveal('.features__head', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__head', handleRevealConfig(50, '24px', 50, 'top'));
     ScrollReveal().reveal('.features__body', handleRevealConfig(50, '24px', 50, 'bottom'));
-    ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'right'));
-    ScrollReveal().reveal('.features__title', handleRevealConfig(50, '24px', 50, 'top'));
-    ScrollReveal().reveal('.features__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__video', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.try-for-free__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.try-for-free__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.subscribe__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.subscribe__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.subscribe__form', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.partners__head', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.partners__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.partners__btn', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimonials__head', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.testimonials__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimonials__btn', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.pricing__head', handleRevealConfig(60, '24px', 50, 'top'));
+    ScrollReveal().reveal('.pricing__list', handleRevealConfig(70, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.contact-us__head', handleRevealConfig(60, '24px', 50, 'top'));
+    ScrollReveal().reveal('.contact-us__form', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.contact-us__detail', handleRevealConfig(60, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.testimony__list', handleRevealConfig(50, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.testimony__title', handleRevealConfig(50, '24px', 50, 'top'));
