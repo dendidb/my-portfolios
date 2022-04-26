@@ -4,72 +4,104 @@
 
 -
   dataFooter = {
-    logoSrc: 'figma-land-white.svg',
-    logoLink: 'index.html',
-    logoAlt: 'Figma Land',
-    description: 'Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone',
+    contact: [
+      {
+        iconClass: 'location',
+        text: '7480 Mockingbird Hill undefined'
+      },
+      {
+        iconClass: 'phone',
+        text: '(239) 555-0108'
+      },
+    ],
+    sosmed: [
+      {
+        sosmedClass: 'twitter',
+        to: '#twitter'
+      },
+      {
+        sosmedClass: 'facebook',
+        to: '#facebook'
+      },
+      {
+        sosmedClass: 'linked-in',
+        to: '#linked-in'
+      },
+    ],
     menu: [
       {
-        title: 'Company',
+        title: 'Pages',
         nav: [
+          {
+            title: 'Home',
+            link: '#home'
+          },
+          {
+            title: 'Product',
+            link: '#product'
+          },
+          {
+            title: 'Pricing',
+            link: '#pricing'
+          },
           {
             title: 'About',
             link: '#about'
           },
           {
-            title: 'Testimonials',
-            link: '#testimonials'
-          },
-          {
-            title: 'Find a doctor',
-            link: '#find-a-doctor'
-          },
-          {
-            title: 'Apps',
-            link: '#apps'
-          }
-        ]
-      },
-      {
-        title: 'Region',
-        nav: [
-          {
-            title: 'Indonesia',
-            link: '#indonesia'
-          },
-          {
-            title: 'Singapore',
-            link: '#singapore'
-          },
-          {
-            title: 'Hongkong',
-            link: '#hongkong'
-          },
-          {
-            title: 'Canada',
-            link: '#canada'
-          }
-        ]
-      },
-      {
-        title: 'Help',
-        nav: [
-          {
-            title: 'Help Center',
-            link: '#help'
-          },
-          {
-            title: 'Contact Support',
+            title: 'Contact',
             link: '#contact'
           },
+        ]
+      },
+      {
+        title: 'Tomothy',
+        nav: [
           {
-            title: 'Intructions',
-            link: '#Intructions'
+            title: 'Eleanor Edwards',
+            link: '#eleanor-edwards'
           },
           {
-            title: 'How it works',
-            link: '#how-it-works'
-          }
+            title: 'Ted Robertson',
+            link: '#ted-robertson'
+          },
+          {
+            title: 'Annette Russell',
+            link: '#annete-russel'
+          },
+          {
+            title: 'Jennie Mckinney',
+            link: '#jennie-mckinney'
+          },
+          {
+            title: 'Gloria Richards',
+            link: '#gloria-richards'
+          },
+        ]
+      },
+      {
+        title: 'Jane Black',
+        nav: [
+          {
+            title: 'Philip Jones',
+            link: '#philip-jones'
+          },
+          {
+            title: 'Product',
+            link: '#product'
+          },
+          {
+            title: 'Colleen Russell',
+            link: '#collen-russel'
+          },
+          {
+            title: 'Marvin Hawkins',
+            link: '#marvin-hawkins'
+          },
+          {
+            title: 'Bruce Simmmons',
+            link: '#bruce-simmons'
+          },
         ]
       }
     ],
@@ -90,13 +122,26 @@
                 ='\n'
                 a.footer__nav__link(href=item.link) !{item.title}
                 ='\n'
-    .footer__about
+    .footer__contact
       ='\n'
-      a.footer__logo(href=dataFooter.logoLink)
-        ='\n'
-        img.footer__logo__img(src='assets/img/logo/'+dataFooter.logoSrc, alt=dataFooter.logoAlt)/
-        ='\n'
-      p.footer__description !{dataFooter.description}
-      p.footer__copyright !{dataFooter.copyright}
+      each val in dataFooter.contact
+        - data = val;
+        .footer__contact__icon
+          ='\n'
+          i.footer__contact__icon-el(class='fl-'+val.iconClass)
+          ='\n'
+        .footer__contact__txt
+          p.footer__contact__txt-el
+           | !{val.text}
+      ul.footer__sosmed
+        each val in dataFooter.sosmed
+          - data = val;
+          li.footer__sosmed__icon
+            ='\n'
+            a.footer__sosmed__link(href=val.to)
+              | !{val.text}
+              ='\n'
+              i.footer__sosmed__icon-el(class='fl-'+val.sosmedClass)
+              ='\n'
 ='\n'
 //end-footer

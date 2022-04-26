@@ -1159,7 +1159,7 @@ html.os-html > .os-host > .os-scrollbar {
 }
 @font-face {
   font-family: "figma-land";
-  src: url("../fonts/icon/figma-land.ttf?m8g85i") format("truetype"), url("../fonts/icon/figma-land.woff?m8g85i") format("woff"), url("../fonts/icon/figma-land.svg?m8g85i#figma-land") format("svg");
+  src: url("../fonts/icon/figma-land.ttf?eyr0pa") format("truetype"), url("../fonts/icon/figma-land.woff?eyr0pa") format("woff"), url("../fonts/icon/figma-land.svg?eyr0pa#figma-land") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1807,6 +1807,7 @@ b {
   margin-bottom: 0;
   font-size: 1.6rem;
   line-height: 2.4rem;
+  color: #374754;
 }
 
 /* ==========================================================================
@@ -1955,11 +1956,11 @@ b {
 .pricing__box:hover {
   background-color: #458ff6;
   color: #fff;
-  -webkit-transform: scale(1.04);
-     -moz-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-       -o-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-transform: scale(1.02);
+     -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+       -o-transform: scale(1.02);
+          transform: scale(1.02);
 }
 @media only screen and (max-width: 1199.98px) {
   .pricing__box {
@@ -2122,13 +2123,12 @@ Components: Input form
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #000;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
   padding-bottom: 8px;
   border: 1px solid #e8e8e8;
   -webkit-border-radius: 40px;
      -moz-border-radius: 40px;
           border-radius: 40px;
-  background-color: transparent;
   padding: 18px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -2155,11 +2155,10 @@ Components: Input form
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #000;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
   padding-bottom: 8px;
   border: 1px solid #e8e8e8;
-  background-color: transparent;
-  padding: 14px;
+  padding: 18px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -2285,8 +2284,8 @@ Components: Input form
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  bottom: -18px;
-  left: 12px;
+  bottom: -24px;
+  left: 8px;
   font-size: 1.2rem;
   line-height: 1.8rem;
   font-weight: 400;
@@ -2321,18 +2320,82 @@ Components: Input form
 }
 .testimonials__client {
   margin-bottom: 48px;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.4s;
+     -moz-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .testimonials__client__img {
   height: 60px;
 }
 .testimonials__customer__name {
   margin-bottom: 16px;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .testimonials__customer__position {
   margin-bottom: 0;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .testimonials__caption {
   margin-bottom: 48px;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .testimonials__caption__el {
   color: #374754;
@@ -2366,6 +2429,22 @@ Components: Input form
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 600;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .testimonials__txt__position {
   font-size: 1.4rem;
@@ -2373,6 +2452,22 @@ Components: Input form
   font-weight: 400;
   margin-bottom: 0;
   color: #374754;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 /* ==========================================================================
@@ -2380,6 +2475,12 @@ Components: Input form
   ========================================================================== */
 .subscribe {
   padding: 64px 0;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe {
+    padding: 32px 0;
+  }
 }
 .subscribe__wrapper::after {
   content: "";
@@ -2388,11 +2489,12 @@ Components: Input form
 }
 .subscribe__img {
   float: left;
-  width: 654px;
+  width: 584px;
 }
 @media only screen and (max-width: 991.98px) {
   .subscribe__img {
     width: 50%;
+    margin-bottom: 24px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -2405,7 +2507,7 @@ Components: Input form
   width: 544px;
   display: table;
   min-height: 496px;
-  padding: 64px;
+  padding: 64px 0 32px 32px;
 }
 @media only screen and (max-width: 991.98px) {
   .subscribe__txt {
@@ -2424,7 +2526,12 @@ Components: Input form
   margin-bottom: 8px;
 }
 .subscribe__title {
+  font-weight: 300;
+  font-size: 3.6rem;
+  line-height: 4.8rem;
   margin-bottom: 16px;
+  color: #252b42;
+  max-width: 324px;
 }
 .subscribe__desc {
   margin-bottom: 32px;
@@ -2464,6 +2571,11 @@ Components: Input form
 .try-for-free {
   padding: 32px 0;
 }
+@media only screen and (max-width: 991.98px) {
+  .try-for-free {
+    padding: 24px 0;
+  }
+}
 .try-for-free__wrapper::after {
   content: "";
   clear: both;
@@ -2476,6 +2588,7 @@ Components: Input form
 @media only screen and (max-width: 767.98px) {
   .try-for-free__img {
     width: 100%;
+    margin-bottom: 24px;
   }
 }
 .try-for-free__txt {
@@ -2487,6 +2600,7 @@ Components: Input form
 @media only screen and (max-width: 767.98px) {
   .try-for-free__txt {
     width: 100%;
+    min-height: initial;
   }
 }
 .try-for-free__txt__align {
@@ -2498,6 +2612,12 @@ Components: Input form
   font-weight: 400;
   font-size: 4.8rem;
   line-height: 5.6rem;
+}
+@media only screen and (max-width: 991.98px) {
+  .try-for-free__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 }
 .try-for-free__desc {
   margin-bottom: 32px;
@@ -2650,9 +2770,10 @@ Components: Input form
           transform-origin: center center;
 }
 .burger-menu__bar:nth-child(2) {
-  width: 24px;
+  width: 20px;
 }
 .burger-menu__bar:nth-child(3) {
+  width: 14px;
   margin-bottom: 0;
 }
 
@@ -2738,6 +2859,11 @@ Components: Input form
   background-position: 60% center;
   min-width: 140px;
   min-height: 60px;
+}
+@media only screen and (max-width: 767.98px) {
+  .btn--subscribe {
+    width: 100%;
+  }
 }
 .btn--subscribe:hover {
   background-position: left center;
@@ -2902,7 +3028,7 @@ Components: Input form
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* =========== Better Font Rendering =========== */
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2953,6 +3079,22 @@ Components: Input form
 
 .fl-twitter:before {
   content: "\e90b";
+}
+
+.fl-chevron-down:before {
+  content: "\e90d";
+}
+
+.fl-chevron-left:before {
+  content: "\e910";
+}
+
+.fl-chevron-right:before {
+  content: "\e90f";
+}
+
+.fl-chevron-up:before {
+  content: "\e90e";
 }
 
 .fl-facebook:before {
@@ -3623,6 +3765,7 @@ Components: Input form
             transition-delay: 0s;
   }
   .show-menu .header .burger-menu__bar:nth-child(3) {
+    width: 24px;
     -webkit-transform: rotate(-135deg) translate(6px, 6px);
        -moz-transform: rotate(-135deg) translate(6px, 6px);
         -ms-transform: rotate(-135deg) translate(6px, 6px);
@@ -3668,59 +3811,8 @@ Components: Input form
     position: relative;
   }
 }
-.footer::before {
-  content: "";
-  position: absolute;
-  left: -16px;
-  bottom: -40px;
-  z-index: 1;
-  width: 130px;
-  height: 115px;
-  background-image: url(../img/bg/element2.svg);
-  background-repeat: no-repeat;
-  -moz-background-size: 100%;
-       background-size: 100%;
-  background-position: left top;
-}
-@media only screen and (max-width: 1199.98px) {
-  .footer::before {
-    width: 96px;
-    height: 88px;
-    left: -8px;
-    bottom: -32px;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .footer::before {
-    width: 88px;
-    height: 80px;
-    bottom: -24px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .footer::before {
-    width: 80px;
-    height: 72px;
-  }
-}
-@media only screen and (max-width: 575.86px) {
-  .footer::before {
-    width: 72px;
-    height: 64px;
-  }
-}
-.footer__about {
-  float: left;
-  max-width: 35%;
-}
-@media only screen and (max-width: 991.98px) {
-  .footer__about {
-    float: none;
-    max-width: 100%;
-  }
-}
 .footer__menu {
-  float: right;
+  float: left;
 }
 .footer__menu::after {
   content: "";
@@ -3786,40 +3878,6 @@ Components: Input form
     transition: all 0.35s ease 0.3s;
   }
 }
-.footer__logo {
-  display: inline-block;
-  margin-bottom: 24px;
-}
-.footer__logo__img {
-  display: block;
-  width: auto;
-  height: 40px;
-}
-.footer__description {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  font-weight: 300;
-  color: #fff;
-  margin-bottom: 32px;
-}
-@media only screen and (max-width: 991.98px) {
-  .footer__description {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .footer__description {
-    margin-bottom: 24px;
-  }
-}
-.footer__copyright {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 300;
-  color: #fff;
-  margin-bottom: 0;
-}
 .footer__title {
   position: relative;
   font-size: 2rem;
@@ -3835,8 +3893,8 @@ Components: Input form
 }
 @media only screen and (max-width: 767.98px) {
   .footer__title::after {
-    content: "\e907";
-    font-family: "trafalgar-icon";
+    content: "\e90d";
+    font-family: "figma-land";
     position: absolute;
     top: 0;
     right: 0;
@@ -3844,6 +3902,10 @@ Components: Input form
     -o-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
     transition: all 0.35s ease;
+    -webkit-transition-delay: 0.4s;
+       -moz-transition-delay: 0.4s;
+         -o-transition-delay: 0.4s;
+            transition-delay: 0.4s;
   }
 }
 .footer__nav {
@@ -3903,6 +3965,8 @@ Components: Input form
 @media only screen and (max-width: 767.98px) {
   .footer__nav__link {
     padding-bottom: 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
 .footer__nav__link::after {
@@ -3942,6 +4006,76 @@ Components: Input form
       -ms-transform-origin: left center;
        -o-transform-origin: left center;
           transform-origin: left center;
+}
+.footer__contact {
+  float: right;
+  max-width: 35%;
+}
+@media only screen and (max-width: 991.98px) {
+  .footer__contact {
+    float: none;
+    max-width: 100%;
+  }
+}
+.footer__contact__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+}
+.footer__contact__icon-el {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  color: #fff;
+}
+.footer__contact__txt {
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 24px;
+}
+.footer__contact__txt-el {
+  color: #fff;
+}
+.footer__sosmed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
+.footer__sosmed__icon {
+  display: inline-block;
+  margin-right: 24px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.footer__sosmed__icon:hover {
+  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.footer__sosmed__icon:hover.fl-twitter {
+  color: #1da1f2;
+}
+.footer__sosmed__icon:hover.fl-facebook {
+  color: #1877f2;
+}
+.footer__sosmed__icon:hover.fl-linked-in {
+  color: #0077b5;
+}
+.footer__sosmed__link {
+  color: #fff;
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* ==========================================================================
@@ -4177,7 +4311,7 @@ Components: Input form
      -moz-border-radius: 8px;
           border-radius: 8px;
   float: right;
-  padding: 32px 32px 32px 48px;
+  padding: 32px 0 32px 48px;
   width: 60%;
 }
 @media only screen and (max-width: 767.98px) {
@@ -4187,12 +4321,17 @@ Components: Input form
   }
 }
 .contact-us__detail__wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 .contact-us__detail__wrapper::after {
   content: "";
   clear: both;
   display: table;
+}
+@media only screen and (max-width: 991.98px) {
+  .contact-us__detail__wrapper {
+    margin-bottom: 24px;
+  }
 }
 .contact-us__box {
   float: left;
@@ -4227,13 +4366,18 @@ Components: Input form
 }
 .contact-us__box__txt__el {
   margin-bottom: 0;
+  color: #374754;
 }
 .contact-us__map-embed {
+  text-align: center;
   margin-bottom: 24px;
+  margin: 0 auto 24px;
+  max-width: 520px;
 }
 .contact-us__map-embed iframe {
   margin: 0 auto;
   display: block;
+  height: 380px;
   width: 100%;
 }
 @media only screen and (max-width: 991.98px) {
@@ -4409,9 +4553,34 @@ Components: Input form
   clear: both;
   display: table;
 }
+@media only screen and (max-width: 767.98px) {
+  .pricing__list {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+  }
+  .pricing__list::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
 .pricing .pricing__card {
   display: inline-block;
   padding: 24px;
+}
+@media only screen and (max-width: 767.98px) {
+  .pricing .pricing__card {
+    padding: 0 24px 0 0;
+  }
 }
 
 /* ==========================================================================
@@ -4419,6 +4588,12 @@ Components: Input form
   ========================================================================== */
 .features {
   padding: 48px 0;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991.98px) {
+  .features {
+    padding: 24px 0;
+  }
 }
 .features__head {
   text-align: center;
@@ -4466,6 +4641,12 @@ Components: Input form
 .features__thumbnail {
   position: relative;
 }
+@media only screen and (max-width: 767.98px) {
+  .features__thumbnail {
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+}
 .features__thumbnail__el {
   display: block;
 }
@@ -4495,8 +4676,13 @@ Components: Input form
   .features__button {
     width: 60px;
     height: 60px;
-    top: 37%;
-    left: 42%;
+    top: 44%;
+    left: 44%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .features__button {
+    left: 44%;
   }
 }
 .features__button:hover {
@@ -4571,7 +4757,9 @@ Components: Input form
 }
 .testimonials .testimonials__item {
   float: left;
-  width: 33.3333333%;
+  max-width: initial;
+  margin: 0 420px;
+  display: block;
   text-align: center;
 }
 @media only screen and (max-width: 991.98px) {
@@ -4586,6 +4774,160 @@ Components: Input form
 }
 .testimonials__btn {
   text-align: center;
+  margin-top: 48px;
+}
+.testimonials--standalone,
+.testimonials .owl-item.active {
+  display: inline-block;
+}
+.testimonials--standalone .testimonials__client__img,
+.testimonials .owl-item.active .testimonials__client__img {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.testimonials--standalone .testimonials__name,
+.testimonials .owl-item.active .testimonials__name {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.testimonials--standalone .testimonials__position,
+.testimonials .owl-item.active .testimonials__position {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.4s;
+     -moz-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.testimonials--standalone .testimonials__desc,
+.testimonials .owl-item.active .testimonials__desc {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.6s;
+     -moz-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.testimonials--standalone .testimonials__btn,
+.testimonials .owl-item.active .testimonials__btn {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
+  -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
+  -moz-transition: opacity 0.1 ease, transform 0.1s ease, -moz-transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease;
+  transition: opacity 0.1 ease, transform 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -o-transform 0.1s ease;
+  -webkit-transition-delay: 0.8s;
+     -moz-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+.testimonials .owl-carousel .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-color: #000;
+  opacity: 0.1;
+}
+@media only screen and (max-width: 575.86px) {
+  .testimonials .owl-carousel .owl-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+.testimonials .owl-carousel .owl-dot:last-child {
+  margin-right: 0;
+}
+.testimonials .owl-carousel .owl-dot.active {
+  width: 32px;
+  opacity: 1;
+}
+.testimonials .owl-carousel .owl-dots {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media only screen and (max-width: 991.98px) {
+  .testimonials .owl-carousel .owl-dots {
+    bottom: 236px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .testimonials .owl-carousel .owl-dots {
+    bottom: 250px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .testimonials .owl-carousel .owl-dots {
+    bottom: 247px;
+  }
 }
 
 /* ==========================================================================

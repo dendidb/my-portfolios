@@ -4,14 +4,19 @@
 
 .subscribe {
   padding: 64px 0;
+  overflow: hidden;
+  @include medium {
+    padding: 32px 0;
+  }
   &__wrapper {
     @include clearfix;
   }
   &__img {
     float: left;
-    width: 654px;
+    width: 584px;
     @include medium {
       width: 50%;
+      margin-bottom: 24px;
     }
     @include small {
       width: 100%;
@@ -22,7 +27,7 @@
     width: 544px;
     display: table;
     min-height: 496px;
-    padding: 64px;
+    padding: 64px 0 32px 32px;
     @include medium {
       width: 50%;
     }
@@ -37,7 +42,11 @@
     margin-bottom: 8px;
   }
   &__title {
+    font-weight: 300;
+    @include font-size(36);
     margin-bottom: 16px;
+    color: color(blue, 4);
+    max-width: 324px;
   }
   &__desc {
     margin-bottom: 32px;

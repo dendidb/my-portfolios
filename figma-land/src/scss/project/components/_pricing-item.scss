@@ -16,11 +16,7 @@
     &:hover {
       background-color: color(blue, 1);
       color: color(white);
-      transform: scale(1.04);
-      // #{$p}__btn {
-      //   background-color: color(white);
-      //   color: color(blue, 1);
-      // }
+      transform: scale(1.02);
     }
     @include large {
       padding: 24px 24px 120px;

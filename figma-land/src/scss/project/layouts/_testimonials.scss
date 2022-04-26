@@ -33,7 +33,9 @@
   }
   #{$t}__item {
     float: left;
-    width: 33.3333333%;
+    max-width: initial;
+    margin: 0 420px;
+    display: block;
     text-align: center;
     @include medium {
       width: 50%;
@@ -44,5 +46,84 @@
   }
   &__btn {
     text-align: center;
+    margin-top: 48px;
+  }
+
+  &--standalone,
+  .owl-item.active {
+    display: inline-block;
+    #{$t} {
+      &__client__img {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .2s;
+      }
+      &__name {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .2s;
+      }
+      &__position {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .4s;
+      }
+      &__desc {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .6s;
+      }
+      &__btn {
+        opacity: 1;
+        transform: none;
+        transition: opacity .10 ease, transform .10s ease;
+        transition-delay: .8s;
+      }
+    }
+  }
+
+  .owl-carousel {
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      transition: all 500ms ease;
+      background-color: color(black);
+      opacity: .1;
+      @include extra-small {
+        width: 6px;
+        height: 6px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 32px;
+        background-color: color(primary);
+        opacity: 1;
+      }
+      &s {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include medium {
+          bottom: 236px;
+        }
+        @include small {
+          bottom: 250px;
+        }
+        @include extra-small {
+          bottom: 247px;
+        }
+      }
+    }
   }
 }

@@ -22,50 +22,9 @@
     padding: 48px 0 56px;
     position: relative;
   }
-  &::before {
-    content: '';
-    position: absolute;
-    left: -16px;
-    bottom: -40px;
-    z-index: 1;
-    width: 130px;
-    height: 115px;
-    background-image: url(../img/bg/element2.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: left top;
-    @include large {
-      width: 96px;
-      height: 88px;
-      left: -8px;
-      bottom: -32px;
-    }
-    @include medium {
-      width: 88px;
-      height: 80px;
-      bottom: -24px;
-    }
-    @include small {
-      width: 80px;
-      height: 72px;
-    }
-    @include extra-small {
-      width: 72px;
-      height: 64px;
-    }
-  }
-
-  &__about {
-    float: left;
-    max-width: 35%;
-    @include medium {
-      float: none;
-      max-width: 100%;
-    }
-  }
 
   &__menu {
-    float: right;
+    float: left;
     @include clearfix;
     @include medium {
       float: none;
@@ -117,36 +76,6 @@
     }
   }
 
-  &__logo {
-    display: inline-block;
-    margin-bottom: 24px;
-    &__img {
-      display: block;
-      width: auto;
-      height: 40px;
-    }
-  }
-
-  &__description {
-    @include font-size(18);
-    font-weight: fw(light);
-    color: color(white);
-    margin-bottom: 32px;
-    @include medium {
-      @include font-size(16);
-    }
-    @include small {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__copyright {
-    @include font-size(16);
-    font-weight: fw(light);
-    color: color(white);
-    margin-bottom: 0;
-  }
-
   &__title {
     position: relative;
     @include font-size(20);
@@ -158,12 +87,13 @@
     }
     &::after {
       @include small {
-        content: "\e907";
-        font-family: 'trafalgar-icon';
+        content: "\e90d";
+        font-family: 'figma-land';
         position: absolute;
         top: 0;
         right: 0;
         transition: all .35s ease;
+        transition-delay: .4s;
       }
     }
   }
@@ -205,6 +135,7 @@
       @include remove-tap-highlight;
       @include small {
         padding-bottom: 0;
+        @include font-size(14);
       }
       &::after {
         content: '';
@@ -225,6 +156,61 @@
           transform-origin: left center;
         }
       }
+    }
+  }
+  &__contact {
+    float: right;
+    max-width: 35%;
+    @include medium {
+      float: none;
+      max-width: 100%;
+    }
+    &__icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+      &-el {
+        @include font-size(36);
+        color: color(white);
+      }
+    }
+    &__txt {
+      width: 60%;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 24px;
+      &-el {
+        color: color(white);
+      }
+    }
+  }
+  &__sosmed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 24px;
+    &__icon {
+      display: inline-block;
+      margin-right: 24px;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.2);
+        &.fl-twitter {
+          color: color(social-media, twitter);
+        }
+        &.fl-facebook {
+          color: color(social-media, facebook);
+        }
+        &.fl-linked-in {
+          color: color(social-media, linked-in);
+        }
+      }
+    }
+    &__link {
+      color: color(white);
+      @include font-size(36);
+      text-decoration: none;
+      @include remove-tap-highlight;
     }
   }
 }

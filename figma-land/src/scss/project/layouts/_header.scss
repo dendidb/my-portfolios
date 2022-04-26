@@ -402,6 +402,7 @@
             transition-delay: 0s;
           }
           &:nth-child(3) {
+            width: 24px;
             transform: rotate(-135deg) translate(6px, 6px);
             transition-delay: .3s;
           }

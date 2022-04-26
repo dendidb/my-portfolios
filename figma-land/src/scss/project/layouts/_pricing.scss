@@ -20,12 +20,21 @@
   }
   &__list {
     @include clearfix;
+    @include small {
+      white-space: nowrap;
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-left: 24px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      @include scroll('x', 'touch', 'hide');
+    }
   }
   #{$p}__card {
-    // float: left;
-    // width: 33.3333333%;
-    // padding: 16px;
     display: inline-block;
     padding: 24px;
+    @include small {
+      padding: 0 24px 0 0;
+    }
   }
 }

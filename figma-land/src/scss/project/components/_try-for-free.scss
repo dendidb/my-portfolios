@@ -4,6 +4,9 @@
 
 .try-for-free {
   padding: 32px 0;
+  @include medium {
+    padding: 24px 0;
+  }
   &__wrapper {
     @include clearfix;
   }
@@ -12,6 +15,7 @@
     width: 50%;
     @include small {
       width: 100%;
+      margin-bottom: 24px;
     }
   }
   &__txt {
@@ -21,6 +25,7 @@
     min-height: 347px;
     @include small {
       width: 100%;
+      min-height: initial;
     }
     &__align {
       display: table-cell;
@@ -31,6 +36,9 @@
     margin-bottom: 16px;
     font-weight: fw(regular);
     @include font-size(48);
+    @include medium {
+      @include font-size(24);
+    }
   }
   &__desc {
     margin-bottom: 32px;

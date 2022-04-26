@@ -29,8 +29,13 @@ const Testimonials = (() => {
           autoplayTimeout: 7000,
           dotsSpeed: 1000,
           autoplaySpeed: 1000,
-          dragEndSpeed: 800
+          dragEndSpeed: 800,
         });
+      } else {
+        if(selector.hasClass('owl-carousel')) {
+          selector.removeClass('owl-carousel');
+        }
+        selector.addClass('testimonials--standalone');
       }
     }
 
@@ -45,4 +50,4 @@ const Testimonials = (() => {
 
 })();
 
-export default Testimonials
+export default Testimonials;

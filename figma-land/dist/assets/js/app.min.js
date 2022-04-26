@@ -684,6 +684,12 @@ var Testimonials = function () {
         autoplaySpeed: 1000,
         dragEndSpeed: 800
       });
+    } else {
+      if (selector.hasClass('owl-carousel')) {
+        selector.removeClass('owl-carousel');
+      }
+
+      selector.addClass('testimonials--standalone');
     }
   }; // init
 
