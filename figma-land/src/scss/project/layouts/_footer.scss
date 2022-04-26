@@ -133,6 +133,7 @@
       padding-bottom: 4px;
       text-decoration: none;
       @include remove-tap-highlight;
+      font-weight: fw(regular);
       @include small {
         padding-bottom: 0;
         @include font-size(14);
@@ -165,22 +166,30 @@
       float: none;
       max-width: 100%;
     }
+    &__item {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     &__icon {
       display: inline-block;
-      vertical-align: middle;
-      width: 20%;
+      vertical-align: top;
+      width: 32px;
       &-el {
         @include font-size(36);
         color: color(white);
       }
     }
     &__txt {
-      width: 60%;
+      width: 82%;
       display: inline-block;
-      vertical-align: middle;
-      padding-left: 24px;
+      vertical-align: top;
+      padding-left: 12px;
       &-el {
         color: color(white);
+        margin-bottom: 0;
+        padding: 12px 0;
       }
     }
   }
@@ -189,12 +198,15 @@
     padding: 0;
     margin: 0;
     margin-top: 24px;
+    &__item {
+      margin-bottom: 24px;
+    }
     &__icon {
       display: inline-block;
       margin-right: 24px;
       transition: all 0.2s ease;
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         &.fl-twitter {
           color: color(social-media, twitter);
         }

@@ -7,7 +7,7 @@
   padding: 48px 0;
   text-align: center;
   &__box {
-    padding: 72px 24px 110px;
+    padding: 40px 24px 110px;
     border-radius: 8px;
     background-color: color(white);
     position: relative;
@@ -23,9 +23,6 @@
     }
     @include medium {
       padding: 24px 24px 112px;
-    }
-    @include small {
-      padding: 16px 16px 104px;
     }
     &__name {
       margin-bottom: 16px;

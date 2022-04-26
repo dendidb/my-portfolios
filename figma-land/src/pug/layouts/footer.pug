@@ -126,13 +126,14 @@
       ='\n'
       each val in dataFooter.contact
         - data = val;
-        .footer__contact__icon
-          ='\n'
-          i.footer__contact__icon-el(class='fl-'+val.iconClass)
-          ='\n'
-        .footer__contact__txt
-          p.footer__contact__txt-el
-           | !{val.text}
+        .footer__contact__item
+          .footer__contact__icon
+            ='\n'
+            i.footer__contact__icon-el(class='fl-'+val.iconClass)
+            ='\n'
+          .footer__contact__txt
+            p.footer__contact__txt-el
+              | !{val.text}
       ul.footer__sosmed
         each val in dataFooter.sosmed
           - data = val;

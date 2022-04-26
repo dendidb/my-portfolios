@@ -6,14 +6,11 @@ Components: Partners Item
   $p: &;
   &__box {
     padding: 24px;
-    min-height: 180px;
+    min-height: 168px;
     &:hover {
       #{$p}__img__el {
         transform: scale(1.06);
       }
-    }
-    @include small {
-      min-height: 160px;
     }
   }
   &__name {
@@ -27,7 +24,12 @@ Components: Partners Item
     &__el {
       display: block;
       margin: 0 auto;
+      object-fit: cover;
+      object-position: center center;
       transition: all .3s ease;
+      @include small {
+        width: 160px;
+      }
     }
   }
 }

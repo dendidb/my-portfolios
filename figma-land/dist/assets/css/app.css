@@ -1939,7 +1939,7 @@ b {
   text-align: center;
 }
 .pricing__box {
-  padding: 72px 24px 110px;
+  padding: 40px 24px 110px;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
@@ -1970,11 +1970,6 @@ b {
 @media only screen and (max-width: 991.98px) {
   .pricing__box {
     padding: 24px 24px 112px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .pricing__box {
-    padding: 16px 16px 104px;
   }
 }
 .pricing__box__name {
@@ -2032,7 +2027,7 @@ Components: Partners Item
 ========================================================================== */
 .partners__box {
   padding: 24px;
-  min-height: 180px;
+  min-height: 168px;
 }
 .partners__box:hover .partners__img__el {
   -webkit-transform: scale(1.06);
@@ -2040,11 +2035,6 @@ Components: Partners Item
       -ms-transform: scale(1.06);
        -o-transform: scale(1.06);
           transform: scale(1.06);
-}
-@media only screen and (max-width: 767.98px) {
-  .partners__box {
-    min-height: 160px;
-  }
 }
 .partners__name {
   font-size: 1.6rem;
@@ -2059,10 +2049,19 @@ Components: Partners Item
 .partners__img__el {
   display: block;
   margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media only screen and (max-width: 767.98px) {
+  .partners__img__el {
+    width: 160px;
+  }
 }
 
 /* ==========================================================================
@@ -3961,6 +3960,7 @@ Components: Input form
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-weight: 400;
 }
 @media only screen and (max-width: 767.98px) {
   .footer__nav__link {
@@ -4017,10 +4017,16 @@ Components: Input form
     max-width: 100%;
   }
 }
+.footer__contact__item {
+  margin-bottom: 24px;
+}
+.footer__contact__item:last-child {
+  margin-bottom: 0;
+}
 .footer__contact__icon {
   display: inline-block;
-  vertical-align: middle;
-  width: 20%;
+  vertical-align: top;
+  width: 32px;
 }
 .footer__contact__icon-el {
   font-size: 3.6rem;
@@ -4028,19 +4034,24 @@ Components: Input form
   color: #fff;
 }
 .footer__contact__txt {
-  width: 60%;
+  width: 82%;
   display: inline-block;
-  vertical-align: middle;
-  padding-left: 24px;
+  vertical-align: top;
+  padding-left: 12px;
 }
 .footer__contact__txt-el {
   color: #fff;
+  margin-bottom: 0;
+  padding: 12px 0;
 }
 .footer__sosmed {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-top: 24px;
+}
+.footer__sosmed__item {
+  margin-bottom: 24px;
 }
 .footer__sosmed__icon {
   display: inline-block;
@@ -4051,11 +4062,11 @@ Components: Input form
   transition: all 0.2s ease;
 }
 .footer__sosmed__icon:hover {
-  -webkit-transform: scale(1.2);
-     -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-       -o-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+       -o-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .footer__sosmed__icon:hover.fl-twitter {
   color: #1da1f2;
@@ -4300,6 +4311,7 @@ Components: Input form
   .contact-us__form {
     width: 100%;
     margin-bottom: 48px;
+    padding: 32px 16px;
   }
 }
 .contact-us__form__ttl {
@@ -4522,6 +4534,7 @@ Components: Input form
   .partners .partners__item {
     float: none;
     display: inline-block;
+    vertical-align: middle;
     margin-right: 24px;
     width: 268px;
     padding: 0;
