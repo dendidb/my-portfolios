@@ -1748,6 +1748,11 @@ b {
   text-align: center;
   min-height: 260px;
 }
+@media only screen and (max-width: 991.98px) {
+  .features__card {
+    padding: 12px;
+  }
+}
 .features__img {
   margin-bottom: 20px;
 }
@@ -2509,7 +2514,7 @@ Components: Input form
   font-weight: 300;
   font-size: 3.6rem;
   line-height: 4.8rem;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   color: #252b42;
   max-width: 324px;
 }
@@ -4663,10 +4668,11 @@ Components: Input form
   float: left;
   width: 33.3333333%;
   padding: 12px;
+  min-height: 320px;
 }
 @media only screen and (max-width: 991.98px) {
   .features .features__item {
-    width: 50%;
+    width: 33.3333333%;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -4752,7 +4758,7 @@ Components: Input form
 .testimonials {
   position: relative;
   overflow: hidden;
-  padding: 48px 0;
+  padding: 64px 0;
 }
 @media only screen and (max-width: 1199.98px) {
   .testimonials {

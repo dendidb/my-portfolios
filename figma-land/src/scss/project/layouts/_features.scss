@@ -33,8 +33,9 @@
     float: left;
     width: 33.3333333%;
     padding: 12px;
+    min-height: 320px;
     @include medium {
-      width: 50%;
+      width: 33.3333333%;
     }
     @include small {
       width: 100%;

@@ -7,6 +7,9 @@
     padding: 24px;
     text-align: center;
     min-height: 260px;
+    @include medium {
+      padding: 12px;
+    }
   }
   &__img {
     margin-bottom: 20px;
