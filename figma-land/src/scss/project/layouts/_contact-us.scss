@@ -23,7 +23,7 @@
     float: left;
     width: 40%;
     box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
-    @include small {
+    @include medium {
       width: 100%;
       margin-bottom: 48px;
       padding: 32px 16px;
@@ -38,7 +38,7 @@
     float: right;
     padding: 32px 0 32px 48px;
     width: 60%;
-    @include small {
+    @include medium {
       width: 100%;
       padding: 0;
     }
@@ -70,6 +70,7 @@
         width: 24px;
         height: 24px;
         display: block;
+        @include font-size(24);
         text-align: center;
         @include small {
           margin: 0;

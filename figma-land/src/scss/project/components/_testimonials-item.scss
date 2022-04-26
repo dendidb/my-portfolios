@@ -5,9 +5,15 @@
 .testimonials {
   &__item {
     padding: 24px;
+    @include medium {
+      padding: 12px;
+    }
   }
   &__client {
     margin-bottom: 48px;
+    @include medium {
+      margin-bottom: 24px;
+    }
     &__img {
       height: 60px;
       display: block;

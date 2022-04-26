@@ -301,7 +301,7 @@
     transform: translateY(-50%);
     margin: 0;
     @include medium {
-      left: 24px;
+      left: 0;
       bottom: 0px;
       transform: none;
       top: 440px;
@@ -311,6 +311,7 @@
     @include small {
       padding-left: 0;
       top: 400px;
+      left: 24px;
     }
     &__item {
       display: inline-block;

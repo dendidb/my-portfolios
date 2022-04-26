@@ -1897,7 +1897,7 @@ b {
   text-align: center;
 }
 .pricing__box {
-  padding: 40px 24px 110px;
+  padding: 48px 24px 110px;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
@@ -1914,11 +1914,11 @@ b {
 .pricing__box:hover {
   background-color: #458ff6;
   color: #fff;
-  -webkit-transform: scale(1.02);
-     -moz-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-       -o-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.04);
+     -moz-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+       -o-transform: scale(1.04);
+          transform: scale(1.04);
 }
 @media only screen and (max-width: 1199.98px) {
   .pricing__box {
@@ -1954,6 +1954,7 @@ b {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
+  padding-left: 8px;
 }
 .pricing__box__txt__currency, .pricing__box__txt__period {
   margin-bottom: 0;
@@ -1965,6 +1966,7 @@ b {
   list-style: none;
   padding: 0;
   margin: 0;
+  min-height: 320px;
 }
 .pricing__box .pricing__body__item {
   margin-bottom: 24px;
@@ -2275,8 +2277,18 @@ Components: Input form
 .testimonials__item {
   padding: 24px;
 }
+@media only screen and (max-width: 991.98px) {
+  .testimonials__item {
+    padding: 12px;
+  }
+}
 .testimonials__client {
   margin-bottom: 48px;
+}
+@media only screen and (max-width: 991.98px) {
+  .testimonials__client {
+    margin-bottom: 24px;
+  }
 }
 .testimonials__client__img {
   height: 60px;
@@ -2457,13 +2469,22 @@ Components: Input form
 }
 @media only screen and (max-width: 991.98px) {
   .subscribe__img {
-    width: 50%;
+    width: 100%;
     margin-bottom: 24px;
   }
 }
 @media only screen and (max-width: 767.98px) {
   .subscribe__img {
     width: 100%;
+  }
+}
+.subscribe__img__el {
+  display: block;
+}
+@media only screen and (max-width: 991.98px) {
+  .subscribe__img__el {
+    margin: 0 auto;
+    height: 380px;
   }
 }
 .subscribe__txt {
@@ -2474,11 +2495,6 @@ Components: Input form
   padding: 64px 0 32px 32px;
 }
 @media only screen and (max-width: 991.98px) {
-  .subscribe__txt {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 767.98px) {
   .subscribe__txt {
     width: 100%;
     padding: 0;
@@ -2549,10 +2565,19 @@ Components: Input form
   float: right;
   width: 50%;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .try-for-free__img {
     width: 100%;
     margin-bottom: 24px;
+  }
+}
+.try-for-free__img__el {
+  display: block;
+}
+@media only screen and (max-width: 991.98px) {
+  .try-for-free__img__el {
+    height: 300px;
+    margin: 0 auto;
   }
 }
 .try-for-free__txt {
@@ -2561,7 +2586,7 @@ Components: Input form
   display: table;
   min-height: 347px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .try-for-free__txt {
     width: 100%;
     min-height: initial;
@@ -3532,7 +3557,7 @@ Components: Input form
 }
 @media only screen and (max-width: 991.98px) {
   .header__sosmed {
-    left: 24px;
+    left: 0;
     bottom: 0px;
     -webkit-transform: none;
        -moz-transform: none;
@@ -3548,6 +3573,7 @@ Components: Input form
   .header__sosmed {
     padding-left: 0;
     top: 400px;
+    left: 24px;
   }
 }
 .header__sosmed__item {
@@ -3998,16 +4024,32 @@ Components: Input form
   line-height: 4.8rem;
   color: #fff;
 }
+@media only screen and (max-width: 767.98px) {
+  .footer__contact__icon-el {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
 .footer__contact__txt {
   width: 82%;
   display: inline-block;
   vertical-align: top;
   padding-left: 12px;
 }
+@media only screen and (max-width: 991.98px) {
+  .footer__contact__txt {
+    padding-left: 0;
+  }
+}
 .footer__contact__txt-el {
   color: #fff;
   margin-bottom: 0;
   padding: 12px 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .footer__contact__txt-el {
+    padding: 6px 0;
+  }
 }
 .footer__sosmed {
   list-style: none;
@@ -4021,6 +4063,7 @@ Components: Input form
 .footer__sosmed__icon {
   display: inline-block;
   margin-right: 24px;
+  text-align: center;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -4052,6 +4095,12 @@ Components: Input form
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media only screen and (max-width: 991.98px) {
+  .footer__sosmed__link {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 }
 
 /* ==========================================================================
@@ -4272,7 +4321,7 @@ Components: Input form
      -moz-box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .contact-us__form {
     width: 100%;
     margin-bottom: 48px;
@@ -4291,7 +4340,7 @@ Components: Input form
   padding: 32px 0 32px 48px;
   width: 60%;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .contact-us__detail {
     width: 100%;
     padding: 0;
@@ -4334,6 +4383,8 @@ Components: Input form
   width: 24px;
   height: 24px;
   display: block;
+  font-size: 2.4rem;
+  line-height: 3rem;
   text-align: center;
 }
 @media only screen and (max-width: 767.98px) {
@@ -4526,6 +4577,12 @@ Components: Input form
 .pricing__title, .pricing__desc {
   color: #fff;
 }
+.pricing__list {
+  margin-left: -16px;
+  margin-right: -16px;
+  font-size: 0;
+  text-align: center;
+}
 .pricing__list::after {
   content: "";
   clear: both;
@@ -4553,6 +4610,7 @@ Components: Input form
 }
 .pricing .pricing__card {
   display: inline-block;
+  vertical-align: middle;
   padding: 16px;
 }
 @media only screen and (max-width: 767.98px) {
@@ -4725,6 +4783,12 @@ Components: Input form
   font-size: 3.6rem;
   line-height: 4.8rem;
 }
+@media only screen and (max-width: 991.98px) {
+  .testimonials__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
 .testimonials__body {
   margin-bottom: 48px;
 }
@@ -4742,17 +4806,18 @@ Components: Input form
 }
 @media only screen and (max-width: 991.98px) {
   .testimonials .testimonials__item {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .testimonials .testimonials__item {
     width: 100%;
+    margin: 0;
   }
 }
 .testimonials__btn {
   text-align: center;
   margin-top: 64px;
+}
+@media only screen and (max-width: 991.98px) {
+  .testimonials__btn {
+    margin-top: 32px;
+  }
 }
 .testimonials--standalone,
 .testimonials .owl-item.active {

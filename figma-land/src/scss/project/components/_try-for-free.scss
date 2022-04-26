@@ -13,9 +13,16 @@
   &__img {
     float: right;
     width: 50%;
-    @include small {
+    @include medium {
       width: 100%;
       margin-bottom: 24px;
+    }
+    &__el {
+      display: block;
+      @include medium {
+        height: 300px;
+        margin: 0 auto;
+      }
     }
   }
   &__txt {
@@ -23,7 +30,7 @@
     width: 50%;
     display: table;
     min-height: 347px;
-    @include small {
+    @include medium {
       width: 100%;
       min-height: initial;
     }

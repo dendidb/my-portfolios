@@ -534,28 +534,26 @@ var PricingCard = function () {
 
 
   var handleCheckHeight = function handleCheckHeight() {
-    if ($(window).width() >= 991.98) {
-      if ($('.pricing__list').hasClass('js-pricing-card')) {
-        var _height = 0;
-        handleResetHeight();
-        $('.js-pricing-card').each(function (i, e) {
-          if (_height < $(e).find('.pricing__box').height()) {
-            _height = $(e).find('.pricing__box').height();
-          }
-        });
-        $('.pricing__box').height(_height);
-      }
+    if ($('.pricing__list').hasClass('js-pricing-card')) {
+      var _height = 0;
+      handleResetHeight();
+      $('.pricing-card').each(function (i, e) {
+        if (_height < $(e).find('.pricing__body').height()) {
+          _height = $(e).find('.pricing__body').height();
+        }
+      });
+      $('.pricing__body').height(_height);
     }
   }; // --- handleResetHeight
 
 
   var handleResetHeight = function handleResetHeight() {
-    var _attr = $('.pricing__box').attr('style'); // For some browsers, `attr` is undefined; for others,
+    var _attr = $('.pricing__body').attr('style'); // For some browsers, `attr` is undefined; for others,
     // `attr` is false.  Check for both.
 
 
     if (typeof _attr !== 'undefined' && _attr !== false) {
-      $('.pricing__box').removeAttr('style');
+      $('.pricing__body').removeAttr('style');
     }
   }; // --- init
 
@@ -671,8 +669,8 @@ var Testimonials = function () {
       // --- init carousel
       selector.addClass('owl-carousel').owlCarousel({
         items: 1,
-        dots: true,
-        nav: true,
+        dots: false,
+        nav: false,
         navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
         touchDrag: true,
         mouseDrag: true,
@@ -683,7 +681,7 @@ var Testimonials = function () {
         autoplayTimeout: 7000,
         dotsSpeed: 1000,
         autoplaySpeed: 1000,
-        dragEndSpeed: 800,
+        dragEndSpeed: 450,
         loop: true,
         rewind: true
       });

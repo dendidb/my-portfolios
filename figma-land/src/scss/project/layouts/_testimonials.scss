@@ -26,6 +26,9 @@
   &__title {
     margin-bottom: 0;
     @include font-size(36);
+    @include medium {
+      @include font-size(24);
+    }
   }
   &__body {
     @include clearfix;
@@ -38,15 +41,16 @@
     display: block;
     text-align: center;
     @include medium {
-      width: 50%;
-    }
-    @include small {
       width: 100%;
+      margin: 0;
     }
   }
   &__btn {
     text-align: center;
     margin-top: 64px;
+    @include medium {
+      margin-top: 32px;
+    }
   }
 
   &--standalone,

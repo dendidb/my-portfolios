@@ -15,11 +15,18 @@
     float: left;
     width: 584px;
     @include medium {
-      width: 50%;
+      width: 100%;
       margin-bottom: 24px;
     }
     @include small {
       width: 100%;
+    }
+    &__el {
+      display: block;
+      @include medium {
+        margin: 0 auto;
+        height: 380px;
+      }
     }
   }
   &__txt {
@@ -29,9 +36,6 @@
     min-height: 496px;
     padding: 64px 0 32px 32px;
     @include medium {
-      width: 50%;
-    }
-    @include small {
       width: 100%;
       padding: 0;
       min-height: initial;

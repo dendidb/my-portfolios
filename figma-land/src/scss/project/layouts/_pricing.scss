@@ -20,6 +20,10 @@
   }
   &__list {
     @include clearfix;
+    margin-left: -16px;
+    margin-right: -16px;
+    font-size: 0;
+    text-align: center;
     @include small {
       white-space: nowrap;
       margin-left: -24px;
@@ -32,6 +36,7 @@
   }
   #{$p}__card {
     display: inline-block;
+    vertical-align: middle;
     padding: 16px;
     @include small {
       padding: 0 24px 0 0;

@@ -18,8 +18,8 @@ const Testimonials = (() => {
         // --- init carousel
         selector.addClass('owl-carousel').owlCarousel({
           items: 1,
-          dots: true,
-          nav: true,
+          dots: false,
+          nav: false,
           navText: ["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
           touchDrag: true,
           mouseDrag: true,
@@ -30,7 +30,7 @@ const Testimonials = (() => {
           autoplayTimeout: 7000,
           dotsSpeed: 1000,
           autoplaySpeed: 1000,
-          dragEndSpeed: 800,
+          dragEndSpeed: 450,
           loop: true,
           rewind: true,
         });

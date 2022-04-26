@@ -7,7 +7,6 @@
 import {
   Header,
   Footer,
-  Blog,
   PricingCard,
 } from 'components';
 
