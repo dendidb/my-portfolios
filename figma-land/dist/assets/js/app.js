@@ -52,9 +52,9 @@ var App = function () {
 
       _components.Testimonials.init();
 
-      _components.Footer.init();
+      _components.Reveal.init();
 
-      _components.Blog.init();
+      _components.Footer.init();
     })(jQuery);
   }; // --- load
 
@@ -81,54 +81,6 @@ var App = function () {
 App.init();
 
 },{"./components":13,"./utilities":17}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-/* ------------------------------------------------------------------------------
-@name: Blog
-@description: Blog
---------------------------------------------------------------------------------- */
-var Blog = function () {
-  // --- handleCheckHeight
-  var setHeight = function setHeight() {
-    handleResetHeight();
-    var _height = 0;
-    $('.blog__list .blog__item').each(function (i, e) {
-      if (_height < $(e).find('.blog__txt').height()) {
-        _height = $(e).find('.blog__txt').height();
-      }
-    });
-    $('.blog__txt').height(_height);
-  }; // --- handleResetHeight
-
-
-  var handleResetHeight = function handleResetHeight() {
-    var _attr = $('.blog__txt').attr('style');
-
-    if (typeof _attr !== 'undefined' && _attr !== false) {
-      $('.blog__txt').removeAttr('style');
-    }
-  }; // init
-
-
-  var init = function init() {
-    setHeight();
-  };
-
-  return {
-    init: init,
-    checkHeight: setHeight
-  };
-}();
-
-var _default = Blog;
-exports["default"] = _default;
-
-},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -211,7 +163,7 @@ var ContactUs = function () {
 var _default = ContactUs;
 exports["default"] = _default;
 
-},{"../utilities":17}],4:[function(require,module,exports){
+},{"../utilities":17}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -278,7 +230,7 @@ var Footer = function () {
 var _default = Footer;
 exports["default"] = _default;
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -355,7 +307,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":17}],6:[function(require,module,exports){
+},{"../utilities":17}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -422,7 +374,7 @@ var HeroBanner = function () {
 var _default = HeroBanner;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -513,7 +465,7 @@ var Popup = function () {
 var _default = Popup;
 exports["default"] = _default;
 
-},{"../utilities":17}],8:[function(require,module,exports){
+},{"../utilities":17}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -570,6 +522,70 @@ var PricingCard = function () {
 }();
 
 var _default = PricingCard;
+exports["default"] = _default;
+
+},{}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+/* ------------------------------------------------------------------------------
+@name: Reveal
+@description: Reveal
+--------------------------------------------------------------------------------- */
+var Reveal = function () {
+  // --- handleRevealConfig
+  var handleRevealConfig = function handleRevealConfig() {
+    var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 50;
+    var distance = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '24px';
+    var interval = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 50;
+    var origin = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'bottom';
+    var _config = {
+      duration: 900,
+      distance: distance,
+      delay: delay,
+      interval: interval,
+      origin: origin
+    };
+    return _config;
+  }; // --- handleRunScrollReveal
+
+
+  var handleRunScrollReveal = function handleRunScrollReveal() {
+    // -- homepage section
+    ScrollReveal().reveal('.features__head', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__body', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'right'));
+    ScrollReveal().reveal('.features__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.features__desc', handleRevealConfig(60, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.features__list', handleRevealConfig(70, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimony__list', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.testimony__title', handleRevealConfig(50, '24px', 50, 'top'));
+    ScrollReveal().reveal('.footer__trial__title', handleRevealConfig(65, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.footer__trial__desc', handleRevealConfig(50, '24px', 50, 'bottom'));
+    ScrollReveal().reveal('.footer__trial__btn', handleRevealConfig(65, '24px', 50, 'bottom'));
+
+    if ($(window).width() <= 767.98) {
+      ScrollReveal().reveal('.section-description__img', handleRevealConfig(50, '24px', 50, 'bottom'));
+      ScrollReveal().reveal('.section-description__txt', handleRevealConfig(50, '24px', 50, 'bottom'));
+    }
+  }; // --- init
+
+
+  var init = function init() {
+    handleRunScrollReveal();
+  }; // --- return
+
+
+  return {
+    init: init
+  };
+}();
+
+var _default = Reveal;
 exports["default"] = _default;
 
 },{}],9:[function(require,module,exports){
@@ -865,12 +881,6 @@ exports["default"] = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Blog", {
-  enumerable: true,
-  get: function get() {
-    return _Blog["default"];
-  }
-});
 Object.defineProperty(exports, "ContactUs", {
   enumerable: true,
   get: function get() {
@@ -905,6 +915,12 @@ Object.defineProperty(exports, "PricingCard", {
   enumerable: true,
   get: function get() {
     return _PricingCard["default"];
+  }
+});
+Object.defineProperty(exports, "Reveal", {
+  enumerable: true,
+  get: function get() {
+    return _Reveal["default"];
   }
 });
 Object.defineProperty(exports, "Subscribe", {
@@ -950,13 +966,13 @@ var _Popup = _interopRequireDefault(require("./Popup"));
 
 var _Testimonials = _interopRequireDefault(require("./Testimonials"));
 
-var _Footer = _interopRequireDefault(require("./Footer"));
+var _Reveal = _interopRequireDefault(require("./Reveal"));
 
-var _Blog = _interopRequireDefault(require("./Blog"));
+var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./Blog":2,"./ContactUs":3,"./Footer":4,"./Header":5,"./HeroBanner":6,"./Popup":7,"./PricingCard":8,"./Subscribe":9,"./Testimonials":10,"./WindowResize":11,"./WindowScroll":12}],14:[function(require,module,exports){
+},{"./ContactUs":2,"./Footer":3,"./Header":4,"./HeroBanner":5,"./Popup":6,"./PricingCard":7,"./Reveal":8,"./Subscribe":9,"./Testimonials":10,"./WindowResize":11,"./WindowScroll":12}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

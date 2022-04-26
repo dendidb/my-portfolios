@@ -23,6 +23,9 @@
         height: 300px;
         margin: 0 auto;
       }
+      @include small {
+        height: 100%;
+      }
     }
   }
   &__txt {

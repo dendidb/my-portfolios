@@ -64,6 +64,9 @@
     }
     &__img {
       margin-bottom: 6px;
+      @include medium {
+        margin-bottom: 16px;
+      }
       &__el {
         color: color(blue, 1);
         margin: 0 auto;

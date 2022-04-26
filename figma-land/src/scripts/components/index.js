@@ -12,8 +12,8 @@ import ContactUs from "./ContactUs";
 import PricingCard from "./PricingCard";
 import Popup from "./Popup";
 import Testimonials from "./Testimonials";
+import Reveal from "./Reveal";
 import Footer from "./Footer";
-import Blog from "./Blog";
 
 export {
   WindowResize,
@@ -25,6 +25,6 @@ export {
   PricingCard,
   Popup,
   Testimonials,
-  Footer,
-  Blog
+  Reveal,
+  Footer
 };

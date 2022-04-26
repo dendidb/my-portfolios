@@ -7,7 +7,7 @@
 import {
   Header,
   Footer,
-  PricingCard,
+  PricingCard
 } from 'components';
 
 // --- WindowResize

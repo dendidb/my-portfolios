@@ -15,8 +15,8 @@ import {
   ContactUs,
   PricingCard,
   Testimonials,
-  Footer,
-  Blog
+  Reveal,
+  Footer
 } from 'components';
 
 // --- App
@@ -55,8 +55,8 @@ const App = (() => {
       ContactUs.init();
       PricingCard.init();
       Testimonials.init();
+      Reveal.init();
       Footer.init();
-      Blog.init();
 
     })(jQuery);
   }
