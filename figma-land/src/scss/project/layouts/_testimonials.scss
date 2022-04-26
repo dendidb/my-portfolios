@@ -34,7 +34,7 @@
   #{$t}__item {
     float: left;
     max-width: initial;
-    margin: 0 420px;
+    margin: 0 220px;
     display: block;
     text-align: center;
     @include medium {
@@ -46,7 +46,7 @@
   }
   &__btn {
     text-align: center;
-    margin-top: 48px;
+    margin-top: 64px;
   }
 
   &--standalone,
@@ -115,13 +115,13 @@
         left: 50%;
         transform: translateX(-50%);
         @include medium {
-          bottom: 236px;
+          // bottom: 236px;
         }
         @include small {
-          bottom: 250px;
+          // bottom: 250px;
         }
         @include extra-small {
-          bottom: 247px;
+          // bottom: 247px;
         }
       }
     }

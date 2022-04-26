@@ -14,20 +14,23 @@
     transition-delay: .4s;
     &__img {
       height: 60px;
+      display: block;
+      object-fit: contain;
+      object-position: center center;
     }
   }
   &__customer {
     &__name {
       margin-bottom: 16px;
-      opacity: 1;
-      transform: none;
+      opacity: 0;
+      transform: translateY(-4px);
       transition: opacity .10 ease, transform .10s ease;
       transition-delay: .6s;
     }
     &__position {
       margin-bottom: 0;
       opacity: 1;
-      transform: none;
+      transform: translateY(-4px);
       transition: opacity .10 ease, transform .10s ease;
       transition-delay: .6s;
     }
@@ -35,7 +38,7 @@
   &__caption {
     margin-bottom: 48px;
     opacity: 1;
-    transform: none;
+    transform: translateY(-4px);
     transition: opacity .10 ease, transform .10s ease;
     transition-delay: .6s;
     &__el {
@@ -45,7 +48,7 @@
   }
   &__person {
     font-size: 0;
-    text-align: left;
+    text-align: center;
   }
   &__img {
     display: inline-block;

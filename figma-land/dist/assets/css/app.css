@@ -1360,48 +1360,6 @@ b {
     padding-top: 32px;
   }
 }
-.hero-banner__item::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: -40px;
-  z-index: 2;
-  width: 130px;
-  height: 115px;
-  background-image: url(../img/bg/element1.svg);
-  background-repeat: no-repeat;
-  -moz-background-size: 100%;
-       background-size: 100%;
-}
-@media only screen and (max-width: 1199.98px) {
-  .hero-banner__item::before {
-    width: 96px;
-    height: 88px;
-    top: 0;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .hero-banner__item::before {
-    width: 88px;
-    height: 80px;
-    top: 32px;
-    left: -32px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .hero-banner__item::before {
-    width: 80px;
-    height: 72px;
-    top: 24px;
-    left: -24px;
-  }
-}
-@media only screen and (max-width: 575.86px) {
-  .hero-banner__item::before {
-    width: 72px;
-    height: 64px;
-  }
-}
 .hero-banner__wrapper::after {
   content: "";
   clear: both;
@@ -2338,15 +2296,20 @@ Components: Input form
 }
 .testimonials__client__img {
   height: 60px;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
 }
 .testimonials__customer__name {
   margin-bottom: 16px;
-  opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
+  opacity: 0;
+  -webkit-transform: translateY(-4px);
+     -moz-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+       -o-transform: translateY(-4px);
+          transform: translateY(-4px);
   -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
@@ -2361,11 +2324,11 @@ Components: Input form
 .testimonials__customer__position {
   margin-bottom: 0;
   opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
+  -webkit-transform: translateY(-4px);
+     -moz-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+       -o-transform: translateY(-4px);
+          transform: translateY(-4px);
   -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
@@ -2380,11 +2343,11 @@ Components: Input form
 .testimonials__caption {
   margin-bottom: 48px;
   opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
+  -webkit-transform: translateY(-4px);
+     -moz-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+       -o-transform: translateY(-4px);
+          transform: translateY(-4px);
   -webkit-transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   transition: opacity 0.1 ease, -webkit-transform 0.1s ease;
   -o-transition: opacity 0.1 ease, -o-transform 0.1s ease;
@@ -2402,7 +2365,7 @@ Components: Input form
 }
 .testimonials__person {
   font-size: 0;
-  text-align: left;
+  text-align: center;
 }
 .testimonials__img {
   display: inline-block;
@@ -4588,7 +4551,7 @@ Components: Input form
 }
 .pricing .pricing__card {
   display: inline-block;
-  padding: 24px;
+  padding: 16px;
 }
 @media only screen and (max-width: 767.98px) {
   .pricing .pricing__card {
@@ -4771,7 +4734,7 @@ Components: Input form
 .testimonials .testimonials__item {
   float: left;
   max-width: initial;
-  margin: 0 420px;
+  margin: 0 220px;
   display: block;
   text-align: center;
 }
@@ -4787,7 +4750,7 @@ Components: Input form
 }
 .testimonials__btn {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 .testimonials--standalone,
 .testimonials .owl-item.active {
@@ -4927,22 +4890,6 @@ Components: Input form
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-@media only screen and (max-width: 991.98px) {
-  .testimonials .owl-carousel .owl-dots {
-    bottom: 236px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .testimonials .owl-carousel .owl-dots {
-    bottom: 250px;
-  }
-}
-@media only screen and (max-width: 575.86px) {
-  .testimonials .owl-carousel .owl-dots {
-    bottom: 247px;
-  }
-}
-
 /* ==========================================================================
    Pages Index
    ========================================================================== */

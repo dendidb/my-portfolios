@@ -21,40 +21,6 @@
     @include retina {
       padding-top: 32px;
     }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 40px;
-      left: -40px;
-      z-index: zi(banner-item-before);
-      width: 130px;
-      height: 115px;
-      background-image: url(../img/bg/element1.svg);
-      background-repeat: no-repeat;
-      background-size: 100%;
-      @include large {
-        width: 96px;
-        height: 88px;
-        top: 0;
-      }
-      @include medium {
-        width: 88px;
-        height: 80px;
-        top: 32px;
-        left: -32px;
-      }
-      @include small {
-        width: 80px;
-        height: 72px;
-        top: 24px;
-        left: -24px;
-      }
-      @include extra-small {
-        width: 72px;
-        height: 64px;
-      }
-    }
   }
 
   &__wrapper {
