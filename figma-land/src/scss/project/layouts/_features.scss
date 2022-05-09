@@ -42,19 +42,19 @@
     }
   }
   &__thumbnail {
-    position: relative;
     @include small {
       margin-left: -48px;
       margin-right: -48px;
     }
     &__el {
+      position: relative;
       display: block;
     }
   }
   &__button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left: 45%;
+    top: 44%;
     width: 100px;
     height: 100px;
     outline: 0;
@@ -63,18 +63,21 @@
     padding: 0;
     margin: 0;
     border-radius: 50%;
-    top: 42%;
-    left: 46%;
     background-color: color(blue, 1);
     transition: .2s ease-in-out 0s;
+    @include large {
+    }
     @include medium {
       width: 60px;
       height: 60px;
       top: 44%;
-      left: 44%;
+      left: 45%;
     }
     @include small {
       left: 44%;
+    }
+    @include extra-small {
+      top: 40%;
     }
     &:hover {
       transform: scale(0.88);

@@ -90,6 +90,10 @@
   &__map-embed {
     text-align: center;
     margin-bottom: 24px;
+    @include small {
+      margin-left: -24px;
+      margin-right: -24px;
+    }
     iframe {
       margin: 0 auto;
       display: block;
@@ -97,6 +101,9 @@
       width: 100%;
       @include medium {
         width: 100%;
+      }
+      @include small {
+        height: 340px;
       }
     }
   }

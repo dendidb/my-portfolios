@@ -3242,8 +3242,13 @@ Components: Input form
   height: 50px;
 }
 @media only screen and (max-width: 991.98px) {
+  .header-on-scroll .header__logo__el {
+    height: 48px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
   .header__logo__el {
-    height: 40px;
+    height: 48px;
   }
 }
 .header__nav {
@@ -4059,7 +4064,7 @@ Components: Input form
 }
 @media only screen and (max-width: 767.98px) {
   .footer__contact__txt-el {
-    padding: 6px 0;
+    padding: 2px 0;
   }
 }
 .footer__sosmed {
@@ -4416,6 +4421,12 @@ Components: Input form
   text-align: center;
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 767.98px) {
+  .contact-us__map-embed {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
 .contact-us__map-embed iframe {
   margin: 0 auto;
   display: block;
@@ -4425,6 +4436,11 @@ Components: Input form
 @media only screen and (max-width: 991.98px) {
   .contact-us__map-embed iframe {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .contact-us__map-embed iframe {
+    height: 340px;
   }
 }
 .contact-us__sosmed__list {
@@ -4689,9 +4705,6 @@ Components: Input form
     width: 100%;
   }
 }
-.features__thumbnail {
-  position: relative;
-}
 @media only screen and (max-width: 767.98px) {
   .features__thumbnail {
     margin-left: -48px;
@@ -4699,12 +4712,13 @@ Components: Input form
   }
 }
 .features__thumbnail__el {
+  position: relative;
   display: block;
 }
 .features__button {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 45%;
+  top: 44%;
   width: 100px;
   height: 100px;
   outline: 0;
@@ -4715,8 +4729,6 @@ Components: Input form
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
-  top: 42%;
-  left: 46%;
   background-color: #458ff6;
   -webkit-transition: 0.2s ease-in-out 0s;
   -o-transition: 0.2s ease-in-out 0s;
@@ -4728,12 +4740,17 @@ Components: Input form
     width: 60px;
     height: 60px;
     top: 44%;
-    left: 44%;
+    left: 45%;
   }
 }
 @media only screen and (max-width: 767.98px) {
   .features__button {
     left: 44%;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .features__button {
+    top: 40%;
   }
 }
 .features__button:hover {
