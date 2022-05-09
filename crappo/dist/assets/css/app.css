@@ -1107,6 +1107,12 @@ b {
   .hero-banner .hero-banner__img {
     width: 100%;
     float: none;
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .hero-banner .hero-banner__img {
+    margin-bottom: 16px;
   }
 }
 .hero-banner .hero-banner__img__el {
@@ -3374,7 +3380,7 @@ Layouts Number
 }
 @media only screen and (max-width: 575.86px) {
   .market__txt__title {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -3453,6 +3459,7 @@ Layouts Number
 }
 @media only screen and (max-width: 575.86px) {
   .statistics__title {
+    margin-bottom: 16px;
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -3523,6 +3530,7 @@ Layouts Number
 }
 @media only screen and (max-width: 575.86px) {
   .grow-profit__title {
+    margin-bottom: 16px;
     font-size: 2rem;
     line-height: 2.8rem;
   }

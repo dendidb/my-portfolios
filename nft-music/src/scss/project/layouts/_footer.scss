@@ -1,0 +1,230 @@
+/* ==========================================================================
+   Layouts Footer
+   ========================================================================== */
+
+.footer {
+  $f: &;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 96px 0 104px;
+  overflow: hidden;
+  background-color: color(white);
+  @include clearfix;
+  @include large {
+    padding: 72px 0 80px;
+  }
+  @include medium {
+    padding: 64px 0 72px
+  }
+  @include small {
+    padding: 48px 0 56px;
+    position: relative;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    bottom: -40px;
+    z-index: 1;
+    width: 130px;
+    height: 115px;
+    background-image: url(../img/bg/element2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left top;
+    @include large {
+      width: 96px;
+      height: 88px;
+      left: -8px;
+      bottom: -32px;
+    }
+    @include medium {
+      width: 88px;
+      height: 80px;
+      bottom: -24px;
+    }
+    @include small {
+      width: 80px;
+      height: 72px;
+    }
+    @include extra-small {
+      width: 72px;
+      height: 64px;
+    }
+  }
+
+  &__about {
+    float: left;
+    max-width: 35%;
+    @include medium {
+      float: none;
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+    float: right;
+    @include clearfix;
+    @include medium {
+      float: none;
+      width: 100%;
+      padding-bottom: 40px;
+    }
+    @include small {
+      padding-bottom: 24px;
+    }
+
+    &__item {
+      float: left;
+      margin-right: 144px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include large {
+        margin-right: 104px;
+      }
+      @include medium {
+        margin-right: 120px;
+      }
+      @include small {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 8px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      &--showed {
+        @include small {
+          #{$f} {
+            &__title {
+              &::after {
+                transform: rotateX(180deg);
+              }
+            }
+            &__nav__item {
+              opacity: 1;
+              transform: none;
+              transition: all .35s ease .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+    &__img {
+      display: block;
+      width: auto;
+      height: 40px;
+    }
+  }
+
+  &__description {
+    @include font-size(18);
+    font-weight: fw(light);
+    color: color(white);
+    margin-bottom: 32px;
+    @include medium {
+      @include font-size(16);
+    }
+    @include small {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__copyright {
+    @include font-size(16);
+    font-weight: fw(light);
+    color: color(white);
+    margin-bottom: 0;
+  }
+
+  &__title {
+    position: relative;
+    @include font-size(20);
+    font-weight: fw(bold);
+    margin-bottom: 24px;
+    color: color(white);
+    @include small {
+      margin-bottom: 16px;
+    }
+    &::after {
+      @include small {
+        content: "\e907";
+        font-family: 'trafalgar-icon';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all .35s ease;
+      }
+    }
+  }
+
+  &__nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include small {
+      display: none;
+    }
+
+    &__item {
+      @include font-size(18);
+      margin-bottom: 12px;
+      color: color(white);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include medium {
+        @include font-size(16);
+      }
+      @include small {
+        opacity: 0;
+        margin-bottom: 16px;
+        transform: translateX(24px);
+        transition: all .4s ease 0s;
+        &:last-child {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 4px;
+      text-decoration: none;
+      @include remove-tap-highlight;
+      @include small {
+        padding-bottom: 0;
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transform-origin: right center;
+        background-color: color(white);
+        transform: scaleX(0);
+        transition: transform .35s ease;
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left center;
+        }
+      }
+    }
+  }
+}

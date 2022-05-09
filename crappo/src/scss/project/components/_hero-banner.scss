@@ -16,6 +16,10 @@
       @include medium {
         width: 100%;
         float: none;
+        margin-bottom: 24px;
+      }
+      @include extra-small {
+        margin-bottom: 16px;
       }
       &__el {
         display: block;

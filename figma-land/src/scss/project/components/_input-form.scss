@@ -61,7 +61,7 @@ Components: Input form
     outline: 0;
     @include font-size(16);
     color: color(black);
-    background-color: color(grey, 4);
+    background-color: color(white);
     padding-bottom: 8px;
     border: 1px solid color(grey, 6);
     border-radius: 40px;
@@ -84,7 +84,7 @@ Components: Input form
     outline: 0;
     @include font-size(16);
     color: color(black);
-    background-color: color(grey, 4);
+    background-color: color(white);
     padding-bottom: 8px;
     border: 1px solid color(grey, 6);
     padding: 18px;

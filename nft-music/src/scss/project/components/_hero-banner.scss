@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Components: Hero Banner
+  ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  &__item {
+    width: 100%;
+    padding: 24px 0 48px;
+    overflow: hidden;
+    position: relative;
+    z-index: zi(banner-item);
+    background-color: color(white);
+
+    @include medium {
+      padding: 40px 0 56px;
+    }
+
+    @include retina {
+      padding-top: 32px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: -40px;
+      z-index: zi(banner-item-before);
+      width: 130px;
+      height: 115px;
+      background-image: url(../img/bg/element1.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      @include large {
+        width: 96px;
+        height: 88px;
+        top: 0;
+      }
+      @include medium {
+        width: 88px;
+        height: 80px;
+        top: 32px;
+        left: -32px;
+      }
+      @include small {
+        width: 80px;
+        height: 72px;
+        top: 24px;
+        left: -24px;
+      }
+      @include extra-small {
+        width: 72px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include clearfix;
+  }
+
+  &__img {
+    float: right;
+    width: 48%;
+    @include medium {
+      float: none;
+      width: auto;
+      margin-bottom: 32px;
+    }
+    @include small {
+      display: block;
+      width: 100%;
+    }
+    &__el {
+      display: block;
+      width: 124%;
+      height: auto;
+      max-width: initial;
+      @include medium {
+        width: auto;
+        max-width: 100%;
+      }
+      @include small {
+        width: 100%;
+      }
+    }
+  }
+
+  &__txt {
+    float: left;
+    width: 52%;
+    display: table;
+    min-height: 485px;
+    @include medium {
+      float: none;
+      width: auto;
+      min-height: initial;
+    }
+    &__align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    max-width: 440px;
+    @include font-size(48);
+    font-weight: fw(bold);
+    margin-bottom: 24px;
+    color: color(black);
+    @include large {
+      @include font-size(36);
+    }
+    @include medium {
+      max-width: initial;
+      margin-bottom: 16px;
+    }
+    @include small {
+      @include font-size(24);
+    }
+  }
+
+  &__desc {
+    @include font-size(18);
+    font-weight: fw(semi-bold);
+    margin-bottom: 32px;
+    color: color(grey);
+    max-width: 520px;
+    @include large {
+      margin-bottom: 24px;
+    }
+    @include small {
+      @include font-size(16);
+      margin-bottom: 16px;
+    }
+  }
+}

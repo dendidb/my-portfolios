@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Service
+  -------------------------------------------------------------------------------//
+
+//service
+.service#find-a-doctor
+  .container
+    .service__head
+      h3.text-title !{data.title}
+      p.text-desc !{data.desc}
+    .service__body
+      .service__list
+        each val in data.list
+          -
+            data = val
+          include ../components/service-card.pug
+    .service__footer
+      ='\n'
+      a.btn.btn--secondary(href='#') Learn more
+='\n'
+//end-service

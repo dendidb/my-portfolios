@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Layout: Hero Banner
+  ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  position: relative;
+  &__item {
+    &::before {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: all 1.75s ease;
+      @include medium {
+        transform: translateY(-32px);
+      }
+    }
+  }
+
+  &__img__el {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: all 1s ease 0s;
+    @include medium {
+      transform: translateY(-32px);
+    }
+  }
+
+  &__title,
+  &__desc,
+  &__btn {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: all .2s ease 0s;
+    @include medium {
+      transform: translateY(32px);
+    }
+  }
+
+  &--single,
+  .owl-item.active {
+    #{$hb} {
+      &__item {
+        &::before {
+          opacity: 1;
+          transform: none;
+          transition: all 1.75s ease;
+        }
+      }
+
+      &__img__el {
+        opacity: 1;
+        transform: none;
+        transition: opacity 3.5 ease, transform 2s ease;
+        transition-delay: .8s;
+      }
+
+      &__title,
+      &__desc,
+      &__btn {
+        opacity: 1;
+        transform: none;
+        transition: all 1.25s ease;
+      }
+
+      &__title {
+        transition-delay: .8s;
+      }
+
+      &__desc {
+        transition-delay: 1.2s;
+      }
+
+      &__btn {
+        transition-delay: 1.4s;
+      }
+    }
+  }
+
+  &.owl-carousel {
+    #{$hb}__img__el,
+    .owl-item img {
+      width: 123%;
+      @include small {
+        width: 100%;
+      }
+    }
+
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      opacity: 0.2;
+      background: color(blue, 1);
+      transition: all .4s ease;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        width: 32px;
+        opacity: 1;
+      }
+
+      &s {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        line-height: 1;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

@@ -36,7 +36,6 @@ const Reveal = (() => {
     ScrollReveal().reveal('.testimonials__head', handleRevealConfig(50, '24px', 50, 'top'));
     ScrollReveal().reveal('.testimonials__body', handleRevealConfig(50, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.testimonials__btn', handleRevealConfig(50, '24px', 50, 'bottom'));
-    ScrollReveal().reveal('.pricing__head', handleRevealConfig(60, '24px', 50, 'top'));
     ScrollReveal().reveal('.pricing__list', handleRevealConfig(70, '24px', 50, 'bottom'));
     ScrollReveal().reveal('.contact-us__head', handleRevealConfig(60, '24px', 50, 'top'));
     ScrollReveal().reveal('.contact-us__form', handleRevealConfig(60, '24px', 50, 'bottom'));

@@ -90,7 +90,7 @@
       margin-bottom: 24px;
       color: color(white);
       @include extra-small {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
         @include font-size(h4);
       }
     }

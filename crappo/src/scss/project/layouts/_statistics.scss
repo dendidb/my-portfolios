@@ -45,6 +45,7 @@
     @include font-size(h3);
     font-weight: fw(bold);
     @include extra-small {
+      margin-bottom: 16px;
       @include font-size(h4);
     }
   }

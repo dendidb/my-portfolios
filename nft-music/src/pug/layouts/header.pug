@@ -1,0 +1,70 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoSrc: 'nft-music.svg',
+    logoLink: 'index.html',
+    logoAlt: 'NFT Music Logo',
+    menu: [
+      {
+        link: '#marketplace',
+        text: 'Marketplace',
+        classActive: 'marketplace'
+      },
+      {
+        link: '#about',
+        text: 'About',
+        classActive: 'about'
+      },
+      {
+        link: '#resources',
+        text: 'Resources',
+        classActive: 'resources'
+      },
+      {
+        link: '#faq',
+        text: 'FAQ',
+        classActive: 'faq'
+      },
+    ],
+    sosmed: [
+      {
+        sosmedClass: 'facebook',
+      },
+      {
+        sosmedClass: 'twitter',
+      },
+      {
+        sosmedClass: 'medium',
+      },
+    ]
+  };
+
+//header
+.header
+  .container
+    .header__nav
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__img(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      ul.header__nav__menu
+        each val in dataHeader.menu
+          li.header__nav__item
+            ='\n'
+            a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+            ='\n'
+      ='\n'
+      button.burger-menu.js-mobile-menu(type='button')
+        ='\n'
+        each val in [0, 1, 2]
+          span.burger-menu__bar
+          ='\n'
+      ='\n'
+    ='\n'
+='\n'
+//end-header

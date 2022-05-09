@@ -176,6 +176,7 @@
       display: inline-block;
       vertical-align: top;
       width: 32px;
+      text-align: center;
       &-el {
         @include font-size(36);
         color: color(white);
@@ -195,7 +196,7 @@
       &-el {
         color: color(white);
         margin-bottom: 0;
-        padding: 14px 0 0 6px;
+        padding: 4px 0 0 6px;
         @include small {
           padding: 6px 0;
         }
