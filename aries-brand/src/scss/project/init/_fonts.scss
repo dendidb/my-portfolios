@@ -1,0 +1,81 @@
+
+/* ==========================================================================
+Init: Fonts
+========================================================================== */
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('../fonts/Neometric-Black.eot');
+  src: url('../fonts/Neometric-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Neometric-Black.woff2') format('woff2'),
+      url('../fonts/Neometric-Black.woff') format('woff'),
+      url('../fonts/Neometric-Black.ttf') format('truetype'),
+      url('../fonts/Neometric-Black.svg#Neometric-Black') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('../fonts/Neometric-ExtraBold.eot');
+  src: url('../fonts/Neometric-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Neometric-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Neometric-ExtraBold.woff') format('woff'),
+      url('../fonts/Neometric-ExtraBold.ttf') format('truetype'),
+      url('../fonts/Neometric-ExtraBold.svg#Neometric-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('../fonts/Neometric-Medium.eot');
+  src: url('../fonts/Neometric-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Neometric-Medium.woff2') format('woff2'),
+      url('../fonts/Neometric-Medium.woff') format('woff'),
+      url('../fonts/Neometric-Medium.ttf') format('truetype'),
+      url('../fonts/Neometric-Medium.svg#Neometric-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('../fonts/Neometric-Light.eot');
+  src: url('../fonts/Neometric-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Neometric-Light.woff2') format('woff2'),
+      url('../fonts/Neometric-Light.woff') format('woff'),
+      url('../fonts/Neometric-Light.ttf') format('truetype'),
+      url('../fonts/Neometric-Light.svg#Neometric-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('../fonts/Neometric-Regular.eot');
+  src: url('../fonts/Neometric-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Neometric-Regular.woff2') format('woff2'),
+      url('../fonts/Neometric-Regular.woff') format('woff'),
+      url('../fonts/Neometric-Regular.ttf') format('truetype'),
+      url('../fonts/Neometric-Regular.svg#Neometric-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'trafalgar-icon';
+  src: url('../fonts/trafalgar-icon.eot?eq9d1k');
+  src: url('../fonts/trafalgar-icon.eot?eq9d1k#iefix') format('embedded-opentype'),
+    url('../fonts/trafalgar-icon.ttf?eq9d1k') format('truetype'),
+    url('../fonts/trafalgar-icon.woff?eq9d1k') format('woff'),
+    url('../fonts/trafalgar-icon.svg?eq9d1k#trafalgar-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

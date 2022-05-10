@@ -1,0 +1,71 @@
+.service__card {
+  $sc: &;
+  &:hover #{$sc}__img__el {
+    transform: translateY(-6px);
+  }
+  &:hover #{$sc}__title {
+    color: color(blue, 1);
+  }
+  &__box {
+    overflow: hidden;
+    padding: 56px 40px;
+    min-height: 365px;
+    border-radius: 20px;
+    @include shadow(50);
+    background-color: color(white);
+    transition: all .4s ease;
+    @include large {
+      min-height: 340px;
+      padding: 48px 32px;
+    }
+    @include medium {
+      min-height: 310px;
+      padding: 32px 24px;
+    }
+    @include small {
+      min-height: 280px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin-bottom: 24px;
+    height: 96px;
+    @include small {
+      height: 72px;
+    }
+    &__el {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      max-height: 100%;
+      transition: all .3s ease;
+    }
+  }
+
+  &__txt {
+    text-align: left;
+  }
+
+  &__title {
+    @include font-size(24);
+    font-weight: fw(bold);
+    margin-bottom: 24px;
+    transition: all 250ms ease;
+    @include large {
+      margin-bottom: 16px;
+    }
+    @include small {
+      @include font-size(18);
+    }
+  }
+
+  &__desc {
+    @include font-size(16);
+    font-weight: fw(light);
+    margin-bottom: 0;
+    color: color(grey);
+    @include multiline-ellipsis(3);
+  }
+}

@@ -1,0 +1,64 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoSrc: 'trafalgar.svg',
+    logoLink: 'index.html',
+    logoAlt: 'Trafalgar Logo',
+    menu: [
+      {
+        link: '#home',
+        text: 'Home',
+        classActive: 'home'
+      },
+      {
+        link: '#find-a-doctor',
+        text: 'Find a doctor',
+        classActive: 'find-a-doctor'
+      },
+      {
+        link: '#apps',
+        text: 'Apps',
+        classActive: 'apps'
+      },
+      {
+        link: '#testimonials',
+        text: 'Testimonials',
+        classActive: 'testimonials'
+      },
+      {
+        link: '#about-us',
+        text: 'About us',
+        classActive: 'about-us'
+      }
+    ]
+  };
+
+//header
+.header
+  .container
+    .header__nav
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__img(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      ul.header__nav__menu
+        each val in dataHeader.menu
+          li.header__nav__item
+            ='\n'
+            a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+            ='\n'
+      ='\n'
+      button.burger-menu.js-mobile-menu(type='button')
+        ='\n'
+        each val in [0, 1, 2]
+          span.burger-menu__bar
+          ='\n'
+      ='\n'
+    ='\n'
+='\n'
+//end-header
