@@ -1350,7 +1350,7 @@ b {
 }
 .hero-banner__img {
   position: absolute;
-  top: -300px;
+  top: -100px;
   left: 0;
   right: 0;
   max-width: initial;
@@ -1408,6 +1408,8 @@ b {
 .hero-banner__title {
   font-size: 4.8rem;
   line-height: 5.6rem;
+  font-size: 72px;
+  line-height: 100px;
   font-weight: 700;
   margin-bottom: 24px;
   color: #fff;
@@ -1429,24 +1431,10 @@ b {
     line-height: 3rem;
   }
 }
-.hero-banner__desc {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #7d7987;
-}
-@media only screen and (max-width: 1199.98px) {
-  .hero-banner__desc {
-    margin-bottom: 24px;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .hero-banner__desc {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-bottom: 16px;
-  }
+.hero-banner__title span {
+  background: conic-gradient(from 180deg at 50% 50%, #66FFE6 -160.13deg, #8093FF 42.37deg, #66FFE6 199.87deg, #8093FF 402.37deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ==========================================================================
@@ -1767,6 +1755,7 @@ b {
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  background-color: transparent;
 }
 @media only screen and (max-width: 1199.98px) {
   .header {
@@ -1801,9 +1790,6 @@ b {
   }
 }
 .header-on-scroll .header {
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-     -moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
   padding: 24px 0;
 }
 @media only screen and (max-width: 991.98px) {
@@ -2550,20 +2536,20 @@ b {
             transform: scale(0.5);
   }
 }
-.hero-banner__title, .hero-banner__desc, .hero-banner__btn {
+.hero-banner__title {
   opacity: 0;
-  -webkit-transform: translateY(32px);
-     -moz-transform: translateY(32px);
-      -ms-transform: translateY(32px);
-       -o-transform: translateY(32px);
-          transform: translateY(32px);
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  -moz-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transform: translateY(48px);
+     -moz-transform: translateY(48px);
+      -ms-transform: translateY(48px);
+       -o-transform: translateY(48px);
+          transform: translateY(48px);
+  -webkit-transition: all 4s ease 0s;
+  -o-transition: all 4s ease 0s;
+  -moz-transition: all 4s ease 0s;
+  transition: all 4s ease 0s;
 }
 @media only screen and (max-width: 991.98px) {
-  .hero-banner__title, .hero-banner__desc, .hero-banner__btn {
+  .hero-banner__title {
     -webkit-transform: translateY(32px);
        -moz-transform: translateY(32px);
         -ms-transform: translateY(32px);
@@ -2598,46 +2584,29 @@ b {
   -moz-transition: opacity 3.5 ease, transform 2s ease, -moz-transform 2s ease;
   transition: opacity 3.5 ease, transform 2s ease;
   transition: opacity 3.5 ease, transform 2s ease, -webkit-transform 2s ease, -moz-transform 2s ease, -o-transform 2s ease;
-  -webkit-transition-delay: 0.8s;
-     -moz-transition-delay: 0.8s;
-       -o-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+  -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
-.hero-banner--single .hero-banner__title, .hero-banner--single .hero-banner__desc, .hero-banner--single .hero-banner__btn,
-.hero-banner .owl-item.active .hero-banner__title,
-.hero-banner .owl-item.active .hero-banner__desc,
-.hero-banner .owl-item.active .hero-banner__btn {
+.hero-banner--single .hero-banner__title,
+.hero-banner .owl-item.active .hero-banner__title {
   opacity: 1;
   -webkit-transform: none;
      -moz-transform: none;
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-  -webkit-transition: all 1.25s ease;
-  -o-transition: all 1.25s ease;
-  -moz-transition: all 1.25s ease;
-  transition: all 1.25s ease;
-}
-.hero-banner--single .hero-banner__title,
-.hero-banner .owl-item.active .hero-banner__title {
+  -webkit-transition: opacity 3.5 ease, -webkit-transform 2s ease;
+  transition: opacity 3.5 ease, -webkit-transform 2s ease;
+  -o-transition: opacity 3.5 ease, -o-transform 2s ease;
+  -moz-transition: opacity 3.5 ease, transform 2s ease, -moz-transform 2s ease;
+  transition: opacity 3.5 ease, transform 2s ease;
+  transition: opacity 3.5 ease, transform 2s ease, -webkit-transform 2s ease, -moz-transform 2s ease, -o-transform 2s ease;
   -webkit-transition-delay: 0.8s;
      -moz-transition-delay: 0.8s;
        -o-transition-delay: 0.8s;
           transition-delay: 0.8s;
-}
-.hero-banner--single .hero-banner__desc,
-.hero-banner .owl-item.active .hero-banner__desc {
-  -webkit-transition-delay: 1.2s;
-     -moz-transition-delay: 1.2s;
-       -o-transition-delay: 1.2s;
-          transition-delay: 1.2s;
-}
-.hero-banner--single .hero-banner__btn,
-.hero-banner .owl-item.active .hero-banner__btn {
-  -webkit-transition-delay: 1.4s;
-     -moz-transition-delay: 1.4s;
-       -o-transition-delay: 1.4s;
-          transition-delay: 1.4s;
 }
 .hero-banner.owl-carousel .hero-banner__img__el,
 .hero-banner.owl-carousel .owl-item img {
@@ -2648,40 +2617,6 @@ b {
 .hero-banner.owl-carousel .owl-item img {
     width: 100%;
   }
-}
-.hero-banner.owl-carousel .owl-dot {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  width: 8px;
-  height: 8px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  opacity: 0.2;
-  background: #458ff6;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.hero-banner.owl-carousel .owl-dot:last-child {
-  margin-right: 0;
-}
-.hero-banner.owl-carousel .owl-dot.active {
-  width: 32px;
-  opacity: 1;
-}
-.hero-banner.owl-carousel .owl-dots {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  line-height: 1;
-  -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 /* ==========================================================================
