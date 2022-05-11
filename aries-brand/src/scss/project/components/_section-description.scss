@@ -2,10 +2,10 @@
    Components Section Description
    ========================================================================== */
 
-.section-description {
+.sd-section {
   $sd: &;
   position: relative;
-  padding: 120px 0;
+  padding: 320px 0;
   @include large {
     padding: 96px 0;
   }
@@ -15,119 +15,38 @@
   @include small {
     padding: 48px 0;
   }
-  &__box {
+  &__wrapper {
     @include clearfix;
   }
   &__img {
-    float: left;
-    width: 50%;
-    @include medium {
-      float: none;
-      width: 100%;
-      margin-bottom: 48px;
-    }
-    @include small {
-      margin-bottom: 32px;
-    }
+    float: right;
+    width: 992px;
+    position: relative;
+    padding-bottom: 20%;
     &__el {
+      height: 448px;
+      position: absolute;
+      top: -200px;
+      right: 0;
+      z-index: -1;
+      width: 100%;
       display: block;
-      max-width: 650px;
-      margin-left: -104px;
-      @include large {
-        max-width: 100%;
-        margin-left: 0;
-      }
-      @include medium {
-        max-width: 640px;
-        margin: 0 auto;
-      }
-      @include small {
-        max-width: 90%;
-      }
-      @include extra-small {
-        max-width: 100%;
-      }
     }
   }
   &__txt {
-    float: right;
-    width: 50%;
-    min-height: 476px;
-    padding-left: 142px;
-    display: table;
-    @include large {
-      min-height: 350px;
-      padding-left: 116px;
-    }
-    @include medium {
-      float: none;
-      width: 100%;
-      min-height: initial;
-      display: block;
-      padding-left: 0;
-    }
-    &__wrapper {
-      width: 100%;
-      display: table-cell;
-      vertical-align: middle;
-      @include medium {
-        display: block;
-      }
-    }
+    float: left;
+    color: color(white);
+    max-width: 522px;
+    position: absolute;
+    bottom: 56px;
   }
-
-  // -- modifier
-  &--reverse {
-    &::before {
-      content: '';
-      position: absolute;
-      top: -58px;
-      right: 16px;
-      z-index: 1;
-      width: 72px;
-      height: 115px;
-      background-image: url(../img/bg/element1.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      @include large {
-        right: 8px;
-        height: 104px;
-        background-position: left top;
-      }
-      @include medium {
-        height: 96px;
-      }
-      @include small {
-        right: 0;
-        width: 64px;
-        height: 80px;
-      }
-    }
-    #{$sd}__img {
-      float: right;
-      @include small {
-        float: none;
-      }
-      &__el {
-        margin-left: 0;
-        @include medium {
-          margin: 0 auto;
-        }
-      }
-    }
-    #{$sd}__txt {
-      float: left;
-      padding-left: 0;
-      padding-right: 142px;
-      @include large {
-        padding-right: 40px;
-      }
-      @include medium {
-        padding-right: 32px;
-      }
-      @include small {
-        padding-right: 0;
-      }
-    }
+  &__title {
+    margin-bottom: 24px;
+    font-size: 48px;
+  }
+  &__desc {
+    max-width: 472px;
+    margin-bottom: 48px;
+    color: color(grey, 4);
   }
 }

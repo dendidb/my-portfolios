@@ -5,13 +5,14 @@
 .header {
   $h: &;
   position: fixed;
-  padding: 56px 0;
+  padding: 30px 0;
   top: 0;
   left: 0;
   width: 100%;
   z-index: zi(header);
   transition: all .5s ease;
   background-color: transparent;
+  @include clearfix;
   @include large {
     padding: 32px 0;
   }
@@ -39,7 +40,10 @@
     }
   }
   &__logo {
-    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     @include remove-tap-highlight;
     @include medium {
@@ -62,7 +66,7 @@
   &__nav {
     position: relative;
     @include clearfix;
-    background-color: color(grey, 1);
+    background-color: color(grey, 3);
     padding: 32px;
     @include medium {
       margin-right: -12px;
@@ -112,7 +116,35 @@
         height: 72px;
       }
     }
-    &__menu {
+    &__menu__left {
+      float: left;
+      list-style: none;
+      padding: 6px 0;
+      margin: 0;
+      @include medium {
+        visibility: hidden;
+        opacity: 0;
+        float: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 8;
+        padding: 112px 24px 48px;
+        @include scroll('y', 'touch', 'show');
+        width: 100%;
+        transition: all .4s ease .5s;
+        .show-menu & {
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+        }
+      }
+      @include small {
+        padding-top: 104px;
+      }
+    }
+    &__menu__right {
       float: right;
       list-style: none;
       padding: 6px 0;
@@ -187,6 +219,7 @@
       transition: all .3s ease;
       @include remove-tap-highlight;
       color: color(white);
+      text-transform: uppercase;
       &:hover {
         opacity: 1;
       }

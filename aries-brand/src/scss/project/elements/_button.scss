@@ -6,12 +6,9 @@
   display: inline-block;
   vertical-align: middle;
   min-width: 200px;
-  padding: 12px 40px;
-  border-radius: 55px;
   text-decoration: none;
   outline: 0;
   cursor: pointer;
-  text-align: center;
   overflow: hidden;
   border: 1px solid transparent;
   @include font-size(16);
@@ -20,11 +17,11 @@
   transition: all 350ms ease;
   font-weight: fw(bold);
   &--primary {
-      background-color: color(blue, 1);
+      background-color: transparent;
       color: color(white);
     &:hover {
       background-color: transparent;
-      border-color: color(blue, 1);
+      border-color: transparent;
       color: color(blue, 1);
     }
   }

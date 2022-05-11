@@ -1,26 +1,12 @@
 -
-  dataDescription = [
-    {
-      img: 'section-description-1.png',
-      title: 'Leading healthcare providers',
-      desc: 'Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver',
-      btn: {
-        to: '#learn-more',
-        text: 'Learn more'
-      }
-    },
-    {
-      modifier: 'reverse',
-      img: 'section-description-2.png',
-      title: 'Download our mobile apps',
-      desc: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely',
-      btn: {
-        to: '#learn-more',
-        text: 'Download',
-        icon: 'icon-arrow-down'
-      }
+  sectionDescription = {
+    img: 'section-description.png',
+    title: 'Building faster, Smarter, Together.',
+    desc: 'ARIES is a part of PIXIRHY, a global venture capital firm providing multi stage investment to develop and scale our founders’ big ideas. SOSV invests in every HAX program startup with follow-on through pre-iPO.',
+    button: {
+      to: '#view-program',
+      text: 'View Program'
     }
-  ];
-each val in dataDescription
-  - data = val;
-  include ../../components/section-description.pug
+  }
+
+include ../../components/section-description.pug

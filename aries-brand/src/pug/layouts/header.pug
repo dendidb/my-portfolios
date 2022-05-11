@@ -4,35 +4,32 @@
 
 -
   dataHeader = {
-    logoSrc: 'trafalgar.svg',
+    logoSrc: 'aries.svg',
     logoLink: 'index.html',
-    logoAlt: 'Trafalgar Logo',
-    menu: [
+    logoAlt: 'Aries Logo',
+    menuLeft: [
       {
-        link: '#home',
-        text: 'Home',
-        classActive: 'home'
+        link: '#program',
+        text: 'Program',
+        classActive: 'program'
       },
       {
-        link: '#find-a-doctor',
-        text: 'Find a doctor',
-        classActive: 'find-a-doctor'
+        link: '#funding',
+        text: 'Funding',
+        classActive: 'funding'
+      },
+    ],
+    menuRight: [
+      {
+        link: '#jobs',
+        text: 'Jobs',
+        classActive: 'jobs'
       },
       {
-        link: '#apps',
-        text: 'Apps',
-        classActive: 'apps'
+        link: '#menu',
+        text: 'Menu',
+        classActive: 'menu'
       },
-      {
-        link: '#testimonials',
-        text: 'Testimonials',
-        classActive: 'testimonials'
-      },
-      {
-        link: '#about-us',
-        text: 'About us',
-        classActive: 'about-us'
-      }
     ]
   };
 
@@ -43,11 +40,16 @@
       ='\n'
       a.header__logo(href=dataHeader.logoLink)
         ='\n'
-        img.header__logo__img(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
-        ='\n'
+        img.header__logo__el(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
       ='\n'
-      ul.header__nav__menu
-        each val in dataHeader.menu
+      ul.header__nav__menu__left
+        each val in dataHeader.menuLeft
+          li.header__nav__item
+            ='\n'
+            a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
+            ='\n'
+      ul.header__nav__menu__right
+        each val in dataHeader.menuRight
           li.header__nav__item
             ='\n'
             a.header__nav__link(href=val.link class=(navActive == val.classActive ? 'header__nav__link--active' : '')) !{val.text}
