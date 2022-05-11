@@ -1491,6 +1491,10 @@ b {
   margin-bottom: 48px;
   color: #b8b8b8;
 }
+.sd-section__btn {
+  text-transform: uppercase;
+  color: #99a9ff;
+}
 
 /* ==========================================================================
    Elements Index
@@ -1571,20 +1575,11 @@ b {
 }
 .btn--primary {
   background-color: transparent;
-  color: #fff;
+  color: #99a9ff;
 }
 .btn--primary:hover {
   background-color: transparent;
   border-color: transparent;
-  color: #458ff6;
-}
-.btn--secondary {
-  background-color: transparent;
-  color: #458ff6;
-  border-color: #458ff6;
-}
-.btn--secondary:hover {
-  background-color: #458ff6;
   color: #fff;
 }
 .btn i {

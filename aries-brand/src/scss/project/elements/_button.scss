@@ -17,20 +17,11 @@
   transition: all 350ms ease;
   font-weight: fw(bold);
   &--primary {
-      background-color: transparent;
-      color: color(white);
+    background-color: transparent;
+    color: color(purple, 2);
     &:hover {
       background-color: transparent;
       border-color: transparent;
-      color: color(blue, 1);
-    }
-  }
-  &--secondary {
-    background-color: transparent;
-    color: color(blue, 1);
-    border-color: color(blue, 1);
-    &:hover {
-      background-color: color(blue, 1);
       color: color(white);
     }
   }
@@ -60,58 +51,3 @@
     -moz-transform: translateY(-4px); 
   }
 }
-
-
-// .btn {
-//   display: inline-block;
-//   vertical-align: middle;
-//   min-width: 200px;
-//   padding: 14px 40px;
-//   border-radius: 55px;
-//   text-decoration: none;
-//   outline: 0;
-//   cursor: pointer;
-//   text-align: center;
-//   overflow: hidden;
-//   border: 1px solid transparent;
-//   @include font-size(16);
-//   background-color: transparent;
-//   @include remove-tap-highlight;
-//   transition: all 350ms ease;
-//   font-weight: fw(bold);
-//   &--primary {
-//     background-color: color(blue, 1);
-//     color: color(white);
-//     &:hover {
-//       background-color: transparent;
-//       color: color(blue, 1);
-//       border-color: color(blue, 1);
-//     }
-//   }
-//   &--secondary {
-//     background-color: transparent;
-//     color: color(blue, 1);
-//     border-color: color(blue, 1);
-//     &:hover {
-//       background-color: color(blue, 1);
-//       color: color(white);
-//     }
-//   }
-//   i {
-//     display: inline-block;
-//     margin-left: 14px;
-//     animation: bounce 1.5s ease-in-out 0s infinite alternate;
-//   }
-// }
-
-// @keyframes bounce {
-//   0%, 20%, 50%, 80%, 100% {
-//     transform: translateY(0);
-//   }
-//   40% {
-//     transform: translateY(-8px);
-//   }
-//   60% {
-//     transform: translateY(-8px);
-//   }
-// }
